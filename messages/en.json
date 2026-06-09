@@ -1,0 +1,151 @@
+{
+  "header": {
+    "features": "How it works",
+    "preview": "Preview",
+    "proof": "Method",
+    "cta": "Join",
+    "ctaAria": "Join the waitlist"
+  },
+  "hero": {
+    "badge": "Flashcards built for medical students",
+    "title": "Less cramming. More knowledge that sticks.",
+    "subtitle": "Learn anatomy, pharmacology and clinical topics in short sessions powered by active recall and spaced repetition.",
+    "primaryCta": "Join the waitlist",
+    "secondaryCta": "See how it works",
+    "earlyAcces": "The first decks are in progress. Sign up for early access and help us choose which subjects come next.",
+    "highlights": [
+      "Curriculum-aligned content",
+      "Reviews at the right time",
+      "Built for exams and finals"
+    ],
+    "stats": [
+      { "value": "10 min", "label": "for a quick session" },
+      { "value": "24/7", "label": "always available" },
+      { "value": "1 goal", "label": "remember longer" }
+    ],
+    "cardLabel": "Today's session",
+    "cardTitle": "A review plan that knows what you are about to forget",
+    "cards": [
+      {
+        "title": "Anatomy: brachial plexus",
+        "text": "12 cards to review · about 4 min"
+      },
+      {
+        "title": "Pharmacology: beta blockers",
+        "text": "8 cards that need reinforcement"
+      },
+      {
+        "title": "Clinical case",
+        "text": "Chest pain · rapid diagnosis"
+      }
+    ]
+  },
+  "features": {
+    "badge": "Learning without chaos",
+    "heading": "From year one to final exams — one app for mastering a mountain of material.",
+    "intro": "Do not read the same notes for the fifth time. Answer, check and revisit material exactly when you need to.",
+    "value": {
+      "heading": "Ready-made medical decks",
+      "text": "Learn from structured sets covering anatomy, physiology, pharmacology, pathophysiology and clinical subjects."
+    },
+    "problem": {
+      "heading": "Active recall",
+      "text": "Every card makes you retrieve information from memory. That works better than passively rereading another handout."
+    },
+    "how": {
+      "heading": "Smart reviews",
+      "text": "The algorithm shows difficult questions more often and mastered ones less often, so your time goes where it matters."
+    },
+    "simulation": {
+      "heading": "Clinical context",
+      "text": "Connect facts with short patient cases and practice reasoning instead of memorizing isolated definitions."
+    },
+    "why": {
+      "heading": "Progress you can see",
+      "text": "Know which topics are solid, where reviews are piling up and what deserves attention before your next exam."
+    },
+    "built": {
+      "heading": "Made for student life",
+      "text": "Short sessions fit between classes, on the commute and before a quiz. No tedious card creation from scratch."
+    },
+    "footerNote": "Recall the answer first. Then check it. That is where real learning begins."
+  },
+  "carousel": {
+    "slides": [
+      {
+        "eyebrow": "Anatomy",
+        "title": "Brachial plexus",
+        "question": "Which spinal roots contribute to the radial nerve?",
+        "answer": "C5–T1",
+        "meta": "12 cards due today"
+      },
+      {
+        "eyebrow": "Pharmacology",
+        "title": "Beta blockers",
+        "question": "Which beta blocker also causes vasodilation through nitric oxide?",
+        "answer": "Nebivolol",
+        "meta": "Review again in 3 days"
+      },
+      {
+        "eyebrow": "Pathophysiology",
+        "title": "Acid-base balance",
+        "question": "Which compensation do you expect in metabolic acidosis?",
+        "answer": "Hyperventilation and lower pCO₂",
+        "meta": "Difficulty: medium"
+      },
+      {
+        "eyebrow": "Clinical case",
+        "title": "Chest pain",
+        "question": "Sudden tearing pain radiating to the back most strongly suggests…",
+        "answer": "Aortic dissection",
+        "meta": "Case 1 of 5"
+      },
+      {
+        "eyebrow": "Your progress",
+        "title": "Pre-exam plan",
+        "question": "Your largest knowledge gap this week:",
+        "answer": "Antiarrhythmic drugs",
+        "meta": "Material mastery: 74%"
+      }
+    ]
+  },
+  "proof": {
+    "badge": "A method that makes sense",
+    "heading": "Consistency beats the night before an exam.",
+    "subtitle": "Fishki turns a huge syllabus into small, concrete tasks you can complete every day.",
+    "stats": [
+      { "value": "10 min", "label": "is enough to review" },
+      { "value": "3", "label": "mastery levels" },
+      { "value": "0", "label": "cards to rewrite" }
+    ],
+    "quote": "We do not want to give you another library full of content. We want to show you the exact questions that will strengthen your memory today.",
+    "author": "The Fishki method",
+    "role": "Designed around the rhythm of medical school"
+  },
+  "cta": {
+    "badge": "Early access",
+    "title": "Study smarter next semester.",
+    "subtitle": "Join the waitlist. We will let you know when the first decks are ready and ask which subjects you need most.",
+    "benefits": [
+      "Priority access to the beta",
+      "A say in the first subjects and decks",
+      "Useful updates only, no spam"
+    ],
+    "cta": "Join the waitlist",
+    "formNote": "It takes less than a minute."
+  },
+  "footer": {
+    "tagline": "Flashcards and smart reviews for medical students who want to understand more and remember longer.",
+    "product": "Product",
+    "features": "How it works",
+    "preview": "Preview",
+    "proof": "Method",
+    "waitlist": "Waitlist",
+    "social": "Find us",
+    "legal": "Terms of service",
+    "copyright": "Built with medical students in mind."
+  },
+  "floatingCta": {
+    "text": "Join the waitlist"
+  }
+}

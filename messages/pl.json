@@ -1,0 +1,151 @@
+{
+  "header": {
+    "features": "Jak to działa",
+    "preview": "Podgląd",
+    "proof": "Metoda",
+    "cta": "Dołącz",
+    "ctaAria": "Dołącz do listy oczekujących"
+  },
+  "hero": {
+    "badge": "Fiszki stworzone dla studentów medycyny",
+    "title": "Mniej zakuwania. Więcej wiedzy, która zostaje.",
+    "subtitle": "Ucz się anatomii, farmakologii i zagadnień klinicznych w krótkich sesjach opartych na aktywnym przypominaniu i powtórkach rozłożonych w czasie.",
+    "primaryCta": "Dołącz do waitlisty",
+    "secondaryCta": "Zobacz, jak to działa",
+    "earlyAcces": "Pierwsze talie już powstają. Zapisz się, aby dostać wczesny dostęp i pomóc nam wybrać kolejne przedmioty.",
+    "highlights": [
+      "Materiały zgodne z programem",
+      "Powtórki w dobrym momencie",
+      "Nauka na kolokwia i LEK"
+    ],
+    "stats": [
+      { "value": "10 min", "label": "na krótką sesję" },
+      { "value": "24/7", "label": "zawsze pod ręką" },
+      { "value": "1 cel", "label": "trwale pamiętać" }
+    ],
+    "cardLabel": "Dzisiejsza sesja",
+    "cardTitle": "Plan powtórek, który wie, co zaraz zapomnisz",
+    "cards": [
+      {
+        "title": "Anatomia: splot ramienny",
+        "text": "12 kart do powtórki · około 4 min"
+      },
+      {
+        "title": "Farmakologia: beta-blokery",
+        "text": "8 kart wymagających utrwalenia"
+      },
+      {
+        "title": "Przypadek kliniczny",
+        "text": "Ból w klatce piersiowej · szybka diagnoza"
+      }
+    ]
+  },
+  "features": {
+    "badge": "Nauka bez chaosu",
+    "heading": "Od pierwszego roku po LEK — jedna aplikacja, która pomaga opanować ogrom materiału.",
+    "intro": "Nie czytaj notatek po raz piąty. Odpowiadaj, sprawdzaj i wracaj do materiału dokładnie wtedy, kiedy trzeba.",
+    "value": {
+      "heading": "Gotowe talie medyczne",
+      "text": "Ucz się z uporządkowanych zestawów z anatomii, fizjologii, farmakologii, patofizjologii i przedmiotów klinicznych."
+    },
+    "problem": {
+      "heading": "Aktywne przypominanie",
+      "text": "Każda karta zmusza do wydobycia informacji z pamięci. To skuteczniejsze niż kolejne bierne czytanie skryptu."
+    },
+    "how": {
+      "heading": "Mądre powtórki",
+      "text": "Algorytm pokazuje trudne pytania częściej, a dobrze opanowane rzadziej, dzięki czemu nie tracisz czasu."
+    },
+    "simulation": {
+      "heading": "Kontekst kliniczny",
+      "text": "Łącz fakty z krótkimi przypadkami pacjentów i ucz się rozumowania, nie tylko pojedynczych definicji."
+    },
+    "why": {
+      "heading": "Postęp bez zgadywania",
+      "text": "Widzisz, które działy masz opanowane, gdzie rosną zaległości i co warto powtórzyć przed egzaminem."
+    },
+    "built": {
+      "heading": "Dopasowane do studiów",
+      "text": "Krótkie sesje zmieszczą się między zajęciami, w tramwaju i przed wejściówką. Bez żmudnego tworzenia kart od zera."
+    },
+    "footerNote": "Najpierw przypomnij sobie odpowiedź. Potem ją sprawdź. Właśnie wtedy zaczyna się prawdziwa nauka."
+  },
+  "carousel": {
+    "slides": [
+      {
+        "eyebrow": "Anatomia",
+        "title": "Splot ramienny",
+        "question": "Które korzenie rdzeniowe tworzą nerw promieniowy?",
+        "answer": "C5–Th1",
+        "meta": "12 kart na dziś"
+      },
+      {
+        "eyebrow": "Farmakologia",
+        "title": "Beta-blokery",
+        "question": "Który beta-bloker ma dodatkowe działanie wazodylatacyjne przez NO?",
+        "answer": "Nebiwolol",
+        "meta": "Powtórka za 3 dni"
+      },
+      {
+        "eyebrow": "Patofizjologia",
+        "title": "Równowaga kwasowo-zasadowa",
+        "question": "Jakiej kompensacji oczekujesz w kwasicy metabolicznej?",
+        "answer": "Hiperwentylacji i spadku pCO₂",
+        "meta": "Poziom: średni"
+      },
+      {
+        "eyebrow": "Przypadek kliniczny",
+        "title": "Ból w klatce piersiowej",
+        "question": "Nagły, rozrywający ból promieniujący do pleców sugeruje przede wszystkim…",
+        "answer": "Rozwarstwienie aorty",
+        "meta": "1 z 5 przypadków"
+      },
+      {
+        "eyebrow": "Twój postęp",
+        "title": "Plan przed kolokwium",
+        "question": "Największa luka wiedzy w tym tygodniu:",
+        "answer": "Leki przeciwarytmiczne",
+        "meta": "Opanowanie materiału: 74%"
+      }
+    ]
+  },
+  "proof": {
+    "badge": "Metoda, która ma sens",
+    "heading": "Systematyczność wygrywa z nocą przed egzaminem.",
+    "subtitle": "Fishki zamieniają duży materiał w małe, konkretne zadania, które możesz wykonać każdego dnia.",
+    "stats": [
+      { "value": "10 min", "label": "wystarczy na sesję" },
+      { "value": "3", "label": "poziomy opanowania" },
+      { "value": "0", "label": "kart do przepisywania" }
+    ],
+    "quote": "Nie chcemy dawać Ci kolejnego miejsca pełnego materiałów. Chcemy codziennie pokazać dokładnie te pytania, które najlepiej wzmocnią Twoją pamięć.",
+    "author": "Metoda Fishki",
+    "role": "Zaprojektowana pod rytm studiów medycznych"
+  },
+  "cta": {
+    "badge": "Wczesny dostęp",
+    "title": "Ucz się mądrzej od następnego semestru.",
+    "subtitle": "Dołącz do listy oczekujących. Damy Ci znać, gdy pierwsze talie będą gotowe i zapytamy, których przedmiotów potrzebujesz najbardziej.",
+    "benefits": [
+      "Pierwszeństwo dostępu do wersji beta",
+      "Wpływ na pierwsze przedmioty i talie",
+      "Tylko istotne informacje, bez spamu"
+    ],
+    "cta": "Zapisz się na waitlistę",
+    "formNote": "Zajmie Ci to mniej niż minutę."
+  },
+  "footer": {
+    "tagline": "Fiszki i inteligentne powtórki dla studentów medycyny, którzy chcą rozumieć więcej i pamiętać dłużej.",
+    "product": "Produkt",
+    "features": "Jak to działa",
+    "preview": "Podgląd",
+    "proof": "Metoda",
+    "waitlist": "Lista oczekujących",
+    "social": "Znajdź nas",
+    "legal": "Warunki usługi",
+    "copyright": "Stworzone z myślą o studentach medycyny."
+  },
+  "floatingCta": {
+    "text": "Dołącz do waitlisty"
+  }
+}
