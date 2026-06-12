@@ -1,23 +1,22 @@
 import Hero from "@/components/hero-home";
 import Cta from "@/components/cta";
 import Features from "@/components/features";
-import Carousel from "@/components/carousel";
-import SocialProof from "@/components/social-proof";
 import FloatingCTA from "@/components/floating-cta";
-
-export const metadata = {
-  title: "Fishki — fiszki dla studentów medycyny",
-  description: "Aktywne przypominanie i inteligentne powtórki dla studentów medycyny.",
-};
+import Comparison from "@/components/comparison";
+import AppDemo from "@/components/app-demo/app-demo";
+import UseCases from "@/components/use-cases";
+import HowItWorks from "@/components/how-it-works";
 
 export default async function Home() {
   return (
     <main className="flex flex-col">
       <Hero />
       <FloatingCTA />
-      <Carousel />
+      <Comparison />
       <Features />
-      <SocialProof />
+      <AppDemo />
+      <UseCases />
+      <HowItWorks />
       <Cta />
     </main>
   );

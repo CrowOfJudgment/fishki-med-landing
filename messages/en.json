@@ -1,148 +1,272 @@
 {
+  "seo": {
+    "title": "Fishki — simple flashcards, smart reviews",
+    "description": "Create medical flashcards with text, images and cloze deletions. Study with quick review or spaced repetition."
+  },
   "header": {
-    "features": "How it works",
-    "preview": "Preview",
-    "proof": "Method",
-    "cta": "Join",
+    "features": "Features",
+    "how": "How it works",
+    "demo": "Demo",
+    "waitlist": "Waitlist",
+    "cta": "Join waitlist",
     "ctaAria": "Join the waitlist"
   },
   "hero": {
-    "badge": "Flashcards built for medical students",
-    "title": "Less cramming. More knowledge that sticks.",
-    "subtitle": "Learn anatomy, pharmacology and clinical topics in short sessions powered by active recall and spaced repetition.",
+    "badge": "Flashcards designed for medical students",
+    "title": "Simple to create. Smart to review.",
+    "subtitle": "Create your own flashcards with text, images and cloze deletions as quickly as in Quizlet. Study with quick review or a spaced repetition system you can trust.",
     "primaryCta": "Join the waitlist",
-    "secondaryCta": "See how it works",
-    "earlyAcces": "The first decks are in progress. Sign up for early access and help us choose which subjects come next.",
+    "secondaryCta": "See the demo",
+    "validation": "Built from conversations with medical students using Anki and Quizlet.",
     "highlights": [
-      "Curriculum-aligned content",
-      "Reviews at the right time",
-      "Built for exams and finals"
+      "Fast card creation",
+      "Spaced repetition",
+      "Offline learning"
     ],
-    "stats": [
-      { "value": "10 min", "label": "for a quick session" },
-      { "value": "24/7", "label": "always available" },
-      { "value": "1 goal", "label": "remember longer" }
-    ],
-    "cardLabel": "Today's session",
-    "cardTitle": "A review plan that knows what you are about to forget",
-    "cards": [
+    "mockup": {
+      "deck": "Pharmacology",
+      "count": "124 flashcards",
+      "newCard": "New flashcard",
+      "frontLabel": "Front",
+      "front": "Mechanism of action of beta blockers",
+      "backLabel": "Back",
+      "back": "Blockade of β-adrenergic receptors",
+      "image": "Add image",
+      "cloze": "Create cloze",
+      "save": "Save card"
+    }
+  },
+  "comparison": {
+    "badge": "Without the usual trade-off",
+    "heading": "You should not have to choose between simplicity and effective learning.",
+    "intro": "Medical students need a fast editor and a serious review system. Today's tools usually deliver only one of them.",
+    "products": [
       {
-        "title": "Anatomy: brachial plexus",
-        "text": "12 cards to review · about 4 min"
+        "name": "Anki",
+        "label": "Powerful, but complicated",
+        "text": "Strong review algorithms, but a dated interface, difficult setup and slow creation of richer cards.",
+        "points": ["Advanced reviews", "Steep learning curve", "Cumbersome editor"]
       },
       {
-        "title": "Pharmacology: beta blockers",
-        "text": "8 cards that need reinforcement"
+        "name": "Quizlet",
+        "label": "Simple, but limited",
+        "text": "Pleasant and fast card creation, but too little control for demanding medical exam preparation.",
+        "points": ["Easy to start", "Clean interface", "Limited study control"]
       },
       {
-        "title": "Clinical case",
-        "text": "Chest pain · rapid diagnosis"
+        "name": "Fishki",
+        "label": "Simple creation + smart reviews",
+        "text": "A fast editor, flexible study modes and tools for images, tables and long medical answers.",
+        "points": ["Fast card creation", "Spaced repetition", "Medical workflows"]
       }
     ]
   },
   "features": {
-    "badge": "Learning without chaos",
-    "heading": "From year one to final exams — one app for mastering a mountain of material.",
-    "intro": "Do not read the same notes for the fifth time. Answer, check and revisit material exactly when you need to.",
-    "value": {
-      "heading": "Ready-made medical decks",
-      "text": "Learn from structured sets covering anatomy, physiology, pharmacology, pathophysiology and clinical subjects."
-    },
-    "problem": {
-      "heading": "Active recall",
-      "text": "Every card makes you retrieve information from memory. That works better than passively rereading another handout."
-    },
-    "how": {
-      "heading": "Smart reviews",
-      "text": "The algorithm shows difficult questions more often and mastered ones less often, so your time goes where it matters."
-    },
-    "simulation": {
-      "heading": "Clinical context",
-      "text": "Connect facts with short patient cases and practice reasoning instead of memorizing isolated definitions."
-    },
-    "why": {
-      "heading": "Progress you can see",
-      "text": "Know which topics are solid, where reviews are piling up and what deserves attention before your next exam."
-    },
-    "built": {
-      "heading": "Made for student life",
-      "text": "Short sessions fit between classes, on the commute and before a quiz. No tedious card creation from scratch."
-    },
-    "footerNote": "Recall the answer first. Then check it. That is where real learning begins."
-  },
-  "carousel": {
-    "slides": [
+    "badge": "Tools for serious study",
+    "heading": "From a quick note to a well-planned review.",
+    "intro": "Every feature should either shorten card creation or give you better control over what you study today.",
+    "planned": "Planned",
+    "items": [
       {
-        "eyebrow": "Anatomy",
-        "title": "Brachial plexus",
-        "question": "Which spinal roots contribute to the radial nerve?",
-        "answer": "C5–T1",
-        "meta": "12 cards due today"
+        "icon": "edit",
+        "heading": "Fast manual card creation",
+        "text": "Text, formatting, highlights and a clean editor without complicated configuration."
       },
       {
-        "eyebrow": "Pharmacology",
-        "title": "Beta blockers",
-        "question": "Which beta blocker also causes vasodilation through nitric oxide?",
-        "answer": "Nebivolol",
-        "meta": "Review again in 3 days"
+        "icon": "cloze",
+        "heading": "Cloze deletion",
+        "text": "Write one note, select key terms and turn them into several fill-in-the-blank cards."
       },
       {
-        "eyebrow": "Pathophysiology",
-        "title": "Acid-base balance",
-        "question": "Which compensation do you expect in metabolic acidosis?",
-        "answer": "Hyperventilation and lower pCO₂",
-        "meta": "Difficulty: medium"
+        "icon": "image",
+        "heading": "Image-first cards",
+        "text": "Add images to both sides. Ideal for slides, anatomy, pathology and tables."
       },
       {
-        "eyebrow": "Clinical case",
-        "title": "Chest pain",
-        "question": "Sudden tearing pain radiating to the back most strongly suggests…",
-        "answer": "Aortic dissection",
-        "meta": "Case 1 of 5"
+        "icon": "occlusion",
+        "heading": "Image occlusion",
+        "text": "Cover labels, diagram fragments or table cells and review them without retyping content."
       },
       {
-        "eyebrow": "Your progress",
-        "title": "Pre-exam plan",
-        "question": "Your largest knowledge gap this week:",
-        "answer": "Antiarrhythmic drugs",
-        "meta": "Material mastery: 74%"
+        "icon": "modes",
+        "heading": "Two study modes",
+        "text": "Spaced repetition for long-term retention or quick “I know / I don't know” sessions."
+      },
+      {
+        "icon": "sort",
+        "heading": "Review order control",
+        "text": "Study randomly, in deck order, oldest first or newest first."
+      },
+      {
+        "icon": "reverse",
+        "heading": "Reverse cards",
+        "text": "Review question–answer, answer–question or both directions in the same deck."
+      },
+      {
+        "icon": "limit",
+        "heading": "Session limits",
+        "text": "Choose 20, 50 or 100 cards from a large deck and fit study into the time you have."
+      },
+      {
+        "icon": "weak",
+        "heading": "Difficult card tracking",
+        "text": "Automatically surface questions you repeatedly miss."
+      },
+      {
+        "icon": "exam",
+        "heading": "Exam mode",
+        "text": "Set an exam date and gradually intensify reviews of the most important cards."
+      },
+      {
+        "icon": "offline",
+        "heading": "Offline-first learning",
+        "text": "Download decks, study without internet and sync your progress later."
+      },
+      {
+        "icon": "shared",
+        "heading": "Shared decks",
+        "text": "Browse other students' decks or collaborate on material with your group.",
+        "planned": true
       }
     ]
   },
-  "proof": {
-    "badge": "A method that makes sense",
-    "heading": "Consistency beats the night before an exam.",
-    "subtitle": "Fishki turns a huge syllabus into small, concrete tasks you can complete every day.",
-    "stats": [
-      { "value": "10 min", "label": "is enough to review" },
-      { "value": "3", "label": "mastery levels" },
-      { "value": "0", "label": "cards to rewrite" }
+  "demo": {
+    "badge": "Interactive demo",
+    "heading": "See how quickly a medical flashcard comes together.",
+    "intro": "Step through an example workflow. This is a lightweight interface prototype — real app screens can replace it here later.",
+    "screenLabel": "App screen",
+    "tapHint": "Choose a step to change the screen",
+    "steps": [
+      {
+        "key": "decks",
+        "nav": "Decks",
+        "title": "Choose or create a deck",
+        "description": "See every subject, card count and upcoming review in one simple view."
+      },
+      {
+        "key": "editor",
+        "nav": "New card",
+        "title": "Add a flashcard in seconds",
+        "description": "A clean text editor, formatting and images without configuring complicated note types."
+      },
+      {
+        "key": "cloze",
+        "nav": "Cloze",
+        "title": "Turn a note into cloze cards",
+        "description": "Select the key fragments and create several questions from one structured note."
+      },
+      {
+        "key": "image",
+        "nav": "Image",
+        "title": "Cover parts of a diagram",
+        "description": "Add an image and mark the fragments you want to retrieve from memory."
+      },
+      {
+        "key": "review",
+        "nav": "Review",
+        "title": "Answer without distractions",
+        "description": "Recall the answer first, reveal the card and decide whether you knew it."
+      },
+      {
+        "key": "results",
+        "nav": "Results",
+        "title": "Return to weak points",
+        "description": "See difficult cards immediately after a session and plan the next review."
+      }
     ],
-    "quote": "We do not want to give you another library full of content. We want to show you the exact questions that will strengthen your memory today.",
-    "author": "The Fishki method",
-    "role": "Designed around the rhythm of medical school"
+    "ui": {
+      "decksTitle": "Your decks",
+      "newDeck": "New deck",
+      "deckAnatomy": "Anatomy",
+      "deckPharmacology": "Pharmacology",
+      "deckPathology": "Pathology",
+      "due": "due today",
+      "cards": "cards",
+      "editorTitle": "New flashcard",
+      "front": "Front",
+      "back": "Back",
+      "frontText": "Most common adverse effect of ACE inhibitors?",
+      "backText": "Dry cough",
+      "addImage": "Add image",
+      "save": "Save",
+      "clozeTitle": "Create cloze",
+      "clozeTextBefore": "The",
+      "clozeHidden": "radial nerve",
+      "clozeTextAfter": "innervates the elbow extensors.",
+      "selected": "Selected fragment",
+      "createCloze": "Create cloze",
+      "imageTitle": "Image occlusion",
+      "imageSubtitle": "Brachial plexus",
+      "coverHint": "Tap an element to cover it",
+      "covered": "3 areas covered",
+      "reviewTitle": "Pharmacology",
+      "reviewProgress": "18 of 40",
+      "question": "What is the mechanism of action of metoprolol?",
+      "showAnswer": "Show answer",
+      "again": "I don't know",
+      "know": "I know",
+      "resultsTitle": "Session complete",
+      "resultScore": "32 / 40",
+      "resultLabel": "cards remembered",
+      "weakTitle": "8 cards need another review",
+      "weakDescription": "These questions will appear more often in upcoming sessions.",
+      "reviewWeak": "Review difficult cards"
+    }
+  },
+  "useCases": {
+    "badge": "Built for medicine",
+    "heading": "Medical material rarely fits into one sentence.",
+    "intro": "Fishki is designed to support images, diagrams, classifications and multi-point answers without forcing them into an oversimplified format.",
+    "items": [
+      { "label": "Anatomy", "title": "Structure labels", "text": "Cover labels on illustrations and learn spatial relationships." },
+      { "label": "Pharmacology", "title": "Adverse effects", "text": "Connect a drug, mechanism, indications and adverse effects in one deck." },
+      { "label": "Pathology", "title": "Images and specimens", "text": "Add images to both sides and mark characteristic findings." },
+      { "label": "Internal medicine", "title": "Disease classifications", "text": "Break criteria, scales and differential diagnoses into focused questions." },
+      { "label": "Physiology", "title": "Mechanisms and relationships", "text": "Create reverse cards and test understanding in both directions." },
+      { "label": "Exams", "title": "Multi-point answers", "text": "Mark the exact point you missed in a longer structured answer." }
+    ]
+  },
+  "howItWorks": {
+    "badge": "How it works",
+    "heading": "A simple study rhythm without building a system from scratch.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Create your own cards in seconds.",
+        "text": "Enter a question and answer, add an image or select a fragment as a cloze deletion."
+      },
+      {
+        "number": "02",
+        "title": "Choose quick review or spaced repetition.",
+        "text": "Review your way before a class or let the system schedule long-term learning."
+      },
+      {
+        "number": "03",
+        "title": "Track weak cards and prepare for exams.",
+        "text": "Return to mistakes, set an exam date and control the size of every session."
+      }
+    ]
   },
   "cta": {
     "badge": "Early access",
-    "title": "Study smarter next semester.",
-    "subtitle": "Join the waitlist. We will let you know when the first decks are ready and ask which subjects you need most.",
+    "title": "Help build better flashcards for medicine.",
+    "subtitle": "Join the waitlist and tell us how you use Anki or Quizlet today. Your answers will help shape the priorities of the first version.",
     "benefits": [
       "Priority access to the beta",
-      "A say in the first subjects and decks",
-      "Useful updates only, no spam"
+      "A say in the first version's features and workflows",
+      "Only concrete product updates"
     ],
-    "cta": "Join the waitlist",
-    "formNote": "It takes less than a minute."
+    "cta": "Join the early access waitlist",
+    "formNote": "The form takes about a minute."
   },
   "footer": {
-    "tagline": "Flashcards and smart reviews for medical students who want to understand more and remember longer.",
+    "tagline": "Simple flashcard creation and a serious review system for medical students.",
     "product": "Product",
-    "features": "How it works",
-    "preview": "Preview",
-    "proof": "Method",
+    "features": "Features",
+    "how": "How it works",
+    "demo": "Demo",
     "waitlist": "Waitlist",
-    "social": "Find us",
-    "legal": "Terms of service",
+    "social": "Contact",
     "copyright": "Built with medical students in mind."
   },
   "floatingCta": {

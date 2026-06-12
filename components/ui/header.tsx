@@ -50,20 +50,18 @@ export default function Header() {
   }
 
   const navLinks = [
-    { href: "#preview", label: t.header.preview },
     { href: "#features", label: t.header.features },
-    { href: "#proof", label: t.header.proof },
+    { href: "#how-it-works", label: t.header.how },
+    { href: "#demo", label: t.header.demo },
+    { href: "#waitlist-form", label: t.header.waitlist },
   ];
 
   return (
     <header className="fixed inset-x-0 top-2 z-40 sm:top-3">
       <div className="mx-auto max-w-6xl px-3 sm:px-6">
-        <div className="flex items-center justify-between gap-2 rounded-[1.25rem] border border-white/55 bg-white/72 px-3 py-2.5 shadow-[0_16px_50px_rgba(15,23,42,0.09)] backdrop-blur-xl sm:gap-3 sm:rounded-[1.4rem] sm:px-4 sm:py-3">
+        <div className="flex items-center justify-between gap-2 rounded-[1.25rem] border border-[#B9DDD5] bg-[#F4F7F5]/90 px-3 py-2.5 shadow-[0_16px_50px_rgba(39,77,83,0.1)] backdrop-blur-xl sm:gap-3 sm:rounded-[1.4rem] sm:px-4 sm:py-3">
           <div className="flex items-center gap-3">
             <Logo horizontal className="w-[92px] sm:w-[118px] lg:w-[138px]" />
-            <span className="hidden rounded-full border border-teal-600/15 bg-teal-600/8 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-teal-800 md:inline-flex">
-              {t.hero.badge}
-            </span>
           </div>
 
           <nav className="hidden items-center gap-2 lg:flex">
@@ -71,7 +69,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-900/5 hover:text-slate-900"
+                className="rounded-full px-3 py-2 text-sm font-medium text-[#274D53] transition hover:bg-[#E7F1EE] hover:text-[#002838]"
               >
                 {link.label}
               </Link>
@@ -82,7 +80,7 @@ export default function Header() {
             <Link
               href="#waitlist-form"
               aria-label={t.header.ctaAria ?? t.header.cta}
-              className="inline-flex h-9 items-center justify-center rounded-full bg-slate-950 px-4 text-sm font-medium text-white shadow-[0_10px_30px_rgba(15,23,42,0.18)] transition hover:-translate-y-0.5 hover:bg-slate-800"
+              className="inline-flex h-9 items-center justify-center rounded-full bg-[#0F766E] px-4 text-sm font-medium text-white shadow-[0_10px_30px_rgba(15,118,110,0.2)] transition hover:-translate-y-0.5 hover:bg-[#002838]"
             >
               {t.header.cta}
             </Link>

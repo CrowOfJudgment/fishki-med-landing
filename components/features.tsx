@@ -2,95 +2,80 @@
 
 import { useT } from "@/lib/i18n-context";
 
-const cards = [
-  {
-    key: "value",
-    tone: "from-teal-500/18 to-emerald-400/10",
-  },
-  {
-    key: "problem",
-    tone: "from-emerald-500/16 to-teal-400/10",
-  },
-  {
-    key: "how",
-    tone: "from-amber-400/18 to-orange-400/10",
-  },
-  {
-    key: "simulation",
-    tone: "from-violet-500/18 to-fuchsia-400/10",
-  },
-  {
-    key: "why",
-    tone: "from-rose-500/16 to-pink-400/10",
-  },
-  {
-    key: "built",
-    tone: "from-slate-200/18 to-white/8",
-  },
-] as const;
+function FeatureIcon({ name }: { name: string }) {
+  const symbols: Record<string, string> = {
+    edit: "✎",
+    cloze: "{ }",
+    image: "▧",
+    occlusion: "◫",
+    modes: "↻",
+    sort: "↕",
+    reverse: "⇄",
+    limit: "50",
+    weak: "!",
+    exam: "✓",
+    offline: "↓",
+    shared: "＋",
+  };
+
+  return (
+    <span aria-hidden="true" className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#E7F1EE] text-sm font-bold text-[#0F766E] ring-1 ring-[#B9DDD5]">
+      {symbols[name] ?? "•"}
+    </span>
+  );
+}
 
 export default function Features() {
   const t = useT();
 
   return (
-    <section
-      id="features"
-      className="relative isolate overflow-hidden scroll-mt-28 bg-[#073b3a] py-20 sm:py-28"
-    >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(45,212,191,0.18),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(251,191,36,0.1),transparent_22%)]"
-      />
+    <section id="features" className="scroll-mt-28 bg-[#E7F1EE] py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-teal-100/90">
+        <div className="max-w-3xl">
+          <span className="inline-flex rounded-full border border-[#B9DDD5] bg-[#F4F7F5] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]">
             {t.features.badge}
           </span>
-          <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-balance text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mt-5 font-display text-4xl font-semibold leading-tight text-balance text-[#002838] sm:text-5xl">
             {t.features.heading}
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-xl leading-8 text-slate-300">
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-[#274D53]">
             {t.features.intro}
           </p>
         </div>
 
-        <div className="mt-12 grid gap-4 md:gap-6 lg:grid-cols-3">
-          {cards.map((card, index) => {
-            const data = t.features[card.key as keyof typeof t.features] as {
-              heading: string;
-              text: string;
-            };
-
-            return (
+        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {t.features.items.map(
+            (
+              item: {
+                icon: string;
+                heading: string;
+                text: string;
+                planned?: boolean;
+              },
+              index: number,
+            ) => (
               <article
-                key={card.key}
-                className="group relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6 shadow-[0_20px_60px_rgba(2,6,23,0.24)] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.06]"
+                key={item.heading}
+                className="group relative min-h-64 rounded-[1.6rem] border border-[#B9DDD5] bg-[#F4F7F5] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#78C2B7] hover:shadow-[0_20px_50px_rgba(39,77,83,0.1)]"
               >
-                <div
-                  aria-hidden="true"
-                  className={`absolute inset-0 bg-gradient-to-br ${card.tone} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
-                />
-                <div className="relative flex h-full flex-col">
-                  <div className="flex items-center justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-sm font-semibold text-white ring-1 ring-white/10">
-                      0{index + 1}
-                    </div>
-                    <div className="h-px flex-1 bg-gradient-to-r from-white/20 to-transparent" />
-                  </div>
-                  <h3 className="mt-6 font-display text-2xl font-semibold leading-tight text-white">
-                    {data.heading}
-                  </h3>
-                  <p className="mt-4 text-sm leading-7 text-slate-300">
-                    {data.text}
-                  </p>
+                <div className="flex items-start justify-between">
+                  <FeatureIcon name={item.icon} />
+                  <span className="text-xs font-semibold text-[#274D53]/45">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
                 </div>
+                <h3 className="mt-6 font-display text-2xl font-semibold leading-tight text-[#002838]">
+                  {item.heading}
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-[#274D53]">{item.text}</p>
+                {item.planned && (
+                  <span className="mt-5 inline-flex rounded-full border border-[#E86860]/25 bg-[#E86860]/8 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#E86860]">
+                    {t.features.planned}
+                  </span>
+                )}
               </article>
-            );
-          })}
-        </div>
-
-        <div className="mt-12 rounded-[1.75rem] border border-white/10 bg-white/[0.04] px-6 py-5 text-center text-xl leading-6 text-slate-300 backdrop-blur-sm">
-          {t.features.footerNote}
+            ),
+          )}
         </div>
       </div>
     </section>
