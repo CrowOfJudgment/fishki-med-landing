@@ -10,11 +10,19 @@ function CheckIcon() {
   );
 }
 
+function NegativeIcon() {
+  return (
+    <svg aria-hidden="true" className="h-3.5 w-3.5" viewBox="0 0 14 14" fill="none">
+      <path d="m4 4 6 6M10 4l-6 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 export default function Comparison() {
   const t = useT();
 
   return (
-    <section className="py-20 sm:py-24">
+    <section id="why-fishki" className="scroll-mt-28 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex rounded-full border border-[#B9DDD5] bg-[#E7F1EE] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]">
@@ -62,8 +70,12 @@ export default function Comparison() {
                   <ul className="mt-7 space-y-3">
                     {product.points.map((point) => (
                       <li key={point} className="flex items-center gap-3 text-sm font-medium">
-                        <span className={`flex h-6 w-6 items-center justify-center rounded-full ${featured ? "bg-white/12 text-white" : "bg-[#E7F1EE] text-[#0F766E]"}`}>
-                          <CheckIcon />
+                        <span className={`flex h-6 w-6 items-center justify-center rounded-full ${
+                          featured
+                            ? "bg-white/12 text-white"
+                            : "bg-[#E86860]/10 text-[#E86860]"
+                        }`}>
+                          {featured ? <CheckIcon /> : <NegativeIcon />}
                         </span>
                         {point}
                       </li>

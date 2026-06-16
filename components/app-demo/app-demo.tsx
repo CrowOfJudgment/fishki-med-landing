@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useT } from "@/lib/i18n-context";
 import DemoAppScreen from "./demo-app-screen";
 import PhoneMockup from "./phone-mockup";
-import StaticDemoShowcase from "./static-demo-showcase";
 
 export type DemoStepKey =
   | "decks"
@@ -32,9 +31,23 @@ export type SavedCard = {
 export type CardTypeKey = "basic" | "cloze" | "image" | "occlusion";
 export type ReviewMode = "smart" | "quick";
 export type ReviewResult = "again" | "hard" | "good" | "easy" | "dontKnow" | "know";
+export type StudyDirection = "frontBack" | "backFront" | "mixed";
+
+type DemoStory = {
+  key: "basic" | "cloze" | "study";
+  title: string;
+  description: string;
+  steps: string[];
+};
+type StudySummary = {
+  total: number;
+  know: number;
+  repeat: number;
+};
 
 export default function AppDemo() {
   const t = useT();
+  const stories = t.demo.stories.items as DemoStory[];
   const steps = t.demo.steps as Array<{
     key: DemoStepKey;
     nav: string;
@@ -70,6 +83,8 @@ export default function AppDemo() {
   const [selectedCardType, setSelectedCardType] = useState<CardTypeKey>("basic");
   const [isAnswerRevealed, setIsAnswerRevealed] = useState(false);
   const [reviewMode, setReviewMode] = useState<ReviewMode>("smart");
+  const [studyDirection, setStudyDirection] =
+    useState<StudyDirection>("frontBack");
   const [selectedReviewResult, setSelectedReviewResult] =
     useState<ReviewResult | null>(null);
   const [savedCards, setSavedCards] = useState<Record<DeckKey, SavedCard[]>>({});
@@ -79,33 +94,56 @@ export default function AppDemo() {
   const [studyRepeatCount, setStudyRepeatCount] = useState(0);
   const [studyQueue, setStudyQueue] = useState<SavedCard[]>([]);
   const [cardsToRepeat, setCardsToRepeat] = useState<SavedCard[]>([]);
+  const [studySummary, setStudySummary] = useState<StudySummary | null>(null);
+  const [selectedStoryIndex, setSelectedStoryIndex] = useState(0);
+  const [storyProgress, setStoryProgress] = useState(0);
+  const [storySavedCards, setStorySavedCards] = useState(0);
 
   const activeStep = steps[currentStep];
+  const selectedStory = stories[selectedStoryIndex];
   const selectedDeckData =
     decks.find((deck) => deck.id === selectedDeck) ?? decks[0];
-  const buildStudyCards = (deck: DeckKey): SavedCard[] => [
-    ...(savedCards[deck] ?? []),
-    {
-      id: "study-1",
-      title: t.demo.ui.question,
-      studyFront: t.demo.ui.question,
-      back: t.demo.ui.answer,
-    },
-    {
-      id: "study-2",
-      title: t.demo.ui.sampleCardTwo,
-      studyFront: t.demo.ui.sampleCardTwo,
+  const buildStudyCards = (deck: DeckKey): SavedCard[] => {
+    const deckData = decks.find((item) => item.id === deck);
+    const userCards = savedCards[deck] ?? [];
+    if (deckData?.custom) return userCards;
+
+    const exampleCards = [
+      t.demo.ui.sampleCardOne,
+      t.demo.ui.sampleCardTwo,
+      t.demo.ui.sampleCardThree,
+      t.demo.ui.sampleCardFour,
+      t.demo.ui.sampleCardFive,
+      t.demo.ui.sampleCardSix,
+      t.demo.ui.sampleCardSeven,
+    ].map((title, index) => ({
+      id: `study-${index + 1}`,
+      title,
+      studyFront: title,
       back: t.demo.ui.sampleCardAnswer,
-    },
-    {
-      id: "study-3",
-      title: t.demo.ui.sampleCardThree,
-      studyFront: t.demo.ui.sampleCardThree,
-      back: t.demo.ui.sampleCardAnswer,
-    },
-  ];
+    }));
+
+    return [...userCards, ...exampleCards];
+  };
   const studyCards =
     studyQueue.length > 0 ? studyQueue : buildStudyCards(selectedDeck);
+  const activeStudyCard = studyCards[studyIndex];
+  const shouldReverseStudyCard =
+    studyDirection === "backFront" ||
+    (studyDirection === "mixed" && studyIndex % 2 === 1);
+  const displayedStudyCard = shouldReverseStudyCard
+    ? {
+        ...activeStudyCard,
+        studyFront: activeStudyCard.back,
+        back: activeStudyCard.studyFront,
+      }
+    : activeStudyCard;
+  const studyFrontLabel = shouldReverseStudyCard
+    ? t.demo.ui.back
+    : t.demo.ui.front;
+  const studyBackLabel = shouldReverseStudyCard
+    ? t.demo.ui.front
+    : t.demo.ui.back;
 
   const goToStep = (index: number) => {
     setCurrentStep(Math.max(0, Math.min(index, steps.length - 1)));
@@ -114,6 +152,9 @@ export default function AppDemo() {
 
   const goNext = () => goToStep(currentStep + 1);
   const goBack = () => goToStep(currentStep - 1);
+  const advanceStory = (step: number) => {
+    setStoryProgress((current) => Math.max(current, step));
+  };
 
   const resetDemo = () => {
     setCurrentStep(0);
@@ -121,23 +162,38 @@ export default function AppDemo() {
     setSelectedCardType("basic");
     setIsAnswerRevealed(false);
     setReviewMode("smart");
+    setStudyDirection("frontBack");
     setSelectedReviewResult(null);
+    setStudyIndex(0);
+    setStudyKnowCount(0);
+    setStudyRepeatCount(0);
+    setStudyQueue([]);
+    setCardsToRepeat([]);
+    setStudySummary(null);
+    setStoryProgress(0);
+    setStorySavedCards(0);
   };
 
   const editDeck = (deck: DeckKey) => {
     setSelectedDeck(deck);
     setEditingCard(null);
+    advanceStory(selectedStory.key === "study" ? 0 : 1);
     goToStep(1);
   };
 
   const studyDeck = (deck: DeckKey) => {
+    const cards = buildStudyCards(deck);
+    if (cards.length === 0) return;
+
     setSelectedDeck(deck);
     setIsAnswerRevealed(false);
     setStudyIndex(0);
     setStudyKnowCount(0);
     setStudyRepeatCount(0);
     setCardsToRepeat([]);
-    setStudyQueue(buildStudyCards(deck));
+    setStudySummary(null);
+    setStudyQueue(cards);
+    advanceStory(selectedStory.key === "study" ? 1 : 4);
     goToStep(3);
   };
 
@@ -155,17 +211,31 @@ export default function AppDemo() {
     };
 
     setDecks((current) => [...current, newDeck]);
+    setSelectedDeck(newDeck.id);
+    advanceStory(1);
+    goToStep(1);
   };
 
   const chooseReviewResult = (result: ReviewResult) => {
     setSelectedReviewResult(result);
-    if (result === "know") setStudyKnowCount((current) => current + 1);
-    else {
-      setStudyRepeatCount((current) => current + 1);
-      setCardsToRepeat((current) => [...current, studyCards[studyIndex]]);
-    }
+    const isKnown = result === "know";
+    const currentCard = studyCards[studyIndex];
+    const nextKnowCount = studyKnowCount + (isKnown ? 1 : 0);
+    const nextRepeatCount = studyRepeatCount + (isKnown ? 0 : 1);
+    const nextRepeatCards =
+      isKnown || !currentCard ? cardsToRepeat : [...cardsToRepeat, currentCard];
+
+    setStudyKnowCount(nextKnowCount);
+    setStudyRepeatCount(nextRepeatCount);
+    setCardsToRepeat(nextRepeatCards);
 
     if (studyIndex + 1 >= studyCards.length) {
+      setStudySummary({
+        total: studyCards.length,
+        know: nextKnowCount,
+        repeat: nextRepeatCount,
+      });
+      advanceStory(selectedStory.steps.length);
       goToStep(5);
       return;
     }
@@ -174,7 +244,12 @@ export default function AppDemo() {
     setIsAnswerRevealed(false);
   };
 
-  const saveCard = (front: string, back: string, studyFront: string) => {
+  const saveCard = (
+    front: string,
+    back: string,
+    studyFront: string,
+    action: "next" | "back" = "next",
+  ) => {
     const title = front.trim() || t.demo.ui.untitledCard;
     const editingCardId = editingCard?.id;
     const editingPersistedCard = Boolean(
@@ -204,12 +279,35 @@ export default function AppDemo() {
       );
     }
     setEditingCard(null);
+    const nextSavedCount = storySavedCards + 1;
+    setStorySavedCards(nextSavedCount);
+    if (selectedStory.key === "basic") {
+      advanceStory(nextSavedCount >= 2 ? 3 : 2);
+    } else if (selectedStory.key === "cloze") {
+      advanceStory(3);
+    }
     if (editingCard) goToStep(1);
+    else if (action === "back") goToStep(1);
   };
 
   const editCard = (card: SavedCard) => {
     setEditingCard(card);
     goToStep(2);
+  };
+
+  const createCard = () => {
+    setEditingCard(null);
+    if (selectedStory.key === "basic") {
+      advanceStory(storySavedCards === 0 ? 1 : 2);
+    } else if (selectedStory.key === "cloze") {
+      advanceStory(2);
+    }
+    goToStep(2);
+  };
+
+  const selectStory = (index: number) => {
+    setSelectedStoryIndex(index);
+    resetDemo();
   };
 
   const deleteCard = (cardId: string) => {
@@ -229,53 +327,122 @@ export default function AppDemo() {
   };
 
   return (
-    <section id="demo" className="scroll-mt-28 py-20 sm:py-28">
+    <section
+      id="demo"
+      className="ios-demo-controls scroll-mt-28 py-20 sm:py-28"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex rounded-full border border-[#B9DDD5] bg-[#E7F1EE] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]">
-            {t.demo.badge}
+            {t.demo.playBadge}
           </span>
           <h2 className="mt-5 font-display text-4xl font-semibold leading-tight text-balance text-[#002838] sm:text-5xl">
-            {t.demo.heading}
+            {t.demo.playHeading}
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#274D53]">
-            {t.demo.intro}
+            {t.demo.playIntro}
           </p>
         </div>
 
-        <div className="mt-14">
-          <div className="mb-8 max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#0F766E]">
-              {t.demo.showcaseBadge}
-            </p>
-            <h3 className="mt-3 font-display text-3xl font-semibold text-[#002838]">
-              {t.demo.showcaseHeading}
-            </h3>
-            <p className="mt-3 leading-7 text-[#274D53]">{t.demo.showcaseIntro}</p>
+        <div className="mt-12">
+          <p className="mb-4 text-center text-xs font-bold uppercase tracking-[0.2em] text-[#274D53]/60">
+            {t.demo.stories.choose}
+          </p>
+          <div className="grid gap-3 md:grid-cols-3">
+            {stories.map((story, index) => {
+              const active = index === selectedStoryIndex;
+              return (
+                <button
+                  key={story.key}
+                  type="button"
+                  onClick={() => selectStory(index)}
+                  aria-pressed={active}
+                  className={`rounded-[1.45rem] border p-5 text-left transition ${
+                    active
+                      ? "border-[#0F766E] bg-[#0F766E] text-white shadow-[0_16px_36px_rgba(15,118,110,0.18)]"
+                      : "border-[#B9DDD5] bg-white/70 text-[#002838] hover:-translate-y-0.5 hover:border-[#78C2B7]"
+                  }`}
+                >
+                  <span className={`flex h-8 w-8 items-center justify-center rounded-xl text-xs font-bold ${
+                    active
+                      ? "bg-white/15 text-white"
+                      : "bg-[#E7F1EE] text-[#0F766E]"
+                  }`}>
+                    {index + 1}
+                  </span>
+                  <h3 className="mt-4 font-display text-lg font-semibold leading-tight">
+                    {story.title}
+                  </h3>
+                  <p className={`mt-2 text-sm leading-6 ${
+                    active ? "text-white/75" : "text-[#274D53]"
+                  }`}>
+                    {story.description}
+                  </p>
+                </button>
+              );
+            })}
           </div>
-          <StaticDemoShowcase
-            screens={t.demo.fixedScreens}
-            ui={t.demo.ui}
-            controls={t.demo.carouselControls}
-          />
         </div>
 
-        <div className="mt-16 overflow-hidden rounded-[2rem] border border-[#B9DDD5] bg-[#E7F1EE] p-5 sm:p-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#0F766E]">
-              {t.demo.playBadge}
-            </p>
-            <h3 className="mt-3 font-display text-3xl font-semibold text-[#002838]">
-              {t.demo.playHeading}
-            </h3>
-            <p className="mt-3 leading-7 text-[#274D53]">{t.demo.playIntro}</p>
-          </div>
+        <div className="mt-14 overflow-hidden rounded-[2rem] border border-[#B9DDD5] bg-[#E7F1EE] p-5 sm:p-8">
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_330px]">
+            <div className="rounded-[1.6rem] border border-[#B9DDD5] bg-[#F4F7F5] p-5 sm:p-7">
+              <span className="inline-flex rounded-full bg-[#E7F1EE] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#0F766E]">
+                {t.demo.stories.guide}
+              </span>
+              <h3 className="mt-4 font-display text-3xl font-semibold leading-tight text-[#002838]">
+                {selectedStory.title}
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-[#274D53]">
+                {selectedStory.description}
+              </p>
 
-          <div className="mt-8">
-            <p className="mb-4 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-[#274D53]/60">
-              {t.demo.screenLabel}
-            </p>
-            <div className="mx-auto w-fit">
+              <ol className="mt-6 space-y-3">
+                {selectedStory.steps.map((storyStep, index) => {
+                  const complete = index < storyProgress;
+                  const active = index === storyProgress;
+                  return (
+                    <li
+                      key={storyStep}
+                      className={`flex items-start gap-3 rounded-2xl border px-4 py-3 transition ${
+                        active
+                          ? "border-[#78C2B7] bg-[#E7F1EE]"
+                          : "border-transparent bg-white/70"
+                      }`}
+                    >
+                      <span className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[9px] font-bold ${
+                        complete
+                          ? "bg-[#0F766E] text-white"
+                          : active
+                            ? "bg-[#B9DDD5] text-[#0F766E]"
+                            : "bg-[#E7F1EE] text-[#274D53]/55"
+                      }`}>
+                        {complete ? "✓" : index + 1}
+                      </span>
+                      <span className={`text-sm leading-6 ${
+                        active
+                          ? "font-semibold text-[#002838]"
+                          : "text-[#274D53]"
+                      }`}>
+                        {storyStep}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ol>
+
+              {storyProgress >= selectedStory.steps.length && (
+                <div className="mt-5 rounded-2xl bg-[#B9DDD5]/55 p-4 text-sm font-semibold text-[#0F766E]">
+                  {t.demo.stories.completed}
+                </div>
+              )}
+            </div>
+
+            <div>
+              <p className="mb-4 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-[#274D53]/60">
+                {t.demo.screenLabel}
+              </p>
+              <div className="mx-auto w-fit">
               <PhoneMockup>
                 <div
                   key={activeStep.key}
@@ -293,25 +460,38 @@ export default function AppDemo() {
                     selectedReviewResult={selectedReviewResult}
                     savedCards={savedCards[selectedDeck] ?? []}
                     editingCard={editingCard}
-                    studyCard={studyCards[studyIndex]}
+                    studyCard={displayedStudyCard}
+                    studyFrontLabel={studyFrontLabel}
+                    studyBackLabel={studyBackLabel}
                     studyIndex={studyIndex}
                     studyTotal={studyCards.length}
-                    studyKnowCount={studyKnowCount}
-                    studyRepeatCount={studyRepeatCount}
+                    studyKnowCount={studySummary?.know ?? studyKnowCount}
+                    studyRepeatCount={studySummary?.repeat ?? studyRepeatCount}
                     onEditDeck={editDeck}
                     onStudyDeck={studyDeck}
                     onAddDeck={addDeck}
-                    onShowCardTypes={goNext}
+                    onShowCardTypes={createCard}
                     onSaveCard={saveCard}
                     onEditCard={editCard}
                     onDeleteCard={deleteCard}
-                    onCloseEditor={() => goToStep(1)}
                     onRevealAnswer={() =>
-                      setIsAnswerRevealed((current) => !current)
+                      setIsAnswerRevealed((current) => {
+                        if (!current) {
+                          advanceStory(selectedStory.key === "study" ? 3 : 5);
+                        }
+                        return !current;
+                      })
                     }
                     onReviewModeChange={setReviewMode}
+                    studyDirection={studyDirection}
+                    onStudyDirectionChange={setStudyDirection}
                     onChooseReviewResult={chooseReviewResult}
-                    onNext={goNext}
+                    onNext={() => {
+                      if (currentStep === 3) {
+                        advanceStory(selectedStory.key === "study" ? 2 : 5);
+                      }
+                      goNext();
+                    }}
                     onBack={goBack}
                     onBackToDecks={() => goToStep(0)}
                     onRepeatUnknown={() => {
@@ -320,6 +500,17 @@ export default function AppDemo() {
                       setStudyKnowCount(0);
                       setStudyRepeatCount(0);
                       setCardsToRepeat([]);
+                      setStudySummary(null);
+                      setIsAnswerRevealed(false);
+                      goToStep(4);
+                    }}
+                    onRepeatAll={() => {
+                      setStudyIndex(0);
+                      setStudyKnowCount(0);
+                      setStudyRepeatCount(0);
+                      setCardsToRepeat([]);
+                      setStudySummary(null);
+                      setSelectedReviewResult(null);
                       setIsAnswerRevealed(false);
                       goToStep(4);
                     }}
@@ -327,6 +518,7 @@ export default function AppDemo() {
                   />
                 </div>
               </PhoneMockup>
+              </div>
             </div>
           </div>
 

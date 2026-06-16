@@ -5,17 +5,14 @@ import { useT } from "@/lib/i18n-context";
 function FeatureIcon({ name }: { name: string }) {
   const symbols: Record<string, string> = {
     edit: "✎",
+    notes: "≡",
     cloze: "{ }",
     image: "▧",
     occlusion: "◫",
-    modes: "↻",
-    sort: "↕",
-    reverse: "⇄",
-    limit: "50",
-    weak: "!",
-    exam: "✓",
-    offline: "↓",
-    shared: "＋",
+    organize: "▤",
+    tags: "#",
+    difficulty: "!",
+    reviews: "↻",
   };
 
   return (
@@ -50,7 +47,6 @@ export default function Features() {
                 icon: string;
                 heading: string;
                 text: string;
-                planned?: boolean;
               },
               index: number,
             ) => (
@@ -68,11 +64,6 @@ export default function Features() {
                   {item.heading}
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-[#274D53]">{item.text}</p>
-                {item.planned && (
-                  <span className="mt-5 inline-flex rounded-full border border-[#E86860]/25 bg-[#E86860]/8 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#E86860]">
-                    {t.features.planned}
-                  </span>
-                )}
               </article>
             ),
           )}

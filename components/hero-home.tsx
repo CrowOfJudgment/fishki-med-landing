@@ -2,65 +2,54 @@
 
 import { useT } from "@/lib/i18n-context";
 
-function EditorPreview() {
+function OfflinePreview() {
   const t = useT();
-  const m = t.hero.mockup;
+  const offline = t.features.offlineHighlight;
 
   return (
-    <div className="relative mx-auto w-full max-w-[480px]">
+    <div className="relative mx-auto w-full max-w-[410px]">
       <div className="absolute -inset-8 rounded-full bg-[#B9DDD5]/50 blur-3xl" />
-      <div className="relative overflow-hidden rounded-[2rem] border border-[#B9DDD5] bg-[#F4F7F5] shadow-[0_28px_80px_rgba(39,77,83,0.16)]">
-        <div className="flex items-center justify-between border-b border-[#B9DDD5]/70 bg-white/70 px-5 py-4">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#0F766E]">
-              {m.deck}
-            </p>
-            <p className="mt-1 text-xs text-[#274D53]/70">{m.count}</p>
-          </div>
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#E7F1EE] text-lg text-[#0F766E]">
-            +
-          </span>
-        </div>
+      <div className="relative overflow-hidden rounded-[2.2rem] border border-[#78C2B7] bg-[#0F766E] p-6 text-white shadow-[0_28px_80px_rgba(15,118,110,0.24)] sm:p-8">
+        <div className="pointer-events-none absolute -right-20 -top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -left-16 h-56 w-56 rounded-full bg-[#78C2B7]/25 blur-3xl" />
 
-        <div className="p-5 sm:p-7">
+        <div className="relative">
           <div className="flex items-center justify-between">
-            <h2 className="font-display text-2xl font-semibold text-[#002838]">
-              {m.newCard}
-            </h2>
-            <span className="h-2.5 w-2.5 rounded-full bg-[#E86860]" />
+            <span className="inline-flex rounded-full bg-white/12 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-white/80">
+              {offline.badge}
+            </span>
+            <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/12 text-2xl font-light ring-1 ring-white/15">
+              ↓
+            </span>
           </div>
 
-          <div className="mt-5 space-y-3">
-            <div className="rounded-2xl border border-[#B9DDD5] bg-white p-4">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#0F766E]">
-                {m.frontLabel}
-              </p>
-              <p className="mt-3 text-sm font-medium leading-6 text-[#002838]">
-                {m.front}
-              </p>
-            </div>
-            <div className="rounded-2xl border border-[#B9DDD5] bg-white p-4">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#0F766E]">
-                {m.backLabel}
-              </p>
-              <p className="mt-3 text-sm font-medium leading-6 text-[#002838]">
-                {m.back}
-              </p>
-            </div>
+          <h2 className="mt-8 font-display text-3xl font-semibold leading-tight sm:text-4xl">
+            {offline.heading}
+          </h2>
+          <p className="mt-4 text-sm leading-7 text-white/75">
+            {offline.text}
+          </p>
+
+          <div className="mt-7 space-y-3">
+            {offline.downloads.map((item: string, index: number) => (
+              <div
+                key={item}
+                className="flex items-center gap-4 rounded-2xl bg-white/10 p-4 ring-1 ring-white/15"
+              >
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/12 text-lg font-light">
+                  {index === 2 ? "✓" : "↓"}
+                </span>
+                <span className="text-sm font-semibold">{item}</span>
+                <span className="ml-auto text-xs font-semibold text-white/45">
+                  {index === 0 ? "38 MB" : index === 1 ? "126 MB" : "420 MB"}
+                </span>
+              </div>
+            ))}
           </div>
 
-          <div className="mt-4 grid grid-cols-2 gap-3">
-            <button className="rounded-xl border border-[#B9DDD5] bg-[#E7F1EE] px-3 py-3 text-xs font-semibold text-[#274D53]">
-              {m.image}
-            </button>
-            <button className="rounded-xl border border-[#B9DDD5] bg-[#E7F1EE] px-3 py-3 text-xs font-semibold text-[#274D53]">
-              {m.cloze}
-            </button>
-          </div>
-
-          <button className="mt-4 w-full rounded-xl bg-[#0F766E] px-4 py-3.5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(15,118,110,0.2)]">
-            {m.save}
-          </button>
+          <p className="mt-7 border-t border-white/15 pt-5 text-xs font-semibold leading-6 text-white/65">
+            {offline.places}
+          </p>
         </div>
       </div>
     </div>
@@ -122,7 +111,7 @@ export default function HeroHome() {
             </div>
           </div>
 
-          <EditorPreview />
+          <OfflinePreview />
         </div>
       </div>
     </section>

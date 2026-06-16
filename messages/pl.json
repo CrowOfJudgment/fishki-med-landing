@@ -1,9 +1,10 @@
 {
   "seo": {
     "title": "Fishki — proste fiszki, mądre powtórki",
-    "description": "Twórz medyczne fiszki z tekstem, obrazami i cloze deletion. Ucz się w szybkim trybie lub ze spaced repetition."
+    "description": "Twórz medyczne fiszki z tekstem, obrazami i cloze deletion. Ucz się w szybkim trybie lub z powtórkami rozłożonymi w czasie."
   },
   "header": {
+    "whyFishki": "Dlaczego Fishki?",
     "features": "Funkcje",
     "how": "Jak to działa",
     "demo": "Demo",
@@ -14,13 +15,13 @@
   "hero": {
     "badge": "Fiszki zaprojektowane dla studentów medycyny",
     "title": "Proste tworzenie fiszek. Mądre powtórki.",
-    "subtitle": "Twórz własne fiszki z tekstem, obrazami i lukami równie szybko jak w Quizlet. Ucz się w trybie szybkiej powtórki albo z systemem spaced repetition, któremu możesz zaufać.",
+    "subtitle": "Błyskawicznie twórz własne fiszki z tekstem, obrazami i lukami bez skomplikowanej konfiguracji. Ucz się wybierając jeden z naszych prostych lub zaawansowanych trybów nauki, budowanych z myślą o studentach medycyny.",
     "primaryCta": "Dołącz do waitlisty",
     "secondaryCta": "Zobacz demo",
     "validation": "Tworzone na podstawie rozmów ze studentami medycyny korzystającymi z aplikacji do fiszek.",
     "highlights": [
       "Szybkie tworzenie",
-      "Spaced repetition",
+      "Powtórki rozłożone w czasie",
       "Nauka offline"
     ],
     "mockup": {
@@ -38,95 +39,86 @@
   },
   "comparison": {
     "badge": "Bez zbędnego kompromisu",
-    "heading": "Nie musisz wybierać między prostotą a skuteczną nauką.",
+    "heading": "Dlaczego Fishki?",
     "intro": "Studenci medycyny potrzebują szybkiego edytora i poważnego systemu powtórek. Dzisiejsze narzędzia zwykle oferują tylko jedno z nich.",
     "products": [
       {
         "name": "Tradycyjne aplikacje",
         "label": "Skuteczne, ale skomplikowane",
         "text": "Mocny algorytm powtórek, lecz przestarzały interfejs, trudna konfiguracja i powolne tworzenie rozbudowanych kart.",
-        "points": ["Zaawansowane powtórki", "Wysoki próg wejścia", "Niewygodny edytor"]
+        "points": ["Przestarzały interfejs", "Wysoki próg wejścia", "Niewygodny edytor"]
       },
       {
-        "name": "Quizlet",
+        "name": "Proste aplikacje do fiszek",
         "label": "Proste, ale ograniczone",
         "text": "Przyjemne i szybkie tworzenie kart, ale za mało kontroli nad sesją i przygotowaniem do wymagających egzaminów.",
-        "points": ["Łatwy start", "Czysty interfejs", "Ograniczona kontrola nauki"]
+        "points": ["Brak zaawansowanych powtórek", "Mała elastyczność", "Ograniczona kontrola nauki"]
       },
       {
         "name": "Fishki",
-        "label": "Proste tworzenie + mądre powtórki",
+        "label": "Proste tworzenie. Zaawansowane powtórki.",
         "text": "Szybki edytor, elastyczne tryby nauki i narzędzia do obrazów, tabel oraz długich odpowiedzi medycznych.",
-        "points": ["Szybkie tworzenie", "Spaced repetition", "Workflow dla medycyny"]
+        "points": ["Proste tworzenie fiszek", "Wybór między szybkimi i zaawansowanymi trybami nauki", "Dostosowane pod naukę medycyny"]
       }
     ]
   },
   "features": {
-    "badge": "Narzędzia do prawdziwej nauki",
-    "heading": "Od szybkiej notatki do dobrze zaplanowanej powtórki.",
-    "intro": "Każda funkcja ma skrócić tworzenie materiału albo dać Ci większą kontrolę nad tym, czego uczysz się dzisiaj.",
+    "badge": "Funkcje",
+    "heading": "Szybciej przerabiaj trudny materiał.",
+    "intro": "Proste narzędzia, które oszczędzają czas podczas tworzenia fiszek i pomagają uporządkować naukę do zajęć, kolokwiów i egzaminów.",
     "planned": "Planowane",
+    "offlineHighlight": {
+      "badge": "Offline-first",
+      "heading": "Nauka nie powinna zależeć od zasięgu.",
+      "text": "Pobierz dokładnie tyle materiału, ile potrzebujesz. Talia, folder lub cały przedmiot pozostają dostępne bez internetu, a postęp synchronizuje się później.",
+      "downloads": ["Talia", "Folder", "Przedmiot"],
+      "places": "Na uczelni · w pociągu · w bibliotece · między zajęciami"
+    },
     "items": [
       {
         "icon": "edit",
-        "heading": "Szybkie tworzenie fiszek",
-        "text": "Tekst, formatowanie, wyróżnienia i czysty edytor bez skomplikowanej konfiguracji."
+        "heading": "Szybkie tworzenie klasycznych fiszek",
+        "text": "Wpisz pytanie i odpowiedź bez zbędnego klikania. Prosty edytor pozwala wygodnie tworzyć fiszki również na telefonie."
+      },
+      {
+        "icon": "notes",
+        "heading": "Fiszki z tekstu i notatek",
+        "text": "Wklej fragment notatek, skryptu lub materiału z zajęć i szybko przerób najważniejsze informacje na fiszki."
       },
       {
         "icon": "cloze",
-        "heading": "Cloze deletion",
-        "text": "Napisz jedną notatkę, zaznacz kluczowe terminy i zamień je w kilka kart z lukami."
+        "heading": "Fiszki z lukami",
+        "text": "Zaznacz najważniejsze pojęcia w zdaniu i zamień je w luki. Sprawdza się przy definicjach, objawach, lekach, klasyfikacjach i zależnościach."
       },
       {
         "icon": "image",
-        "heading": "Karty oparte na obrazach",
-        "text": "Dodawaj obrazy na obie strony karty. Idealne do slajdów, anatomii, patologii i tabel."
+        "heading": "Zdjęcia, schematy i grafiki",
+        "text": "Twórz fiszki na podstawie zdjęć z notatek, slajdów, atlasów, tabel i schematów medycznych."
       },
       {
         "icon": "occlusion",
         "heading": "Image occlusion",
-        "text": "Zakrywaj podpisy, fragmenty schematu lub komórki tabeli i odpytuj się bez przepisywania treści."
+        "text": "Zasłaniaj podpisy, struktury i elementy obrazu. Ucz się anatomii, histologii, dermatologii, radiologii oraz schematów bez przepisywania materiału."
       },
       {
-        "icon": "modes",
-        "heading": "Dwa tryby nauki",
-        "text": "Spaced repetition do trwałej nauki albo szybkie „umiem / nie umiem” przed zajęciami."
+        "icon": "organize",
+        "heading": "Talie, foldery i przedmioty",
+        "text": "Porządkuj fiszki według przedmiotów, działów, egzaminów i tematów, takich jak anatomia, farmakologia czy patofizjologia."
       },
       {
-        "icon": "sort",
-        "heading": "Pełna kontrola kolejności",
-        "text": "Ucz się losowo, po kolei, od najstarszych lub od najnowszych kart."
+        "icon": "tags",
+        "heading": "Tagowanie fiszek",
+        "text": "Dodawaj tagi, takie jak „egzamin”, „kolokwium”, „trudne”, „leki” lub „objawy”, aby szybko filtrować potrzebny materiał."
       },
       {
-        "icon": "reverse",
-        "heading": "Odwrócone karty",
-        "text": "Powtarzaj pytanie–odpowiedź, odpowiedź–pytanie albo oba kierunki w jednej talii."
+        "icon": "difficulty",
+        "heading": "Poziom trudności",
+        "text": "Oznaczaj fiszki jako łatwe, średnie lub trudne i szybciej wracaj do tematów, które nadal sprawiają Ci problem."
       },
       {
-        "icon": "limit",
-        "heading": "Limity sesji",
-        "text": "Wybierz 20, 50 lub 100 kart z dużej talii i dopasuj sesję do czasu, który masz."
-      },
-      {
-        "icon": "weak",
-        "heading": "Trudne karty",
-        "text": "Automatycznie wyłapuj pytania, które regularnie sprawiają Ci problem."
-      },
-      {
-        "icon": "exam",
-        "heading": "Tryb egzaminu",
-        "text": "Ustaw datę egzaminu i stopniowo zwiększaj intensywność powtórek najważniejszych kart."
-      },
-      {
-        "icon": "offline",
-        "heading": "Nauka offline",
-        "text": "Pobierz talie, ucz się bez internetu i zsynchronizuj postęp później."
-      },
-      {
-        "icon": "shared",
-        "heading": "Wspólne talie",
-        "text": "Przeglądaj talie innych studentów lub współtwórz materiał ze swoją grupą.",
-        "planned": true
+        "icon": "reviews",
+        "heading": "Sugestie powtórek",
+        "text": "Już podczas tworzenia możesz zaplanować powtórkę talii lub dodać fiszki do systemu powtórek rozłożonych w czasie."
       }
     ]
   },
@@ -136,11 +128,55 @@
     "intro": "Przejdź przez krótkie demo i zobacz, jak Fishki zamieniają medyczne notatki w czyste fiszki gotowe do skutecznej powtórki.",
     "screenLabel": "Interaktywny prototyp",
     "showcaseBadge": "Jak działa Fishki",
-    "showcaseHeading": "Najważniejsze etapy w czterech ekranach",
-    "showcaseIntro": "Krótka, statyczna prezentacja pokazuje drogę od wyboru talii do szybkiej sesji nauki.",
-    "playBadge": "Interaktywne demo",
-    "playHeading": "Teraz poklikaj po aplikacji samodzielnie",
+    "showcaseHeading": "Od pierwszej fiszki do planu na egzamin",
+    "showcaseIntro": "Przesuń ekran i zobacz spójną historię tworzenia, szybkiej nauki, planowania egzaminu oraz pracy offline.",
+    "playBadge": "Pierwsza fiszka w 10 sekund",
+    "playHeading": "Wypróbuj demo i stwórz swoją pierwszą fiszkę",
     "playIntro": "Twórz talie i fiszki, edytuj je, usuwaj gestem oraz uruchom szybką naukę. Wszystko działa lokalnie w tym prototypie.",
+    "stories": {
+      "choose": "Wybierz historyjkę",
+      "guide": "Przewodnik po demo",
+      "completed": "Gotowe. Doszedłeś do ekranu końcowego po nauce.",
+      "items": [
+        {
+          "key": "basic",
+          "title": "Nowa talia → 2 fiszki",
+          "description": "Utwórz talię, dodaj dwie klasyczne fiszki i przejdź przez naukę do podsumowania.",
+          "steps": [
+            "Kliknij „Dodaj talię” i utwórz nowy zestaw.",
+            "Dodaj pierwszą klasyczną fiszkę i kliknij „Następna”.",
+            "Dodaj drugą fiszkę i kliknij „Zapisz”, aby wrócić do talii.",
+            "Kliknij „Ucz się” w prawym górnym rogu talii.",
+            "Wybierz szybki tryb nauki i kliknij „Rozpocznij”.",
+            "Przejdź przez fiszki do ekranu podsumowania."
+          ]
+        },
+        {
+          "key": "cloze",
+          "title": "Nowa talia → cloze",
+          "description": "Utwórz talię, dodaj fiszkę z luką i zakończ krótką sesję nauki.",
+          "steps": [
+            "Kliknij „Dodaj talię” i utwórz nowy zestaw.",
+            "Kliknij „Dodaj fiszkę”.",
+            "Zaznacz fragment tekstu, użyj cloze i kliknij „Zapisz”.",
+            "Kliknij „Ucz się” w prawym górnym rogu talii.",
+            "Wybierz szybki tryb nauki i kliknij „Rozpocznij”.",
+            "Przejdź przez naukę do ekranu podsumowania."
+          ]
+        },
+        {
+          "key": "study",
+          "title": "Gotowy zestaw → nauka",
+          "description": "Rozpocznij naukę z przykładowej talii i dojść do wyboru powtórki albo wyjścia.",
+          "steps": [
+            "Kliknij „Ucz się” przy jednej z przykładowych talii.",
+            "Wybierz szybki tryb nauki i kliknij „Rozpocznij”.",
+            "Oceniaj kolejne fiszki jako „Umiem” albo „Nie umiem”.",
+            "Na ekranie końcowym wybierz powtórkę lub powrót do talii."
+          ]
+        }
+      ]
+    },
     "resetInteractive": "Zresetuj interaktywne demo",
     "carouselControls": {
       "previous": "Poprzedni ekran",
@@ -148,10 +184,14 @@
       "goTo": "Przejdź do ekranu"
     },
     "fixedScreens": [
-      { "number": "01", "label": "Talie", "title": "Wybierz talię", "description": "Zarządzaj materiałem albo rozpocznij naukę bez szukania funkcji w menu." },
-      { "number": "02", "label": "Edytor", "title": "Twórz bogate fiszki", "description": "Dodawaj tekst, zdjęcia, cloze deletion oraz zasłonięcia fragmentów obrazu." },
-      { "number": "03", "label": "Tryb", "title": "Dobierz sposób nauki", "description": "Uruchom szybką sesję teraz, a w przyszłości skorzystaj z inteligentnych powtórek." },
-      { "number": "04", "label": "Nauka", "title": "Oceniaj bez tarcia", "description": "Odwracaj fiszki i wybieraj tylko „Umiem” albo „Nie umiem”." }
+      { "key": "decks", "number": "01", "label": "Talie", "title": "Zacznij od uporządkowanego materiału", "description": "Wybierz talię do edycji albo od razu rozpocznij naukę konkretnego przedmiotu." },
+      { "key": "editor", "number": "02", "label": "Edytor", "title": "Twórz bogate fiszki bez konfiguracji", "description": "Dodawaj tekst, zdjęcia, cloze deletion oraz zasłonięcia fragmentów obrazu." },
+      { "key": "quickSetup", "number": "03", "label": "Szybka nauka", "title": "Wybierz kierunek kart", "description": "Powtarzaj przód–tył, tył–przód albo mieszaj oba kierunki w jednej szybkiej sesji." },
+      { "key": "review", "number": "04", "label": "Powtórka", "title": "Oceniaj bez zbędnego tarcia", "description": "Odwracaj fiszki i wybieraj tylko „Umiem” albo „Nie umiem”, aby szybko przejść przez materiał." },
+      { "key": "plannerSetup", "number": "05", "label": "Planner", "title": "Powiedz, do czego i kiedy się uczysz", "description": "Wybierz egzamin, jego datę, talie do opanowania oraz liczbę dni dostępnych na naukę." },
+      { "key": "plannerToday", "number": "06", "label": "Plan dnia", "title": "Dostawaj konkretny plan na każdy dzień", "description": "Fishki rozdzielają nowe, powtórkowe i trudne karty tak, aby materiał był gotowy przed egzaminem." },
+      { "key": "testMode", "number": "07", "label": "Wkrótce", "title": "Sprawdź, czy naprawdę umiesz", "description": "Tryb testu pozwoli wpisywać odpowiedzi, wybierać opcje lub odpowiadać ustnie, zamiast tylko rozpoznawać tył karty." },
+      { "key": "offline", "number": "08", "label": "Offline", "title": "Zabierz cały przedmiot ze sobą", "description": "Pobierz talię, folder albo cały przedmiot i ucz się bez internetu na uczelni, w pociągu lub bibliotece." }
     ],
     "tapHint": "Dwa przepływy produktu",
     "createFlow": "Tworzenie i zarządzanie",
@@ -206,8 +246,9 @@
     ],
     "ui": {
       "decksTitle": "Twoje talie",
-      "decksTab": "Talie",
-      "plannerTab": "Planner",
+      "decksTab": "Fiszki",
+      "plannerTab": "Nauka",
+      "downloadsTab": "Offline",
       "profileTab": "Profil",
       "addDeck": "Dodaj talię",
       "searchDecks": "Szukaj talii",
@@ -225,6 +266,7 @@
       "addFlashcard": "Dodaj fiszkę",
       "editDeck": "Edytuj",
       "studyDeck": "Ucz się",
+      "addCardsBeforeStudy": "Dodaj przynajmniej jedną fiszkę, aby rozpocząć naukę",
       "deleteCard": "Usuń",
       "editCardTitle": "Edytuj fiszkę",
       "deckCardsTitle": "Fiszki w talii",
@@ -275,8 +317,9 @@
       "clearOcclusions": "Wyczyść",
       "formatHint": "Pogrubienie, lista i wyróżnienie",
       "save": "Zapisz i podejrzyj",
-      "previewAction": "Podejrzyj",
+      "previewAction": "Podgląd",
       "saveAndNext": "Zapisz i następna",
+      "nextCard": "Następna",
       "saveChanges": "Zapisz",
       "editCard": "Wróć do edycji",
       "closeEditor": "Zamknij edytor",
@@ -293,15 +336,23 @@
       "comingSoon": "Wkrótce",
       "quickStudyTitle": "Szybka nauka",
       "quickStudyDescription": "Błyskawiczna sesja z prostą oceną „Umiem / Nie umiem”. Idealna przed kolokwium lub po wykładzie.",
+      "quickStudyInfo": "Informacje o szybkiej nauce",
+      "cardDirection": "Kierunek fiszek",
+      "frontToBack": "Przód → tył",
+      "backToFront": "Tył → przód",
+      "mixedDirection": "Mieszany",
       "startQuickStudy": "Rozpocznij szybką naukę",
+      "start": "Rozpocznij",
       "smartStudyTitle": "Inteligentne powtórki",
       "smartStudyDescription": "Inteligentny harmonogram powtórek do długoterminowego zapamiętywania dużej ilości materiału.",
+      "smartStudyInfo": "Informacje o inteligentnych powtórkach",
       "sessionSummary": "Podsumowanie sesji",
       "sessionDone": "Sesja zakończona",
       "reviewedCards": "Fiszki",
       "toRepeat": "Nie umiem",
       "repeatUnknown": "Powtórz karty do utrwalenia",
-      "backToDecks": "Wróć do talii",
+      "repeatAll": "Powtórz wszystko",
+      "backToDecks": "Wróć",
       "frontSide": "Przód karty",
       "backSide": "Odpowiedź",
       "question": "Jaki nerw unerwia przeponę?",
@@ -310,7 +361,7 @@
       "continueReview": "Przejdź do oceny",
       "reviewTitle": "Pierwsza powtórka",
       "reviewProgress": "Nowa karta",
-      "smartMode": "Spaced repetition",
+      "smartMode": "Powtórki rozłożone w czasie",
       "quickMode": "Szybka powtórka",
       "again": "Jeszcze raz",
       "hard": "Trudne",
@@ -325,7 +376,55 @@
       "difficult": "Oznaczono jako trudną",
       "scheduled": "Powtórka została zaplanowana",
       "done": "Gotowe",
-      "startOver": "Utwórz kolejną fiszkę"
+      "startOver": "Utwórz kolejną fiszkę",
+      "planExamTitle": "Zaplanuj naukę",
+      "examLabel": "Egzamin",
+      "examName": "Egzamin z anatomii",
+      "examDate": "Data egzaminu",
+      "examDateValue": "24 czerwca",
+      "studyDays": "Czas na naukę",
+      "studyDaysValue": "12 dni",
+      "decksToMaster": "Zestawy do opanowania",
+      "createStudyPlan": "Utwórz plan nauki",
+      "plannerTitle": "Planner",
+      "examCountdown": "12 dni",
+      "today": "Dzisiaj",
+      "todayTotal": "75 fiszek do zrobienia",
+      "todayAnatomy": "Nowe fiszki z anatomii",
+      "todayPhysiology": "Powtórki z fizjologii",
+      "todayPharmacology": "Trudne fiszki z farmakologii",
+      "plannedForToday": "Zaplanowane na dziś",
+      "startTodayPlan": "Rozpocznij plan na dziś",
+      "testModeTitle": "Tryb testu",
+      "testModeInfo": "Informacje o trybie testu",
+      "testModeHeading": "Symulacja sprawdzianu z talii",
+      "testModeDescription": "Nie odkrywaj tylko odpowiedzi. Najpierw odpowiedz samodzielnie, a dopiero później porównaj wynik.",
+      "testTyped": "Wpisywanie odpowiedzi",
+      "testChoice": "Wybór jednej z opcji",
+      "testSpoken": "Odpowiedź ustna",
+      "testMental": "Odpowiedź mentalna i porównanie",
+      "testUseCases": "Przed kolokwium, egzaminem i wtedy, gdy chcesz sprawdzić realne przypominanie zamiast rozpoznawania.",
+      "studyPlannerModeTitle": "Plan nauki",
+      "studyPlannerModeInfo": "Informacje o planie nauki",
+      "studyPlannerModeDescription": "To tryb pracy rozkładający cały materiał na dni prowadzące do egzaminu.",
+      "plannerChooseExam": "Wybierz egzamin",
+      "plannerChooseDate": "Ustaw datę egzaminu",
+      "plannerChooseDecks": "Wskaż zestawy do opanowania",
+      "plannerChooseDays": "Określ liczbę dni na naukę",
+      "plannerTodayExample": "Przykładowy plan na dziś:",
+      "plannerExampleAnatomy": "40 nowych fiszek z anatomii",
+      "plannerExamplePhysiology": "25 powtórek z fizjologii",
+      "plannerExamplePharmacology": "10 trudnych fiszek z farmakologii",
+      "offlineTitle": "Nauka offline",
+      "offlineReady": "Gotowe offline",
+      "offlineHeading": "Ucz się bez połączenia",
+      "offlineDescription": "Pobrane materiały działają bez internetu, a postęp zsynchronizuje się później.",
+      "offlineDeck": "Talia",
+      "offlineFolder": "Folder",
+      "offlineSubject": "Cały przedmiot",
+      "offlineFolderName": "Anatomia — semestr 1",
+      "offlineSubjectName": "Farmakologia",
+      "offlinePlaces": "Na uczelni · w pociągu · w bibliotece · między zajęciami"
     }
   },
   "useCases": {
@@ -352,7 +451,7 @@
       },
       {
         "number": "02",
-        "title": "Wybierz szybki tryb lub spaced repetition.",
+        "title": "Wybierz szybki tryb lub powtórki rozłożone w czasie.",
         "text": "Powtarzaj po swojemu przed wejściówką albo pozwól systemowi zaplanować naukę długoterminową."
       },
       {

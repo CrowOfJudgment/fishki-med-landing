@@ -7,6 +7,7 @@ import type {
   ReviewMode,
   ReviewResult,
   SavedCard,
+  StudyDirection,
 } from "./app-demo";
 
 type DemoUi = Record<string, string>;
@@ -50,6 +51,9 @@ function AppHeader({
   meta,
   backLabel,
   onBack,
+  actionLabel,
+  onAction,
+  actionDisabled,
   closeLabel,
   onClose,
 }: {
@@ -57,6 +61,9 @@ function AppHeader({
   meta?: string;
   backLabel?: string;
   onBack?: () => void;
+  actionLabel?: string;
+  onAction?: () => void;
+  actionDisabled?: boolean;
   closeLabel?: string;
   onClose?: () => void;
 }) {
@@ -77,7 +84,16 @@ function AppHeader({
       <p className="pointer-events-none absolute left-1/2 max-w-36 -translate-x-1/2 truncate text-center text-[13px] font-semibold text-[#002838]">
         {title}
       </p>
-      {onClose ? (
+      {onAction ? (
+        <button
+          type="button"
+          onClick={onAction}
+          disabled={actionDisabled}
+          className="rounded-full bg-[#0F766E] px-3 py-2 text-[9px] font-bold text-white transition active:scale-95 disabled:bg-[#B9DDD5] disabled:text-[#274D53]/55"
+        >
+          {actionLabel}
+        </button>
+      ) : onClose ? (
         <div className="flex items-center gap-1.5">
           <button
             type="button"
@@ -184,7 +200,9 @@ function DeckScreen({
                       <button
                         type="button"
                         onClick={() => onStudyDeck(deck.id)}
-                        className="rounded-lg bg-[#0F766E] px-2 py-2 text-[8px] font-bold text-white active:scale-95"
+                        disabled={deck.cards === 0}
+                        title={deck.cards === 0 ? ui.addCardsBeforeStudy : undefined}
+                        className="rounded-lg bg-[#0F766E] px-2 py-2 text-[8px] font-bold text-white active:scale-95 disabled:cursor-not-allowed disabled:bg-[#B9DDD5] disabled:text-[#274D53]/55"
                       >
                         {ui.studyDeck}
                       </button>
@@ -206,8 +224,18 @@ function DeckScreen({
         {ui.addDeck}
       </button>
 
-      <nav className="absolute bottom-0 left-0 right-0 z-10 grid h-16 grid-cols-3 border-t border-[#274D53]/10 bg-white/95 px-3 pb-1 pt-1.5 backdrop-blur-xl">
+      <nav className="absolute bottom-0 left-0 right-0 z-10 grid h-16 grid-cols-4 overflow-hidden rounded-b-[2rem] border-t border-[#274D53]/10 bg-white/95 px-2 pb-1 pt-1.5 backdrop-blur-xl">
         {[
+          {
+            label: ui.plannerTab,
+            active: false,
+            icon: (
+              <>
+                <rect x="3.5" y="4.5" width="13" height="12" rx="2" stroke="currentColor" strokeWidth="1.5" />
+                <path d="M6.5 2.8v3.4M13.5 2.8v3.4M3.5 8h13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              </>
+            ),
+          },
           {
             label: ui.decksTab,
             active: true,
@@ -216,12 +244,12 @@ function DeckScreen({
             ),
           },
           {
-            label: ui.plannerTab,
+            label: ui.downloadsTab,
             active: false,
             icon: (
               <>
-                <rect x="3.5" y="4.5" width="13" height="12" rx="2" stroke="currentColor" strokeWidth="1.5" />
-                <path d="M6.5 2.8v3.4M13.5 2.8v3.4M3.5 8h13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                <path d="M10 3.5v8M6.8 8.8 10 12l3.2-3.2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M4 14.5h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
               </>
             ),
           },
@@ -395,6 +423,7 @@ function CardTypeScreen({
   ui,
   deck,
   onShowCardTypes,
+  onStudyDeck,
   onBack,
   savedCards,
   onDeleteCard,
@@ -403,38 +432,37 @@ function CardTypeScreen({
   ui: DemoUi;
   deck: DemoDeck;
   onShowCardTypes: () => void;
+  onStudyDeck: (deck: DeckKey) => void;
   onBack: () => void;
   savedCards: SavedCard[];
   onDeleteCard: (cardId: string) => void;
   onEditCard: (card: SavedCard) => void;
 }) {
+  const exampleCards = [
+    ui.sampleCardOne,
+    ui.sampleCardTwo,
+    ui.sampleCardThree,
+    ui.sampleCardFour,
+    ui.sampleCardFive,
+    ui.sampleCardSix,
+    ui.sampleCardSeven,
+  ].map((title, index) => ({
+    id: `sample-${index}`,
+    title,
+    studyFront: title,
+    back: ui.sampleCardAnswer,
+    saved: false,
+  }));
   const sampleCards: Array<{
     id: string;
     title: string;
     studyFront: string;
     back: string;
     saved: boolean;
-  }> =
-    deck.cards > 0
-      ? [
-          ...savedCards.map((card) => ({ ...card, saved: true })),
-          ...[
-            ui.sampleCardOne,
-            ui.sampleCardTwo,
-            ui.sampleCardThree,
-            ui.sampleCardFour,
-            ui.sampleCardFive,
-            ui.sampleCardSix,
-            ui.sampleCardSeven,
-          ].map((title, index) => ({
-            id: `sample-${index}`,
-            title,
-            studyFront: title,
-            back: ui.sampleCardAnswer,
-            saved: false,
-          })),
-        ]
-      : [];
+  }> = [
+    ...savedCards.map((card) => ({ ...card, saved: true })),
+    ...(deck.custom ? [] : exampleCards),
+  ];
 
   return (
     <div className="relative isolate flex h-full flex-col overflow-hidden">
@@ -442,6 +470,9 @@ function CardTypeScreen({
         title={deck.title}
         backLabel={ui.backNavigation}
         onBack={onBack}
+        actionLabel={ui.studyDeck}
+        onAction={() => onStudyDeck(deck.id)}
+        actionDisabled={sampleCards.length === 0}
       />
       <div className="min-h-0 flex-1 overflow-y-auto px-3 pb-24 pt-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {sampleCards.length > 0 ? (
@@ -785,17 +816,6 @@ function FlashcardField({
         </button>
         <button
           type="button"
-          onClick={() =>
-            imageUrl ? removeImage() : fileInputRef.current?.click()
-          }
-          aria-label={imageUrl ? ui.removeImage : ui.addImage}
-          title={imageUrl ? ui.removeImage : ui.addImage}
-          className={toolClass(Boolean(imageUrl))}
-        >
-          <PhotoIcon />
-        </button>
-        <button
-          type="button"
           onMouseDown={keepSelection}
           onClick={applyCloze}
           aria-label={ui.addCloze}
@@ -803,21 +823,6 @@ function FlashcardField({
           className={toolClass(Boolean(generatedTerms?.length))}
         >
           {"{…}"}
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            if (!imageUrl) {
-              fileInputRef.current?.click();
-              return;
-            }
-            setIsOcclusionMode((current) => !current);
-          }}
-          aria-label={ui.addOcclusion}
-          title={ui.addOcclusion}
-          className={toolClass(isOcclusionMode)}
-        >
-          <OcclusionIcon />
         </button>
         {ellipses.length > 0 && (
           <button
@@ -886,15 +891,18 @@ function EditorScreen({
   selectedDeckName,
   editingCard,
   onBack,
-  onClose,
   onSaveCard,
 }: {
   ui: DemoUi;
   selectedDeckName: string;
   editingCard: SavedCard | null;
   onBack: () => void;
-  onClose: () => void;
-  onSaveCard: (front: string, back: string, studyFront: string) => void;
+  onSaveCard: (
+    front: string,
+    back: string,
+    studyFront: string,
+    action?: "next" | "back",
+  ) => void;
 }) {
   const emptySnapshot: FieldSnapshot = {
     text: "",
@@ -903,8 +911,8 @@ function EditorScreen({
     imageUrl: null,
     ellipses: [],
   };
-  const [front, setFront] = useState(editingCard?.title ?? ui.frontText);
-  const [back, setBack] = useState(editingCard?.back ?? ui.backText);
+  const [front, setFront] = useState(editingCard?.title ?? "");
+  const [back, setBack] = useState(editingCard?.back ?? "");
   const [clozeTerms, setClozeTerms] = useState<string[]>([]);
   const [frontSnapshot, setFrontSnapshot] = useState<FieldSnapshot>(emptySnapshot);
   const [backSnapshot, setBackSnapshot] = useState<FieldSnapshot>(emptySnapshot);
@@ -922,15 +930,16 @@ function EditorScreen({
     });
   };
 
-  const saveAndReset = () => {
+  const saveAndReset = (action: "next" | "back" = "next") => {
     const previewTextContainer = document.createElement("div");
     previewTextContainer.innerHTML = frontSnapshot.previewHtml;
     const studyFront =
       previewTextContainer.innerText.trim() || front.trim() || ui.untitledCard;
-    onSaveCard(front, back, studyFront);
-    if (editingCard) return;
+    onSaveCard(front, back, studyFront, action);
+    if (action === "back") return;
     setFront("");
     setBack("");
+    setIsPreviewFlipped(false);
     setClozeTerms([]);
     setFrontSnapshot(emptySnapshot);
     setBackSnapshot(emptySnapshot);
@@ -942,11 +951,9 @@ function EditorScreen({
   return (
     <div className="relative flex h-full flex-col overflow-hidden">
       <AppHeader
-        title={editingCard ? ui.editCardTitle : ui.editorTitle}
+        title={ui.editorTitle}
         backLabel={ui.backNavigation}
         onBack={onBack}
-        closeLabel={ui.closeEditor}
-        onClose={onClose}
       />
       <div className="min-h-0 flex-1 overflow-y-auto px-4 pb-20 pt-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <p className="mb-3 truncate text-[9px] font-semibold text-[#274D53]/65">
@@ -974,25 +981,34 @@ function EditorScreen({
           />
         </div>
       </div>
-      <div className={`absolute bottom-0 left-0 right-0 grid gap-2 border-t border-[#274D53]/10 bg-white/90 px-3 py-2 backdrop-blur-xl ${editingCard ? "grid-cols-1" : "grid-cols-2"}`}>
-        {!editingCard && (
-          <button
-            type="button"
-            onClick={() => {
-              setIsPreviewFlipped(false);
-              setShowPreview(true);
-            }}
-            className="rounded-xl bg-[#E7F1EE] px-2 py-2.5 text-[9px] font-semibold text-[#0F766E] transition active:scale-[0.98]"
-          >
-            {ui.previewAction}
-          </button>
-        )}
+      <div
+        className={`absolute bottom-0 left-0 right-0 overflow-hidden rounded-b-[2rem] border-t border-[#274D53]/10 bg-white/90 px-3 py-2 backdrop-blur-xl ${
+          "grid grid-cols-3 gap-2"
+        }`}
+      >
         <button
           type="button"
-          onClick={saveAndReset}
-          className="rounded-xl bg-[#0F766E] px-2 py-2.5 text-[9px] font-semibold text-white shadow-sm transition active:scale-[0.98]"
+          onClick={() => {
+            setIsPreviewFlipped(false);
+            setShowPreview(true);
+          }}
+          className="h-12 w-full rounded-full bg-[#E7F1EE] px-2 text-[8px] font-semibold leading-3 text-[#0F766E] transition active:scale-[0.98]"
         >
-          {editingCard ? ui.saveChanges : ui.saveAndNext}
+          {ui.previewAction}
+        </button>
+        <button
+          type="button"
+          onClick={() => saveAndReset("back")}
+          className="h-12 w-full rounded-full bg-[#0F766E] px-2 text-[8px] font-semibold leading-3 text-white shadow-sm transition active:scale-[0.98]"
+        >
+          {ui.saveChanges}
+        </button>
+        <button
+          type="button"
+          onClick={() => saveAndReset("next")}
+          className="h-12 w-full rounded-full bg-[#78C2B7] px-2 text-[8px] font-semibold leading-3 text-[#002838] shadow-sm transition active:scale-[0.98]"
+        >
+          {ui.nextCard}
         </button>
       </div>
 
@@ -1037,16 +1053,16 @@ function EditorScreen({
             <button
               type="button"
               onClick={() => setShowPreview(false)}
-              className="rounded-xl bg-[#E7F1EE] px-2 py-2.5 text-[9px] font-semibold text-[#0F766E]"
+              className="h-12 w-full rounded-full bg-[#E7F1EE] px-2 text-[8px] font-semibold leading-3 text-[#0F766E]"
             >
               {ui.editCard}
             </button>
             <button
               type="button"
-              onClick={saveAndReset}
-              className="rounded-xl bg-[#0F766E] px-2 py-2.5 text-[9px] font-semibold text-white"
+              onClick={() => saveAndReset("back")}
+              className="h-12 w-full rounded-full bg-[#0F766E] px-2 text-[8px] font-semibold leading-4 text-white"
             >
-              {ui.saveAndNext}
+              <span className="mx-auto block max-w-16">{ui.saveChanges}</span>
             </button>
           </div>
         </div>
@@ -1058,14 +1074,20 @@ function EditorScreen({
 function PreviewScreen({
   ui,
   selectedDeckName,
+  studyDirection,
+  onStudyDirectionChange,
   onBack,
   onNext,
 }: {
   ui: DemoUi;
   selectedDeckName: string;
+  studyDirection: StudyDirection;
+  onStudyDirectionChange: (direction: StudyDirection) => void;
   onBack: () => void;
   onNext: () => void;
 }) {
+  const [showQuickStudyInfo, setShowQuickStudyInfo] = useState(false);
+
   return (
     <div className="flex h-full flex-col">
       <AppHeader
@@ -1077,41 +1099,137 @@ function PreviewScreen({
         <p className="truncate text-[10px] font-semibold text-[#274D53]/65">
           {selectedDeckName}
         </p>
-        <button
-          type="button"
-          onClick={onNext}
-          className="mt-4 w-full rounded-[1.3rem] bg-white p-5 text-left shadow-[0_6px_24px_rgba(0,40,56,0.08)] transition active:scale-[0.98]"
-        >
-          <div className="flex items-center justify-between">
+        <div className="mt-4 w-full rounded-[1.3rem] bg-white p-5 text-left shadow-[0_6px_24px_rgba(0,40,56,0.08)]">
+          <div className="flex items-center gap-3">
             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0F766E] text-lg text-white">✓</span>
-            <span className="rounded-full bg-[#B9DDD5] px-2.5 py-1 text-[8px] font-bold text-[#0F766E]">
-              {ui.availableNow}
-            </span>
+            <h3 className="min-w-0 flex-1 text-sm font-semibold text-[#002838]">
+              {ui.quickStudyTitle}
+            </h3>
+            <button
+              type="button"
+              onClick={() => setShowQuickStudyInfo((current) => !current)}
+              aria-label={ui.quickStudyInfo}
+              className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#E7F1EE] text-[10px] font-bold text-[#0F766E]"
+            >
+              ?
+            </button>
           </div>
-          <h3 className="mt-4 text-sm font-semibold text-[#002838]">
-            {ui.quickStudyTitle}
-          </h3>
-          <p className="mt-2 text-[10px] leading-5 text-[#274D53]">
-            {ui.quickStudyDescription}
-          </p>
-          <span className="mt-4 inline-flex text-[10px] font-bold text-[#0F766E]">
-            {ui.startQuickStudy} →
-          </span>
-        </button>
+          {showQuickStudyInfo && (
+            <p className="mt-3 rounded-xl bg-[#E7F1EE] p-3 text-[9px] leading-4 text-[#274D53]">
+              {ui.quickStudyDescription}
+            </p>
+          )}
+          <div className="mt-4">
+            <p className="text-[8px] font-bold uppercase tracking-[0.16em] text-[#274D53]/60">
+              {ui.cardDirection}
+            </p>
+            <div className="mt-2 grid gap-1.5">
+              {[
+                ["frontBack", ui.frontToBack],
+                ["backFront", ui.backToFront],
+                ["mixed", ui.mixedDirection],
+              ].map(([value, label]) => (
+                <button
+                  key={value}
+                  type="button"
+                  onClick={() =>
+                    onStudyDirectionChange(value as StudyDirection)
+                  }
+                  className={`w-full rounded-xl px-3 py-2.5 text-left text-[8px] font-bold ${
+                    studyDirection === value
+                      ? "bg-[#0F766E] text-white"
+                      : "bg-[#E7F1EE] text-[#0F766E]"
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={onNext}
+            className="mt-4 w-full rounded-full bg-[#0F766E] px-4 py-3 text-[9px] font-bold text-white"
+          >
+            {ui.start}
+          </button>
+        </div>
 
-        <div className="mt-3 rounded-[1.3rem] border border-[#B9DDD5] bg-[#E7F1EE]/70 p-5 opacity-75">
-          <div className="flex items-center justify-between">
+        <div className="mt-3 rounded-[1.3rem] border border-[#B9DDD5] bg-[#E7F1EE]/70 p-5">
+          <div className="flex items-center gap-3">
             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-lg text-[#0F766E]">↻</span>
+            <h3 className="min-w-0 flex-1 text-sm font-semibold text-[#002838]">
+              {ui.smartStudyTitle}
+            </h3>
             <span className="rounded-full bg-[#E86860]/10 px-2.5 py-1 text-[8px] font-bold text-[#E86860]">
               {ui.comingSoon}
             </span>
           </div>
-          <h3 className="mt-4 text-sm font-semibold text-[#002838]">
-            {ui.smartStudyTitle}
-          </h3>
-          <p className="mt-2 text-[10px] leading-5 text-[#274D53]">
+          <p className="mt-3 rounded-xl bg-white/80 p-3 text-[9px] leading-4 text-[#274D53]">
             {ui.smartStudyDescription}
           </p>
+        </div>
+
+        <div className="mt-3 rounded-[1.3rem] border border-[#B9DDD5] bg-[#E7F1EE]/70 p-5">
+          <div className="flex items-center gap-3">
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-lg font-bold text-[#0F766E]">
+              ?
+            </span>
+            <h3 className="min-w-0 flex-1 text-sm font-semibold text-[#002838]">
+              {ui.testModeTitle}
+            </h3>
+            <span className="rounded-full bg-[#E86860]/10 px-2.5 py-1 text-[8px] font-bold text-[#E86860]">
+              {ui.comingSoon}
+            </span>
+          </div>
+          <div className="mt-3 rounded-xl bg-white/80 p-3 text-[9px] leading-4 text-[#274D53]">
+            <p>{ui.testModeDescription}</p>
+            <div className="mt-2 space-y-1">
+              {[ui.testTyped, ui.testChoice, ui.testSpoken, ui.testMental].map(
+                (item) => (
+                  <p key={item}>• {item}</p>
+                ),
+              )}
+            </div>
+            <p className="mt-2 font-semibold text-[#0F766E]">
+              {ui.testUseCases}
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-3 rounded-[1.3rem] border border-[#B9DDD5] bg-[#E7F1EE]/70 p-5">
+          <div className="flex items-center gap-3">
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-lg text-[#0F766E]">
+              □
+            </span>
+            <h3 className="min-w-0 flex-1 text-sm font-semibold text-[#002838]">
+              {ui.studyPlannerModeTitle}
+            </h3>
+            <span className="rounded-full bg-[#E86860]/10 px-2.5 py-1 text-[8px] font-bold text-[#E86860]">
+              {ui.comingSoon}
+            </span>
+          </div>
+          <div className="mt-3 rounded-xl bg-white/80 p-3 text-[9px] leading-4 text-[#274D53]">
+            <p>{ui.studyPlannerModeDescription}</p>
+            <div className="mt-2 space-y-1">
+              {[
+                ui.plannerChooseExam,
+                ui.plannerChooseDate,
+                ui.plannerChooseDecks,
+                ui.plannerChooseDays,
+              ].map((item) => (
+                <p key={item}>• {item}</p>
+              ))}
+            </div>
+            <p className="mt-2 font-semibold text-[#0F766E]">
+              {ui.plannerTodayExample}
+            </p>
+            <div className="mt-1 space-y-1">
+              <p>• {ui.plannerExampleAnatomy}</p>
+              <p>• {ui.plannerExamplePhysiology}</p>
+              <p>• {ui.plannerExamplePharmacology}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1121,6 +1239,8 @@ function PreviewScreen({
 function ReviewScreen({
   ui,
   studyCard,
+  studyFrontLabel,
+  studyBackLabel,
   studyIndex,
   studyTotal,
   isAnswerRevealed,
@@ -1130,6 +1250,8 @@ function ReviewScreen({
 }: {
   ui: DemoUi;
   studyCard: SavedCard;
+  studyFrontLabel: string;
+  studyBackLabel: string;
   studyIndex: number;
   studyTotal: number;
   isAnswerRevealed: boolean;
@@ -1163,7 +1285,7 @@ function ReviewScreen({
           >
             <span className="absolute inset-0 flex flex-col items-center justify-center rounded-[1.5rem] border border-[#B9DDD5] bg-white p-6 text-center shadow-[0_14px_40px_rgba(0,40,56,0.1)] [backface-visibility:hidden]">
               <span className="text-[8px] font-bold uppercase tracking-[0.18em] text-[#0F766E]">
-                {ui.front}
+                {studyFrontLabel}
               </span>
               <span className="mt-6 font-display text-xl font-semibold leading-snug text-[#002838]">
                 {studyCard.studyFront}
@@ -1171,7 +1293,7 @@ function ReviewScreen({
             </span>
             <span className="absolute inset-0 flex flex-col items-center justify-center rounded-[1.5rem] border border-[#B9DDD5] bg-white p-6 text-center shadow-[0_14px_40px_rgba(0,40,56,0.1)] [backface-visibility:hidden] [transform:rotateY(180deg)]">
               <span className="text-[8px] font-bold uppercase tracking-[0.18em] text-[#0F766E]">
-                {ui.back}
+                {studyBackLabel}
               </span>
               <span className="mt-6 whitespace-pre-wrap font-display text-xl font-semibold leading-snug text-[#002838]">
                 {studyCard.back}
@@ -1195,18 +1317,18 @@ function ReviewScreen({
         <p className="mt-2 h-3 whitespace-nowrap text-center text-[7px] font-semibold leading-3 text-[#274D53]/55">
           {isAnswerRevealed ? ui.tapForFront : ui.tapForBack}
         </p>
-        <div className="mt-2 grid grid-cols-2 gap-2">
+        <div className="mt-2 flex items-center justify-center gap-2">
           <button
             type="button"
             onClick={() => onChooseReviewResult("dontKnow")}
-            className="rounded-xl bg-[#E86860]/10 px-3 py-3 text-[10px] font-bold text-[#E86860] active:scale-[0.98]"
+            className="w-[42%] max-w-32 rounded-full bg-[#E86860]/10 px-4 py-3 text-[10px] font-bold text-[#E86860] active:scale-[0.98]"
           >
             {ui.dontKnow}
           </button>
           <button
             type="button"
             onClick={() => onChooseReviewResult("know")}
-            className="rounded-xl bg-[#0F766E] px-3 py-3 text-[10px] font-bold text-white active:scale-[0.98]"
+            className="w-[42%] max-w-32 rounded-full bg-[#0F766E] px-4 py-3 text-[10px] font-bold text-white active:scale-[0.98]"
           >
             {ui.know}
           </button>
@@ -1221,23 +1343,23 @@ function ResultScreen({
   studyTotal,
   studyKnowCount,
   studyRepeatCount,
-  onBack,
-  onRepeat,
+  onRepeatUnknown,
+  onRepeatAll,
   onReset,
 }: {
   ui: DemoUi;
   studyTotal: number;
   studyKnowCount: number;
   studyRepeatCount: number;
-  onBack: () => void;
-  onRepeat: () => void;
+  onRepeatUnknown: () => void;
+  onRepeatAll: () => void;
   onReset: () => void;
 }) {
   const mastery = Math.round((studyKnowCount / Math.max(studyTotal, 1)) * 100);
 
   return (
     <div className="flex h-full flex-col">
-      <AppHeader title={ui.sessionSummary} backLabel={ui.backNavigation} onBack={onBack} />
+      <AppHeader title={ui.sessionSummary} />
       <div className="min-h-0 flex-1 overflow-y-auto p-5 text-center">
         <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[#B9DDD5] text-2xl font-bold text-[#0F766E]">
           {mastery}%
@@ -1257,16 +1379,23 @@ function ResultScreen({
         </div>
         <button
           type="button"
-          onClick={onRepeat}
+          onClick={onRepeatAll}
+          className="mt-5 w-full rounded-full bg-[#0F766E] px-3 py-3 text-[10px] font-bold text-white"
+        >
+          {ui.repeatAll}
+        </button>
+        <button
+          type="button"
+          onClick={onRepeatUnknown}
           disabled={studyRepeatCount === 0}
-          className="mt-5 w-full rounded-xl bg-[#E86860]/10 px-3 py-3 text-[10px] font-bold text-[#E86860] disabled:opacity-40"
+          className="mt-2 w-full rounded-full bg-[#E86860]/10 px-3 py-3 text-[10px] font-bold text-[#E86860] disabled:opacity-40"
         >
           {ui.repeatUnknown}
         </button>
         <button
           type="button"
           onClick={onReset}
-          className="mt-2 w-full rounded-xl bg-[#0F766E] px-3 py-3 text-[10px] font-bold text-white"
+          className="mt-2 w-full rounded-full bg-[#E7F1EE] px-3 py-3 text-[10px] font-bold text-[#0F766E]"
         >
           {ui.backToDecks}
         </button>
@@ -1285,9 +1414,12 @@ export default function DemoAppScreen({
   isAnswerRevealed,
   reviewMode,
   selectedReviewResult,
+  studyDirection,
   savedCards,
   editingCard,
   studyCard,
+  studyFrontLabel,
+  studyBackLabel,
   studyIndex,
   studyTotal,
   studyKnowCount,
@@ -1299,14 +1431,15 @@ export default function DemoAppScreen({
   onSaveCard,
   onDeleteCard,
   onEditCard,
-  onCloseEditor,
   onRevealAnswer,
   onReviewModeChange,
+  onStudyDirectionChange,
   onChooseReviewResult,
   onNext,
   onBack,
   onBackToDecks,
   onRepeatUnknown,
+  onRepeatAll,
   onReset,
 }: {
   step: DemoStepKey;
@@ -1318,9 +1451,12 @@ export default function DemoAppScreen({
   isAnswerRevealed: boolean;
   reviewMode: ReviewMode;
   selectedReviewResult: ReviewResult | null;
+  studyDirection: StudyDirection;
   savedCards: SavedCard[];
   editingCard: SavedCard | null;
   studyCard: SavedCard;
+  studyFrontLabel: string;
+  studyBackLabel: string;
   studyIndex: number;
   studyTotal: number;
   studyKnowCount: number;
@@ -1329,17 +1465,23 @@ export default function DemoAppScreen({
   onStudyDeck: (deck: DeckKey) => void;
   onAddDeck: (name: string) => void;
   onShowCardTypes: () => void;
-  onSaveCard: (front: string, back: string, studyFront: string) => void;
+  onSaveCard: (
+    front: string,
+    back: string,
+    studyFront: string,
+    action?: "next" | "back",
+  ) => void;
   onDeleteCard: (cardId: string) => void;
   onEditCard: (card: SavedCard) => void;
-  onCloseEditor: () => void;
   onRevealAnswer: () => void;
   onReviewModeChange: (mode: ReviewMode) => void;
+  onStudyDirectionChange: (direction: StudyDirection) => void;
   onChooseReviewResult: (result: ReviewResult) => void;
   onNext: () => void;
   onBack: () => void;
   onBackToDecks: () => void;
   onRepeatUnknown: () => void;
+  onRepeatAll: () => void;
   onReset: () => void;
 }) {
   if (step === "decks") {
@@ -1360,6 +1502,7 @@ export default function DemoAppScreen({
         ui={ui}
         deck={decks.find((deck) => deck.id === selectedDeck) ?? decks[0]}
         onShowCardTypes={onShowCardTypes}
+        onStudyDeck={onStudyDeck}
         onBack={onBack}
         savedCards={savedCards}
         onDeleteCard={onDeleteCard}
@@ -1374,7 +1517,6 @@ export default function DemoAppScreen({
         selectedDeckName={selectedDeckName}
         editingCard={editingCard}
         onBack={onBack}
-        onClose={onCloseEditor}
         onSaveCard={onSaveCard}
       />
     );
@@ -1384,6 +1526,8 @@ export default function DemoAppScreen({
       <PreviewScreen
         ui={ui}
         selectedDeckName={selectedDeckName}
+        studyDirection={studyDirection}
+        onStudyDirectionChange={onStudyDirectionChange}
         onBack={onBackToDecks}
         onNext={onNext}
       />
@@ -1394,6 +1538,8 @@ export default function DemoAppScreen({
       <ReviewScreen
         ui={ui}
         studyCard={studyCard}
+        studyFrontLabel={studyFrontLabel}
+        studyBackLabel={studyBackLabel}
         studyIndex={studyIndex}
         studyTotal={studyTotal}
         isAnswerRevealed={isAnswerRevealed}
@@ -1409,8 +1555,8 @@ export default function DemoAppScreen({
       studyTotal={studyTotal}
       studyKnowCount={studyKnowCount}
       studyRepeatCount={studyRepeatCount}
-      onBack={onBack}
-      onRepeat={onRepeatUnknown}
+      onRepeatUnknown={onRepeatUnknown}
+      onRepeatAll={onRepeatAll}
       onReset={onReset}
     />
   );

@@ -9,7 +9,7 @@ export default function Logo({
 }) {
   return (
     <Link
-      href="/"
+      href="#top"
       aria-label="Fishki"
       className={`inline-flex shrink-0 items-center gap-2.5 ${className}`.trim()}
     >

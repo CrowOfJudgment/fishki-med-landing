@@ -50,9 +50,10 @@ export default function Header() {
   }
 
   const navLinks = [
-    { href: "#features", label: t.header.features },
+    { href: "#why-fishki", label: t.header.whyFishki },
     { href: "#how-it-works", label: t.header.how },
     { href: "#demo", label: t.header.demo },
+    { href: "#features", label: t.header.features },
     { href: "#waitlist-form", label: t.header.waitlist },
   ];
 

@@ -2,7 +2,7 @@
 
 import Script from "next/script";
 import { useEffect } from "react";
-import { useT } from "@/lib/i18n-context";
+import { useLocale, useT } from "@/lib/i18n-context";
 
 type TallyWindow = Window & {
   Tally?: {
@@ -31,6 +31,17 @@ function CheckIcon() {
 
 export default function Cta() {
   const t = useT();
+  const locale = useLocale();
+  const tallyForm =
+    locale === "pl"
+      ? {
+          src: "https://tally.so/embed/2ERGxA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1",
+          title: "Fishki Med PL",
+        }
+      : {
+          src: "https://tally.so/embed/pbzpW8?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1",
+          title: "Fishki Med",
+        };
   const loadEmbeds = () => {
     (window as TallyWindow).Tally?.loadEmbeds?.();
   };
@@ -108,10 +119,10 @@ export default function Cta() {
                 <div className="flex flex-1 p-4 sm:p-5 lg:p-6">
                   <div className="min-h-[420px] w-full overflow-hidden rounded-[1.4rem] border border-[#B9DDD5] bg-white shadow-inner">
                     <iframe
-                      data-tally-src="https://tally.so/embed/ODkPZk?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                      title={t.cta.cta}
+                      data-tally-src={tallyForm.src}
+                      title={tallyForm.title}
                       width="100%"
-                      height="320"
+                      height="229"
                       className="block w-full border-0"
                       frameBorder="0"
                       marginHeight={0}

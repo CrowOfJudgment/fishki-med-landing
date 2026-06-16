@@ -4,19 +4,19 @@ import Features from "@/components/features";
 import FloatingCTA from "@/components/floating-cta";
 import Comparison from "@/components/comparison";
 import AppDemo from "@/components/app-demo/app-demo";
+import StaticDemoSection from "@/components/app-demo/static-demo-section";
 import UseCases from "@/components/use-cases";
-import HowItWorks from "@/components/how-it-works";
 
 export default async function Home() {
   return (
-    <main className="flex flex-col">
+    <main id="top" className="flex flex-col">
       <Hero />
       <FloatingCTA />
       <Comparison />
-      <Features />
+      <StaticDemoSection />
       <AppDemo />
+      <Features />
       <UseCases />
-      <HowItWorks />
       <Cta />
     </main>
   );
