@@ -448,16 +448,16 @@
     ]
   },
   "cta": {
-    "badge": "Wczesny dostęp",
-    "title": "Pomóż zbudować lepsze fiszki dla medycyny.",
-    "subtitle": "Dołącz do listy oczekujących i powiedz nam, jak dziś korzystasz z aplikacji do fiszek. Twoje odpowiedzi pomogą ustalić priorytety pierwszej wersji.",
+    "badge": "Lista oczekujących",
+    "title": "Zostaw maila, a damy znać, kiedy Fishki będą dostępne.",
+    "subtitle": "Dołącz do listy oczekujących, jeśli chcesz śledzić rozwój Fishki i dostać informację o starcie produktu.",
     "benefits": [
-      "Pierwszeństwo dostępu do wersji beta",
-      "Wpływ na funkcje i workflow pierwszej wersji",
-      "Tylko konkretne informacje o produkcie"
+      "Informacja, kiedy Fishki będą dostępne",
+      "Konkretne aktualizacje o produkcie",
+      "Bez spamu i bez zobowiązań"
     ],
-    "cta": "Dołącz do listy oczekujących wczesnego dostępu",
-    "formNote": "Formularz zajmuje około minuty.",
+    "cta": "Lista oczekujących",
+    "formNote": "Formularz zajmuje około minuty. Jeśli chcesz mocniej wesprzeć rozwój Fishki i skorzystać ze specjalnych benefitów, sprawdź też wczesny dostęp w preorderze.",
     "preorderLink": "Chcę zobaczyć wczesny dostęp",
     "preorderAria": "Przejdź do płatnej rezerwacji wczesnego dostępu"
   },
