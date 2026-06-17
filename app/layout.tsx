@@ -16,6 +16,9 @@ export async function generateMetadata() {
   return {
     title: messages.seo.title,
     description: messages.seo.description,
+    icons: {
+      icon: "/icon.svg",
+    },
   };
 }
 
