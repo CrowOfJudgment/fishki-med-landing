@@ -396,21 +396,21 @@ export default function StaticDemoShowcase({
     {
       id: "anatomy",
       title: ui.deckAnatomy,
-      cards: 7,
+      cards: 30,
       due: 0,
       accent: "#0F766E",
     },
     {
       id: "pharmacology",
       title: ui.deckPharmacology,
-      cards: 7,
+      cards: 127,
       due: 0,
       accent: "#78C2B7",
     },
     {
       id: "pathophysiology",
       title: ui.deckPathology,
-      cards: 7,
+      cards: 84,
       due: 0,
       accent: "#E86860",
     },
@@ -420,6 +420,12 @@ export default function StaticDemoShowcase({
     title: ui.question,
     studyFront: ui.question,
     back: ui.answer,
+  };
+  const editorExampleCard: SavedCard = {
+    id: "static-editor-cloze-card",
+    title: ui.clozeQuestion,
+    studyFront: ui.clozeQuestion,
+    back: ui.clozeAnswer,
   };
 
   const stopAutoplay = () => {
@@ -553,7 +559,9 @@ export default function StaticDemoShowcase({
                     selectedReviewResult={null}
                     studyDirection="frontBack"
                     savedCards={[]}
-                    editingCard={null}
+                    editingCard={
+                      screen.key === "editor" ? editorExampleCard : null
+                    }
                     studyCard={studyCard}
                     studyFrontLabel={ui.front}
                     studyBackLabel={ui.back}

@@ -13,6 +13,7 @@ function FeatureIcon({ name }: { name: string }) {
     tags: "#",
     difficulty: "!",
     reviews: "↻",
+    offline: "↓",
   };
 
   return (
@@ -40,7 +41,7 @@ export default function Features() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {t.features.items.map(
             (
               item: {

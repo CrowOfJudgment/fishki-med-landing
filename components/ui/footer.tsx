@@ -9,10 +9,11 @@ export default function Footer({ border = false }: { border?: boolean }) {
   const year = new Date().getFullYear();
 
   const productLinks = [
-    { href: "#features", label: t.footer.features },
-    { href: "#how-it-works", label: t.footer.how },
-    { href: "#demo", label: t.footer.demo },
-    { href: "#waitlist-form", label: t.footer.waitlist },
+    { href: "/#features", label: t.footer.features },
+    { href: "/#how-it-works", label: t.footer.how },
+    { href: "/#demo", label: t.footer.demo },
+    { href: "/#waitlist-form", label: t.footer.waitlist },
+    { href: "/terms", label: t.footer.terms },
   ];
 
   return (
@@ -59,23 +60,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </ul>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:block">
-              <div className="rounded-2xl border border-[#B9DDD5] bg-[#F4F7F5] p-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#274D53]/70">
-                  {t.footer.social}
-                </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {["LinkedIn", "IG", "TIKTOK"].map((label) => (
-                    <span
-                      key={label}
-                      className="inline-flex h-10 min-w-10 items-center justify-center rounded-full border border-[#B9DDD5] bg-[#E7F1EE] px-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#274D53]"
-                    >
-                      {label}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
+            <div>
               <div className="rounded-2xl border border-[#B9DDD5] bg-[#F4F7F5] p-5">
                 <p className="mt-4 text-sm leading-6 text-[#274D53]">
                   © {year} Fishki. {t.footer.copyright}

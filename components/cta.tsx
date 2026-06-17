@@ -36,11 +36,11 @@ export default function Cta() {
     locale === "pl"
       ? {
           src: "https://tally.so/embed/2ERGxA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1",
-          title: "Fishki Med PL",
+          title: "Fishki PL",
         }
       : {
           src: "https://tally.so/embed/pbzpW8?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1",
-          title: "Fishki Med",
+          title: "Fishki",
         };
   const loadEmbeds = () => {
     (window as TallyWindow).Tally?.loadEmbeds?.();
@@ -104,6 +104,13 @@ export default function Cta() {
                 <p className="mt-2 text-sm leading-6 text-[#274D53]">
                   {t.cta.formNote}
                 </p>
+                <a
+                  href="#preorder"
+                  aria-label={t.cta.preorderAria}
+                  className="mt-4 inline-flex rounded-full bg-[#E86860] px-4 py-2 text-xs font-semibold text-white shadow-[0_10px_24px_rgba(232,104,96,0.18)] transition hover:bg-[#D85A52]"
+                >
+                  {t.cta.preorderLink}
+                </a>
               </div>
             </div>
 

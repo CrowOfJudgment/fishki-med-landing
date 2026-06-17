@@ -1,26 +1,28 @@
 {
   "seo": {
-    "title": "Fishki — proste fiszki, mądre powtórki",
-    "description": "Twórz medyczne fiszki z tekstem, obrazami i cloze deletion. Ucz się w szybkim trybie lub z powtórkami rozłożonymi w czasie."
+    "title": "Fishki — fiszki medyczne bez walki z edytorem",
+    "description": "Twórz fiszki medyczne z notatek, zdjęć, atlasów i wykładów. Ucz się offline i powtarzaj materiał według planu do kolokwium, egzaminu albo sesji."
   },
   "header": {
     "whyFishki": "Dlaczego Fishki?",
     "features": "Funkcje",
     "how": "Jak to działa",
     "demo": "Demo",
-    "waitlist": "Waitlista",
-    "cta": "Dołącz do waitlisty",
-    "ctaAria": "Dołącz do listy oczekujących"
+    "waitlist": "Lista oczekujących",
+    "cta": "Lista oczekujących",
+    "ctaAria": "Dołącz do listy oczekujących",
+    "preorderCta": "Wczesny dostęp",
+    "preorderCtaAria": "Przejdź do rezerwacji wczesnego dostępu"
   },
   "hero": {
     "badge": "Fiszki zaprojektowane dla studentów medycyny",
-    "title": "Proste tworzenie fiszek. Mądre powtórki.",
-    "subtitle": "Błyskawicznie twórz własne fiszki z tekstem, obrazami i lukami bez skomplikowanej konfiguracji. Ucz się wybierając jeden z naszych prostych lub zaawansowanych trybów nauki, budowanych z myślą o studentach medycyny.",
-    "primaryCta": "Dołącz do waitlisty",
-    "secondaryCta": "Zobacz demo",
+    "title": "Fiszki medyczne bez walki z edytorem",
+    "subtitle": "Twórz fiszki z notatek, zdjęć, atlasów i wykładów. Ucz się offline i powtarzaj materiał według planu do kolokwium, egzaminu albo sesji.",
+    "primaryCta": "Dołącz do listy oczekujących",
+    "secondaryCta": "Zarezerwuj wczesny dostęp",
     "validation": "Tworzone na podstawie rozmów ze studentami medycyny korzystającymi z aplikacji do fiszek.",
     "highlights": [
-      "Szybkie tworzenie",
+      "Szybkie tworzenie fiszek",
       "Powtórki rozłożone w czasie",
       "Nauka offline"
     ],
@@ -33,7 +35,7 @@
       "backLabel": "Tył",
       "back": "Blokada receptorów β-adrenergicznych",
       "image": "Dodaj obraz",
-      "cloze": "Utwórz lukę",
+      "gap": "Utwórz lukę",
       "save": "Zapisz kartę"
     }
   },
@@ -63,9 +65,9 @@
     ]
   },
   "features": {
-    "badge": "Funkcje",
-    "heading": "Szybciej przerabiaj trudny materiał.",
-    "intro": "Proste narzędzia, które oszczędzają czas podczas tworzenia fiszek i pomagają uporządkować naukę do zajęć, kolokwiów i egzaminów.",
+    "badge": "4 filary",
+    "heading": "Najważniejsze rzeczy bez przeładowania funkcjami.",
+    "intro": "Fishki skupia się na tym, co realnie skraca drogę od materiału z zajęć do aktywnej nauki.",
     "planned": "Planowane",
     "offlineHighlight": {
       "badge": "Offline-first",
@@ -77,48 +79,23 @@
     "items": [
       {
         "icon": "edit",
-        "heading": "Szybkie tworzenie klasycznych fiszek",
-        "text": "Wpisz pytanie i odpowiedź bez zbędnego klikania. Prosty edytor pozwala wygodnie tworzyć fiszki również na telefonie."
-      },
-      {
-        "icon": "notes",
-        "heading": "Fiszki z tekstu i notatek",
-        "text": "Wklej fragment notatek, skryptu lub materiału z zajęć i szybko przerób najważniejsze informacje na fiszki."
-      },
-      {
-        "icon": "cloze",
-        "heading": "Fiszki z lukami",
-        "text": "Zaznacz najważniejsze pojęcia w zdaniu i zamień je w luki. Sprawdza się przy definicjach, objawach, lekach, klasyfikacjach i zależnościach."
+        "heading": "Twórz fiszki szybciej",
+        "text": "Dodawaj tekst, obrazy, luki w tekście i najważniejsze informacje z notatek bez przeklikiwania skomplikowanych ustawień."
       },
       {
         "icon": "image",
-        "heading": "Zdjęcia, schematy i grafiki",
-        "text": "Twórz fiszki na podstawie zdjęć z notatek, slajdów, atlasów, tabel i schematów medycznych."
-      },
-      {
-        "icon": "occlusion",
-        "heading": "Image occlusion",
-        "text": "Zasłaniaj podpisy, struktury i elementy obrazu. Ucz się anatomii, histologii, dermatologii, radiologii oraz schematów bez przepisywania materiału."
-      },
-      {
-        "icon": "organize",
-        "heading": "Talie, foldery i przedmioty",
-        "text": "Porządkuj fiszki według przedmiotów, działów, egzaminów i tematów, takich jak anatomia, farmakologia czy patofizjologia."
-      },
-      {
-        "icon": "tags",
-        "heading": "Tagowanie fiszek",
-        "text": "Dodawaj tagi, takie jak „egzamin”, „kolokwium”, „trudne”, „leki” lub „objawy”, aby szybko filtrować potrzebny materiał."
-      },
-      {
-        "icon": "difficulty",
-        "heading": "Poziom trudności",
-        "text": "Oznaczaj fiszki jako łatwe, średnie lub trudne i szybciej wracaj do tematów, które nadal sprawiają Ci problem."
+        "heading": "Ucz się obrazów, nie tylko tekstu",
+        "text": "Korzystaj z obrazów i zakrywania elementów na obrazkach do anatomii, histologii, schematów i materiałów z zajęć."
       },
       {
         "icon": "reviews",
-        "heading": "Sugestie powtórek",
-        "text": "Już podczas tworzenia możesz zaplanować powtórkę talii lub dodać fiszki do systemu powtórek rozłożonych w czasie."
+        "heading": "Powtarzaj według planu",
+        "text": "Fishki podpowiadają, co warto powtórzyć dzisiaj, żeby materiał nie znikał tuż przed egzaminem."
+      },
+      {
+        "icon": "offline",
+        "heading": "Miej materiały offline",
+        "text": "Pobieraj talie, foldery albo całe przedmioty i ucz się także bez internetu."
       }
     ]
   },
@@ -129,10 +106,18 @@
     "screenLabel": "Interaktywny prototyp",
     "showcaseBadge": "Jak działa Fishki",
     "showcaseHeading": "Od pierwszej fiszki do planu na egzamin",
-    "showcaseIntro": "Przesuń ekran i zobacz spójną historię tworzenia, szybkiej nauki, planowania egzaminu oraz pracy offline.",
+    "showcaseIntro": "Zobacz spójną historię tworzenia, szybkiej nauki, planowania egzaminu oraz pracy offline.",
     "playBadge": "Pierwsza fiszka w 10 sekund",
     "playHeading": "Wypróbuj demo i stwórz swoją pierwszą fiszkę",
     "playIntro": "Twórz talie i fiszki, edytuj je, usuwaj gestem oraz uruchom szybką naukę. Wszystko działa lokalnie w tym prototypie.",
+    "postDemoCta": {
+      "title": "Prototyp pokazuje kierunek produktu. Jeżeli chcesz wesprzeć rozwój Fishki, możesz wybrać swój poziom zaangażowania.",
+      "text": "Możesz dołączyć do darmowej listy oczekujących albo zarezerwować wczesny dostęp ze specjalnymi benefitami, jeśli chcesz wcześniej testować Fishki i mieć wpływ na priorytety.",
+      "waitlist": "Dołącz do listy oczekujących",
+      "waitlistAria": "Dołącz do darmowej listy oczekujących Fishki",
+      "preorder": "Zarezerwuj wczesny dostęp",
+      "preorderAria": "Przejdź do sekcji wczesnego dostępu"
+    },
     "stories": {
       "choose": "Wybierz historyjkę",
       "guide": "Przewodnik po demo",
@@ -153,12 +138,12 @@
         },
         {
           "key": "cloze",
-          "title": "Nowa talia → cloze",
-          "description": "Utwórz talię, dodaj fiszkę z luką i zakończ krótką sesję nauki.",
+          "title": "Nowa talia → luki w tekście",
+          "description": "Utwórz talię, dodaj fiszkę z lukami i zakończ krótką sesją nauki.",
           "steps": [
             "Kliknij „Dodaj talię” i utwórz nowy zestaw.",
             "Kliknij „Dodaj fiszkę”.",
-            "Zaznacz fragment tekstu, użyj cloze i kliknij „Zapisz”.",
+            "Zaznacz fragment tekstu, utwórz lukę i kliknij „Zapisz”.",
             "Kliknij „Ucz się” w prawym górnym rogu talii.",
             "Wybierz szybki tryb nauki i kliknij „Rozpocznij”.",
             "Przejdź przez naukę do ekranu podsumowania."
@@ -167,7 +152,7 @@
         {
           "key": "study",
           "title": "Gotowy zestaw → nauka",
-          "description": "Rozpocznij naukę z przykładowej talii i dojść do wyboru powtórki albo wyjścia.",
+          "description": "Rozpocznij naukę z przykładowej talii.",
           "steps": [
             "Kliknij „Ucz się” przy jednej z przykładowych talii.",
             "Wybierz szybki tryb nauki i kliknij „Rozpocznij”.",
@@ -185,7 +170,7 @@
     },
     "fixedScreens": [
       { "key": "decks", "number": "01", "label": "Talie", "title": "Zacznij od uporządkowanego materiału", "description": "Wybierz talię do edycji albo od razu rozpocznij naukę konkretnego przedmiotu." },
-      { "key": "editor", "number": "02", "label": "Edytor", "title": "Twórz bogate fiszki bez konfiguracji", "description": "Dodawaj tekst, zdjęcia, cloze deletion oraz zasłonięcia fragmentów obrazu." },
+      { "key": "editor", "number": "02", "label": "Edytor", "title": "Twórz bogate fiszki bez konfiguracji", "description": "Dodawaj tekst, zdjęcia, luki w tekście oraz zakrywanie elementów na obrazie." },
       { "key": "quickSetup", "number": "03", "label": "Szybka nauka", "title": "Wybierz kierunek kart", "description": "Powtarzaj przód–tył, tył–przód albo mieszaj oba kierunki w jednej szybkiej sesji." },
       { "key": "review", "number": "04", "label": "Powtórka", "title": "Oceniaj bez zbędnego tarcia", "description": "Odwracaj fiszki i wybieraj tylko „Umiem” albo „Nie umiem”, aby szybko przejść przez materiał." },
       { "key": "plannerSetup", "number": "05", "label": "Planner", "title": "Powiedz, do czego i kiedy się uczysz", "description": "Wybierz egzamin, jego datę, talie do opanowania oraz liczbę dni dostępnych na naukę." },
@@ -282,14 +267,14 @@
       "cardTypeButton": "Wybierz typ fiszki",
       "typeTitle": "Typ fiszki",
       "typeSubtitle": "Jak chcesz zapisać tę informację?",
-      "basicType": "Pytanie i odpowiedź",
+      "basicType": "Klasyczna fiszka",
       "basicTypeDesc": "Klasyczna fiszka z przodem i tyłem",
-      "clozeType": "Cloze deletion",
-      "clozeTypeDesc": "Ukryj kluczowe fragmenty notatki",
+      "clozeType": "Luki w tekście",
+      "clozeTypeDesc": "Ukryj wybrane fragmenty notatki i odtwarzaj je z pamięci.",
       "imageType": "Karta obrazkowa",
       "imageTypeDesc": "Obraz na jednej lub obu stronach",
-      "occlusionType": "Image occlusion",
-      "occlusionTypeDesc": "Zakryj podpisy i elementy obrazu",
+      "occlusionType": "Zakrywanie obrazu",
+      "occlusionTypeDesc": "Zakryj elementy na schemacie, zdjęciu lub rycinie i ucz się ich rozpoznawania.",
       "selectedType": "Wybrany format",
       "useType": "Użyj tego typu",
       "editorTitle": "Nowa fiszka",
@@ -308,9 +293,10 @@
       "addImage": "Dodaj obraz",
       "removeImage": "Usuń obraz",
       "formatText": "Formatuj tekst",
-      "addCloze": "Dodaj cloze deletion",
-      "addOcclusion": "Dodaj image occlusion",
-      "clozeActive": "Cloze",
+      "addCloze": "Dodaj lukę w tekście",
+      "addOcclusion": "Dodaj zakrywanie obrazu",
+      "clozeActive": "Luka",
+      "clozeActivePlural": "Luki",
       "medicalImage": "Obraz medyczny",
       "uploadedImage": "Dodany obraz",
       "drawOcclusionHint": "Przeciągnij palcem, aby zasłonić fragment",
@@ -430,7 +416,7 @@
   "useCases": {
     "badge": "Stworzone pod medycynę",
     "heading": "Materiał medyczny rzadko mieści się w jednym zdaniu.",
-    "intro": "Fishki mają wspierać obrazy, schematy, klasyfikacje i odpowiedzi złożone z wielu punktów — bez wciskania ich w zbyt prosty format.",
+    "intro": "Fishki mają wspierać obrazy, schematy, klasyfikacje i odpowiedzi złożone z wielu punktów - bez upychania ich w zbyt prosty format.",
     "items": [
       { "label": "Anatomia", "title": "Podpisy struktur", "text": "Zakrywaj nazwy na rycinach i ucz się relacji przestrzennych." },
       { "label": "Farmakologia", "title": "Działania niepożądane", "text": "Łącz lek, mechanizm, wskazania i działania uboczne w jednej talii." },
@@ -447,7 +433,7 @@
       {
         "number": "01",
         "title": "Twórz własne karty w kilka sekund.",
-        "text": "Wpisz pytanie i odpowiedź, dodaj obraz albo zaznacz fragment tekstu jako cloze."
+        "text": "Wpisz pytanie i odpowiedź, dodaj obraz albo zaznacz fragment tekstu jako lukę."
       },
       {
         "number": "02",
@@ -464,14 +450,107 @@
   "cta": {
     "badge": "Wczesny dostęp",
     "title": "Pomóż zbudować lepsze fiszki dla medycyny.",
-    "subtitle": "Dołącz do waitlisty i powiedz nam, jak dziś korzystasz z aplikacji do fiszek. Twoje odpowiedzi pomogą ustalić priorytety pierwszej wersji.",
+    "subtitle": "Dołącz do listy oczekujących i powiedz nam, jak dziś korzystasz z aplikacji do fiszek. Twoje odpowiedzi pomogą ustalić priorytety pierwszej wersji.",
     "benefits": [
       "Pierwszeństwo dostępu do wersji beta",
       "Wpływ na funkcje i workflow pierwszej wersji",
       "Tylko konkretne informacje o produkcie"
     ],
-    "cta": "Dołącz do waitlisty early access",
-    "formNote": "Formularz zajmuje około minuty."
+    "cta": "Dołącz do listy oczekujących wczesnego dostępu",
+    "formNote": "Formularz zajmuje około minuty.",
+    "preorderLink": "Chcę zobaczyć wczesny dostęp",
+    "preorderAria": "Przejdź do płatnej rezerwacji wczesnego dostępu"
+  },
+  "research": {
+    "badge": "Research insight",
+    "heading": "Budowane na podstawie rozmów ze studentami medycyny",
+    "description": "Najczęściej powtarzały się te same problemy: zbyt wolne tworzenie fiszek, słabe wsparcie obrazów, chaos w powtórkach i brak wygodnego trybu offline. Fishki skupia się właśnie na tych problemach.",
+    "insights": [
+      "Szybkie tworzenie fiszek jest ważne, ale nie kosztem zaawansowanych funkcji edycji.",
+      "Obrazy są kluczowe w anatomii, histologii i schematach.",
+      "Offline jest realną potrzebą, nie dodatkiem."
+    ]
+  },
+  "proof": {
+    "badge": "Feedback studentów",
+    "heading": "Co studenci medycyny chcieliby mieć w narzędziu do fiszek",
+    "description": "Te wypowiedzi pokazują, które problemy Fishki ma rozwiązać w pierwszej kolejności: szybsze tworzenie, lepsza praca z obrazami, tryby nauki, plan przed egzaminem i pewny offline.",
+    "quotes": [
+      {
+        "name": "Łukasz",
+        "role": "student medycyny",
+        "quote": "Chciałbym móc oznaczać konkretne punkty odpowiedzi, których nie pamiętam — tak żeby przy kolejnej powtórce aplikacja zasłaniała właśnie te fragmenty. Bardzo przydałby się też tryb egzaminu i automatyczne zwiększanie liczby powtórek przed terminem."
+      },
+      {
+        "name": "Hania",
+        "role": "studentka medycyny",
+        "quote": "Najważniejszy byłby łatwy dostęp do fiszek innych użytkowników, ale też algorytm powtórek jak w Anki. Chciałabym móc robić fiszki na tablecie, kontynuować na telefonie i mieć wszystko dostępne offline z synchronizacją po powrocie internetu."
+      },
+      {
+        "name": "Kasia",
+        "role": "studentka medycyny",
+        "quote": "Najbardziej przydałoby mi się połączenie Anki i Quizleta: raz szybka powtórka z podziałem na umiem/nie umiem, a raz normalne powtórki rozłożone w czasie. Fajna byłaby też podpowiedź przed pokazaniem odpowiedzi, np. mnemotechnika albo skojarzenie."
+      },
+      {
+        "name": "Marta",
+        "role": "studentka medycyny",
+        "quote": "Często uczę się w miejscach bez internetu, np. w pociągu, i w Quizlecie pobieranie talii potrafi się zacinać. Dla mnie dużym plusem byłoby offline, które po prostu działa i daje pewność, że fiszki są naprawdę pobrane."
+      },
+      {
+        "name": "Ola",
+        "role": "studentka medycyny",
+        "quote": "Quizlet ma fajne tryby nauki, np. ręczne wpisywanie odpowiedzi albo test ABCD, ale brakuje mi większej kontroli nad powtórkami. Chciałabym móc ręcznie zmieniać interwały, losować fiszki albo uczyć się ich po kolei i łatwo zamieniać strony pytanie–odpowiedź."
+      }
+    ]
+  },
+  "preorder": {
+    "badge": "Płatna rezerwacja",
+    "title": "Wczesny dostęp dla pierwszych użytkowników",
+    "subtitle": "Zarezerwuj wcześniejszy dostęp do Fishki, testuj produkt przed publicznym startem i skorzystaj ze specjalnych benefitów dla pierwszych użytkowników.",
+    "includes": [
+      "Dostęp do zamkniętej bety",
+      "Wpływ na roadmapę i priorytety funkcji",
+      "Specjalne benefity dla pierwszych użytkowników",
+      "Niższa cena niż po publicznym starcie",
+      "6 miesięcy dostępu po premierze publicznej",
+      "Możliwość zwrotu, jeżeli beta znacząco się opóźni"
+    ],
+    "trust": "To nie jest gotowa aplikacja produkcyjna. To wcześniejszy dostęp dla osób, które chcą pomóc zbudować lepsze narzędzie do nauki medycyny. Jeżeli wolisz tylko obserwować rozwój projektu, dołącz do darmowej listy oczekujących.",
+    "primaryCta": "Zarezerwuj wczesny dostęp",
+    "primaryAria": "Przejdź do modułu rezerwacji wczesnego dostępu",
+    "secondaryCta": "Najpierw dołączę do listy oczekujących",
+    "secondaryAria": "Przejdź do darmowej listy oczekujących",
+    "placeholderLabel": "Komponent preorderu",
+    "placeholderText": "Tutaj pojawi się docelowy moduł płatności, wyboru planu albo inny element związany z preorderem.",
+    "assurances": [
+      {
+        "title": "Co kupujesz",
+        "text": "Płatną rezerwację wcześniejszego dostępu, a nie obietnicę gotowej aplikacji już dziś."
+      },
+      {
+        "title": "Kiedy dostaniesz dostęp",
+        "text": "Gdy zamknięta beta będzie gotowa do zaproszenia pierwszej grupy użytkowników. Nie obiecujemy konkretnej daty przed jej potwierdzeniem."
+      },
+      {
+        "title": "Jeżeli beta się opóźni",
+        "text": "Poinformujemy o statusie prac. Przy znaczącym opóźnieniu będzie dostępna możliwość zwrotu zgodnie z zasadami opisanymi na stronie."
+      }
+    ],
+    "roadmapTitle": "Planowany zakres bety",
+    "roadmap": [
+      {
+        "stage": "Etap 1",
+        "text": "Talie, fiszki tekstowe, obrazy, luki w tekście, podstawowy tryb nauki."
+      },
+      {
+        "stage": "Etap 2",
+        "text": "Zakrywanie obrazu, lepszy planner powtórek, tryb offline dla pobranych talii."
+      },
+      {
+        "stage": "Etap 3",
+        "text": "Statystyki, import, publiczna biblioteka i funkcje współdzielenia."
+      }
+    ]
   },
   "footer": {
     "tagline": "Proste tworzenie fiszek i poważny system powtórek dla studentów medycyny.",
@@ -479,11 +558,21 @@
     "features": "Funkcje",
     "how": "Jak to działa",
     "demo": "Demo",
-    "waitlist": "Waitlista",
+    "waitlist": "Lista oczekujących",
     "social": "Kontakt",
-    "copyright": "Tworzone z myślą o studentach medycyny."
+    "copyright": "Tworzone z myślą o studentach medycyny.",
+    "terms": "Warunki użytkowania",
+    "contactPlaceholder": "Miejsce na adres email kontaktowy."
+  },
+  "terms": {
+    "back": "Wróć na stronę główną",
+    "badge": "Dokument",
+    "title": "Warunki użytkowania",
+    "intro": "To statyczna strona przygotowana pod warunki użytkowania Fishki. Wklej tutaj docelowy regulamin, gdy będzie gotowy.",
+    "placeholderTitle": "Miejsce na treść warunków",
+    "placeholderText": "Tutaj możesz wkleić pełne warunki użytkowania, zasady preorderu, informacje o zwrotach i pozostałe postanowienia. Ten tekst jest placeholderem i nie stanowi porady prawnej."
   },
   "floatingCta": {
-    "text": "Dołącz do waitlisty"
+    "text": "Zarezerwuj wczesny dostęp"
   }
 }

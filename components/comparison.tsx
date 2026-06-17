@@ -69,8 +69,8 @@ export default function Comparison() {
                   </p>
                   <ul className="mt-7 space-y-3">
                     {product.points.map((point) => (
-                      <li key={point} className="flex items-center gap-3 text-sm font-medium">
-                        <span className={`flex h-6 w-6 items-center justify-center rounded-full ${
+                      <li key={point} className="flex items-start gap-3 text-sm font-medium leading-6">
+                        <span className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${
                           featured
                             ? "bg-white/12 text-white"
                             : "bg-[#E86860]/10 text-[#E86860]"

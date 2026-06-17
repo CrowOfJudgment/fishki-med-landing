@@ -1,4 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import {
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+  useState,
+} from "react";
 import type {
   CardTypeKey,
   DeckKey,
@@ -516,16 +522,12 @@ function CardTypeScreen({
   );
 }
 
-function FlashcardField({
-  label,
-  value,
-  onChange,
-  onClozeTerm,
-  generatedTerms,
-  resetKey,
-  onSnapshotChange,
-  ui,
-}: {
+type FlashcardFieldHandle = {
+  applyBold: () => void;
+  applyCloze: () => void;
+};
+
+const FlashcardField = forwardRef<FlashcardFieldHandle, {
   label: string;
   value: string;
   onChange: (value: string) => void;
@@ -534,7 +536,16 @@ function FlashcardField({
   resetKey: number;
   onSnapshotChange: (snapshot: FieldSnapshot) => void;
   ui: DemoUi;
-}) {
+}>(function FlashcardField({
+  label,
+  value,
+  onChange,
+  onClozeTerm,
+  generatedTerms,
+  resetKey,
+  onSnapshotChange,
+  ui,
+}, ref) {
   const editorRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [imageUrl, setImageUrl] = useState<string | null>(null);
@@ -720,6 +731,11 @@ function FlashcardField({
     setDraftEllipse(null);
   };
 
+  useImperativeHandle(ref, () => ({
+    applyBold,
+    applyCloze,
+  }));
+
   return (
     <div className="rounded-[1.15rem] bg-white p-3 shadow-[0_1px_3px_rgba(0,40,56,0.07)]">
       <div className="flex items-center justify-between">
@@ -728,7 +744,8 @@ function FlashcardField({
         </p>
         {!!generatedTerms?.length && (
           <span className="rounded-full bg-[#E86860]/10 px-2 py-1 text-[7px] font-bold text-[#E86860]">
-            {generatedTerms.length} {ui.clozeActive}
+            {generatedTerms.length}{" "}
+            {generatedTerms.length === 1 ? ui.clozeActive : ui.clozeActivePlural}
           </span>
         )}
       </div>
@@ -802,12 +819,39 @@ function FlashcardField({
         className="hidden"
         onChange={(event) => addImage(event.target.files?.[0])}
       />
+    </div>
+  );
+});
 
-      <div className="flex items-center gap-1.5 border-t border-[#E7F1EE] pt-2.5">
+function EditorToolbar({
+  ui,
+  hasClozeTerms,
+  onBold,
+  onCloze,
+}: {
+  ui: DemoUi;
+  hasClozeTerms: boolean;
+  onBold: () => void;
+  onCloze: () => void;
+}) {
+  const toolClass = (active = false) =>
+    `flex h-8 min-w-8 items-center justify-center rounded-xl px-2 text-[9px] font-bold transition active:scale-95 ${
+      active
+        ? "bg-[#0F766E] text-white"
+        : "bg-white text-[#0F766E] ring-1 ring-[#B9DDD5]"
+    }`;
+
+  const keepSelection = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+  };
+
+  return (
+    <div className="mb-3 flex items-center justify-start rounded-[1.15rem] border border-[#B9DDD5] bg-[#E7F1EE]/70 px-3 py-2">
+      <div className="flex items-center gap-1.5">
         <button
           type="button"
           onMouseDown={keepSelection}
-          onClick={applyBold}
+          onClick={onBold}
           aria-label={ui.formatText}
           title={ui.formatText}
           className={toolClass(false)}
@@ -817,22 +861,31 @@ function FlashcardField({
         <button
           type="button"
           onMouseDown={keepSelection}
-          onClick={applyCloze}
+          onClick={onCloze}
           aria-label={ui.addCloze}
           title={ui.addCloze}
-          className={toolClass(Boolean(generatedTerms?.length))}
+          className={toolClass(hasClozeTerms)}
         >
           {"{…}"}
         </button>
-        {ellipses.length > 0 && (
-          <button
-            type="button"
-            onClick={() => setEllipses([])}
-            className="ml-auto text-[8px] font-semibold text-[#E86860]"
-          >
-            {ui.clearOcclusions}
-          </button>
-        )}
+        <button
+          type="button"
+          disabled
+          aria-label={ui.addImage}
+          title={ui.addImage}
+          className={`${toolClass(false)} cursor-not-allowed opacity-45 active:scale-100`}
+        >
+          <PhotoIcon />
+        </button>
+        <button
+          type="button"
+          disabled
+          aria-label={ui.addOcclusion}
+          title={ui.addOcclusion}
+          className={`${toolClass(false)} cursor-not-allowed opacity-45 active:scale-100`}
+        >
+          <OcclusionIcon />
+        </button>
       </div>
     </div>
   );
@@ -919,6 +972,7 @@ function EditorScreen({
   const [showPreview, setShowPreview] = useState(false);
   const [isPreviewFlipped, setIsPreviewFlipped] = useState(false);
   const [resetKey, setResetKey] = useState(0);
+  const frontFieldRef = useRef<FlashcardFieldHandle>(null);
 
   const addClozeTerm = (term: string) => {
     setClozeTerms((current) => {
@@ -954,12 +1008,21 @@ function EditorScreen({
         title={ui.editorTitle}
         backLabel={ui.backNavigation}
         onBack={onBack}
+        actionLabel={ui.saveChanges}
+        onAction={() => saveAndReset("back")}
       />
       <div className="min-h-0 flex-1 overflow-y-auto px-4 pb-20 pt-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <p className="mb-3 truncate text-[9px] font-semibold text-[#274D53]/65">
           {selectedDeckName}
         </p>
+        <EditorToolbar
+          ui={ui}
+          hasClozeTerms={clozeTerms.length > 0}
+          onBold={() => frontFieldRef.current?.applyBold()}
+          onCloze={() => frontFieldRef.current?.applyCloze()}
+        />
         <FlashcardField
+          ref={frontFieldRef}
           label={ui.front}
           value={front}
           onChange={setFront}
@@ -974,7 +1037,6 @@ function EditorScreen({
             label={ui.back}
             value={back}
             onChange={setBack}
-            generatedTerms={clozeTerms}
             resetKey={resetKey}
             onSnapshotChange={setBackSnapshot}
             ui={ui}
@@ -983,7 +1045,7 @@ function EditorScreen({
       </div>
       <div
         className={`absolute bottom-0 left-0 right-0 overflow-hidden rounded-b-[2rem] border-t border-[#274D53]/10 bg-white/90 px-3 py-2 backdrop-blur-xl ${
-          "grid grid-cols-3 gap-2"
+          "grid grid-cols-2 gap-2"
         }`}
       >
         <button
@@ -998,13 +1060,6 @@ function EditorScreen({
         </button>
         <button
           type="button"
-          onClick={() => saveAndReset("back")}
-          className="h-12 w-full rounded-full bg-[#0F766E] px-2 text-[8px] font-semibold leading-3 text-white shadow-sm transition active:scale-[0.98]"
-        >
-          {ui.saveChanges}
-        </button>
-        <button
-          type="button"
           onClick={() => saveAndReset("next")}
           className="h-12 w-full rounded-full bg-[#78C2B7] px-2 text-[8px] font-semibold leading-3 text-[#002838] shadow-sm transition active:scale-[0.98]"
         >
@@ -1016,8 +1071,10 @@ function EditorScreen({
         <div className="absolute inset-0 z-40 flex flex-col bg-[#F1F5F3]">
           <AppHeader
             title={ui.previewTitle}
-            closeLabel={ui.closePreview}
-            onClose={() => setShowPreview(false)}
+            backLabel={ui.backNavigation}
+            onBack={() => setShowPreview(false)}
+            actionLabel={ui.saveChanges}
+            onAction={() => saveAndReset("back")}
           />
           <div className="min-h-0 flex flex-1 flex-col px-4 pb-3 pt-2">
             <span className="mx-auto mb-2 rounded-full bg-[#E7F1EE] px-3 py-1 text-[8px] font-bold uppercase tracking-[0.16em] text-[#0F766E]">
@@ -1059,10 +1116,10 @@ function EditorScreen({
             </button>
             <button
               type="button"
-              onClick={() => saveAndReset("back")}
-              className="h-12 w-full rounded-full bg-[#0F766E] px-2 text-[8px] font-semibold leading-4 text-white"
+              onClick={() => saveAndReset("next")}
+              className="h-12 w-full rounded-full bg-[#78C2B7] px-2 text-[8px] font-semibold leading-3 text-[#002838] shadow-sm transition active:scale-[0.98]"
             >
-              <span className="mx-auto block max-w-16">{ui.saveChanges}</span>
+              {ui.nextCard}
             </button>
           </div>
         </div>

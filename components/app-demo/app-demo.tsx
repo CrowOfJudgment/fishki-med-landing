@@ -286,8 +286,7 @@ export default function AppDemo() {
     } else if (selectedStory.key === "cloze") {
       advanceStory(3);
     }
-    if (editingCard) goToStep(1);
-    else if (action === "back") goToStep(1);
+    if (action === "back") goToStep(1);
   };
 
   const editCard = (card: SavedCard) => {
@@ -530,6 +529,30 @@ export default function AppDemo() {
             >
               {t.demo.resetInteractive}
             </button>
+          </div>
+          <div className="mt-8 rounded-[1.75rem] border border-[#B9DDD5] bg-[#F4F7F5] p-5 text-center sm:p-6">
+            <p className="text-sm font-semibold text-[#002838]">
+              {t.demo.postDemoCta.title}
+            </p>
+            <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-[#274D53]">
+              {t.demo.postDemoCta.text}
+            </p>
+            <div className="mt-5 flex flex-col justify-center gap-3 sm:flex-row">
+              <a
+                href="#preorder"
+                aria-label={t.demo.postDemoCta.preorderAria}
+                className="inline-flex items-center justify-center rounded-full bg-[#E86860] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(232,104,96,0.22)] transition hover:-translate-y-0.5 hover:bg-[#D85A52]"
+              >
+                {t.demo.postDemoCta.preorder}
+              </a>
+              <a
+                href="#waitlist-form"
+                aria-label={t.demo.postDemoCta.waitlistAria}
+                className="inline-flex items-center justify-center rounded-full bg-[#0F766E] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(15,118,110,0.2)] transition hover:-translate-y-0.5 hover:bg-[#002838]"
+              >
+                {t.demo.postDemoCta.waitlist}
+              </a>
+            </div>
           </div>
         </div>
       </div>
