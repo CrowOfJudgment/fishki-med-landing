@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useT } from "@/lib/i18n-context";
 
 export default function Preorder() {
@@ -29,6 +30,38 @@ export default function Preorder() {
               <p className="mt-4 max-w-xl text-base leading-7 text-[#274D53]">
                 {t.preorder.subtitle}
               </p>
+              <div className="mt-7 grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+                {t.preorder.offerFacts.map(
+                  (item: { label: string; value: string; note: string }, index: number) => (
+                    <article
+                      key={item.label}
+                      className={`rounded-[1.35rem] border p-4 ${
+                        index === 0
+                          ? "border-[#E86860]/35 bg-[#E86860]/8"
+                          : "border-[#B9DDD5] bg-[#F4F7F5]"
+                      }`}
+                    >
+                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#0F766E]">
+                        {item.label}
+                      </p>
+                      <p className="mt-2 text-lg font-semibold text-[#002838]">
+                        {item.value}
+                      </p>
+                      <p className="mt-1 text-xs leading-5 text-[#274D53]">
+                        {item.note}
+                      </p>
+                    </article>
+                  ),
+                )}
+              </div>
+              <div className="mt-4 rounded-[1.35rem] border border-[#B9DDD5] bg-[#F4F7F5] p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#0F766E]">
+                  {t.preorder.deliveryGuaranteeLabel}
+                </p>
+                <p className="mt-2 text-sm font-medium leading-6 text-[#002838]">
+                  {t.preorder.deliveryGuarantee}
+                </p>
+              </div>
               <div className="mt-7 space-y-3">
                 {t.preorder.includes.map((item: string) => (
                   <div key={item} className="flex items-start gap-3">
@@ -65,29 +98,49 @@ export default function Preorder() {
             <div className="space-y-4">
               <div
                 id="preorder-module"
-                className="rounded-[1.75rem] border border-dashed border-[#78C2B7] bg-[#F4F7F5] p-6 text-center sm:p-8"
+                className="rounded-[1.75rem] border border-[#78C2B7] bg-[#F4F7F5] p-6 sm:p-8"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]">
+                <p className="text-center text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]">
                   {t.preorder.placeholderLabel}
                 </p>
-                <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-[#274D53]">
+                <p className="mx-auto mt-3 max-w-md text-center text-sm leading-6 text-[#274D53]">
                   {t.preorder.placeholderText}
                 </p>
-              </div>
-              <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
-                {t.preorder.assurances.map((item: { title: string; text: string }) => (
-                  <article
-                    key={item.title}
-                    className="rounded-[1.4rem] border border-[#B9DDD5] bg-white/80 p-5 shadow-sm"
-                  >
-                    <h3 className="text-sm font-semibold text-[#002838]">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-xs leading-5 text-[#274D53]">
-                      {item.text}
-                    </p>
-                  </article>
-                ))}
+
+                <div className="mt-6 space-y-3 text-left">
+                  <label className="flex cursor-pointer items-start gap-3 rounded-[1.15rem] border border-[#B9DDD5] bg-white p-4 text-sm leading-6 text-[#274D53]">
+                    <input
+                      type="checkbox"
+                      required
+                      className="mt-1 h-4 w-4 shrink-0 accent-[#0F766E]"
+                    />
+                    <span>
+                      {t.preorder.purchaseConsentBefore}
+                      <Link
+                        href="/preorder-terms"
+                        className="font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 hover:text-[#002838]"
+                      >
+                        {t.preorder.termsLink}
+                      </Link>
+                      {t.preorder.purchaseConsentAfter}
+                    </span>
+                  </label>
+
+                  <label className="flex cursor-pointer items-start gap-3 rounded-[1.15rem] border border-[#B9DDD5] bg-white p-4 text-sm leading-6 text-[#274D53]">
+                    <input
+                      type="checkbox"
+                      className="mt-1 h-4 w-4 shrink-0 accent-[#0F766E]"
+                    />
+                    <span>{t.preorder.marketingConsent}</span>
+                  </label>
+                </div>
+
+                <Link
+                  href="/preorder-terms"
+                  className="mx-auto mt-5 inline-flex items-center justify-center text-sm font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 transition hover:text-[#002838]"
+                >
+                  {t.preorder.readTerms}
+                </Link>
               </div>
             </div>
           </div>

@@ -9,11 +9,11 @@ export default function Footer({ border = false }: { border?: boolean }) {
   const year = new Date().getFullYear();
 
   const productLinks = [
-    { href: "/#features", label: t.footer.features },
     { href: "/#how-it-works", label: t.footer.how },
     { href: "/#demo", label: t.footer.demo },
     { href: "/#waitlist-form", label: t.footer.waitlist },
     { href: "/terms", label: t.footer.terms },
+    { href: "/preorder-terms", label: t.footer.preorderTerms },
   ];
 
   return (

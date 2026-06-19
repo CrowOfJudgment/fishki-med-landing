@@ -504,38 +504,47 @@
     ]
   },
   "preorder": {
-    "badge": "Paid reservation",
-    "title": "Early Access for first users",
-    "subtitle": "Reserve early access to Fishki, test the product before the public launch and get special benefits for first users.",
-    "includes": [
-      "Access to the closed beta",
-      "Influence on the roadmap and feature priorities",
-      "Special benefits for first users",
-      "Lower price than after the public launch",
-      "12 months of premium plan access after the public release",
-      "Refund option if the beta is significantly delayed"
+    "badge": "Preorder",
+    "title": "Fishki Early Access for PLN 39",
+    "subtitle": "Buy Early Access on preferential terms, test Fishki before the public launch and have a real say in the order in which features are implemented.",
+    "offerFacts": [
+      {
+        "label": "Preorder price",
+        "value": "PLN 39",
+        "note": "One-time payment. After launch, the price for one year of access will be higher."
+      },
+      {
+        "label": "What is included",
+        "value": "Early Access + 12 months",
+        "note": "Test access and 12 months of the premium plan after the public launch."
+      },
+      {
+        "label": "Estimated access",
+        "value": "Second half of 2026",
+        "note": "This is an estimate and may change as the product develops."
+      }
     ],
-    "trust": "This is not a finished production app yet. It is early access for people who want to help build a better study tool for medicine. If you prefer to follow the project first, join the free waitlist.",
+    "deliveryGuaranteeLabel": "Delivery guarantee",
+    "deliveryGuarantee": "If we do not release the first Fishki Early Access version by June 30, 2027, every purchaser will be able to request a full preorder refund.",
+    "includes": [
+      "Access to the test version before the official launch",
+      "12 months of the premium plan after the public launch",
+      "The ability to share feedback and influence product development",
+      "Voting on feature implementation priorities",
+      "A lower price than the planned post-launch price"
+    ],
+    "trust": "This is not a finished production app. You are buying early access to a product that is still being developed. You may withdraw from the purchase within 14 days without giving a reason.",
     "primaryCta": "Reserve Early Access",
     "primaryAria": "Go to the Early Access reservation module",
     "secondaryCta": "I’ll join the waitlist first",
     "secondaryAria": "Go to the free waitlist",
-    "placeholderLabel": "Preorder component",
-    "placeholderText": "The final payment module, plan picker or another preorder element can live here.",
-    "assurances": [
-      {
-        "title": "What you buy",
-        "text": "A paid reservation for early access, not a promise that the finished app is available today."
-      },
-      {
-        "title": "When you get access",
-        "text": "When the closed beta is ready to invite the first user group. We will not promise a specific date before it is confirmed."
-      },
-      {
-        "title": "If the beta is delayed",
-        "text": "We will share progress updates. If there is a significant delay, a refund option will be available according to the rules described on the page."
-      }
-    ],
+    "placeholderLabel": "Preorder purchase module",
+    "placeholderText": "The final payment button will appear here. Before buying, the user will accept the preorder terms and choose whether to receive marketing updates.",
+    "purchaseConsentBefore": "I accept the ",
+    "termsLink": "Fishki Early Access preorder terms",
+    "purchaseConsentAfter": " and understand that I am purchasing early access to an application that is still being developed.",
+    "marketingConsent": "I want to receive information about Fishki development, the app launch and special offers.",
+    "readTerms": "Read the purchase terms",
     "roadmapTitle": "Planned beta scope",
     "roadmap": [
       {
@@ -560,7 +569,8 @@
     "demo": "Demo",
     "waitlist": "Waitlist",
     "copyright": "Built with medical students in mind.",
-    "terms": "Terms of use"
+    "terms": "Terms of use",
+    "preorderTerms": "Preorder terms"
   },
   "terms": {
     "back": "Back to homepage",
@@ -569,6 +579,150 @@
     "intro": "This static page is prepared for the Fishki terms of use. Paste the final terms here when they are ready.",
     "placeholderTitle": "Terms content placeholder",
     "placeholderText": "You can paste the full terms of use, preorder rules, refund information and remaining provisions here. This text is a placeholder and is not legal advice."
+  },
+  "preorderTerms": {
+    "back": "Back to preorder",
+    "badge": "Purchase terms",
+    "title": "Fishki Early Access preorder terms",
+    "lastUpdated": "Last updated: [DD.MM.YYYY]",
+    "intro": "These terms govern the purchase of preorder access to the Fishki application, available at: [website address].",
+    "sections": [
+      {
+        "title": "1. Seller information",
+        "paragraphs": [
+          "The preorder seller is:",
+          "[full business name / full name]",
+          "Address: [address]",
+          "Tax ID: [Tax ID, if applicable]",
+          "Contact email: [email address]",
+          "Hereinafter: the “Seller”."
+        ]
+      },
+      {
+        "title": "2. What Fishki is",
+        "paragraphs": [
+          "Fishki is an educational application being developed for medical students. Its purpose is to make learning easier through flashcards, reviews and user-created materials.",
+          "At the time of the preorder purchase, the application may be in the design, testing or early development stage. Purchasing the preorder does not mean purchasing a finished, final product."
+        ]
+      },
+      {
+        "title": "3. What the Fishki Early Access preorder is",
+        "paragraphs": [
+          "The Fishki Early Access preorder is a purchase of earlier access to the Fishki application on preferential terms.",
+          "As part of the preorder, the user receives:",
+          "The features available in Early Access may be limited compared with the planned final version. The application may contain bugs, unfinished features or changes to its interface and operation."
+        ],
+        "items": [
+          "the right to receive access to an early version of Fishki when it becomes available,",
+          "the ability to test the application before its official launch,",
+          "the ability to provide feedback, vote on feature priorities and influence product development,",
+          "12 months of access to the premium plan after the official launch,",
+          "a price lower than the planned standard price after the official launch."
+        ]
+      },
+      {
+        "title": "4. Preorder price",
+        "paragraphs": [
+          "The preorder price is PLN 39 gross.",
+          "This is a one-time price and covers the benefits described in these terms.",
+          "The planned price after the official launch will be higher. The Seller may change the preorder price or end its sale in the future. A price change does not affect users who purchased earlier."
+        ]
+      },
+      {
+        "title": "5. Application availability date",
+        "paragraphs": [
+          "The first Early Access version is planned for the second half of 2026.",
+          "This date is an estimate because the application is still being developed. The Seller will inform preorder users about material changes to the release timing.",
+          "If the first Fishki Early Access version is not made available by June 30, 2027, the user may request a full refund of the amount paid."
+        ]
+      },
+      {
+        "title": "6. How the preorder purchase works",
+        "paragraphs": [
+          "The preorder is purchased by clicking the purchase button on the website and paying through the available payment provider.",
+          "After payment, the user will receive a purchase confirmation at the email address provided.",
+          "The user should provide a true and current email address because it will be used to share access information and preorder communications."
+        ]
+      },
+      {
+        "title": "7. Right of withdrawal",
+        "paragraphs": [
+          "A user who is a consumer may withdraw from the agreement within 14 days of purchasing the preorder without giving a reason.",
+          "To withdraw, send a message to [email address] stating that you wish to withdraw from the agreement.",
+          "Example message: “I withdraw from the Fishki Early Access preorder purchase agreement. Please refund my payment. Email address used for the purchase: [email address].”",
+          "The refund will be made using the same payment method used for the purchase unless the parties agree on another refund method."
+        ]
+      },
+      {
+        "title": "8. Additional refund guarantee",
+        "paragraphs": [
+          "Independently of the statutory right of withdrawal, the Seller grants the user an additional refund option if the first Fishki Early Access version is not made available by June 30, 2027.",
+          "In that case, the user may request a full refund by sending a message to: [email address]."
+        ]
+      },
+      {
+        "title": "9. Nature of Early Access",
+        "paragraphs": [
+          "The user acknowledges that Early Access may:",
+          "The Seller will take reasonable steps to develop and improve the application but does not guarantee that every planned feature will be available in the first version."
+        ],
+        "items": [
+          "contain technical errors,",
+          "have a limited number of features,",
+          "differ from descriptions, mockups, demos or marketing materials,",
+          "change during development,",
+          "be temporarily unavailable because of technical work."
+        ]
+      },
+      {
+        "title": "10. Contact with preorder users",
+        "paragraphs": [
+          "The Seller may contact preorder users about:",
+          "Communication will be sent to the email address provided during purchase."
+        ],
+        "items": [
+          "purchase confirmation,",
+          "access to the application,",
+          "product development updates,",
+          "requests for opinions, voting or feedback,",
+          "refund and complaint handling."
+        ]
+      },
+      {
+        "title": "11. Complaints",
+        "paragraphs": [
+          "The user may submit a complaint concerning the preorder or the application by sending a message to: [email address].",
+          "The complaint should include:",
+          "The Seller will respond within 14 days of receiving the complaint."
+        ],
+        "items": [
+          "the email address used for the purchase,",
+          "a description of the issue,",
+          "the expected solution."
+        ]
+      },
+      {
+        "title": "12. Personal data",
+        "paragraphs": [
+          "The user's personal data will be processed to handle the preorder purchase, provide application access, contact the user and handle potential refunds and complaints.",
+          "Detailed information about personal data processing is available in the Privacy Policy at: [privacy policy link]."
+        ]
+      },
+      {
+        "title": "13. Changes to the preorder terms",
+        "paragraphs": [
+          "The Seller may amend these terms in the future, particularly because of changes to the application, payment provider, applicable law or product development.",
+          "Changes will not worsen the position of users who purchased the preorder before the changes took effect unless required by law."
+        ]
+      },
+      {
+        "title": "14. Final provisions",
+        "paragraphs": [
+          "Polish law applies to matters not regulated by these terms.",
+          "Questions about the preorder may be sent to the Seller at: [email address]."
+        ]
+      }
+    ]
   },
   "floatingCta": {
     "text": "Reserve Early Access"
