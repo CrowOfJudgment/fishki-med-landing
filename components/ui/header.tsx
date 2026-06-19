@@ -78,18 +78,18 @@ export default function Header() {
 
           <div className="flex shrink-0 items-center gap-2">
             <Link
-              href="/#preorder"
-              aria-label={t.header.preorderCtaAria ?? t.header.preorderCta}
-              className="hidden h-9 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-[#E86860] px-3 text-xs font-semibold text-white shadow-[0_10px_28px_rgba(232,104,96,0.24)] transition hover:-translate-y-0.5 hover:bg-[#D85A52] min-[820px]:inline-flex xl:px-4 xl:text-sm"
-            >
-              {t.header.preorderCta}
-            </Link>
-            <Link
               href="/#waitlist-form"
               aria-label={t.header.ctaAria ?? t.header.cta}
               className="inline-flex h-9 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-[#0F766E] px-3 text-xs font-medium text-white shadow-[0_10px_30px_rgba(15,118,110,0.2)] transition hover:-translate-y-0.5 hover:bg-[#002838] xl:px-4 xl:text-sm"
             >
               {t.header.cta}
+            </Link>
+            <Link
+              href="/#preorder"
+              aria-label={t.header.preorderCtaAria ?? t.header.preorderCta}
+              className="hidden h-9 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-[#E86860] px-3 text-xs font-semibold text-white shadow-[0_10px_28px_rgba(232,104,96,0.24)] transition hover:-translate-y-0.5 hover:bg-[#D85A52] min-[820px]:inline-flex xl:px-4 xl:text-sm"
+            >
+              {t.header.preorderCta}
             </Link>
           </div>
         </div>

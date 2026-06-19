@@ -79,18 +79,18 @@ export default function Preorder() {
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="#preorder-module"
-                  aria-label={t.preorder.primaryAria}
-                  className="inline-flex items-center justify-center rounded-full bg-[#E86860] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(232,104,96,0.24)] transition hover:-translate-y-0.5 hover:bg-[#D85A52]"
-                >
-                  {t.preorder.primaryCta}
-                </a>
-                <a
                   href="#waitlist-form"
                   aria-label={t.preorder.secondaryAria}
                   className="inline-flex items-center justify-center rounded-full bg-[#0F766E] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(15,118,110,0.2)] transition hover:-translate-y-0.5 hover:bg-[#002838]"
                 >
                   {t.preorder.secondaryCta}
+                </a>
+                <a
+                  href="#preorder-module"
+                  aria-label={t.preorder.primaryAria}
+                  className="inline-flex items-center justify-center rounded-full bg-[#E86860] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(232,104,96,0.24)] transition hover:-translate-y-0.5 hover:bg-[#D85A52]"
+                >
+                  {t.preorder.primaryCta}
                 </a>
               </div>
             </div>

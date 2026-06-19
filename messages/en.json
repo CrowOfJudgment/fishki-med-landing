@@ -127,7 +127,7 @@
       "items": [
         {
           "key": "basic",
-          "title": "New deck → 2 cards",
+          "title": "Create medical flashcards",
           "description": "Create a deck, add two basic cards and study them through to the summary.",
           "steps": [
             "Tap “Add deck” and create a new set.",
@@ -140,7 +140,7 @@
         },
         {
           "key": "cloze",
-          "title": "New deck → cloze",
+          "title": "Turn pharmacology notes into cloze cards",
           "description": "Create a deck, add one cloze card and finish a short study session.",
           "steps": [
             "Tap “Add deck” and create a new set.",
@@ -153,7 +153,7 @@
         },
         {
           "key": "study",
-          "title": "Ready deck → study",
+          "title": "Review before a colloquium",
           "description": "Start studying from an example deck and reach the repeat-or-exit choice.",
           "steps": [
             "Tap “Study” on one of the example decks.",
@@ -481,27 +481,27 @@
       {
         "name": "Łukasz",
         "role": "medical student",
-        "quote": "I would like to mark the exact points in an answer that I do not remember, so that during the next review the app hides those specific fragments. An exam mode and automatic increase in reviews before the deadline would also be very useful."
+        "quote": "I would like to mark only the parts of an answer that I do not remember and practise them more before an exam."
       },
       {
         "name": "Hania",
         "role": "medical student",
-        "quote": "The most important thing would be easy access to flashcards from other users, but also a review algorithm like in Anki. I would like to make flashcards on a tablet, continue on my phone and have everything available offline with sync when the internet comes back."
+        "quote": "I want reviews like in Anki, but with simpler syncing between my tablet, phone and offline mode."
       },
       {
         "name": "Kasia",
         "role": "medical student",
-        "quote": "What would help me most is a combination of Anki and Quizlet: sometimes a quick review split into I know / I do not know, and sometimes normal spaced repetition. A hint before showing the answer would also be nice, for example a mnemonic or association."
+        "quote": "The best option would combine Anki and Quizlet: quick review and regular spaced repetition."
       },
       {
         "name": "Marta",
         "role": "medical student",
-        "quote": "I often study in places without internet, for example on a train, and in Quizlet downloading decks can get stuck. For me, a big plus would be offline access that simply works and gives confidence that the flashcards are really downloaded."
+        "quote": "Offline simply has to work, without the stress of discovering that a deck did not download before studying on a train."
       },
       {
-        "name": "Ola",
+        "name": "Adam",
         "role": "medical student",
-        "quote": "Quizlet has nice study modes, for example typing the answer manually or ABCD tests, but I miss more control over reviews. I would like to manually change intervals, shuffle flashcards or study them in order, and easily swap question-answer sides."
+        "quote": "I would like more control: changing intervals, shuffling flashcards and easily swapping the question and answer."
       }
     ]
   },
@@ -513,7 +513,7 @@
       {
         "label": "Preorder price",
         "value": "PLN 39",
-        "note": "One-time payment. After launch, the price for one year of access will be higher."
+        "note": "One-time payment. After the official launch, one year of access will cost between PLN 119 and PLN 179."
       },
       {
         "label": "What is included",
@@ -533,7 +533,7 @@
       "12 months of the premium plan after the public launch",
       "The ability to share feedback and influence product development",
       "Voting on feature implementation priorities",
-      "A lower price than the planned post-launch price"
+      "PLN 39 in preorder instead of the planned PLN 119–179 per year after launch"
     ],
     "trust": "This is not a finished production app. You are buying early access to a product that is still being developed. You may withdraw from the purchase within 14 days without giving a reason.",
     "primaryCta": "Reserve Early Access",
@@ -619,7 +619,7 @@
           "the ability to test the application before its official launch,",
           "the ability to provide feedback, vote on feature priorities and influence product development,",
           "12 months of access to the premium plan after the official launch,",
-          "a price lower than the planned standard price after the official launch."
+          "a PLN 39 preorder price instead of the planned PLN 119–179 per year after the official launch."
         ]
       },
       {
@@ -627,7 +627,7 @@
         "paragraphs": [
           "The preorder price is PLN 39 gross.",
           "This is a one-time price and covers the benefits described in these terms.",
-          "The planned price after the official launch will be higher. The Seller may change the preorder price or end its sale in the future. A price change does not affect users who purchased earlier."
+          "After the official launch, one year of access will cost between PLN 119 and PLN 179. The Seller may change the preorder price or end its sale in the future. A price change does not affect users who purchased earlier."
         ]
       },
       {

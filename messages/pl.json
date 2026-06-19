@@ -127,7 +127,7 @@
       "items": [
         {
           "key": "basic",
-          "title": "Nowa talia → 2 fiszki",
+          "title": "Stwórz medyczne fiszki",
           "description": "Utwórz talię, dodaj dwie klasyczne fiszki i przejdź przez naukę do podsumowania.",
           "steps": [
             "Kliknij „Dodaj talię” i utwórz nowy zestaw.",
@@ -140,7 +140,7 @@
         },
         {
           "key": "cloze",
-          "title": "Nowa talia → luki w tekście",
+          "title": "Zamień notatki z farmakologii w fiszki z lukami",
           "description": "Utwórz talię, dodaj fiszkę z lukami i zakończ krótką sesją nauki.",
           "steps": [
             "Kliknij „Dodaj talię” i utwórz nowy zestaw.",
@@ -153,7 +153,7 @@
         },
         {
           "key": "study",
-          "title": "Gotowy zestaw → nauka",
+          "title": "Powtórka przed kolokwium",
           "description": "Rozpocznij naukę z przykładowej talii.",
           "steps": [
             "Kliknij „Ucz się” przy jednej z przykładowych talii.",
@@ -481,27 +481,27 @@
       {
         "name": "Łukasz",
         "role": "student medycyny",
-        "quote": "Chciałbym móc oznaczać konkretne punkty odpowiedzi, których nie pamiętam — tak żeby przy kolejnej powtórce aplikacja zasłaniała właśnie te fragmenty. Bardzo przydałby się też tryb egzaminu i automatyczne zwiększanie liczby powtórek przed terminem."
+        "quote": "Chciałbym oznaczać tylko te fragmenty odpowiedzi, których nie pamiętam — i ćwiczyć je mocniej przed egzaminem."
       },
       {
         "name": "Hania",
         "role": "studentka medycyny",
-        "quote": "Najważniejszy byłby łatwy dostęp do fiszek innych użytkowników, ale też algorytm powtórek jak w Anki. Chciałabym móc robić fiszki na tablecie, kontynuować na telefonie i mieć wszystko dostępne offline z synchronizacją po powrocie internetu."
+        "quote": "Chcę powtórek jak w Anki, ale z prostszą synchronizacją między tabletem, telefonem i trybem offline."
       },
       {
         "name": "Kasia",
         "role": "studentka medycyny",
-        "quote": "Najbardziej przydałoby mi się połączenie Anki i Quizleta: raz szybka powtórka z podziałem na umiem/nie umiem, a raz normalne powtórki rozłożone w czasie. Fajna byłaby też podpowiedź przed pokazaniem odpowiedzi, np. mnemotechnika albo skojarzenie."
+        "quote": "Najlepsze byłoby połączenie Anki i Quizleta: szybka powtórka oraz normalne powtórki rozłożone w czasie."
       },
       {
         "name": "Marta",
         "role": "studentka medycyny",
-        "quote": "Często uczę się w miejscach bez internetu, np. w pociągu, i w Quizlecie pobieranie talii potrafi się zacinać. Dla mnie dużym plusem byłoby offline, które po prostu działa i daje pewność, że fiszki są naprawdę pobrane."
+        "quote": "Offline musi po prostu działać — bez stresu, że talia nie pobrała się przed nauką w pociągu."
       },
       {
-        "name": "Ola",
-        "role": "studentka medycyny",
-        "quote": "Quizlet ma fajne tryby nauki, np. ręczne wpisywanie odpowiedzi albo test ABCD, ale brakuje mi większej kontroli nad powtórkami. Chciałabym móc ręcznie zmieniać interwały, losować fiszki albo uczyć się ich po kolei i łatwo zamieniać strony pytanie–odpowiedź."
+        "name": "Adam",
+        "role": "student medycyny",
+        "quote": "Chciałbym mieć większą kontrolę: zmieniać interwały, losować fiszki i łatwo odwracać pytanie z odpowiedzią."
       }
     ]
   },
@@ -513,7 +513,7 @@
       {
         "label": "Cena preorderu",
         "value": "39 zł",
-        "note": "Płatność jednorazowa. Po premierze cena w przeliczeniu za jeden rok dostępu będzie wyższa."
+        "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp na jeden rok będzie kosztował od 119 do 179 zł."
       },
       {
         "label": "Zakres oferty",
@@ -533,7 +533,7 @@
       "12 miesięcy planu premium po publicznym starcie",
       "Możliwość zgłaszania opinii i wpływania na rozwój produktu",
       "Głosowania nad priorytetem wdrażania funkcji",
-      "Cena niższa niż planowana cena po premierze"
+      "39 zł w preorderze zamiast planowanych 119–179 zł za rok po premierze"
     ],
     "trust": "To nie jest gotowa aplikacja produkcyjna. Kupujesz wcześniejszy dostęp do produktu w trakcie tworzenia. Możesz odstąpić od zakupu w ciągu 14 dni bez podawania przyczyny.",
     "primaryCta": "Zarezerwuj wczesny dostęp",
@@ -621,7 +621,7 @@
           "możliwość testowania aplikacji przed oficjalną premierą,",
           "możliwość przekazywania opinii, udziału w głosowaniach nad priorytetami funkcji i wpływania na rozwój aplikacji,",
           "12 miesięcy dostępu do planu premium po oficjalnym starcie,",
-          "cenę niższą niż planowana cena standardowa po oficjalnej premierze."
+          "cenę 39 zł w preorderze zamiast planowanych 119–179 zł za rok po oficjalnej premierze."
         ]
       },
       {
@@ -629,7 +629,7 @@
         "paragraphs": [
           "Cena preorderu wynosi 39 zł brutto.",
           "Cena jest ceną jednorazową i obejmuje świadczenia opisane w niniejszych warunkach.",
-          "Planowana cena po oficjalnej premierze będzie wyższa. Sprzedawca może w przyszłości zmienić cenę preorderu lub zakończyć jego sprzedaż. Zmiana ceny nie wpływa na osoby, które wcześniej dokonały zakupu."
+          "Po oficjalnej premierze dostęp na jeden rok będzie kosztował od 119 do 179 zł. Sprzedawca może w przyszłości zmienić cenę preorderu lub zakończyć jego sprzedaż. Zmiana ceny nie wpływa na osoby, które wcześniej dokonały zakupu."
         ]
       },
       {
