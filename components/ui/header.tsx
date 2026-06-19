@@ -50,9 +50,10 @@ export default function Header() {
   }
 
   const navLinks = [
-    { href: "/#why-fishki", label: t.header.whyFishki, className: "hidden min-[940px]:inline-flex" },
+    { href: "/#student-voices", label: t.header.studentVoices, className: "hidden md:inline-flex" },
+    { href: "/#why-fishki", label: t.header.whyFishki, className: "hidden min-[930px]:inline-flex" },
     { href: "/#how-it-works", label: t.header.how, className: "hidden min-[1040px]:inline-flex" },
-    { href: "/#demo", label: t.header.demo, className: "hidden md:inline-flex" },
+    { href: "/#for-medicine", label: t.header.forMedicine, className: "hidden min-[1160px]:inline-flex" },
   ];
 
   return (
@@ -63,7 +64,7 @@ export default function Header() {
             <Logo horizontal className="w-[92px] sm:w-[108px] lg:w-[116px] xl:w-[138px]" />
           </div>
 
-          <nav className="min-w-0 items-center gap-0.5 lg:flex xl:gap-1">
+          <nav className="min-w-0 items-center gap-0.5 md:flex xl:gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

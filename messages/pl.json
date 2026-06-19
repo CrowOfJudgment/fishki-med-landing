@@ -4,7 +4,9 @@
     "description": "Twórz fiszki medyczne z notatek, zdjęć, atlasów i wykładów. Ucz się offline i powtarzaj materiał według planu do kolokwium, egzaminu albo sesji."
   },
   "header": {
-    "whyFishki": "Dlaczego Fishki?",
+    "studentVoices": "Głos studentów",
+    "whyFishki": "Dlaczego Fishki",
+    "forMedicine": "Dla medycyny",
     "features": "Funkcje",
     "how": "Jak to działa",
     "demo": "Demo",

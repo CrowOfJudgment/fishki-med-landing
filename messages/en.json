@@ -4,7 +4,9 @@
     "description": "Create medical flashcards from notes, images, atlases and lectures. Study offline and review with a plan for your next test, exam or finals."
   },
   "header": {
-    "whyFishki": "Why Fishki?",
+    "studentVoices": "Student voices",
+    "whyFishki": "Why Fishki",
+    "forMedicine": "For medicine",
     "features": "Features",
     "how": "How it works",
     "demo": "Demo",

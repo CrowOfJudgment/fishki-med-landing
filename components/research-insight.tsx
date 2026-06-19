@@ -12,7 +12,7 @@ export default function ResearchInsight() {
   const t = useT();
 
   return (
-    <section className="scroll-mt-28 py-16 sm:py-20">
+    <section id="student-voices" className="scroll-mt-28 py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="relative overflow-hidden rounded-[2.25rem] border border-[#B9DDD5] bg-[#F4F7F5] p-6 shadow-[0_24px_70px_rgba(39,77,83,0.08)] sm:p-8 lg:p-10">
           <div

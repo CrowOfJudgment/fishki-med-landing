@@ -6,7 +6,7 @@ export default function UseCases() {
   const t = useT();
 
   return (
-    <section className="py-20 sm:py-28">
+    <section id="for-medicine" className="scroll-mt-28 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div>
