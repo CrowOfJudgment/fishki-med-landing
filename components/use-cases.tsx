@@ -1,6 +1,7 @@
 "use client";
 
 import { useT } from "@/lib/i18n-context";
+import OfflineFirst from "@/components/offline-first";
 
 export default function UseCases() {
   const t = useT();
@@ -36,6 +37,7 @@ export default function UseCases() {
             )}
           </div>
         </div>
+        <OfflineFirst />
       </div>
     </section>
   );

@@ -5177,6 +5177,153 @@ function StaticDemoSection() {
     }, this);
 }
 }),
+"[project]/components/offline-first.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>OfflineFirst
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$i18n$2d$context$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/i18n-context.tsx [app-ssr] (ecmascript)");
+"use client";
+;
+;
+function OfflineFirst() {
+    const t = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$i18n$2d$context$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useT"])();
+    const offline = t.features.offlineHighlight;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        id: "offline",
+        className: "relative mt-16 overflow-hidden rounded-[2.2rem] border border-[#78C2B7] bg-[#0F766E] p-6 text-white shadow-[0_28px_80px_rgba(15,118,110,0.24)] sm:mt-20 sm:p-8 lg:p-10",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "pointer-events-none absolute -right-20 -top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl"
+            }, void 0, false, {
+                fileName: "[project]/components/offline-first.tsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "pointer-events-none absolute -bottom-24 -left-16 h-56 w-56 rounded-full bg-[#78C2B7]/25 blur-3xl"
+            }, void 0, false, {
+                fileName: "[project]/components/offline-first.tsx",
+                lineNumber: 15,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "relative lg:grid lg:grid-cols-[0.9fr_1.1fr] lg:gap-x-12 lg:gap-y-6",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center justify-between",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "inline-flex rounded-full bg-white/12 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-white/80",
+                                        children: offline.badge
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/offline-first.tsx",
+                                        lineNumber: 20,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "flex h-12 w-12 items-center justify-center rounded-2xl bg-white/12 text-2xl font-light ring-1 ring-white/15",
+                                        children: "↓"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/offline-first.tsx",
+                                        lineNumber: 23,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/offline-first.tsx",
+                                lineNumber: 19,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                className: "mt-8 font-display text-3xl font-semibold leading-tight sm:text-4xl",
+                                children: offline.heading
+                            }, void 0, false, {
+                                fileName: "[project]/components/offline-first.tsx",
+                                lineNumber: 28,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "mt-4 text-sm leading-7 text-white/75",
+                                children: offline.text
+                            }, void 0, false, {
+                                fileName: "[project]/components/offline-first.tsx",
+                                lineNumber: 31,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/offline-first.tsx",
+                        lineNumber: 18,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-7 space-y-3 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mt-0 lg:self-center",
+                        children: offline.downloads.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center gap-4 rounded-2xl bg-white/10 p-4 ring-1 ring-white/15",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/12 text-lg font-light",
+                                        children: index === 2 ? "✓" : "↓"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/offline-first.tsx",
+                                        lineNumber: 42,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-sm font-semibold",
+                                        children: item
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/offline-first.tsx",
+                                        lineNumber: 45,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "ml-auto text-xs font-semibold text-white/45",
+                                        children: index === 0 ? "38 MB" : index === 1 ? "126 MB" : "420 MB"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/offline-first.tsx",
+                                        lineNumber: 46,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, item, true, {
+                                fileName: "[project]/components/offline-first.tsx",
+                                lineNumber: 38,
+                                columnNumber: 13
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/components/offline-first.tsx",
+                        lineNumber: 36,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "mt-7 border-t border-white/15 pt-5 text-xs font-semibold leading-6 text-white/65 lg:col-start-1 lg:row-start-2 lg:mt-0",
+                        children: offline.places
+                    }, void 0, false, {
+                        fileName: "[project]/components/offline-first.tsx",
+                        lineNumber: 53,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/offline-first.tsx",
+                lineNumber: 17,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/offline-first.tsx",
+        lineNumber: 10,
+        columnNumber: 5
+    }, this);
+}
+}),
 "[project]/components/use-cases.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -5186,7 +5333,9 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$i18n$2d$context$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/i18n-context.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$offline$2d$first$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/offline-first.tsx [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 function UseCases() {
@@ -5196,111 +5345,118 @@ function UseCases() {
         className: "scroll-mt-28 py-20 sm:py-28",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "mx-auto max-w-6xl px-4 sm:px-6",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "inline-flex rounded-full border border-[#B9DDD5] bg-[#E7F1EE] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]",
-                                children: t.useCases.badge
-                            }, void 0, false, {
-                                fileName: "[project]/components/use-cases.tsx",
-                                lineNumber: 13,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "mt-5 font-display text-4xl font-semibold leading-tight text-balance text-[#002838] sm:text-5xl",
-                                children: t.useCases.heading
-                            }, void 0, false, {
-                                fileName: "[project]/components/use-cases.tsx",
-                                lineNumber: 16,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "mt-5 text-lg leading-8 text-[#274D53]",
-                                children: t.useCases.intro
-                            }, void 0, false, {
-                                fileName: "[project]/components/use-cases.tsx",
-                                lineNumber: 19,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/use-cases.tsx",
-                        lineNumber: 12,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "grid gap-4 sm:grid-cols-2",
-                        children: t.useCases.items.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
-                                className: "rounded-[1.5rem] border border-[#B9DDD5] bg-white/70 p-5",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex items-center justify-between",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-[10px] font-bold uppercase tracking-[0.2em] text-[#0F766E]",
-                                                children: item.label
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/use-cases.tsx",
-                                                lineNumber: 27,
-                                                columnNumber: 21
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: `h-2.5 w-2.5 rounded-full ${index === 1 ? "bg-[#E86860]" : "bg-[#78C2B7]"}`
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/use-cases.tsx",
-                                                lineNumber: 30,
-                                                columnNumber: 21
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/use-cases.tsx",
-                                        lineNumber: 26,
-                                        columnNumber: 19
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "mt-4 font-display text-xl font-semibold text-[#002838]",
-                                        children: item.title
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/use-cases.tsx",
-                                        lineNumber: 32,
-                                        columnNumber: 19
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "mt-3 text-sm leading-6 text-[#274D53]",
-                                        children: item.text
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/use-cases.tsx",
-                                        lineNumber: 33,
-                                        columnNumber: 19
-                                    }, this)
-                                ]
-                            }, item.title, true, {
-                                fileName: "[project]/components/use-cases.tsx",
-                                lineNumber: 25,
-                                columnNumber: 17
-                            }, this))
-                    }, void 0, false, {
-                        fileName: "[project]/components/use-cases.tsx",
-                        lineNumber: 22,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/components/use-cases.tsx",
-                lineNumber: 11,
-                columnNumber: 9
-            }, this)
-        }, void 0, false, {
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "inline-flex rounded-full border border-[#B9DDD5] bg-[#E7F1EE] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]",
+                                    children: t.useCases.badge
+                                }, void 0, false, {
+                                    fileName: "[project]/components/use-cases.tsx",
+                                    lineNumber: 14,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                    className: "mt-5 font-display text-4xl font-semibold leading-tight text-balance text-[#002838] sm:text-5xl",
+                                    children: t.useCases.heading
+                                }, void 0, false, {
+                                    fileName: "[project]/components/use-cases.tsx",
+                                    lineNumber: 17,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "mt-5 text-lg leading-8 text-[#274D53]",
+                                    children: t.useCases.intro
+                                }, void 0, false, {
+                                    fileName: "[project]/components/use-cases.tsx",
+                                    lineNumber: 20,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/use-cases.tsx",
+                            lineNumber: 13,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "grid gap-4 sm:grid-cols-2",
+                            children: t.useCases.items.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
+                                    className: "rounded-[1.5rem] border border-[#B9DDD5] bg-white/70 p-5",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "flex items-center justify-between",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-[10px] font-bold uppercase tracking-[0.2em] text-[#0F766E]",
+                                                    children: item.label
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/use-cases.tsx",
+                                                    lineNumber: 28,
+                                                    columnNumber: 21
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: `h-2.5 w-2.5 rounded-full ${index === 1 ? "bg-[#E86860]" : "bg-[#78C2B7]"}`
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/use-cases.tsx",
+                                                    lineNumber: 31,
+                                                    columnNumber: 21
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/use-cases.tsx",
+                                            lineNumber: 27,
+                                            columnNumber: 19
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                            className: "mt-4 font-display text-xl font-semibold text-[#002838]",
+                                            children: item.title
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/use-cases.tsx",
+                                            lineNumber: 33,
+                                            columnNumber: 19
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "mt-3 text-sm leading-6 text-[#274D53]",
+                                            children: item.text
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/use-cases.tsx",
+                                            lineNumber: 34,
+                                            columnNumber: 19
+                                        }, this)
+                                    ]
+                                }, item.title, true, {
+                                    fileName: "[project]/components/use-cases.tsx",
+                                    lineNumber: 26,
+                                    columnNumber: 17
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "[project]/components/use-cases.tsx",
+                            lineNumber: 23,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/use-cases.tsx",
+                    lineNumber: 12,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$offline$2d$first$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                    fileName: "[project]/components/use-cases.tsx",
+                    lineNumber: 40,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
             fileName: "[project]/components/use-cases.tsx",
-            lineNumber: 10,
+            lineNumber: 11,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/use-cases.tsx",
-        lineNumber: 9,
+        lineNumber: 10,
         columnNumber: 5
     }, this);
 }
@@ -5867,175 +6023,6 @@ function ResearchInsight() {
     }, this);
 }
 }),
-"[project]/components/offline-first.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
-
-__turbopack_context__.s([
-    "default",
-    ()=>OfflineFirst
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$i18n$2d$context$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/i18n-context.tsx [app-ssr] (ecmascript)");
-"use client";
-;
-;
-function OfflineFirst() {
-    const t = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$i18n$2d$context$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useT"])();
-    const offline = t.features.offlineHighlight;
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        id: "offline",
-        className: "scroll-mt-28 bg-[#E7F1EE] py-20 sm:py-24",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "mx-auto max-w-6xl px-4 sm:px-6",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "relative mx-auto w-full max-w-[460px]",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute -inset-8 rounded-full bg-[#B9DDD5]/50 blur-3xl"
-                    }, void 0, false, {
-                        fileName: "[project]/components/offline-first.tsx",
-                        lineNumber: 13,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative overflow-hidden rounded-[2.2rem] border border-[#78C2B7] bg-[#0F766E] p-6 text-white shadow-[0_28px_80px_rgba(15,118,110,0.24)] sm:p-8",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "pointer-events-none absolute -right-20 -top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl"
-                            }, void 0, false, {
-                                fileName: "[project]/components/offline-first.tsx",
-                                lineNumber: 15,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "pointer-events-none absolute -bottom-24 -left-16 h-56 w-56 rounded-full bg-[#78C2B7]/25 blur-3xl"
-                            }, void 0, false, {
-                                fileName: "[project]/components/offline-first.tsx",
-                                lineNumber: 16,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "relative",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex items-center justify-between",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "inline-flex rounded-full bg-white/12 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-white/80",
-                                                children: offline.badge
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/offline-first.tsx",
-                                                lineNumber: 20,
-                                                columnNumber: 17
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "flex h-12 w-12 items-center justify-center rounded-2xl bg-white/12 text-2xl font-light ring-1 ring-white/15",
-                                                children: "↓"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/offline-first.tsx",
-                                                lineNumber: 23,
-                                                columnNumber: 17
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/offline-first.tsx",
-                                        lineNumber: 19,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "mt-8 font-display text-3xl font-semibold leading-tight sm:text-4xl",
-                                        children: offline.heading
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/offline-first.tsx",
-                                        lineNumber: 28,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "mt-4 text-sm leading-7 text-white/75",
-                                        children: offline.text
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/offline-first.tsx",
-                                        lineNumber: 31,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "mt-7 space-y-3",
-                                        children: offline.downloads.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "flex items-center gap-4 rounded-2xl bg-white/10 p-4 ring-1 ring-white/15",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/12 text-lg font-light",
-                                                        children: index === 2 ? "✓" : "↓"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/offline-first.tsx",
-                                                        lineNumber: 41,
-                                                        columnNumber: 21
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "text-sm font-semibold",
-                                                        children: item
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/offline-first.tsx",
-                                                        lineNumber: 44,
-                                                        columnNumber: 21
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "ml-auto text-xs font-semibold text-white/45",
-                                                        children: index === 0 ? "38 MB" : index === 1 ? "126 MB" : "420 MB"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/offline-first.tsx",
-                                                        lineNumber: 45,
-                                                        columnNumber: 21
-                                                    }, this)
-                                                ]
-                                            }, item, true, {
-                                                fileName: "[project]/components/offline-first.tsx",
-                                                lineNumber: 37,
-                                                columnNumber: 19
-                                            }, this))
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/offline-first.tsx",
-                                        lineNumber: 35,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "mt-7 border-t border-white/15 pt-5 text-xs font-semibold leading-6 text-white/65",
-                                        children: offline.places
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/offline-first.tsx",
-                                        lineNumber: 52,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/offline-first.tsx",
-                                lineNumber: 18,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/offline-first.tsx",
-                        lineNumber: 14,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/components/offline-first.tsx",
-                lineNumber: 12,
-                columnNumber: 9
-            }, this)
-        }, void 0, false, {
-            fileName: "[project]/components/offline-first.tsx",
-            lineNumber: 11,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
-        fileName: "[project]/components/offline-first.tsx",
-        lineNumber: 10,
-        columnNumber: 5
-    }, this);
-}
-}),
 ];
 
-//# sourceMappingURL=components_3d8000ef._.js.map
+//# sourceMappingURL=components_fb9cb744._.js.map

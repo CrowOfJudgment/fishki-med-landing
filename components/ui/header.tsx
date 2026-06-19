@@ -50,10 +50,11 @@ export default function Header() {
   }
 
   const navLinks = [
-    { href: "/#student-voices", label: t.header.studentVoices, className: "hidden md:inline-flex" },
-    { href: "/#why-fishki", label: t.header.whyFishki, className: "hidden min-[930px]:inline-flex" },
-    { href: "/#how-it-works", label: t.header.how, className: "hidden min-[1040px]:inline-flex" },
-    { href: "/#for-medicine", label: t.header.forMedicine, className: "hidden min-[1160px]:inline-flex" },
+    { href: "/#how-it-works", label: t.header.how, className: "hidden md:inline-flex" },
+    { href: "/#student-voices", label: t.header.studentVoices, className: "hidden min-[930px]:inline-flex" },
+    { href: "/#why-fishki", label: t.header.whyFishki, className: "hidden min-[1040px]:inline-flex" },
+    { href: "/#demo", label: t.header.demo, className: "hidden min-[1120px]:inline-flex" },
+    { href: "/#for-medicine", label: t.header.forMedicine, className: "hidden min-[1240px]:inline-flex" },
   ];
 
   return (

@@ -137,24 +137,29 @@ function Header() {
     }
     const navLinks = [
         {
+            href: "/#how-it-works",
+            label: t.header.how,
+            className: "hidden md:inline-flex"
+        },
+        {
             href: "/#student-voices",
             label: t.header.studentVoices,
-            className: "hidden md:inline-flex"
+            className: "hidden min-[930px]:inline-flex"
         },
         {
             href: "/#why-fishki",
             label: t.header.whyFishki,
-            className: "hidden min-[930px]:inline-flex"
+            className: "hidden min-[1040px]:inline-flex"
         },
         {
-            href: "/#how-it-works",
-            label: t.header.how,
-            className: "hidden min-[1040px]:inline-flex"
+            href: "/#demo",
+            label: t.header.demo,
+            className: "hidden min-[1120px]:inline-flex"
         },
         {
             href: "/#for-medicine",
             label: t.header.forMedicine,
-            className: "hidden min-[1160px]:inline-flex"
+            className: "hidden min-[1240px]:inline-flex"
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
@@ -171,12 +176,12 @@ function Header() {
                             className: "w-[92px] sm:w-[108px] lg:w-[116px] xl:w-[138px]"
                         }, void 0, false, {
                             fileName: "[project]/components/ui/header.tsx",
-                            lineNumber: 64,
+                            lineNumber: 65,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/ui/header.tsx",
-                        lineNumber: 63,
+                        lineNumber: 64,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -187,12 +192,12 @@ function Header() {
                                 children: link.label
                             }, link.href, false, {
                                 fileName: "[project]/components/ui/header.tsx",
-                                lineNumber: 69,
+                                lineNumber: 70,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/components/ui/header.tsx",
-                        lineNumber: 67,
+                        lineNumber: 68,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -205,7 +210,7 @@ function Header() {
                                 children: t.header.cta
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/header.tsx",
-                                lineNumber: 80,
+                                lineNumber: 81,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -215,29 +220,29 @@ function Header() {
                                 children: t.header.preorderCta
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/header.tsx",
-                                lineNumber: 87,
+                                lineNumber: 88,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ui/header.tsx",
-                        lineNumber: 79,
+                        lineNumber: 80,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ui/header.tsx",
-                lineNumber: 62,
+                lineNumber: 63,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/ui/header.tsx",
-            lineNumber: 61,
+            lineNumber: 62,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/ui/header.tsx",
-        lineNumber: 60,
+        lineNumber: 61,
         columnNumber: 5
     }, this);
 }
