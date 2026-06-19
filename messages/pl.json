@@ -172,11 +172,11 @@
     },
     "fixedScreens": [
       { "key": "decks", "number": "01", "label": "Talie", "title": "Zacznij od uporządkowanego materiału", "description": "Wybierz talię do edycji albo od razu rozpocznij naukę konkretnego przedmiotu." },
-      { "key": "editor", "number": "02", "label": "Edytor", "title": "Twórz bogate fiszki bez konfiguracji", "description": "Dodawaj tekst, zdjęcia, luki w tekście oraz zakrywanie elementów na obrazie." },
+      { "key": "editor", "number": "02", "label": "Edytor", "title": "Twórz bogate fiszki bez konfiguracji", "description": "Dodawaj tekst, zdjęcia, luki w tekście oraz zakrywaj elementy na obrazie." },
       { "key": "quickSetup", "number": "03", "label": "Szybka nauka", "title": "Wybierz kierunek kart", "description": "Powtarzaj przód–tył, tył–przód albo mieszaj oba kierunki w jednej szybkiej sesji." },
-      { "key": "review", "number": "04", "label": "Powtórka", "title": "Oceniaj bez zbędnego tarcia", "description": "Odwracaj fiszki i wybieraj tylko „Umiem” albo „Nie umiem”, aby szybko przejść przez materiał." },
+      { "key": "review", "number": "04", "label": "Powtórka", "title": "Oceniaj bez zbędnego tarcia", "description": "Odwracaj fiszki i wybieraj tylko „Umiem” albo „Nie umiem” w trybie Szybkiej Nauki lub wybierz bardziej zaawansowane Inteligentne Powtórki." },
       { "key": "plannerSetup", "number": "05", "label": "Planner", "title": "Powiedz, do czego i kiedy się uczysz", "description": "Wybierz egzamin, jego datę, talie do opanowania oraz liczbę dni dostępnych na naukę." },
-      { "key": "plannerToday", "number": "06", "label": "Plan dnia", "title": "Dostawaj konkretny plan na każdy dzień", "description": "Fishki rozdzielają nowe, powtórkowe i trudne karty tak, aby materiał był gotowy przed egzaminem." },
+      { "key": "plannerToday", "number": "06", "label": "Plan dnia", "title": "Konkretny plan na każdy dzień", "description": "Fishki rozdzielają nowe, powtórkowe i trudne karty tak, aby materiał był gotowy przed egzaminem." },
       { "key": "testMode", "number": "07", "label": "Wkrótce", "title": "Sprawdź, czy naprawdę umiesz", "description": "Tryb testu pozwoli wpisywać odpowiedzi, wybierać opcje lub odpowiadać ustnie, zamiast tylko rozpoznawać tył karty." },
       { "key": "offline", "number": "08", "label": "Offline", "title": "Zabierz cały przedmiot ze sobą", "description": "Pobierz talię, folder albo cały przedmiot i ucz się bez internetu na uczelni, w pociągu lub bibliotece." }
     ],
@@ -377,7 +377,7 @@
       "plannerTitle": "Planner",
       "examCountdown": "12 dni",
       "today": "Dzisiaj",
-      "todayTotal": "75 fiszek do zrobienia",
+      "todayTotal": "75 fiszek do powtórzenia",
       "todayAnatomy": "Nowe fiszki z anatomii",
       "todayPhysiology": "Powtórki z fizjologii",
       "todayPharmacology": "Trudne fiszki z farmakologii",
@@ -463,20 +463,10 @@
     "preorderLink": "Chcę zobaczyć wczesny dostęp",
     "preorderAria": "Przejdź do płatnej rezerwacji wczesnego dostępu"
   },
-  "research": {
-    "badge": "Research insight",
-    "heading": "Budowane na podstawie rozmów ze studentami medycyny",
-    "description": "Najczęściej powtarzały się te same problemy: zbyt wolne tworzenie fiszek, słabe wsparcie obrazów, chaos w powtórkach i brak wygodnego trybu offline. Fishki skupia się właśnie na tych problemach.",
-    "insights": [
-      "Szybkie tworzenie fiszek jest ważne, ale nie kosztem zaawansowanych funkcji edycji.",
-      "Obrazy są kluczowe w anatomii, histologii i schematach.",
-      "Offline jest realną potrzebą, nie dodatkiem."
-    ]
-  },
   "proof": {
-    "badge": "Feedback studentów",
+    "badge": "Budowane na podstawie rozmów ze studentami",
     "heading": "Co studenci medycyny chcieliby mieć w narzędziu do fiszek",
-    "description": "Te wypowiedzi pokazują, które problemy Fishki ma rozwiązać w pierwszej kolejności: szybsze tworzenie, lepsza praca z obrazami, tryby nauki, plan przed egzaminem i pewny offline.",
+    "description": "W naszych rozmowach ze studentami najczęściej powtarzały się te same problemy: zbyt wolne tworzenie fiszek, słabe wsparcie obrazów, chaos w powtórkach i brak wygodnego trybu offline. Fishki skupia się właśnie na tych problemach i zapewnia szybsze tworzenie, lepszą pracę z obrazami, tryby nauki, plan przed egzaminem i pewny offline.",
     "quotes": [
       {
         "name": "Łukasz",

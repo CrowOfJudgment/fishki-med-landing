@@ -172,11 +172,11 @@
     },
     "fixedScreens": [
       { "key": "decks", "number": "01", "label": "Decks", "title": "Start with organized material", "description": "Choose a deck to edit or immediately begin studying a specific subject." },
-      { "key": "editor", "number": "02", "label": "Editor", "title": "Create rich cards without setup", "description": "Add text, images, cloze deletions and covered image areas." },
+      { "key": "editor", "number": "02", "label": "Editor", "title": "Create rich cards without setup", "description": "Add text, images, cloze deletions and cover elements in images." },
       { "key": "quickSetup", "number": "03", "label": "Quick study", "title": "Choose the card direction", "description": "Study front-to-back, back-to-front or mix both directions in one quick session." },
-      { "key": "review", "number": "04", "label": "Review", "title": "Rate without extra friction", "description": "Flip cards and choose only “I know” or “I don't know” to move through material quickly." },
+      { "key": "review", "number": "04", "label": "Review", "title": "Rate without extra friction", "description": "Flip cards and choose only “I know” or “I don't know” in Quick Study mode, or choose the more advanced Smart Reviews." },
       { "key": "plannerSetup", "number": "05", "label": "Planner", "title": "Tell Fishki what and when you study", "description": "Choose the exam, its date, decks to master and the number of days available." },
-      { "key": "plannerToday", "number": "06", "label": "Daily plan", "title": "Get a concrete plan for each day", "description": "Fishki distributes new, review and difficult cards so the material is ready before the exam." },
+      { "key": "plannerToday", "number": "06", "label": "Daily plan", "title": "A concrete plan for each day", "description": "Fishki distributes new, review and difficult cards so the material is ready before the exam." },
       { "key": "testMode", "number": "07", "label": "Coming soon", "title": "Check whether you truly know it", "description": "Test mode will let you type, choose or speak an answer instead of only recognizing the back of a card." },
       { "key": "offline", "number": "08", "label": "Offline", "title": "Take an entire subject with you", "description": "Download a deck, folder or whole subject and study without internet at university, on a train or in the library." }
     ],
@@ -377,7 +377,7 @@
       "plannerTitle": "Planner",
       "examCountdown": "12 days",
       "today": "Today",
-      "todayTotal": "75 flashcards to complete",
+      "todayTotal": "75 flashcards to review",
       "todayAnatomy": "New anatomy flashcards",
       "todayPhysiology": "Physiology reviews",
       "todayPharmacology": "Difficult pharmacology cards",
@@ -463,20 +463,10 @@
     "preorderLink": "See preorder",
     "preorderAria": "Go to the paid Early Access reservation"
   },
-  "research": {
-    "badge": "Research insight",
-    "heading": "Built from conversations with medical students",
-    "description": "The same problems kept coming up: creating flashcards takes too long, images are poorly supported, reviews become chaotic and offline access is not good enough. Fishki focuses on exactly those problems.",
-    "insights": [
-      "Fast flashcard creation matters, but not at the expense of advanced editing features.",
-      "Images are essential for anatomy, histology and diagrams.",
-      "Offline access is a real need, not a nice extra."
-    ]
-  },
   "proof": {
-    "badge": "Student feedback",
+    "badge": "Built from conversations with students",
     "heading": "What medical students want from a flashcard tool",
-    "description": "These comments show which problems Fishki is designed to tackle first: faster creation, better image workflows, study modes, exam planning and reliable offline access.",
+    "description": "In our conversations with students, the same problems kept coming up: creating flashcards takes too long, images are poorly supported, reviews become chaotic and convenient offline access is missing. Fishki focuses on these problems by providing faster creation, better image workflows, study modes, an exam planner and reliable offline access.",
     "quotes": [
       {
         "name": "Łukasz",

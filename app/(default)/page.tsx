@@ -7,16 +7,18 @@ import StaticDemoSection from "@/components/app-demo/static-demo-section";
 import UseCases from "@/components/use-cases";
 import Preorder from "@/components/preorder";
 import ResearchInsight from "@/components/research-insight";
+import OfflineFirst from "@/components/offline-first";
 
 export default async function Home() {
   return (
     <main id="top" className="flex flex-col">
       <Hero />
       <FloatingCTA />
+      <StaticDemoSection />
       <ResearchInsight />
       <Comparison />
-      <StaticDemoSection />
       <AppDemo />
+      <OfflineFirst />
       <UseCases />
       <Cta />
       <Preorder />

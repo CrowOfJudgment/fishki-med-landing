@@ -1,7 +1,7 @@
 {
   "/icon.svg/route": "/icon.svg",
   "/_not-found/page": "/_not-found",
-  "/(default)/terms/page": "/terms",
   "/(default)/page": "/",
+  "/(default)/terms/page": "/terms",
   "/(default)/preorder-terms/page": "/preorder-terms"
 }
