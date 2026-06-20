@@ -2096,10 +2096,6 @@
     min-height: calc(var(--spacing) * 16);
   }
 
-  .min-h-\[420px\] {
-    min-height: 420px;
-  }
-
   .min-h-\[520px\] {
     min-height: 520px;
   }
@@ -2555,10 +2551,6 @@
 
   .rounded-\[1\.3rem\] {
     border-radius: 1.3rem;
-  }
-
-  .rounded-\[1\.4rem\] {
-    border-radius: 1.4rem;
   }
 
   .rounded-\[1\.5rem\] {
@@ -3064,10 +3056,6 @@
 
   .object-contain {
     object-fit: contain;
-  }
-
-  .p-1 {
-    padding: calc(var(--spacing) * 1);
   }
 
   .p-3 {
@@ -4241,20 +4229,8 @@
   }
 
   @media (min-width: 40rem) {
-    .sm\:p-2 {
-      padding: calc(var(--spacing) * 2);
-    }
-  }
-
-  @media (min-width: 40rem) {
     .sm\:p-4 {
       padding: calc(var(--spacing) * 4);
-    }
-  }
-
-  @media (min-width: 40rem) {
-    .sm\:p-5 {
-      padding: calc(var(--spacing) * 5);
     }
   }
 
@@ -4603,18 +4579,6 @@
   @media (min-width: 64rem) {
     .lg\:self-center {
       align-self: center;
-    }
-  }
-
-  @media (min-width: 64rem) {
-    .lg\:p-3 {
-      padding: calc(var(--spacing) * 3);
-    }
-  }
-
-  @media (min-width: 64rem) {
-    .lg\:p-6 {
-      padding: calc(var(--spacing) * 6);
     }
   }
 

@@ -114,31 +114,22 @@ export default function Cta() {
               </div>
             </div>
 
-            <div className="relative p-1 sm:p-2 lg:p-3">
+            <div className="relative">
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute -inset-4 rounded-[2rem] bg-[#274D53]/5 blur-2xl"
               />
-
-              <div className="relative flex h-full min-h-[520px] flex-col overflow-hidden rounded-[2rem] border border-[#B9DDD5] bg-[#F4F7F5] shadow-[0_24px_70px_rgba(39,77,83,0.12)] sm:min-h-[560px] lg:min-h-[620px]">
-                
-
-                <div className="flex flex-1 p-4 sm:p-5 lg:p-6">
-                  <div className="min-h-[420px] w-full overflow-hidden rounded-[1.4rem] border border-[#B9DDD5] bg-white shadow-inner">
-                    <iframe
-                      data-tally-src={tallyForm.src}
-                      title={tallyForm.title}
-                      width="100%"
-                      height="229"
-                      className="block w-full border-0"
-                      frameBorder="0"
-                      marginHeight={0}
-                      marginWidth={0}
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
+              <iframe
+                data-tally-src={tallyForm.src}
+                title={tallyForm.title}
+                width="100%"
+                height="620"
+                className="relative block min-h-[520px] w-full rounded-[2rem] border border-[#B9DDD5] bg-white shadow-[0_24px_70px_rgba(39,77,83,0.12)] sm:min-h-[560px] lg:min-h-[620px]"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                loading="lazy"
+              />
             </div>
           </div>
         </div>

@@ -319,7 +319,7 @@ function Cta() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "relative p-1 sm:p-2 lg:p-3",
+                                    className: "relative",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             "aria-hidden": "true",
@@ -329,40 +329,19 @@ function Cta() {
                                             lineNumber: 118,
                                             columnNumber: 15
                                         }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "relative flex h-full min-h-[520px] flex-col overflow-hidden rounded-[2rem] border border-[#B9DDD5] bg-[#F4F7F5] shadow-[0_24px_70px_rgba(39,77,83,0.12)] sm:min-h-[560px] lg:min-h-[620px]",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "flex flex-1 p-4 sm:p-5 lg:p-6",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "min-h-[420px] w-full overflow-hidden rounded-[1.4rem] border border-[#B9DDD5] bg-white shadow-inner",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
-                                                        "data-tally-src": tallyForm.src,
-                                                        title: tallyForm.title,
-                                                        width: "100%",
-                                                        height: "229",
-                                                        className: "block w-full border-0",
-                                                        frameBorder: "0",
-                                                        marginHeight: 0,
-                                                        marginWidth: 0,
-                                                        loading: "lazy"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/cta.tsx",
-                                                        lineNumber: 128,
-                                                        columnNumber: 21
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/cta.tsx",
-                                                    lineNumber: 127,
-                                                    columnNumber: 19
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/cta.tsx",
-                                                lineNumber: 126,
-                                                columnNumber: 17
-                                            }, this)
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
+                                            "data-tally-src": tallyForm.src,
+                                            title: tallyForm.title,
+                                            width: "100%",
+                                            height: "620",
+                                            className: "relative block min-h-[520px] w-full rounded-[2rem] border border-[#B9DDD5] bg-white shadow-[0_24px_70px_rgba(39,77,83,0.12)] sm:min-h-[560px] lg:min-h-[620px]",
+                                            frameBorder: "0",
+                                            marginHeight: 0,
+                                            marginWidth: 0,
+                                            loading: "lazy"
                                         }, void 0, false, {
                                             fileName: "[project]/components/cta.tsx",
-                                            lineNumber: 123,
+                                            lineNumber: 122,
                                             columnNumber: 15
                                         }, this)
                                     ]
@@ -394,7 +373,7 @@ function Cta() {
                 onLoad: loadEmbeds
             }, void 0, false, {
                 fileName: "[project]/components/cta.tsx",
-                lineNumber: 146,
+                lineNumber: 137,
                 columnNumber: 7
             }, this)
         ]
