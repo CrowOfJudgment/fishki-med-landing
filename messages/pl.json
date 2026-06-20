@@ -530,8 +530,13 @@
     "placeholderText": "Tutaj pojawi się docelowy przycisk płatności. Przed zakupem użytkownik zaakceptuje warunki preorderu i zdecyduje, czy chce otrzymywać informacje marketingowe.",
     "purchaseConsentBefore": "Akceptuję ",
     "termsLink": "warunki preorderu Wczesnego Dostępu do Fishki",
-    "purchaseConsentAfter": " i rozumiem, że kupuję wcześniejszy dostęp do aplikacji będącej w trakcie tworzenia.",
-    "marketingConsent": "Chcę otrzymywać informacje o rozwoju Fishki, premierze aplikacji i ofertach specjalnych.",
+    "purchaseConsentAfter": " i rozumiem, że kupuję wcześniejszy dostęp do aplikacji, która jest nadal rozwijana.",
+    "documentsConsentBefore": "Zapoznałem/am się z ",
+    "termsOfUseLink": "Warunkami użytkowania",
+    "documentsConsentMiddle": " i ",
+    "privacyLink": "Polityką prywatności",
+    "documentsConsentAfter": ".",
+    "marketingConsent": "Chcę otrzymywać informacje marketingowe o rozwoju Fishki, premierze aplikacji, specjalnych ofertach i nowych funkcjach.",
     "readTerms": "Przeczytaj warunki zakupu",
     "roadmapTitle": "Planowany zakres bety",
     "roadmap": [
@@ -559,6 +564,7 @@
     "social": "Kontakt",
     "copyright": "Tworzone z myślą o studentach medycyny.",
     "terms": "Warunki użytkowania",
+    "privacy": "Polityka prywatności",
     "preorderTerms": "Warunki preorderu",
     "contactPlaceholder": "Miejsce na adres email kontaktowy."
   },
@@ -572,145 +578,184 @@
   },
   "preorderTerms": {
     "back": "Wróć do preorderu",
-    "badge": "Warunki zakupu",
-    "title": "Warunki preorderu Wczesnego Dostępu do Fishki",
-    "lastUpdated": "Data ostatniej aktualizacji: [DD.MM.RRRR]",
-    "intro": "Niniejsze warunki określają zasady zakupu preorderu dostępu do aplikacji Fishki, dostępnej pod adresem: [adres strony].",
+    "badge": "Regulamin preorderu",
+    "title": "Regulamin preorderu Fishki Early Access",
+    "lastUpdated": "Ostatnia aktualizacja: [DD.MM.2026]",
+    "intro": "",
     "sections": [
       {
-        "title": "1. Informacje o sprzedawcy",
-        "paragraphs": [
-          "Sprzedawcą preorderu jest:",
-          "[pełna nazwa działalności / imię i nazwisko]",
-          "Adres: [adres]",
-          "NIP: [NIP, jeżeli dotyczy]",
-          "Adres e-mail do kontaktu: [adres e-mail]",
-          "Dalej: „Sprzedawca”."
+        "title": "1. Sprzedawca",
+        "blocks": [
+          { "type": "paragraph", "text": "Sprzedawcą preorderu Fishki Early Access jest:" },
+          { "type": "paragraph", "text": "[pełna nazwa firmy / imię i nazwisko]" },
+          { "type": "paragraph", "text": "Adres: [adres]" },
+          { "type": "paragraph", "text": "NIP: [NIP, jeżeli dotyczy]" },
+          { "type": "paragraph", "text": "E-mail kontaktowy: [adres e-mail]" },
+          { "type": "paragraph", "text": "Dalej: „Sprzedawca”." }
         ]
       },
       {
         "title": "2. Czym jest Fishki",
-        "paragraphs": [
-          "Fishki to tworzona aplikacja edukacyjna dla studentów medycyny, której celem jest ułatwienie nauki z wykorzystaniem fiszek, powtórek oraz materiałów tworzonych przez użytkownika.",
-          "Na moment zakupu preorderu aplikacja może znajdować się na etapie projektowania, testów lub wczesnej wersji rozwojowej. Zakup preorderu nie oznacza zakupu gotowego, finalnego produktu."
+        "blocks": [
+          { "type": "paragraph", "text": "Fishki to aplikacja edukacyjna tworzona z myślą o studentach medycyny. Jej celem jest ułatwienie tworzenia fiszek, nauki z powtórkami, pracy z materiałami graficznymi oraz planowania nauki do kolokwiów, egzaminów i egzaminów końcowych." },
+          { "type": "paragraph", "text": "Fishki jest produktem w trakcie tworzenia. Zakup preorderu nie oznacza zakupu gotowej, finalnej aplikacji produkcyjnej." }
         ]
       },
       {
-        "title": "3. Czym jest preorder Wczesnego Dostępu do Fishki",
-        "paragraphs": [
-          "Preorder Wczesnego Dostępu do Fishki to zakup wcześniejszego dostępu do aplikacji na preferencyjnych warunkach.",
-          "W ramach preorderu użytkownik otrzymuje:",
-          "Zakres funkcji dostępnych w wersji Wczesnego Dostępu może być ograniczony względem planowanej wersji finalnej. Aplikacja może zawierać błędy, niedokończone funkcje lub zmiany w interfejsie i sposobie działania."
-        ],
-        "items": [
-          "prawo do uzyskania dostępu do wczesnej wersji aplikacji Fishki, gdy zostanie ona udostępniona,",
-          "możliwość testowania aplikacji przed oficjalną premierą,",
-          "możliwość przekazywania opinii, udziału w głosowaniach nad priorytetami funkcji i wpływania na rozwój aplikacji,",
-          "12 miesięcy dostępu do planu premium po oficjalnym starcie,",
-          "cenę 39 zł w preorderze zamiast planowanych 119–179 zł za rok po oficjalnej premierze."
+        "title": "3. Czym jest preorder Fishki Early Access",
+        "blocks": [
+          { "type": "paragraph", "text": "Preorder Fishki Early Access to zakup wcześniejszego dostępu do aplikacji Fishki na preferencyjnych warunkach." },
+          { "type": "paragraph", "text": "W ramach preorderu użytkownik otrzymuje:" },
+          { "type": "list", "items": [
+            "dostęp do testowej wersji Fishki przed publicznym uruchomieniem aplikacji,",
+            "możliwość testowania aplikacji i zgłaszania opinii,",
+            "możliwość wpływania na priorytety rozwoju produktu, w tym głosowania na kolejność wdrażania funkcji,",
+            "12 miesięcy dostępu do planu premium po publicznym uruchomieniu aplikacji,",
+            "cenę preorderową 39 PLN zamiast planowanej ceny rocznej po premierze w przedziale 119–179 PLN."
+          ] },
+          { "type": "paragraph", "text": "Zakres funkcji dostępnych w Early Access może być ograniczony względem planowanej wersji finalnej." }
         ]
       },
       {
         "title": "4. Cena preorderu",
-        "paragraphs": [
-          "Cena preorderu wynosi 39 zł brutto.",
-          "Cena jest ceną jednorazową i obejmuje świadczenia opisane w niniejszych warunkach.",
-          "Po oficjalnej premierze dostęp na jeden rok będzie kosztował od 119 do 179 zł. Sprzedawca może w przyszłości zmienić cenę preorderu lub zakończyć jego sprzedaż. Zmiana ceny nie wpływa na osoby, które wcześniej dokonały zakupu."
+        "blocks": [
+          { "type": "paragraph", "text": "Cena preorderu wynosi 39 PLN brutto." },
+          { "type": "paragraph", "text": "Jest to jednorazowa płatność obejmująca świadczenia opisane w niniejszym regulaminie." },
+          { "type": "paragraph", "text": "Sprzedawca może w przyszłości zmienić cenę preorderu lub zakończyć jego sprzedaż. Zmiana ceny nie wpływa na osoby, które kupiły preorder przed zmianą." }
         ]
       },
       {
-        "title": "5. Termin udostępnienia aplikacji",
-        "paragraphs": [
-          "Planowany termin udostępnienia pierwszej wersji Wczesnego Dostępu to 30 września 2026 roku.",
-          "Termin Wczesnego Dostępu ma charakter orientacyjny i może ulec zmianie, ponieważ aplikacja jest produktem rozwijanym. Sprzedawca będzie informował użytkowników preorderu o istotnych zmianach dotyczących terminu udostępnienia aplikacji.",
-          "Oficjalna premiera aplikacji jest planowana do końca 2026 roku.",
-          "Jeżeli oficjalna premiera aplikacji nie nastąpi do 31 marca 2027 roku, użytkownik będzie mógł poprosić o pełny zwrot zapłaconej kwoty w okresie od 1 kwietnia do 31 maja 2027 roku."
+        "title": "5. Planowany termin udostępnienia aplikacji",
+        "blocks": [
+          { "type": "paragraph", "text": "Pierwsza wersja Fishki Early Access jest planowana na drugą połowę 2026 roku." },
+          { "type": "paragraph", "text": "Termin ten ma charakter szacunkowy i może ulec zmianie, ponieważ aplikacja jest nadal rozwijana." },
+          { "type": "paragraph", "text": "Jeżeli pierwsza wersja Fishki Early Access nie zostanie udostępniona do 30 czerwca 2027 roku, każdy kupujący będzie mógł zażądać pełnego zwrotu kwoty zapłaconej za preorder." }
         ]
       },
       {
-        "title": "6. Jak działa zakup preorderu",
-        "paragraphs": [
-          "Zakup preorderu odbywa się przez kliknięcie przycisku zakupu na stronie i dokonanie płatności za pomocą dostępnego operatora płatności.",
-          "Po dokonaniu płatności użytkownik otrzyma potwierdzenie zakupu na podany adres e-mail.",
-          "Użytkownik powinien podać prawdziwy i aktualny adres e-mail, ponieważ będzie on używany do przekazania informacji o dostępie do aplikacji oraz komunikacji dotyczącej preorderu."
+        "title": "6. Zakres planowanej wersji Early Access",
+        "blocks": [
+          { "type": "paragraph", "text": "Planowany zakres rozwoju aplikacji obejmuje w szczególności:" },
+          { "type": "list", "items": [
+            "tworzenie talii i fiszek tekstowych,",
+            "dodawanie obrazów,",
+            "fiszki typu cloze deletion,",
+            "podstawowy tryb nauki,",
+            "image occlusion,",
+            "planner powtórek,",
+            "tryb offline dla pobranych materiałów,",
+            "statystyki, import, bibliotekę publiczną i funkcje udostępniania — w późniejszych etapach."
+          ] },
+          { "type": "paragraph", "text": "Sprzedawca nie gwarantuje, że wszystkie powyższe funkcje będą dostępne w pierwszej wersji Early Access." }
         ]
       },
       {
-        "title": "7. Prawo odstąpienia od umowy",
-        "paragraphs": [
-          "Użytkownik będący konsumentem ma prawo odstąpić od umowy w terminie 14 dni od dnia zakupu preorderu bez podawania przyczyny.",
-          "Aby odstąpić od umowy, należy wysłać wiadomość na adres: [adres e-mail] z informacją o chęci odstąpienia od umowy.",
-          "Przykładowa treść wiadomości: „Odstępuję od umowy zakupu preorderu Wczesnego Dostępu do Fishki. Proszę o zwrot płatności. Adres e-mail użyty przy zakupie: [adres e-mail].”",
-          "Zwrot płatności zostanie dokonany przy użyciu tej samej metody płatności, która została użyta przy zakupie, chyba że strony uzgodnią inną metodę zwrotu."
+        "title": "7. Charakter wersji Early Access",
+        "blocks": [
+          { "type": "paragraph", "text": "Użytkownik przyjmuje do wiadomości, że wersja Early Access:" },
+          { "type": "list", "items": [
+            "może zawierać błędy techniczne,",
+            "może mieć ograniczony zakres funkcji,",
+            "może działać niestabilnie,",
+            "może być czasowo niedostępna z powodu prac technicznych,",
+            "może różnić się od makiet, demo, materiałów marketingowych i opisów na stronie,",
+            "może zmieniać się w trakcie rozwoju produktu."
+          ] },
+          { "type": "paragraph", "text": "Sprzedawca będzie podejmował rozsądne działania w celu rozwijania i poprawiania aplikacji, ale nie gwarantuje wdrożenia każdej funkcji sugerowanej przez użytkowników." }
         ]
       },
       {
-        "title": "8. Dodatkowa gwarancja zwrotu",
-        "paragraphs": [
-          "Niezależnie od ustawowego prawa odstąpienia od umowy, Sprzedawca przyznaje użytkownikowi dodatkową możliwość zwrotu środków, jeżeli oficjalna premiera aplikacji Fishki nie nastąpi do 31 marca 2027 roku.",
-          "W takim przypadku użytkownik może poprosić o pełny zwrot w okresie od 1 kwietnia do 31 maja 2027 roku, wysyłając wiadomość na adres: [adres e-mail]."
+        "title": "8. Jak działa zakup preorderu",
+        "blocks": [
+          { "type": "paragraph", "text": "Zakup preorderu następuje przez:" },
+          { "type": "list", "items": [
+            "kliknięcie przycisku zakupu na stronie,",
+            "podanie danych wymaganych do realizacji zakupu,",
+            "zaakceptowanie niniejszego regulaminu,",
+            "dokonanie płatności przez dostępnego operatora płatności."
+          ] },
+          { "type": "paragraph", "text": "Po dokonaniu płatności użytkownik otrzyma potwierdzenie zakupu na podany adres e-mail." },
+          { "type": "paragraph", "text": "Użytkownik powinien podać prawdziwy i aktualny adres e-mail, ponieważ będzie on używany do przekazania informacji o dostępie do aplikacji, komunikacji dotyczącej preorderu, zwrotów i reklamacji." }
         ]
       },
       {
-        "title": "9. Charakter wersji Wczesnego Dostępu",
-        "paragraphs": [
-          "Użytkownik przyjmuje do wiadomości, że wersja Wczesnego Dostępu może:",
-          "Sprzedawca będzie podejmował rozsądne działania, aby rozwijać aplikację i poprawiać jej działanie, ale nie gwarantuje dostępności wszystkich planowanych funkcji w pierwszej wersji."
-        ],
-        "items": [
-          "zawierać błędy techniczne,",
-          "mieć ograniczoną liczbę funkcji,",
-          "różnić się od opisów, makiet, demo lub materiałów marketingowych,",
-          "zmieniać się w trakcie rozwoju aplikacji,",
-          "być czasowo niedostępna z powodu prac technicznych."
+        "title": "9. Prawo odstąpienia od umowy",
+        "blocks": [
+          { "type": "paragraph", "text": "Użytkownik będący konsumentem może odstąpić od umowy w terminie 14 dni od zakupu preorderu bez podawania przyczyny." },
+          { "type": "paragraph", "text": "Aby odstąpić od umowy, należy wysłać wiadomość e-mail na adres:" },
+          { "type": "paragraph", "text": "[adres e-mail]" },
+          { "type": "paragraph", "text": "Przykładowa treść wiadomości:" },
+          { "type": "quote", "text": "Odstępuję od umowy zakupu preorderu Fishki Early Access. Proszę o zwrot płatności.\nAdres e-mail użyty przy zakupie: [adres e-mail]." },
+          { "type": "paragraph", "text": "Zwrot zostanie dokonany przy użyciu tego samego sposobu płatności, którego użyto przy zakupie, chyba że strony uzgodnią inny sposób zwrotu." }
         ]
       },
       {
-        "title": "10. Kontakt z użytkownikami preorderu",
-        "paragraphs": [
-          "Sprzedawca może kontaktować się z użytkownikami preorderu w sprawach związanych z:",
-          "Komunikacja będzie prowadzona na adres e-mail podany przy zakupie."
-        ],
-        "items": [
-          "potwierdzeniem zakupu,",
-          "dostępem do aplikacji,",
-          "aktualizacjami dotyczącymi rozwoju aplikacji,",
-          "prośbą o opinię, udziałem w głosowaniach lub feedbackiem,",
-          "obsługą zwrotów i reklamacji."
+        "title": "10. Dodatkowa gwarancja zwrotu",
+        "blocks": [
+          { "type": "paragraph", "text": "Niezależnie od ustawowego prawa odstąpienia od umowy, Sprzedawca przyznaje użytkownikowi dodatkowe prawo do zwrotu." },
+          { "type": "paragraph", "text": "Jeżeli pierwsza wersja Fishki Early Access nie zostanie udostępniona do 30 czerwca 2027 roku, użytkownik może zażądać pełnego zwrotu kwoty zapłaconej za preorder." },
+          { "type": "paragraph", "text": "Żądanie zwrotu należy wysłać na adres:" },
+          { "type": "paragraph", "text": "[adres e-mail]" },
+          { "type": "paragraph", "text": "Zwrot obejmuje kwotę faktycznie zapłaconą przez użytkownika za preorder." }
         ]
       },
       {
-        "title": "11. Reklamacje",
-        "paragraphs": [
-          "Użytkownik może złożyć reklamację dotyczącą preorderu lub działania aplikacji, wysyłając wiadomość na adres: [adres e-mail].",
-          "Reklamacja powinna zawierać:",
-          "Sprzedawca odpowie na reklamację w terminie 14 dni od jej otrzymania."
-        ],
-        "items": [
-          "adres e-mail użyty przy zakupie,",
-          "opis problemu,",
-          "oczekiwany sposób rozwiązania sprawy."
+        "title": "11. Komunikacja z użytkownikami preorderu",
+        "blocks": [
+          { "type": "paragraph", "text": "Sprzedawca może kontaktować się z użytkownikiem w sprawach dotyczących:" },
+          { "type": "list", "items": [
+            "potwierdzenia zakupu,",
+            "dostępu do aplikacji,",
+            "statusu rozwoju Fishki,",
+            "testowania aplikacji,",
+            "zbierania opinii,",
+            "głosowania na priorytety funkcji,",
+            "reklamacji i zwrotów."
+          ] },
+          { "type": "paragraph", "text": "Komunikacja będzie prowadzona na adres e-mail podany przy zakupie." }
         ]
       },
       {
-        "title": "12. Dane osobowe",
-        "paragraphs": [
-          "Dane osobowe użytkownika będą przetwarzane w celu obsługi zakupu preorderu, przekazania dostępu do aplikacji, kontaktu z użytkownikiem oraz obsługi ewentualnych zwrotów i reklamacji.",
-          "Szczegółowe informacje o przetwarzaniu danych osobowych znajdują się w Polityce prywatności dostępnej pod adresem: [link do polityki prywatności]."
+        "title": "12. Reklamacje",
+        "blocks": [
+          { "type": "paragraph", "text": "Użytkownik może złożyć reklamację dotyczącą preorderu lub działania aplikacji, wysyłając wiadomość na adres:" },
+          { "type": "paragraph", "text": "[adres e-mail]" },
+          { "type": "paragraph", "text": "Reklamacja powinna zawierać:" },
+          { "type": "list", "items": [
+            "adres e-mail użyty przy zakupie,",
+            "opis problemu,",
+            "oczekiwane rozwiązanie."
+          ] },
+          { "type": "paragraph", "text": "Sprzedawca odpowie na reklamację w terminie 14 dni od jej otrzymania." }
         ]
       },
       {
-        "title": "13. Zmiany warunków preorderu",
-        "paragraphs": [
-          "Sprzedawca może zmienić niniejsze warunki w przyszłości, w szczególności w przypadku zmiany sposobu działania aplikacji, zmiany operatora płatności, zmiany przepisów prawa lub rozwoju produktu.",
-          "Zmiany nie będą pogarszać sytuacji użytkowników, którzy dokonali zakupu preorderu przed wejściem zmian w życie, chyba że będzie to wymagane przez przepisy prawa."
+        "title": "13. Dane osobowe",
+        "blocks": [
+          { "type": "paragraph", "text": "Dane osobowe użytkownika są przetwarzane w celu obsługi preorderu, płatności, dostępu do aplikacji, komunikacji, zwrotów i reklamacji." },
+          { "type": "paragraph", "text": "Szczegółowe informacje dotyczące przetwarzania danych znajdują się w Polityce prywatności." }
         ]
       },
       {
-        "title": "14. Postanowienia końcowe",
-        "paragraphs": [
-          "W sprawach nieuregulowanych niniejszymi warunkami zastosowanie mają przepisy prawa polskiego.",
-          "W przypadku pytań dotyczących preorderu można skontaktować się ze Sprzedawcą pod adresem: [adres e-mail]."
+        "title": "14. Zmiany regulaminu preorderu",
+        "blocks": [
+          { "type": "paragraph", "text": "Sprzedawca może zmienić niniejszy regulamin, w szczególności w przypadku:" },
+          { "type": "list", "items": [
+            "zmiany funkcjonalności aplikacji,",
+            "zmiany operatora płatności,",
+            "zmiany przepisów prawa,",
+            "zmiany danych Sprzedawcy,",
+            "potrzeby doprecyzowania zasad preorderu."
+          ] },
+          { "type": "paragraph", "text": "Zmiany nie pogorszą sytuacji użytkowników, którzy kupili preorder przed wejściem zmian w życie, chyba że zmiana wynika z obowiązujących przepisów prawa." }
+        ]
+      },
+      {
+        "title": "15. Postanowienia końcowe",
+        "blocks": [
+          { "type": "paragraph", "text": "W sprawach nieuregulowanych niniejszym regulaminem zastosowanie ma prawo polskie." },
+          { "type": "paragraph", "text": "Kontakt w sprawach preorderu:" },
+          { "type": "paragraph", "text": "[adres e-mail]" }
         ]
       }
     ]

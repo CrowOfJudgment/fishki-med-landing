@@ -113,6 +113,25 @@ export default function Preorder() {
                   <label className="flex cursor-pointer items-start gap-3 rounded-[1.15rem] border border-[#B9DDD5] bg-white p-4 text-sm leading-6 text-[#274D53]">
                     <input
                       type="checkbox"
+                      required
+                      className="mt-1 h-4 w-4 shrink-0 accent-[#0F766E]"
+                    />
+                    <span>
+                      {t.preorder.documentsConsentBefore}
+                      <Link href="/terms" className="font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 hover:text-[#002838]">
+                        {t.preorder.termsOfUseLink}
+                      </Link>
+                      {t.preorder.documentsConsentMiddle}
+                      <Link href="/privacy" className="font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 hover:text-[#002838]">
+                        {t.preorder.privacyLink}
+                      </Link>
+                      {t.preorder.documentsConsentAfter}
+                    </span>
+                  </label>
+
+                  <label className="flex cursor-pointer items-start gap-3 rounded-[1.15rem] border border-[#B9DDD5] bg-white p-4 text-sm leading-6 text-[#274D53]">
+                    <input
+                      type="checkbox"
                       className="mt-1 h-4 w-4 shrink-0 accent-[#0F766E]"
                     />
                     <span>{t.preorder.marketingConsent}</span>

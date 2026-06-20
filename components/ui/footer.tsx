@@ -13,6 +13,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
     { href: "/#demo", label: t.footer.demo },
     { href: "/#waitlist-form", label: t.footer.waitlist },
     { href: "/terms", label: t.footer.terms },
+    { href: "/privacy", label: t.footer.privacy },
     { href: "/preorder-terms", label: t.footer.preorderTerms },
   ];
 

@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { useT } from "@/lib/i18n-context";
 
-type TermsSection = {
-  title: string;
-  paragraphs: string[];
-  items?: string[];
-};
+type TermsBlock =
+  | { type: "paragraph"; text: string }
+  | { type: "list"; items: string[] }
+  | { type: "quote"; text: string };
+
+type TermsSection = { title: string; blocks: TermsBlock[] };
 
 export default function PreorderTermsPage() {
   const t = useT();
@@ -32,9 +33,11 @@ export default function PreorderTermsPage() {
           <p className="mt-4 text-sm font-medium text-[#0F766E]">
             {t.preorderTerms.lastUpdated}
           </p>
-          <p className="mt-5 text-base leading-8 text-[#274D53]">
-            {t.preorderTerms.intro}
-          </p>
+          {t.preorderTerms.intro ? (
+            <p className="mt-5 text-base leading-8 text-[#274D53]">
+              {t.preorderTerms.intro}
+            </p>
+          ) : null}
 
           <div className="mt-10 space-y-8">
             {t.preorderTerms.sections.map((section: TermsSection) => (
@@ -45,20 +48,42 @@ export default function PreorderTermsPage() {
                 <h2 className="font-display text-2xl font-semibold text-[#002838]">
                   {section.title}
                 </h2>
-                <div className="mt-4 space-y-3">
-                  {section.paragraphs.map((paragraph: string) => (
-                    <p key={paragraph} className="text-sm leading-7 text-[#274D53]">
-                      {paragraph}
-                    </p>
-                  ))}
+                <div className="mt-4 space-y-4">
+                  {section.blocks.map((block: TermsBlock, index: number) => {
+                    if (block.type === "list") {
+                      return (
+                        <ul
+                          key={`${section.title}-list-${index}`}
+                          className="list-disc space-y-2 pl-5 text-sm leading-7 text-[#274D53] marker:text-[#0F766E]"
+                        >
+                          {block.items.map((item: string) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                      );
+                    }
+
+                    if (block.type === "quote") {
+                      return (
+                        <blockquote
+                          key={`${section.title}-quote-${index}`}
+                          className="rounded-[1.15rem] border border-[#B9DDD5] bg-white p-4 text-sm leading-7 text-[#274D53]"
+                        >
+                          {block.text}
+                        </blockquote>
+                      );
+                    }
+
+                    return (
+                      <p
+                        key={`${section.title}-paragraph-${index}`}
+                        className="text-sm leading-7 text-[#274D53]"
+                      >
+                        {block.text}
+                      </p>
+                    );
+                  })}
                 </div>
-                {section.items?.length ? (
-                  <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm leading-7 text-[#274D53] marker:font-semibold marker:text-[#0F766E]">
-                    {section.items.map((item: string) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ol>
-                ) : null}
               </article>
             ))}
           </div>

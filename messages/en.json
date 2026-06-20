@@ -530,8 +530,13 @@
     "placeholderText": "The final payment button will appear here. Before buying, the user will accept the preorder terms and choose whether to receive marketing updates.",
     "purchaseConsentBefore": "I accept the ",
     "termsLink": "Fishki Early Access preorder terms",
-    "purchaseConsentAfter": " and understand that I am purchasing early access to an application that is still being developed.",
-    "marketingConsent": "I want to receive information about Fishki development, the app launch and special offers.",
+    "purchaseConsentAfter": " and understand that I am purchasing early access to an application that is still under development.",
+    "documentsConsentBefore": "I have read the ",
+    "termsOfUseLink": "Terms of use",
+    "documentsConsentMiddle": " and the ",
+    "privacyLink": "Privacy Policy",
+    "documentsConsentAfter": ".",
+    "marketingConsent": "I want to receive marketing information about Fishki development, the app launch, special offers and new features.",
     "readTerms": "Read the purchase terms",
     "roadmapTitle": "Planned beta scope",
     "roadmap": [
@@ -558,6 +563,7 @@
     "waitlist": "Waitlist",
     "copyright": "Built with medical students in mind.",
     "terms": "Terms of use",
+    "privacy": "Privacy Policy",
     "preorderTerms": "Preorder terms"
   },
   "terms": {
@@ -570,145 +576,184 @@
   },
   "preorderTerms": {
     "back": "Back to preorder",
-    "badge": "Purchase terms",
-    "title": "Fishki Early Access preorder terms",
-    "lastUpdated": "Last updated: [DD.MM.YYYY]",
-    "intro": "These terms govern the purchase of preorder access to the Fishki application, available at: [website address].",
+    "badge": "Preorder terms",
+    "title": "Fishki Early Access Preorder Terms",
+    "lastUpdated": "Last updated: [DD.MM.2026]",
+    "intro": "",
     "sections": [
       {
-        "title": "1. Seller information",
-        "paragraphs": [
-          "The preorder seller is:",
-          "[full business name / full name]",
-          "Address: [address]",
-          "Tax ID: [Tax ID, if applicable]",
-          "Contact email: [email address]",
-          "Hereinafter: the “Seller”."
+        "title": "1. Seller",
+        "blocks": [
+          { "type": "paragraph", "text": "The seller of the Fishki Early Access preorder is:" },
+          { "type": "paragraph", "text": "[full company name / full name]" },
+          { "type": "paragraph", "text": "Address: [address]" },
+          { "type": "paragraph", "text": "Tax ID: [Tax ID, if applicable]" },
+          { "type": "paragraph", "text": "Contact email: [email address]" },
+          { "type": "paragraph", "text": "Hereinafter: the “Seller”." }
         ]
       },
       {
         "title": "2. What Fishki is",
-        "paragraphs": [
-          "Fishki is an educational application being developed for medical students. Its purpose is to make learning easier through flashcards, reviews and user-created materials.",
-          "At the time of the preorder purchase, the application may be in the design, testing or early development stage. Purchasing the preorder does not mean purchasing a finished, final product."
+        "blocks": [
+          { "type": "paragraph", "text": "Fishki is an educational application being developed for medical students. Its purpose is to make creating flashcards, studying with reviews, working with visual materials and planning study for tests, exams and final exams easier." },
+          { "type": "paragraph", "text": "Fishki is a product under development. Purchasing the preorder does not mean purchasing a finished, final production application." }
         ]
       },
       {
         "title": "3. What the Fishki Early Access preorder is",
-        "paragraphs": [
-          "The Fishki Early Access preorder is a purchase of earlier access to the Fishki application on preferential terms.",
-          "As part of the preorder, the user receives:",
-          "The features available in Early Access may be limited compared with the planned final version. The application may contain bugs, unfinished features or changes to its interface and operation."
-        ],
-        "items": [
-          "the right to receive access to an early version of Fishki when it becomes available,",
-          "the ability to test the application before its official launch,",
-          "the ability to provide feedback, vote on feature priorities and influence product development,",
-          "12 months of access to the premium plan after the official launch,",
-          "a PLN 39 preorder price instead of the planned PLN 119–179 per year after the official launch."
+        "blocks": [
+          { "type": "paragraph", "text": "The Fishki Early Access preorder is the purchase of earlier access to the Fishki application on preferential terms." },
+          { "type": "paragraph", "text": "As part of the preorder, the user receives:" },
+          { "type": "list", "items": [
+            "access to a test version of Fishki before the public launch of the application,",
+            "the ability to test the application and submit feedback,",
+            "the ability to influence product development priorities, including voting on the order in which features are implemented,",
+            "12 months of access to the premium plan after the public launch of the application,",
+            "a PLN 39 preorder price instead of the planned annual price after launch of PLN 119–179."
+          ] },
+          { "type": "paragraph", "text": "The scope of features available in Early Access may be limited compared with the planned final version." }
         ]
       },
       {
         "title": "4. Preorder price",
-        "paragraphs": [
-          "The preorder price is PLN 39 gross.",
-          "This is a one-time price and covers the benefits described in these terms.",
-          "After the official launch, one year of access will cost between PLN 119 and PLN 179. The Seller may change the preorder price or end its sale in the future. A price change does not affect users who purchased earlier."
+        "blocks": [
+          { "type": "paragraph", "text": "The preorder price is PLN 39 gross." },
+          { "type": "paragraph", "text": "This is a one-time payment covering the benefits described in these terms." },
+          { "type": "paragraph", "text": "The Seller may change the preorder price or end its sale in the future. A price change does not affect people who purchased the preorder before the change." }
         ]
       },
       {
-        "title": "5. Application availability date",
-        "paragraphs": [
-          "The first Early Access version is planned by September 30, 2026.",
-          "The Early Access date is an estimate and may change because the application is still being developed. The Seller will inform preorder users about material changes to the release timing.",
-          "The official application launch is planned by the end of 2026.",
-          "If the official application launch does not take place by March 31, 2027, the user may request a full refund of the amount paid between April 1 and May 31, 2027."
+        "title": "5. Planned application availability date",
+        "blocks": [
+          { "type": "paragraph", "text": "The first Fishki Early Access version is planned for the second half of 2026." },
+          { "type": "paragraph", "text": "This date is an estimate and may change because the application is still under development." },
+          { "type": "paragraph", "text": "If the first Fishki Early Access version is not made available by June 30, 2027, every purchaser may request a full refund of the amount paid for the preorder." }
         ]
       },
       {
-        "title": "6. How the preorder purchase works",
-        "paragraphs": [
-          "The preorder is purchased by clicking the purchase button on the website and paying through the available payment provider.",
-          "After payment, the user will receive a purchase confirmation at the email address provided.",
-          "The user should provide a true and current email address because it will be used to share access information and preorder communications."
+        "title": "6. Planned Early Access scope",
+        "blocks": [
+          { "type": "paragraph", "text": "The planned scope of application development includes in particular:" },
+          { "type": "list", "items": [
+            "creating decks and text flashcards,",
+            "adding images,",
+            "cloze deletion flashcards,",
+            "a basic study mode,",
+            "image occlusion,",
+            "a review planner,",
+            "offline mode for downloaded materials,",
+            "statistics, import, a public library and sharing features at later stages."
+          ] },
+          { "type": "paragraph", "text": "The Seller does not guarantee that all of the above features will be available in the first Early Access version." }
         ]
       },
       {
-        "title": "7. Right of withdrawal",
-        "paragraphs": [
-          "A user who is a consumer may withdraw from the agreement within 14 days of purchasing the preorder without giving a reason.",
-          "To withdraw, send a message to [email address] stating that you wish to withdraw from the agreement.",
-          "Example message: “I withdraw from the Fishki Early Access preorder purchase agreement. Please refund my payment. Email address used for the purchase: [email address].”",
-          "The refund will be made using the same payment method used for the purchase unless the parties agree on another refund method."
+        "title": "7. Nature of Early Access",
+        "blocks": [
+          { "type": "paragraph", "text": "The user acknowledges that Early Access:" },
+          { "type": "list", "items": [
+            "may contain technical errors,",
+            "may have a limited feature set,",
+            "may operate unstably,",
+            "may be temporarily unavailable due to technical work,",
+            "may differ from mockups, demos, marketing materials and descriptions on the website,",
+            "may change during product development."
+          ] },
+          { "type": "paragraph", "text": "The Seller will take reasonable steps to develop and improve the application but does not guarantee the implementation of every feature suggested by users." }
         ]
       },
       {
-        "title": "8. Additional refund guarantee",
-        "paragraphs": [
-          "Independently of the statutory right of withdrawal, the Seller grants the user an additional refund option if the official Fishki application launch does not take place by March 31, 2027.",
-          "In that case, the user may request a full refund between April 1 and May 31, 2027 by sending a message to: [email address]."
+        "title": "8. How the preorder purchase works",
+        "blocks": [
+          { "type": "paragraph", "text": "The preorder is purchased by:" },
+          { "type": "list", "items": [
+            "clicking the purchase button on the website,",
+            "providing the information required to complete the purchase,",
+            "accepting these terms,",
+            "making a payment through the available payment provider."
+          ] },
+          { "type": "paragraph", "text": "After payment, the user will receive a purchase confirmation at the email address provided." },
+          { "type": "paragraph", "text": "The user should provide a true and current email address because it will be used to provide information about access to the application and for communications concerning the preorder, refunds and complaints." }
         ]
       },
       {
-        "title": "9. Nature of Early Access",
-        "paragraphs": [
-          "The user acknowledges that Early Access may:",
-          "The Seller will take reasonable steps to develop and improve the application but does not guarantee that every planned feature will be available in the first version."
-        ],
-        "items": [
-          "contain technical errors,",
-          "have a limited number of features,",
-          "differ from descriptions, mockups, demos or marketing materials,",
-          "change during development,",
-          "be temporarily unavailable because of technical work."
+        "title": "9. Right of withdrawal",
+        "blocks": [
+          { "type": "paragraph", "text": "A user who is a consumer may withdraw from the agreement within 14 days of purchasing the preorder without giving a reason." },
+          { "type": "paragraph", "text": "To withdraw from the agreement, send an email to:" },
+          { "type": "paragraph", "text": "[email address]" },
+          { "type": "paragraph", "text": "Example message:" },
+          { "type": "quote", "text": "I withdraw from the Fishki Early Access preorder purchase agreement. Please refund the payment.\nEmail address used for the purchase: [email address]." },
+          { "type": "paragraph", "text": "The refund will be made using the same payment method used for the purchase unless the parties agree on another refund method." }
         ]
       },
       {
-        "title": "10. Contact with preorder users",
-        "paragraphs": [
-          "The Seller may contact preorder users about:",
-          "Communication will be sent to the email address provided during purchase."
-        ],
-        "items": [
-          "purchase confirmation,",
-          "access to the application,",
-          "product development updates,",
-          "requests for opinions, voting or feedback,",
-          "refund and complaint handling."
+        "title": "10. Additional refund guarantee",
+        "blocks": [
+          { "type": "paragraph", "text": "Independently of the statutory right of withdrawal, the Seller grants the user an additional right to a refund." },
+          { "type": "paragraph", "text": "If the first Fishki Early Access version is not made available by June 30, 2027, the user may request a full refund of the amount paid for the preorder." },
+          { "type": "paragraph", "text": "The refund request should be sent to:" },
+          { "type": "paragraph", "text": "[email address]" },
+          { "type": "paragraph", "text": "The refund covers the amount actually paid by the user for the preorder." }
         ]
       },
       {
-        "title": "11. Complaints",
-        "paragraphs": [
-          "The user may submit a complaint concerning the preorder or the application by sending a message to: [email address].",
-          "The complaint should include:",
-          "The Seller will respond within 14 days of receiving the complaint."
-        ],
-        "items": [
-          "the email address used for the purchase,",
-          "a description of the issue,",
-          "the expected solution."
+        "title": "11. Communication with preorder users",
+        "blocks": [
+          { "type": "paragraph", "text": "The Seller may contact the user regarding:" },
+          { "type": "list", "items": [
+            "purchase confirmation,",
+            "access to the application,",
+            "Fishki development status,",
+            "application testing,",
+            "collecting feedback,",
+            "voting on feature priorities,",
+            "complaints and refunds."
+          ] },
+          { "type": "paragraph", "text": "Communication will be sent to the email address provided during the purchase." }
         ]
       },
       {
-        "title": "12. Personal data",
-        "paragraphs": [
-          "The user's personal data will be processed to handle the preorder purchase, provide application access, contact the user and handle potential refunds and complaints.",
-          "Detailed information about personal data processing is available in the Privacy Policy at: [privacy policy link]."
+        "title": "12. Complaints",
+        "blocks": [
+          { "type": "paragraph", "text": "The user may submit a complaint concerning the preorder or the application by sending a message to:" },
+          { "type": "paragraph", "text": "[email address]" },
+          { "type": "paragraph", "text": "The complaint should include:" },
+          { "type": "list", "items": [
+            "the email address used for the purchase,",
+            "a description of the issue,",
+            "the expected solution."
+          ] },
+          { "type": "paragraph", "text": "The Seller will respond to the complaint within 14 days of receiving it." }
         ]
       },
       {
-        "title": "13. Changes to the preorder terms",
-        "paragraphs": [
-          "The Seller may amend these terms in the future, particularly because of changes to the application, payment provider, applicable law or product development.",
-          "Changes will not worsen the position of users who purchased the preorder before the changes took effect unless required by law."
+        "title": "13. Personal data",
+        "blocks": [
+          { "type": "paragraph", "text": "The user's personal data is processed to handle the preorder, payment, access to the application, communications, refunds and complaints." },
+          { "type": "paragraph", "text": "Detailed information concerning data processing is available in the Privacy Policy." }
         ]
       },
       {
-        "title": "14. Final provisions",
-        "paragraphs": [
-          "Polish law applies to matters not regulated by these terms.",
-          "Questions about the preorder may be sent to the Seller at: [email address]."
+        "title": "14. Changes to the preorder terms",
+        "blocks": [
+          { "type": "paragraph", "text": "The Seller may amend these terms, in particular in the event of:" },
+          { "type": "list", "items": [
+            "changes to the application's functionality,",
+            "a change of payment provider,",
+            "changes in applicable law,",
+            "changes to the Seller's details,",
+            "the need to clarify the preorder rules."
+          ] },
+          { "type": "paragraph", "text": "Changes will not worsen the position of users who purchased the preorder before the changes took effect unless the change results from applicable law." }
+        ]
+      },
+      {
+        "title": "15. Final provisions",
+        "blocks": [
+          { "type": "paragraph", "text": "Polish law applies to matters not regulated by these terms." },
+          { "type": "paragraph", "text": "Contact regarding the preorder:" },
+          { "type": "paragraph", "text": "[email address]" }
         ]
       }
     ]

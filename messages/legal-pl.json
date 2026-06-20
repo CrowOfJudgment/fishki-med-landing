@@ -1,0 +1,174 @@
+{
+  "terms": {
+    "back": "Wróć na stronę główną",
+    "badge": "Warunki użytkowania",
+    "title": "Warunki użytkowania Fishki",
+    "lastUpdated": "Ostatnia aktualizacja: [DD.MM.2026]",
+    "intro": "",
+    "sections": [
+      { "title": "1. Postanowienia ogólne", "blocks": [
+        { "type": "paragraph", "text": "Niniejsze Warunki użytkowania określają zasady korzystania ze strony internetowej Fishki dostępnej pod adresem:" },
+        { "type": "paragraph", "text": "https://www.fishki-med.com/" },
+        { "type": "paragraph", "text": "oraz, po jej udostępnieniu, z aplikacji Fishki." },
+        { "type": "paragraph", "text": "Właścicielem i operatorem strony jest:" },
+        { "type": "paragraph", "text": "[pełna nazwa firmy / imię i nazwisko]\nAdres: [adres]\nNIP: [NIP, jeżeli dotyczy]\nE-mail: [adres e-mail]" },
+        { "type": "paragraph", "text": "Dalej: „Operator”." }
+      ] },
+      { "title": "2. Charakter strony", "blocks": [
+        { "type": "paragraph", "text": "Strona Fishki służy do:" },
+        { "type": "list", "items": ["prezentacji planowanej aplikacji edukacyjnej,", "pokazania interaktywnego demo,", "zbierania zapisów na waitlistę,", "sprzedaży preorderu Fishki Early Access,", "informowania o rozwoju produktu."] },
+        { "type": "paragraph", "text": "Treści na stronie mają charakter informacyjny i marketingowy. Nie stanowią porady medycznej, prawnej, podatkowej ani edukacyjnej." }
+      ] },
+      { "title": "3. Demo aplikacji", "blocks": [
+        { "type": "paragraph", "text": "Demo dostępne na stronie pokazuje kierunek rozwoju produktu i przykładowy sposób działania aplikacji." },
+        { "type": "paragraph", "text": "Demo:" },
+        { "type": "list", "items": ["nie jest finalną wersją aplikacji,", "może działać wyłącznie lokalnie w przeglądarce,", "może mieć ograniczone funkcje,", "może różnić się od przyszłej wersji aplikacji,", "może zawierać uproszczone dane przykładowe."] },
+        { "type": "paragraph", "text": "Operator może w dowolnym czasie zmienić, ograniczyć lub usunąć demo." }
+      ] },
+      { "title": "4. Waitlista", "blocks": [
+        { "type": "paragraph", "text": "Użytkownik może zapisać się na waitlistę, podając wymagane dane, w szczególności adres e-mail." },
+        { "type": "paragraph", "text": "Zapis na waitlistę jest bezpłatny i nie zobowiązuje użytkownika do zakupu aplikacji." },
+        { "type": "paragraph", "text": "Osoby zapisane na waitlistę mogą otrzymywać wiadomości dotyczące:" },
+        { "type": "list", "items": ["rozwoju Fishki,", "premiery aplikacji,", "możliwości testowania,", "ankiet i pytań produktowych,", "ofert związanych z Fishki."] },
+        { "type": "paragraph", "text": "Użytkownik może w każdej chwili zrezygnować z komunikacji, klikając link rezygnacji w wiadomości e-mail albo kontaktując się z Operatorem." }
+      ] },
+      { "title": "5. Preorder", "blocks": [
+        { "type": "paragraph", "text": "Zasady zakupu preorderu Fishki Early Access określa osobny dokument: Regulamin preorderu Fishki Early Access." },
+        { "type": "paragraph", "text": "W przypadku rozbieżności między Warunkami użytkowania a Regulaminem preorderu, w zakresie zakupu preorderu pierwszeństwo ma Regulamin preorderu." }
+      ] },
+      { "title": "6. Konto użytkownika", "blocks": [
+        { "type": "paragraph", "text": "Po udostępnieniu aplikacji Fishki może wymagać utworzenia konta użytkownika." },
+        { "type": "paragraph", "text": "Użytkownik zobowiązuje się do podawania prawdziwych danych oraz zabezpieczenia dostępu do swojego konta." },
+        { "type": "paragraph", "text": "Użytkownik nie powinien udostępniać danych logowania osobom trzecim." },
+        { "type": "paragraph", "text": "Operator może zablokować lub ograniczyć dostęp do konta, jeżeli użytkownik narusza niniejsze Warunki użytkowania, prawo lub prawa innych osób." }
+      ] },
+      { "title": "7. Materiały użytkownika", "blocks": [
+        { "type": "paragraph", "text": "Po uruchomieniu aplikacji użytkownik może tworzyć, dodawać lub przechowywać własne materiały edukacyjne, takie jak fiszki, teksty, obrazy, notatki, talie lub inne treści." },
+        { "type": "paragraph", "text": "Użytkownik odpowiada za materiały, które dodaje do aplikacji." },
+        { "type": "paragraph", "text": "Użytkownik oświadcza, że posiada prawa lub odpowiednie uprawnienia do korzystania z materiałów dodawanych do aplikacji." },
+        { "type": "paragraph", "text": "Zabronione jest dodawanie materiałów, które:" },
+        { "type": "list", "items": ["naruszają prawo,", "naruszają prawa autorskie lub inne prawa osób trzecich,", "zawierają treści bezprawne, obraźliwe lub dyskryminujące,", "zawierają dane osobowe osób trzecich bez podstawy prawnej,", "służą do obchodzenia zabezpieczeń aplikacji,", "zakłócają działanie aplikacji."] }
+      ] },
+      { "title": "8. Prawa własności intelektualnej", "blocks": [
+        { "type": "paragraph", "text": "Strona, nazwa Fishki, elementy interfejsu, teksty, grafiki, logo, układ strony, kod oraz inne elementy stworzone przez Operatora są chronione prawem." },
+        { "type": "paragraph", "text": "Użytkownik nie nabywa praw własności intelektualnej do Fishki poza prawem do korzystania ze strony lub aplikacji zgodnie z niniejszymi Warunkami." },
+        { "type": "paragraph", "text": "Użytkownik zachowuje prawa do własnych materiałów dodanych do aplikacji." },
+        { "type": "paragraph", "text": "Dodając materiały do aplikacji, użytkownik udziela Operatorowi niewyłącznej, nieodpłatnej licencji technicznej na ich przechowywanie, przetwarzanie i wyświetlanie wyłącznie w zakresie niezbędnym do działania aplikacji." }
+      ] },
+      { "title": "9. Zakaz nadużyć", "blocks": [
+        { "type": "paragraph", "text": "Użytkownik nie może:" },
+        { "type": "list", "items": ["korzystać ze strony lub aplikacji w sposób sprzeczny z prawem,", "próbować uzyskać nieuprawnionego dostępu do systemów Operatora,", "kopiować, reverse-engineerować lub dekompilować aplikacji, jeżeli naruszałoby to prawo,", "automatycznie pobierać treści ze strony bez zgody Operatora,", "zakłócać działania strony lub aplikacji,", "wykorzystywać Fishki do rozpowszechniania złośliwego oprogramowania,", "naruszać praw innych użytkowników."] }
+      ] },
+      { "title": "10. Dostępność i zmiany produktu", "blocks": [
+        { "type": "paragraph", "text": "Operator będzie podejmował rozsądne działania, aby strona i aplikacja działały poprawnie." },
+        { "type": "paragraph", "text": "Operator nie gwarantuje jednak nieprzerwanej dostępności strony, demo ani aplikacji." },
+        { "type": "paragraph", "text": "Strona lub aplikacja mogą być czasowo niedostępne z powodu:" },
+        { "type": "list", "items": ["prac technicznych,", "awarii,", "zmian infrastruktury,", "działań podmiotów zewnętrznych,", "przyczyn niezależnych od Operatora."] },
+        { "type": "paragraph", "text": "Operator może rozwijać, zmieniać, usuwać lub dodawać funkcje aplikacji." }
+      ] },
+      { "title": "11. Brak porady medycznej", "blocks": [
+        { "type": "paragraph", "text": "Fishki jest narzędziem edukacyjnym." },
+        { "type": "paragraph", "text": "Treści dostępne w aplikacji, demo lub materiałach użytkowników nie stanowią porady medycznej, diagnostycznej ani terapeutycznej." },
+        { "type": "paragraph", "text": "Użytkownik powinien samodzielnie weryfikować poprawność materiałów edukacyjnych, szczególnie w przypadku nauki do egzaminów, praktyki klinicznej lub pracy z pacjentami." }
+      ] },
+      { "title": "12. Odpowiedzialność", "blocks": [
+        { "type": "paragraph", "text": "Operator odpowiada wobec konsumentów zgodnie z obowiązującymi przepisami prawa." },
+        { "type": "paragraph", "text": "W zakresie dopuszczalnym przez prawo Operator nie odpowiada za:" },
+        { "type": "list", "items": ["błędy w materiałach dodanych przez użytkowników,", "skutki nauki na podstawie niezweryfikowanych materiałów,", "utratę danych wynikającą z działań użytkownika,", "przerwy techniczne,", "decyzje podjęte na podstawie treści dostępnych w aplikacji,", "brak osiągnięcia określonego wyniku edukacyjnego."] },
+        { "type": "paragraph", "text": "Żadne postanowienie niniejszych Warunków nie ogranicza praw konsumenta wynikających z bezwzględnie obowiązujących przepisów prawa." }
+      ] },
+      { "title": "13. Reklamacje", "blocks": [
+        { "type": "paragraph", "text": "Reklamacje dotyczące działania strony lub aplikacji można zgłaszać na adres:" },
+        { "type": "paragraph", "text": "[adres e-mail]" },
+        { "type": "paragraph", "text": "Reklamacja powinna zawierać:" },
+        { "type": "list", "items": ["dane pozwalające zidentyfikować użytkownika,", "opis problemu,", "oczekiwane rozwiązanie."] },
+        { "type": "paragraph", "text": "Operator odpowie na reklamację w terminie 14 dni od jej otrzymania." }
+      ] },
+      { "title": "14. Dane osobowe", "blocks": [{ "type": "paragraph", "text": "Zasady przetwarzania danych osobowych opisuje Polityka prywatności." }] },
+      { "title": "15. Zmiany Warunków użytkowania", "blocks": [
+        { "type": "paragraph", "text": "Operator może zmienić niniejsze Warunki użytkowania, w szczególności w przypadku:" },
+        { "type": "list", "items": ["zmiany funkcji strony lub aplikacji,", "uruchomienia nowych usług,", "zmiany przepisów prawa,", "zmiany danych Operatora,", "potrzeby doprecyzowania zasad korzystania z Fishki."] },
+        { "type": "paragraph", "text": "Nowa wersja Warunków zostanie opublikowana na stronie." }
+      ] },
+      { "title": "16. Kontakt", "blocks": [{ "type": "paragraph", "text": "Kontakt z Operatorem:" }, { "type": "paragraph", "text": "[adres e-mail]" }] }
+    ]
+  },
+  "privacy": {
+    "back": "Wróć na stronę główną",
+    "badge": "Prywatność",
+    "title": "Polityka prywatności Fishki",
+    "lastUpdated": "Ostatnia aktualizacja: [DD.MM.2026]",
+    "intro": "",
+    "sections": [
+      { "title": "1. Administrator danych", "blocks": [
+        { "type": "paragraph", "text": "Administratorem Twoich danych osobowych jest:" },
+        { "type": "paragraph", "text": "[pełna nazwa firmy / imię i nazwisko]\nAdres: [adres]\nNIP: [NIP, jeżeli dotyczy]\nE-mail: [adres e-mail]" },
+        { "type": "paragraph", "text": "Dalej: „Administrator”." },
+        { "type": "paragraph", "text": "Ta Polityka prywatności wyjaśnia, jakie dane przetwarzamy, w jakich celach, na jakiej podstawie i jakie prawa Ci przysługują. Polityka prywatności może być miejscem realizacji obowiązku informacyjnego wobec użytkownika, ponieważ przy zbieraniu danych trzeba jasno wskazać m.in. administratora, cele, podstawy, okres przetwarzania i prawa osoby, której dane dotyczą." }
+      ] },
+      { "title": "2. Jakie dane możemy przetwarzać", "blocks": [
+        { "type": "paragraph", "text": "W zależności od sposobu korzystania ze strony lub aplikacji możemy przetwarzać:" },
+        { "type": "list", "items": ["adres e-mail,", "imię lub nazwę użytkownika, jeżeli zostaną podane,", "odpowiedzi udzielone w formularzu waitlisty,", "dane dotyczące zakupu preorderu,", "dane płatnicze w zakresie przekazanym przez operatora płatności,", "dane techniczne, takie jak adres IP, typ urządzenia, przeglądarka, system operacyjny, identyfikatory cookies,", "dane dotyczące korzystania ze strony lub aplikacji,", "treści dodane przez użytkownika w aplikacji, po jej uruchomieniu."] }
+      ] },
+      { "title": "3. Cele i podstawy przetwarzania danych", "blocks": [
+        { "type": "paragraph", "text": "Przetwarzamy dane w następujących celach:" },
+        { "type": "paragraph", "text": "3.1. Obsługa waitlisty\nDane przetwarzamy, aby zapisać Cię na waitlistę, wysyłać informacje o rozwoju Fishki i poinformować Cię o starcie aplikacji.\n\nPodstawa prawna: zgoda użytkownika albo prawnie uzasadniony interes Administratora polegający na obsłudze osób zainteresowanych produktem." },
+        { "type": "paragraph", "text": "3.2. Obsługa preorderu\nDane przetwarzamy, aby przyjąć i obsłużyć zakup preorderu, wysłać potwierdzenie zakupu, przekazać dostęp do aplikacji, obsłużyć zwroty i reklamacje.\n\nPodstawa prawna: wykonanie umowy lub podjęcie działań przed jej zawarciem." },
+        { "type": "paragraph", "text": "3.3. Komunikacja produktowa\nDane przetwarzamy, aby wysyłać informacje o rozwoju aplikacji, testach, ankietach, głosowaniach na funkcje i aktualizacjach dotyczących Fishki.\n\nPodstawa prawna: zgoda użytkownika albo prawnie uzasadniony interes Administratora, jeżeli komunikacja dotyczy produktu, którym użytkownik wcześniej się zainteresował." },
+        { "type": "paragraph", "text": "3.4. Marketing\nJeżeli wyrazisz zgodę, możemy wysyłać Ci informacje marketingowe dotyczące Fishki, promocji, ofert specjalnych i nowych funkcji.\n\nPodstawa prawna: zgoda użytkownika. Możesz wycofać zgodę w każdej chwili." },
+        { "type": "paragraph", "text": "3.5. Analityka i poprawa strony\nMożemy analizować sposób korzystania ze strony, aby poprawiać jej działanie, mierzyć skuteczność treści i rozwijać produkt.\n\nPodstawa prawna: prawnie uzasadniony interes Administratora albo zgoda, jeżeli wymagają jej przepisy dotyczące cookies lub podobnych technologii." },
+        { "type": "paragraph", "text": "3.6. Dochodzenie lub obrona roszczeń\nDane możemy przetwarzać w celu dochodzenia, ustalenia lub obrony przed roszczeniami.\n\nPodstawa prawna: prawnie uzasadniony interes Administratora." },
+        { "type": "paragraph", "text": "3.7. Obowiązki księgowe i podatkowe\nW przypadku zakupu preorderu możemy przetwarzać dane wymagane do rozliczeń księgowych i podatkowych.\n\nPodstawa prawna: obowiązek prawny ciążący na Administratorze." }
+      ] },
+      { "title": "4. Formularze i zewnętrzni dostawcy", "blocks": [
+        { "type": "paragraph", "text": "Do obsługi strony, formularzy, płatności, hostingu, analityki i komunikacji e-mail możemy korzystać z zewnętrznych dostawców." },
+        { "type": "paragraph", "text": "Mogą to być w szczególności:" },
+        { "type": "list", "items": ["dostawca hostingu strony,", "dostawca formularzy,", "operator płatności,", "dostawca narzędzi mailingowych,", "dostawca analityki,", "dostawca infrastruktury aplikacji."] },
+        { "type": "paragraph", "text": "Wstaw konkretne nazwy, gdy już wybierzesz narzędzia, np.:" },
+        { "type": "list", "items": ["Vercel — hosting strony,", "Tally — formularze,", "Stripe / Paddle / PayU / Przelewy24 — płatności,", "Resend / MailerLite / Brevo — e-mail,", "Google Analytics / Plausible / PostHog — analityka."] },
+        { "type": "paragraph", "text": "Dostawcy przetwarzają dane wyłącznie w zakresie potrzebnym do świadczenia usług na rzecz Administratora." }
+      ] },
+      { "title": "5. Przekazywanie danych poza Europejski Obszar Gospodarczy", "blocks": [
+        { "type": "paragraph", "text": "Niektórzy dostawcy usług mogą przetwarzać dane poza Europejskim Obszarem Gospodarczym." },
+        { "type": "paragraph", "text": "Jeżeli dane są przekazywane poza EOG, Administrator stosuje odpowiednie mechanizmy prawne przewidziane przez przepisy o ochronie danych osobowych, w szczególności standardowe klauzule umowne, jeżeli są wymagane." }
+      ] },
+      { "title": "6. Okres przechowywania danych", "blocks": [
+        { "type": "paragraph", "text": "Dane przechowujemy przez następujące okresy:" },
+        { "type": "list", "items": ["dane z waitlisty — do czasu rezygnacji użytkownika albo zakończenia celu, dla którego zostały zebrane,", "dane marketingowe — do czasu wycofania zgody,", "dane dotyczące preorderu — przez okres potrzebny do wykonania umowy, obsługi reklamacji, zwrotów i ewentualnych roszczeń,", "dane księgowe i podatkowe — przez okres wymagany przepisami prawa,", "dane techniczne i analityczne — przez okres wynikający z ustawień danego narzędzia analitycznego lub cookies,", "dane konta użytkownika — przez okres posiadania konta, a potem przez okres wymagany do obsługi roszczeń lub obowiązków prawnych."] }
+      ] },
+      { "title": "7. Prawa użytkownika", "blocks": [
+        { "type": "paragraph", "text": "Masz prawo do:" },
+        { "type": "list", "items": ["dostępu do swoich danych,", "sprostowania danych,", "usunięcia danych,", "ograniczenia przetwarzania,", "przenoszenia danych,", "sprzeciwu wobec przetwarzania,", "wycofania zgody w dowolnym momencie,", "złożenia skargi do Prezesa Urzędu Ochrony Danych Osobowych."] },
+        { "type": "paragraph", "text": "Wycofanie zgody nie wpływa na zgodność z prawem przetwarzania dokonanego przed jej wycofaniem." },
+        { "type": "paragraph", "text": "Aby skorzystać ze swoich praw, napisz na:" },
+        { "type": "paragraph", "text": "[adres e-mail]" }
+      ] },
+      { "title": "8. Dobrowolność podania danych", "blocks": [
+        { "type": "paragraph", "text": "Podanie danych jest dobrowolne, ale może być konieczne do:" },
+        { "type": "list", "items": ["zapisania się na waitlistę,", "zakupu preorderu,", "otrzymania dostępu do aplikacji,", "kontaktu z Administratorem,", "obsługi reklamacji lub zwrotu."] },
+        { "type": "paragraph", "text": "Brak podania wymaganych danych może uniemożliwić skorzystanie z danej funkcji." }
+      ] },
+      { "title": "9. Cookies i podobne technologie", "blocks": [
+        { "type": "paragraph", "text": "Strona może korzystać z cookies oraz podobnych technologii." },
+        { "type": "paragraph", "text": "Cookies mogą być używane w celu:" },
+        { "type": "list", "items": ["zapewnienia prawidłowego działania strony,", "zapamiętania preferencji użytkownika,", "prowadzenia statystyk,", "mierzenia skuteczności działań marketingowych,", "poprawy działania strony."] },
+        { "type": "paragraph", "text": "Użytkownik może zarządzać cookies w ustawieniach swojej przeglądarki." },
+        { "type": "paragraph", "text": "Jeżeli strona korzysta z narzędzi analitycznych lub marketingowych wymagających zgody, odpowiedni komunikat cookies powinien umożliwiać wyrażenie lub odmowę zgody." }
+      ] },
+      { "title": "10. Dane dzieci", "blocks": [
+        { "type": "paragraph", "text": "Fishki jest kierowane przede wszystkim do studentów medycyny i osób pełnoletnich." },
+        { "type": "paragraph", "text": "Jeżeli z aplikacji chciałaby skorzystać osoba niepełnoletnia, powinna robić to za zgodą rodzica lub opiekuna prawnego, jeżeli taka zgoda jest wymagana przez prawo." }
+      ] },
+      { "title": "11. Bezpieczeństwo danych", "blocks": [
+        { "type": "paragraph", "text": "Administrator stosuje odpowiednie środki organizacyjne i techniczne, aby chronić dane osobowe przed nieuprawnionym dostępem, utratą, zmianą lub ujawnieniem." },
+        { "type": "paragraph", "text": "Należy jednak pamiętać, że żadna metoda transmisji danych przez Internet ani przechowywania danych nie daje pełnej gwarancji bezpieczeństwa." }
+      ] },
+      { "title": "12. Zmiany Polityki prywatności", "blocks": [
+        { "type": "paragraph", "text": "Administrator może zmienić niniejszą Politykę prywatności, w szczególności w przypadku:" },
+        { "type": "list", "items": ["zmiany funkcji strony lub aplikacji,", "zmiany dostawców usług,", "zmiany przepisów prawa,", "zmiany sposobu przetwarzania danych."] },
+        { "type": "paragraph", "text": "Nowa wersja Polityki prywatności zostanie opublikowana na stronie." }
+      ] },
+      { "title": "13. Kontakt", "blocks": [{ "type": "paragraph", "text": "W sprawach dotyczących prywatności i danych osobowych napisz na:" }, { "type": "paragraph", "text": "[adres e-mail]" }] }
+    ]
+  }
+}
