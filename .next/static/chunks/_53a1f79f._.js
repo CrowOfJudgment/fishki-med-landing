@@ -141,22 +141,22 @@ function Header() {
         {
             href: "/#student-voices",
             label: t.header.studentVoices,
-            className: "hidden min-[930px]:inline-flex"
+            className: "hidden md:inline-flex"
         },
         {
             href: "/#why-fishki",
             label: t.header.whyFishki,
-            className: "hidden min-[1040px]:inline-flex"
+            className: "hidden min-[900px]:inline-flex"
         },
         {
             href: "/#demo",
             label: t.header.demo,
-            className: "hidden min-[1120px]:inline-flex"
+            className: "hidden min-[1000px]:inline-flex"
         },
         {
             href: "/#for-medicine",
             label: t.header.forMedicine,
-            className: "hidden min-[1240px]:inline-flex"
+            className: "hidden min-[1100px]:inline-flex"
         }
     ];
     var _t_header_ctaAria, _t_header_preorderCtaAria;

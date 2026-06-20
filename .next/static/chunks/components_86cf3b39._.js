@@ -5917,35 +5917,6 @@ function Preorder() {
                                         fileName: "[project]/components/preorder.tsx",
                                         lineNumber: 77,
                                         columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "mt-6 flex flex-col gap-3 sm:flex-row",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: "#waitlist-form",
-                                                "aria-label": t.preorder.secondaryAria,
-                                                className: "inline-flex items-center justify-center rounded-full bg-[#0F766E] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(15,118,110,0.2)] transition hover:-translate-y-0.5 hover:bg-[#002838]",
-                                                children: t.preorder.secondaryCta
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/preorder.tsx",
-                                                lineNumber: 81,
-                                                columnNumber: 17
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: "#preorder-module",
-                                                "aria-label": t.preorder.primaryAria,
-                                                className: "inline-flex items-center justify-center rounded-full bg-[#E86860] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(232,104,96,0.24)] transition hover:-translate-y-0.5 hover:bg-[#D85A52]",
-                                                children: t.preorder.primaryCta
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/preorder.tsx",
-                                                lineNumber: 88,
-                                                columnNumber: 17
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/preorder.tsx",
-                                        lineNumber: 80,
-                                        columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
@@ -5964,7 +5935,7 @@ function Preorder() {
                                             children: t.preorder.placeholderLabel
                                         }, void 0, false, {
                                             fileName: "[project]/components/preorder.tsx",
-                                            lineNumber: 103,
+                                            lineNumber: 87,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5972,7 +5943,7 @@ function Preorder() {
                                             children: t.preorder.placeholderText
                                         }, void 0, false, {
                                             fileName: "[project]/components/preorder.tsx",
-                                            lineNumber: 106,
+                                            lineNumber: 90,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5987,7 +5958,7 @@ function Preorder() {
                                                             className: "mt-1 h-4 w-4 shrink-0 accent-[#0F766E]"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/preorder.tsx",
-                                                            lineNumber: 112,
+                                                            lineNumber: 96,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5999,20 +5970,20 @@ function Preorder() {
                                                                     children: t.preorder.termsLink
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/preorder.tsx",
-                                                                    lineNumber: 119,
+                                                                    lineNumber: 103,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 t.preorder.purchaseConsentAfter
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/preorder.tsx",
-                                                            lineNumber: 117,
+                                                            lineNumber: 101,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/preorder.tsx",
-                                                    lineNumber: 111,
+                                                    lineNumber: 95,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -6023,26 +5994,26 @@ function Preorder() {
                                                             className: "mt-1 h-4 w-4 shrink-0 accent-[#0F766E]"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/preorder.tsx",
-                                                            lineNumber: 130,
+                                                            lineNumber: 114,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             children: t.preorder.marketingConsent
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/preorder.tsx",
-                                                            lineNumber: 134,
+                                                            lineNumber: 118,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/preorder.tsx",
-                                                    lineNumber: 129,
+                                                    lineNumber: 113,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/preorder.tsx",
-                                            lineNumber: 110,
+                                            lineNumber: 94,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -6051,18 +6022,18 @@ function Preorder() {
                                             children: t.preorder.readTerms
                                         }, void 0, false, {
                                             fileName: "[project]/components/preorder.tsx",
-                                            lineNumber: 138,
+                                            lineNumber: 122,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/preorder.tsx",
-                                    lineNumber: 99,
+                                    lineNumber: 83,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/preorder.tsx",
-                                lineNumber: 98,
+                                lineNumber: 82,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -6079,7 +6050,7 @@ function Preorder() {
                                 children: t.preorder.roadmapTitle
                             }, void 0, false, {
                                 fileName: "[project]/components/preorder.tsx",
-                                lineNumber: 149,
+                                lineNumber: 133,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6092,7 +6063,7 @@ function Preorder() {
                                                 children: item.stage
                                             }, void 0, false, {
                                                 fileName: "[project]/components/preorder.tsx",
-                                                lineNumber: 158,
+                                                lineNumber: 142,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6100,24 +6071,24 @@ function Preorder() {
                                                 children: item.text
                                             }, void 0, false, {
                                                 fileName: "[project]/components/preorder.tsx",
-                                                lineNumber: 161,
+                                                lineNumber: 145,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, item.stage, true, {
                                         fileName: "[project]/components/preorder.tsx",
-                                        lineNumber: 154,
+                                        lineNumber: 138,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/preorder.tsx",
-                                lineNumber: 152,
+                                lineNumber: 136,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/preorder.tsx",
-                        lineNumber: 148,
+                        lineNumber: 132,
                         columnNumber: 11
                     }, this)
                 ]

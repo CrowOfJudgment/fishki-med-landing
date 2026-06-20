@@ -498,7 +498,7 @@
   "preorder": {
     "badge": "Preorder",
     "title": "Wczesny dostęp do Fishki za 39 zł",
-    "subtitle": "Kup Wczesny Dostęp na preferencyjnych warunkach, testuj Fishki przed publicznym startem i miej realny wpływ na kolejność wdrażania funkcji.",
+    "subtitle": "Kup Wczesny Dostęp na preferencyjnych warunkach, testuj Fishki przed publicznym startem i pomóż w rozwoju produktu.",
     "offerFacts": [
       {
         "label": "Cena preorderu",
@@ -507,29 +507,25 @@
       },
       {
         "label": "Zakres oferty",
-        "value": "Wczesny Dostęp + 12 miesięcy",
-        "note": "Dostęp testowy oraz 12 miesięcy planu premium po publicznym starcie."
+        "value": "Wczesny Dostęp + 12 miesięcy premium",
+        "note": "Dostęp testowy jest planowany na koniec września 2026."
       },
       {
-        "label": "Szacowany dostęp",
-        "value": "Druga połowa 2026 roku",
-        "note": "Termin jest orientacyjny i może zmienić się wraz z rozwojem produktu."
+        "label": "Oficjalny start aplikacji",
+        "value": "Do końca 2026 roku",
+        "note": "Termin może ulec zmianie."
       }
     ],
     "deliveryGuaranteeLabel": "Gwarancja terminu",
-    "deliveryGuarantee": "Jeśli nie udostępnimy Pierwszej wersji Wczesnego Dostępu do Fishki do 30 czerwca 2027 roku, każdy kupujący będzie mógł poprosić o pełny zwrot preorderu.",
+    "deliveryGuarantee": "Celujemy z premierą aplikacji na koniec roku 2026, ale chcemy dać sobie trochę zapasu. Jeśli premiera aplikacji nie odbędzie się do 31 marca 2027 roku, każdy kupujący będzie mógł poprosić o pełny zwrot preorderu w ciągu najbliższych dwóch miesięcy od tej daty.",
     "includes": [
       "Dostęp do wersji testowej przed oficjalną premierą",
       "12 miesięcy planu premium po publicznym starcie",
       "Możliwość zgłaszania opinii i wpływania na rozwój produktu",
       "Głosowania nad priorytetem wdrażania funkcji",
-      "39 zł w preorderze zamiast planowanych 119–179 zł za rok po premierze"
+      "39 zł w preorderze zamiast planowanych 119–179 zł"
     ],
     "trust": "To nie jest gotowa aplikacja produkcyjna. Kupujesz wcześniejszy dostęp do produktu w trakcie tworzenia. Możesz odstąpić od zakupu w ciągu 14 dni bez podawania przyczyny.",
-    "primaryCta": "Zarezerwuj wczesny dostęp",
-    "primaryAria": "Przejdź do modułu rezerwacji wczesnego dostępu",
-    "secondaryCta": "Najpierw dołączę do listy oczekujących",
-    "secondaryAria": "Przejdź do darmowej listy oczekujących",
     "placeholderLabel": "Moduł zakupu preorderu",
     "placeholderText": "Tutaj pojawi się docelowy przycisk płatności. Przed zakupem użytkownik zaakceptuje warunki preorderu i zdecyduje, czy chce otrzymywać informacje marketingowe.",
     "purchaseConsentBefore": "Akceptuję ",
@@ -625,9 +621,10 @@
       {
         "title": "5. Termin udostępnienia aplikacji",
         "paragraphs": [
-          "Planowany termin udostępnienia pierwszej wersji Wczesnego Dostępu to druga połowa 2026 roku.",
-          "Termin ten ma charakter orientacyjny, ponieważ aplikacja jest produktem rozwijanym. Sprzedawca będzie informował użytkowników preorderu o istotnych zmianach dotyczących terminu udostępnienia aplikacji.",
-          "Jeżeli pierwsza wersja Wczesnego Dostępu do Fishki nie zostanie udostępniona do 30 czerwca 2027 roku, użytkownik będzie mógł poprosić o pełny zwrot zapłaconej kwoty."
+          "Planowany termin udostępnienia pierwszej wersji Wczesnego Dostępu to 30 września 2026 roku.",
+          "Termin Wczesnego Dostępu ma charakter orientacyjny i może ulec zmianie, ponieważ aplikacja jest produktem rozwijanym. Sprzedawca będzie informował użytkowników preorderu o istotnych zmianach dotyczących terminu udostępnienia aplikacji.",
+          "Oficjalna premiera aplikacji jest planowana do końca 2026 roku.",
+          "Jeżeli oficjalna premiera aplikacji nie nastąpi do 31 marca 2027 roku, użytkownik będzie mógł poprosić o pełny zwrot zapłaconej kwoty w okresie od 1 kwietnia do 31 maja 2027 roku."
         ]
       },
       {
@@ -650,8 +647,8 @@
       {
         "title": "8. Dodatkowa gwarancja zwrotu",
         "paragraphs": [
-          "Niezależnie od ustawowego prawa odstąpienia od umowy, Sprzedawca przyznaje użytkownikowi dodatkową możliwość zwrotu środków, jeżeli pierwsza wersja Wczesnego Dostępu do aplikacji Fishki nie zostanie udostępniona do 30 czerwca 2027 roku.",
-          "W takim przypadku użytkownik może poprosić o pełny zwrot, wysyłając wiadomość na adres: [adres e-mail]."
+          "Niezależnie od ustawowego prawa odstąpienia od umowy, Sprzedawca przyznaje użytkownikowi dodatkową możliwość zwrotu środków, jeżeli oficjalna premiera aplikacji Fishki nie nastąpi do 31 marca 2027 roku.",
+          "W takim przypadku użytkownik może poprosić o pełny zwrot w okresie od 1 kwietnia do 31 maja 2027 roku, wysyłając wiadomość na adres: [adres e-mail]."
         ]
       },
       {

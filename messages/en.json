@@ -498,7 +498,7 @@
   "preorder": {
     "badge": "Preorder",
     "title": "Fishki Early Access for PLN 39",
-    "subtitle": "Buy Early Access on preferential terms, test Fishki before the public launch and have a real say in the order in which features are implemented.",
+    "subtitle": "Buy Early Access on preferential terms, test Fishki before the public launch and help shape the product.",
     "offerFacts": [
       {
         "label": "Preorder price",
@@ -507,29 +507,25 @@
       },
       {
         "label": "What is included",
-        "value": "Early Access + 12 months",
-        "note": "Test access and 12 months of the premium plan after the public launch."
+        "value": "Early Access + 12 months of premium",
+        "note": "Test access is planned for the end of September 2026."
       },
       {
-        "label": "Estimated access",
-        "value": "Second half of 2026",
-        "note": "This is an estimate and may change as the product develops."
+        "label": "Official app launch",
+        "value": "By the end of 2026",
+        "note": "This date may change."
       }
     ],
     "deliveryGuaranteeLabel": "Delivery guarantee",
-    "deliveryGuarantee": "If we do not release the first Fishki Early Access version by June 30, 2027, every purchaser will be able to request a full preorder refund.",
+    "deliveryGuarantee": "We are aiming to launch the app by the end of 2026, but we want to leave some buffer. If the app does not officially launch by March 31, 2027, every purchaser will be able to request a full preorder refund within the following two months from that date.",
     "includes": [
       "Access to the test version before the official launch",
       "12 months of the premium plan after the public launch",
       "The ability to share feedback and influence product development",
       "Voting on feature implementation priorities",
-      "PLN 39 in preorder instead of the planned PLN 119–179 per year after launch"
+      "PLN 39 in preorder instead of the planned PLN 119–179"
     ],
     "trust": "This is not a finished production app. You are buying early access to a product that is still being developed. You may withdraw from the purchase within 14 days without giving a reason.",
-    "primaryCta": "Reserve Early Access",
-    "primaryAria": "Go to the Early Access reservation module",
-    "secondaryCta": "I’ll join the waitlist first",
-    "secondaryAria": "Go to the free waitlist",
     "placeholderLabel": "Preorder purchase module",
     "placeholderText": "The final payment button will appear here. Before buying, the user will accept the preorder terms and choose whether to receive marketing updates.",
     "purchaseConsentBefore": "I accept the ",
@@ -623,9 +619,10 @@
       {
         "title": "5. Application availability date",
         "paragraphs": [
-          "The first Early Access version is planned for the second half of 2026.",
-          "This date is an estimate because the application is still being developed. The Seller will inform preorder users about material changes to the release timing.",
-          "If the first Fishki Early Access version is not made available by June 30, 2027, the user may request a full refund of the amount paid."
+          "The first Early Access version is planned by September 30, 2026.",
+          "The Early Access date is an estimate and may change because the application is still being developed. The Seller will inform preorder users about material changes to the release timing.",
+          "The official application launch is planned by the end of 2026.",
+          "If the official application launch does not take place by March 31, 2027, the user may request a full refund of the amount paid between April 1 and May 31, 2027."
         ]
       },
       {
@@ -648,8 +645,8 @@
       {
         "title": "8. Additional refund guarantee",
         "paragraphs": [
-          "Independently of the statutory right of withdrawal, the Seller grants the user an additional refund option if the first Fishki Early Access version is not made available by June 30, 2027.",
-          "In that case, the user may request a full refund by sending a message to: [email address]."
+          "Independently of the statutory right of withdrawal, the Seller grants the user an additional refund option if the official Fishki application launch does not take place by March 31, 2027.",
+          "In that case, the user may request a full refund between April 1 and May 31, 2027 by sending a message to: [email address]."
         ]
       },
       {
