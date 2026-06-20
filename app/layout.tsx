@@ -17,7 +17,8 @@ export async function generateMetadata() {
     title: messages.seo.title,
     description: messages.seo.description,
     icons: {
-      icon: "/icon.svg",
+      icon: [{ url: "/favicon.ico", type: "image/x-icon" }],
+      shortcut: "/favicon.ico",
     },
   };
 }
