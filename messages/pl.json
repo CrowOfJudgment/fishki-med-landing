@@ -580,17 +580,16 @@
     "back": "Wróć do preorderu",
     "badge": "Regulamin preorderu",
     "title": "Regulamin preorderu Fishki Early Access",
-    "lastUpdated": "Ostatnia aktualizacja: [DD.MM.2026]",
+    "lastUpdated": "Ostatnia aktualizacja: 26.06.2026 r.",
     "intro": "",
     "sections": [
       {
         "title": "1. Sprzedawca",
         "blocks": [
           { "type": "paragraph", "text": "Sprzedawcą preorderu Fishki Early Access jest:" },
-          { "type": "paragraph", "text": "[pełna nazwa firmy / imię i nazwisko]" },
-          { "type": "paragraph", "text": "Adres: [adres]" },
-          { "type": "paragraph", "text": "NIP: [NIP, jeżeli dotyczy]" },
-          { "type": "paragraph", "text": "E-mail kontaktowy: [adres e-mail]" },
+          { "type": "paragraph", "text": "Mateusz Buczak Nierejestrowana Działalność Gospodarcza" },
+          { "type": "paragraph", "text": "Adres: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów" },
+          { "type": "paragraph", "text": "E-mail kontaktowy: mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "Dalej: „Sprzedawca”." }
         ]
       },
@@ -683,7 +682,7 @@
         "blocks": [
           { "type": "paragraph", "text": "Użytkownik będący konsumentem może odstąpić od umowy w terminie 14 dni od zakupu preorderu bez podawania przyczyny." },
           { "type": "paragraph", "text": "Aby odstąpić od umowy, należy wysłać wiadomość e-mail na adres:" },
-          { "type": "paragraph", "text": "[adres e-mail]" },
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "Przykładowa treść wiadomości:" },
           { "type": "quote", "text": "Odstępuję od umowy zakupu preorderu Fishki Early Access. Proszę o zwrot płatności.\nAdres e-mail użyty przy zakupie: [adres e-mail]." },
           { "type": "paragraph", "text": "Zwrot zostanie dokonany przy użyciu tego samego sposobu płatności, którego użyto przy zakupie, chyba że strony uzgodnią inny sposób zwrotu." }
@@ -695,7 +694,7 @@
           { "type": "paragraph", "text": "Niezależnie od ustawowego prawa odstąpienia od umowy, Sprzedawca przyznaje użytkownikowi dodatkowe prawo do zwrotu." },
           { "type": "paragraph", "text": "Jeżeli pierwsza wersja Fishki Early Access nie zostanie udostępniona do 30 czerwca 2027 roku, użytkownik może zażądać pełnego zwrotu kwoty zapłaconej za preorder." },
           { "type": "paragraph", "text": "Żądanie zwrotu należy wysłać na adres:" },
-          { "type": "paragraph", "text": "[adres e-mail]" },
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "Zwrot obejmuje kwotę faktycznie zapłaconą przez użytkownika za preorder." }
         ]
       },
@@ -719,7 +718,7 @@
         "title": "12. Reklamacje",
         "blocks": [
           { "type": "paragraph", "text": "Użytkownik może złożyć reklamację dotyczącą preorderu lub działania aplikacji, wysyłając wiadomość na adres:" },
-          { "type": "paragraph", "text": "[adres e-mail]" },
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "Reklamacja powinna zawierać:" },
           { "type": "list", "items": [
             "adres e-mail użyty przy zakupie,",
@@ -755,7 +754,7 @@
         "blocks": [
           { "type": "paragraph", "text": "W sprawach nieuregulowanych niniejszym regulaminem zastosowanie ma prawo polskie." },
           { "type": "paragraph", "text": "Kontakt w sprawach preorderu:" },
-          { "type": "paragraph", "text": "[adres e-mail]" }
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }
         ]
       }
     ]

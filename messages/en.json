@@ -578,17 +578,16 @@
     "back": "Back to preorder",
     "badge": "Preorder terms",
     "title": "Fishki Early Access Preorder Terms",
-    "lastUpdated": "Last updated: [DD.MM.2026]",
+    "lastUpdated": "Last updated: June 26, 2026",
     "intro": "",
     "sections": [
       {
         "title": "1. Seller",
         "blocks": [
           { "type": "paragraph", "text": "The seller of the Fishki Early Access preorder is:" },
-          { "type": "paragraph", "text": "[full company name / full name]" },
-          { "type": "paragraph", "text": "Address: [address]" },
-          { "type": "paragraph", "text": "Tax ID: [Tax ID, if applicable]" },
-          { "type": "paragraph", "text": "Contact email: [email address]" },
+          { "type": "paragraph", "text": "Mateusz Buczak Unregistered Business Activity" },
+          { "type": "paragraph", "text": "Address: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów, Poland" },
+          { "type": "paragraph", "text": "Contact email: mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "Hereinafter: the “Seller”." }
         ]
       },
@@ -681,7 +680,7 @@
         "blocks": [
           { "type": "paragraph", "text": "A user who is a consumer may withdraw from the agreement within 14 days of purchasing the preorder without giving a reason." },
           { "type": "paragraph", "text": "To withdraw from the agreement, send an email to:" },
-          { "type": "paragraph", "text": "[email address]" },
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "Example message:" },
           { "type": "quote", "text": "I withdraw from the Fishki Early Access preorder purchase agreement. Please refund the payment.\nEmail address used for the purchase: [email address]." },
           { "type": "paragraph", "text": "The refund will be made using the same payment method used for the purchase unless the parties agree on another refund method." }
@@ -693,7 +692,7 @@
           { "type": "paragraph", "text": "Independently of the statutory right of withdrawal, the Seller grants the user an additional right to a refund." },
           { "type": "paragraph", "text": "If the first Fishki Early Access version is not made available by June 30, 2027, the user may request a full refund of the amount paid for the preorder." },
           { "type": "paragraph", "text": "The refund request should be sent to:" },
-          { "type": "paragraph", "text": "[email address]" },
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "The refund covers the amount actually paid by the user for the preorder." }
         ]
       },
@@ -717,7 +716,7 @@
         "title": "12. Complaints",
         "blocks": [
           { "type": "paragraph", "text": "The user may submit a complaint concerning the preorder or the application by sending a message to:" },
-          { "type": "paragraph", "text": "[email address]" },
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "The complaint should include:" },
           { "type": "list", "items": [
             "the email address used for the purchase,",
@@ -753,7 +752,7 @@
         "blocks": [
           { "type": "paragraph", "text": "Polish law applies to matters not regulated by these terms." },
           { "type": "paragraph", "text": "Contact regarding the preorder:" },
-          { "type": "paragraph", "text": "[email address]" }
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }
         ]
       }
     ]

@@ -3,7 +3,7 @@
     "back": "Back to homepage",
     "badge": "Terms of use",
     "title": "Fishki Terms of Use",
-    "lastUpdated": "Last updated: [DD.MM.2026]",
+    "lastUpdated": "Last updated: June 26, 2026",
     "intro": "",
     "sections": [
       { "title": "1. General provisions", "blocks": [
@@ -11,7 +11,7 @@
         { "type": "paragraph", "text": "https://www.fishki-med.com/" },
         { "type": "paragraph", "text": "and, once it becomes available, the Fishki application." },
         { "type": "paragraph", "text": "The owner and operator of the website is:" },
-        { "type": "paragraph", "text": "[full company name / full name]\nAddress: [address]\nTax ID: [Tax ID, if applicable]\nEmail: [email address]" },
+        { "type": "paragraph", "text": "Mateusz Buczak Unregistered Business Activity\nAddress: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów, Poland\nEmail: mateuszbuczak1@gmail.com" },
         { "type": "paragraph", "text": "Hereinafter: the “Operator”." }
       ] },
       { "title": "2. Nature of the website", "blocks": [
@@ -77,7 +77,7 @@
       ] },
       { "title": "13. Complaints", "blocks": [
         { "type": "paragraph", "text": "Complaints concerning the website or application may be sent to:" },
-        { "type": "paragraph", "text": "[email address]" },
+        { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
         { "type": "paragraph", "text": "A complaint should include:" },
         { "type": "list", "items": ["information identifying the user,", "a description of the issue,", "the expected solution."] },
         { "type": "paragraph", "text": "The Operator will respond within 14 days of receiving the complaint." }
@@ -88,19 +88,19 @@
         { "type": "list", "items": ["changes to website or application features,", "the launch of new services,", "changes in law,", "changes to the Operator's details,", "the need to clarify the rules for using Fishki."] },
         { "type": "paragraph", "text": "The new version of the Terms will be published on the website." }
       ] },
-      { "title": "16. Contact", "blocks": [{ "type": "paragraph", "text": "Contact the Operator at:" }, { "type": "paragraph", "text": "[email address]" }] }
+      { "title": "16. Contact", "blocks": [{ "type": "paragraph", "text": "Contact the Operator at:" }, { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }] }
     ]
   },
   "privacy": {
     "back": "Back to homepage",
     "badge": "Privacy",
     "title": "Fishki Privacy Policy",
-    "lastUpdated": "Last updated: [DD.MM.2026]",
+    "lastUpdated": "Last updated: June 26, 2026",
     "intro": "",
     "sections": [
       { "title": "1. Data controller", "blocks": [
         { "type": "paragraph", "text": "The controller of your personal data is:" },
-        { "type": "paragraph", "text": "[full company name / full name]\nAddress: [address]\nTax ID: [Tax ID, if applicable]\nEmail: [email address]" },
+        { "type": "paragraph", "text": "Mateusz Buczak Unregistered Business Activity\nAddress: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów, Poland\nEmail: mateuszbuczak1@gmail.com" },
         { "type": "paragraph", "text": "Hereinafter: the “Controller”." },
         { "type": "paragraph", "text": "This Privacy Policy explains what data we process, for what purposes, on what legal basis and what rights you have. It may serve to provide the information required when data is collected, including the controller's identity, purposes, legal bases, retention period and data subject rights." }
       ] },
@@ -122,8 +122,8 @@
         { "type": "paragraph", "text": "We may use external providers for the website, forms, payments, hosting, analytics and email communication." },
         { "type": "paragraph", "text": "These may include:" },
         { "type": "list", "items": ["website hosting providers,", "form providers,", "payment operators,", "email tool providers,", "analytics providers,", "application infrastructure providers."] },
-        { "type": "paragraph", "text": "Add the specific names once tools have been selected, for example:" },
-        { "type": "list", "items": ["Vercel — website hosting,", "Tally — forms,", "Stripe / Paddle / PayU / Przelewy24 — payments,", "Resend / MailerLite / Brevo — email,", "Google Analytics / Plausible / PostHog — analytics."] },
+        { "type": "paragraph", "text": "We currently use the following providers in particular:" },
+        { "type": "list", "items": ["Vercel — website hosting,", "Tally — forms,", "PayByLink — payments."] },
         { "type": "paragraph", "text": "Providers process data only to the extent necessary to provide services to the Controller." }
       ] },
       { "title": "5. Transfers outside the European Economic Area", "blocks": [
@@ -139,7 +139,7 @@
         { "type": "list", "items": ["access your data,", "rectify your data,", "erase your data,", "restrict processing,", "data portability,", "object to processing,", "withdraw consent at any time,", "lodge a complaint with the President of the Polish Personal Data Protection Office."] },
         { "type": "paragraph", "text": "Withdrawal of consent does not affect the lawfulness of processing carried out before it was withdrawn." },
         { "type": "paragraph", "text": "To exercise your rights, contact:" },
-        { "type": "paragraph", "text": "[email address]" }
+        { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }
       ] },
       { "title": "8. Voluntary provision of data", "blocks": [
         { "type": "paragraph", "text": "Providing data is voluntary but may be necessary to:" },
@@ -165,7 +165,7 @@
         { "type": "list", "items": ["changes to website or application features,", "changes of service providers,", "changes in law,", "changes in how data is processed."] },
         { "type": "paragraph", "text": "The new version of the Privacy Policy will be published on the website." }
       ] },
-      { "title": "13. Contact", "blocks": [{ "type": "paragraph", "text": "For privacy and personal data matters, contact:" }, { "type": "paragraph", "text": "[email address]" }] }
+      { "title": "13. Contact", "blocks": [{ "type": "paragraph", "text": "For privacy and personal data matters, contact:" }, { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }] }
     ]
   }
 }

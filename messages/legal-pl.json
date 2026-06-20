@@ -3,7 +3,7 @@
     "back": "Wróć na stronę główną",
     "badge": "Warunki użytkowania",
     "title": "Warunki użytkowania Fishki",
-    "lastUpdated": "Ostatnia aktualizacja: [DD.MM.2026]",
+    "lastUpdated": "Ostatnia aktualizacja: 26.06.2026 r.",
     "intro": "",
     "sections": [
       { "title": "1. Postanowienia ogólne", "blocks": [
@@ -11,7 +11,7 @@
         { "type": "paragraph", "text": "https://www.fishki-med.com/" },
         { "type": "paragraph", "text": "oraz, po jej udostępnieniu, z aplikacji Fishki." },
         { "type": "paragraph", "text": "Właścicielem i operatorem strony jest:" },
-        { "type": "paragraph", "text": "[pełna nazwa firmy / imię i nazwisko]\nAdres: [adres]\nNIP: [NIP, jeżeli dotyczy]\nE-mail: [adres e-mail]" },
+        { "type": "paragraph", "text": "Mateusz Buczak Nierejestrowana Działalność Gospodarcza\nAdres: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów\nE-mail: mateuszbuczak1@gmail.com" },
         { "type": "paragraph", "text": "Dalej: „Operator”." }
       ] },
       { "title": "2. Charakter strony", "blocks": [
@@ -79,7 +79,7 @@
       ] },
       { "title": "13. Reklamacje", "blocks": [
         { "type": "paragraph", "text": "Reklamacje dotyczące działania strony lub aplikacji można zgłaszać na adres:" },
-        { "type": "paragraph", "text": "[adres e-mail]" },
+        { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
         { "type": "paragraph", "text": "Reklamacja powinna zawierać:" },
         { "type": "list", "items": ["dane pozwalające zidentyfikować użytkownika,", "opis problemu,", "oczekiwane rozwiązanie."] },
         { "type": "paragraph", "text": "Operator odpowie na reklamację w terminie 14 dni od jej otrzymania." }
@@ -90,19 +90,19 @@
         { "type": "list", "items": ["zmiany funkcji strony lub aplikacji,", "uruchomienia nowych usług,", "zmiany przepisów prawa,", "zmiany danych Operatora,", "potrzeby doprecyzowania zasad korzystania z Fishki."] },
         { "type": "paragraph", "text": "Nowa wersja Warunków zostanie opublikowana na stronie." }
       ] },
-      { "title": "16. Kontakt", "blocks": [{ "type": "paragraph", "text": "Kontakt z Operatorem:" }, { "type": "paragraph", "text": "[adres e-mail]" }] }
+      { "title": "16. Kontakt", "blocks": [{ "type": "paragraph", "text": "Kontakt z Operatorem:" }, { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }] }
     ]
   },
   "privacy": {
     "back": "Wróć na stronę główną",
     "badge": "Prywatność",
     "title": "Polityka prywatności Fishki",
-    "lastUpdated": "Ostatnia aktualizacja: [DD.MM.2026]",
+    "lastUpdated": "Ostatnia aktualizacja: 26.06.2026 r.",
     "intro": "",
     "sections": [
       { "title": "1. Administrator danych", "blocks": [
         { "type": "paragraph", "text": "Administratorem Twoich danych osobowych jest:" },
-        { "type": "paragraph", "text": "[pełna nazwa firmy / imię i nazwisko]\nAdres: [adres]\nNIP: [NIP, jeżeli dotyczy]\nE-mail: [adres e-mail]" },
+        { "type": "paragraph", "text": "Mateusz Buczak Nierejestrowana Działalność Gospodarcza\nAdres: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów\nE-mail: mateuszbuczak1@gmail.com" },
         { "type": "paragraph", "text": "Dalej: „Administrator”." },
         { "type": "paragraph", "text": "Ta Polityka prywatności wyjaśnia, jakie dane przetwarzamy, w jakich celach, na jakiej podstawie i jakie prawa Ci przysługują. Polityka prywatności może być miejscem realizacji obowiązku informacyjnego wobec użytkownika, ponieważ przy zbieraniu danych trzeba jasno wskazać m.in. administratora, cele, podstawy, okres przetwarzania i prawa osoby, której dane dotyczą." }
       ] },
@@ -124,8 +124,8 @@
         { "type": "paragraph", "text": "Do obsługi strony, formularzy, płatności, hostingu, analityki i komunikacji e-mail możemy korzystać z zewnętrznych dostawców." },
         { "type": "paragraph", "text": "Mogą to być w szczególności:" },
         { "type": "list", "items": ["dostawca hostingu strony,", "dostawca formularzy,", "operator płatności,", "dostawca narzędzi mailingowych,", "dostawca analityki,", "dostawca infrastruktury aplikacji."] },
-        { "type": "paragraph", "text": "Wstaw konkretne nazwy, gdy już wybierzesz narzędzia, np.:" },
-        { "type": "list", "items": ["Vercel — hosting strony,", "Tally — formularze,", "Stripe / Paddle / PayU / Przelewy24 — płatności,", "Resend / MailerLite / Brevo — e-mail,", "Google Analytics / Plausible / PostHog — analityka."] },
+        { "type": "paragraph", "text": "Obecnie korzystamy w szczególności z następujących dostawców:" },
+        { "type": "list", "items": ["Vercel — hosting strony,", "Tally — formularze,", "PayByLink — płatności."] },
         { "type": "paragraph", "text": "Dostawcy przetwarzają dane wyłącznie w zakresie potrzebnym do świadczenia usług na rzecz Administratora." }
       ] },
       { "title": "5. Przekazywanie danych poza Europejski Obszar Gospodarczy", "blocks": [
@@ -141,7 +141,7 @@
         { "type": "list", "items": ["dostępu do swoich danych,", "sprostowania danych,", "usunięcia danych,", "ograniczenia przetwarzania,", "przenoszenia danych,", "sprzeciwu wobec przetwarzania,", "wycofania zgody w dowolnym momencie,", "złożenia skargi do Prezesa Urzędu Ochrony Danych Osobowych."] },
         { "type": "paragraph", "text": "Wycofanie zgody nie wpływa na zgodność z prawem przetwarzania dokonanego przed jej wycofaniem." },
         { "type": "paragraph", "text": "Aby skorzystać ze swoich praw, napisz na:" },
-        { "type": "paragraph", "text": "[adres e-mail]" }
+        { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }
       ] },
       { "title": "8. Dobrowolność podania danych", "blocks": [
         { "type": "paragraph", "text": "Podanie danych jest dobrowolne, ale może być konieczne do:" },
@@ -168,7 +168,7 @@
         { "type": "list", "items": ["zmiany funkcji strony lub aplikacji,", "zmiany dostawców usług,", "zmiany przepisów prawa,", "zmiany sposobu przetwarzania danych."] },
         { "type": "paragraph", "text": "Nowa wersja Polityki prywatności zostanie opublikowana na stronie." }
       ] },
-      { "title": "13. Kontakt", "blocks": [{ "type": "paragraph", "text": "W sprawach dotyczących prywatności i danych osobowych napisz na:" }, { "type": "paragraph", "text": "[adres e-mail]" }] }
+      { "title": "13. Kontakt", "blocks": [{ "type": "paragraph", "text": "W sprawach dotyczących prywatności i danych osobowych napisz na:" }, { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }] }
     ]
   }
 }
