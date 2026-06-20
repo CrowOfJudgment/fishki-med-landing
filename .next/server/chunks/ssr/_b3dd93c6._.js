@@ -67,7 +67,7 @@ function Logo({ className = "", horizontal = false }) {
             src: __TURBOPACK__imported__module__$5b$project$5d2f$logo$2d$horizontal$2e$png$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$logo$2d$horizontal$2e$png__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"],
             alt: "",
             priority: true,
-            quality: 100,
+            unoptimized: true,
             sizes: "170px",
             className: "h-auto w-full object-contain"
         }, void 0, false, {

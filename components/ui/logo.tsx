@@ -21,7 +21,7 @@ export default function Logo({
           src={horizontalLogoImage}
           alt=""
           priority
-          quality={100}
+          unoptimized
           sizes="170px"
           className="h-auto w-full object-contain"
         />
