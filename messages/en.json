@@ -470,27 +470,27 @@
     "quotes": [
       {
         "name": "Łukasz",
-        "role": "medical student",
+        "role": "third-year medical student",
         "quote": "I would like to mark only the parts of an answer that I do not remember and practise them more before an exam."
       },
       {
         "name": "Hania",
-        "role": "medical student",
+        "role": "fifth-year medical student",
         "quote": "I want reviews like in Anki, but with simpler syncing between my tablet, phone and offline mode."
       },
       {
         "name": "Kasia",
-        "role": "medical student",
+        "role": "second-year medical student",
         "quote": "The best option would combine Anki and Quizlet: quick review and regular spaced repetition."
       },
       {
         "name": "Marta",
-        "role": "medical student",
+        "role": "fourth-year medical student",
         "quote": "Offline simply has to work, without the stress of discovering that a deck did not download before studying on a train."
       },
       {
         "name": "Adam",
-        "role": "medical student",
+        "role": "fourth-year medical student",
         "quote": "I would like more control: changing intervals, shuffling flashcards and easily swapping the question and answer."
       }
     ]
