@@ -497,13 +497,13 @@
   },
   "preorder": {
     "badge": "Preorder",
-    "title": "Wczesny dostęp do Fishki za 39 zł",
+    "title": "Wczesny dostęp do Fishki za 59 zł",
     "subtitle": "Kup Wczesny Dostęp na preferencyjnych warunkach, testuj Fishki przed publicznym startem i pomóż w rozwoju produktu.",
     "offerFacts": [
       {
         "label": "Cena preorderu",
-        "value": "39 zł",
-        "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp na jeden rok będzie kosztował od 119 do 179 zł."
+        "value": "59 zł",
+        "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp będzie kosztował 149 zł rocznie."
       },
       {
         "label": "Zakres oferty",
@@ -523,7 +523,7 @@
       "12 miesięcy planu premium po publicznym starcie",
       "Możliwość zgłaszania opinii i wpływania na rozwój produktu",
       "Głosowania nad priorytetem wdrażania funkcji",
-      "39 zł w preorderze zamiast planowanych 119–179 zł"
+      "59 zł w preorderze zamiast planowanych 149 zł rocznie"
     ],
     "trust": "To nie jest gotowa aplikacja produkcyjna. Kupujesz wcześniejszy dostęp do produktu w trakcie tworzenia. Możesz odstąpić od zakupu w ciągu 14 dni bez podawania przyczyny.",
     "placeholderLabel": "Moduł zakupu preorderu",
@@ -611,7 +611,7 @@
             "możliwość testowania aplikacji i zgłaszania opinii,",
             "możliwość wpływania na priorytety rozwoju produktu, w tym głosowania na kolejność wdrażania funkcji,",
             "12 miesięcy dostępu do planu premium po publicznym uruchomieniu aplikacji,",
-            "cenę preorderową 39 PLN zamiast planowanej ceny rocznej po premierze w przedziale 119–179 PLN."
+            "cenę preorderową 59 PLN zamiast planowanej ceny 149 PLN rocznie po premierze."
           ] },
           { "type": "paragraph", "text": "Zakres funkcji dostępnych w Early Access może być ograniczony względem planowanej wersji finalnej." }
         ]
@@ -619,7 +619,7 @@
       {
         "title": "4. Cena preorderu",
         "blocks": [
-          { "type": "paragraph", "text": "Cena preorderu wynosi 39 PLN brutto." },
+          { "type": "paragraph", "text": "Cena preorderu wynosi 59 PLN brutto." },
           { "type": "paragraph", "text": "Jest to jednorazowa płatność obejmująca świadczenia opisane w niniejszym regulaminie." },
           { "type": "paragraph", "text": "Sprzedawca może w przyszłości zmienić cenę preorderu lub zakończyć jego sprzedaż. Zmiana ceny nie wpływa na osoby, które kupiły preorder przed zmianą." }
         ]

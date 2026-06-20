@@ -497,13 +497,13 @@
   },
   "preorder": {
     "badge": "Preorder",
-    "title": "Fishki Early Access for PLN 39",
+    "title": "Fishki Early Access for PLN 59",
     "subtitle": "Buy Early Access on preferential terms, test Fishki before the public launch and help shape the product.",
     "offerFacts": [
       {
         "label": "Preorder price",
-        "value": "PLN 39",
-        "note": "One-time payment. After the official launch, one year of access will cost between PLN 119 and PLN 179."
+        "value": "PLN 59",
+        "note": "One-time payment. After the official launch, access will cost PLN 149 per year."
       },
       {
         "label": "What is included",
@@ -523,7 +523,7 @@
       "12 months of the premium plan after the public launch",
       "The ability to share feedback and influence product development",
       "Voting on feature implementation priorities",
-      "PLN 39 in preorder instead of the planned PLN 119–179"
+      "PLN 59 in preorder instead of the planned PLN 149 per year"
     ],
     "trust": "This is not a finished production app. You are buying early access to a product that is still being developed. You may withdraw from the purchase within 14 days without giving a reason.",
     "placeholderLabel": "Preorder purchase module",
@@ -609,7 +609,7 @@
             "the ability to test the application and submit feedback,",
             "the ability to influence product development priorities, including voting on the order in which features are implemented,",
             "12 months of access to the premium plan after the public launch of the application,",
-            "a PLN 39 preorder price instead of the planned annual price after launch of PLN 119–179."
+            "a PLN 59 preorder price instead of the planned post-launch price of PLN 149 per year."
           ] },
           { "type": "paragraph", "text": "The scope of features available in Early Access may be limited compared with the planned final version." }
         ]
@@ -617,7 +617,7 @@
       {
         "title": "4. Preorder price",
         "blocks": [
-          { "type": "paragraph", "text": "The preorder price is PLN 39 gross." },
+          { "type": "paragraph", "text": "The preorder price is PLN 59 gross." },
           { "type": "paragraph", "text": "This is a one-time payment covering the benefits described in these terms." },
           { "type": "paragraph", "text": "The Seller may change the preorder price or end its sale in the future. A price change does not affect people who purchased the preorder before the change." }
         ]
