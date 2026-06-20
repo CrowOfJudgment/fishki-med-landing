@@ -580,7 +580,7 @@
     "back": "Wróć do preorderu",
     "badge": "Regulamin preorderu",
     "title": "Regulamin preorderu Fishki Early Access",
-    "lastUpdated": "Ostatnia aktualizacja: 26.06.2026 r.",
+    "lastUpdated": "Ostatnia aktualizacja: 20.06.2026 r.",
     "intro": "",
     "sections": [
       {
@@ -626,9 +626,10 @@
       {
         "title": "5. Planowany termin udostępnienia aplikacji",
         "blocks": [
-          { "type": "paragraph", "text": "Pierwsza wersja Fishki Early Access jest planowana na drugą połowę 2026 roku." },
-          { "type": "paragraph", "text": "Termin ten ma charakter szacunkowy i może ulec zmianie, ponieważ aplikacja jest nadal rozwijana." },
-          { "type": "paragraph", "text": "Jeżeli pierwsza wersja Fishki Early Access nie zostanie udostępniona do 30 czerwca 2027 roku, każdy kupujący będzie mógł zażądać pełnego zwrotu kwoty zapłaconej za preorder." }
+          { "type": "paragraph", "text": "Pierwsza wersja testowa Fishki Early Access jest planowana do końca września 2026 roku." },
+          { "type": "paragraph", "text": "Oficjalne uruchomienie aplikacji jest planowane do końca 2026 roku." },
+          { "type": "paragraph", "text": "Terminy te mają charakter szacunkowy i mogą ulec zmianie, ponieważ aplikacja jest nadal rozwijana." },
+          { "type": "paragraph", "text": "Jeżeli oficjalna premiera aplikacji nie odbędzie się do 31 marca 2027 roku, każdy kupujący będzie mógł zażądać pełnego zwrotu kwoty zapłaconej za preorder w ciągu dwóch miesięcy od tej daty." }
         ]
       },
       {
@@ -692,7 +693,7 @@
         "title": "10. Dodatkowa gwarancja zwrotu",
         "blocks": [
           { "type": "paragraph", "text": "Niezależnie od ustawowego prawa odstąpienia od umowy, Sprzedawca przyznaje użytkownikowi dodatkowe prawo do zwrotu." },
-          { "type": "paragraph", "text": "Jeżeli pierwsza wersja Fishki Early Access nie zostanie udostępniona do 30 czerwca 2027 roku, użytkownik może zażądać pełnego zwrotu kwoty zapłaconej za preorder." },
+          { "type": "paragraph", "text": "Jeżeli oficjalna premiera aplikacji nie odbędzie się do 31 marca 2027 roku, użytkownik może zażądać pełnego zwrotu kwoty zapłaconej za preorder w ciągu dwóch miesięcy od tej daty." },
           { "type": "paragraph", "text": "Żądanie zwrotu należy wysłać na adres:" },
           { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "Zwrot obejmuje kwotę faktycznie zapłaconą przez użytkownika za preorder." }

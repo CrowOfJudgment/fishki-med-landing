@@ -578,7 +578,7 @@
     "back": "Back to preorder",
     "badge": "Preorder terms",
     "title": "Fishki Early Access Preorder Terms",
-    "lastUpdated": "Last updated: June 26, 2026",
+    "lastUpdated": "Last updated: June 20, 2026",
     "intro": "",
     "sections": [
       {
@@ -624,9 +624,10 @@
       {
         "title": "5. Planned application availability date",
         "blocks": [
-          { "type": "paragraph", "text": "The first Fishki Early Access version is planned for the second half of 2026." },
-          { "type": "paragraph", "text": "This date is an estimate and may change because the application is still under development." },
-          { "type": "paragraph", "text": "If the first Fishki Early Access version is not made available by June 30, 2027, every purchaser may request a full refund of the amount paid for the preorder." }
+          { "type": "paragraph", "text": "The first Fishki Early Access test version is planned by the end of September 2026." },
+          { "type": "paragraph", "text": "The official application launch is planned by the end of 2026." },
+          { "type": "paragraph", "text": "These dates are estimates and may change because the application is still under development." },
+          { "type": "paragraph", "text": "If the application does not officially launch by March 31, 2027, every purchaser may request a full refund of the amount paid for the preorder within two months of that date." }
         ]
       },
       {
@@ -690,7 +691,7 @@
         "title": "10. Additional refund guarantee",
         "blocks": [
           { "type": "paragraph", "text": "Independently of the statutory right of withdrawal, the Seller grants the user an additional right to a refund." },
-          { "type": "paragraph", "text": "If the first Fishki Early Access version is not made available by June 30, 2027, the user may request a full refund of the amount paid for the preorder." },
+          { "type": "paragraph", "text": "If the application does not officially launch by March 31, 2027, the user may request a full refund of the amount paid for the preorder within two months of that date." },
           { "type": "paragraph", "text": "The refund request should be sent to:" },
           { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "The refund covers the amount actually paid by the user for the preorder." }
