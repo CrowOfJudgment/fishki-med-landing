@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logoImage from "../../logo.png";
+import horizontalLogoImage from "../../logo-horizontal.png";
 
 export default function Logo({
   className = "",
@@ -13,18 +14,32 @@ export default function Logo({
     <Link
       href="/#top"
       aria-label="Fishki"
-      className={`inline-flex shrink-0 items-center gap-2.5 ${className}`.trim()}
+      className={`inline-flex shrink-0 items-center ${horizontal ? "" : "gap-2.5"} ${className}`.trim()}
     >
-      <Image
-        src={logoImage}
-        alt=""
-        priority
-        sizes="64px"
-        className="h-auto w-[38%] max-w-16 shrink-0 object-contain"
-      />
-      <span className={`font-display font-semibold tracking-tight text-[#002838] ${horizontal ? "text-[1.45em]" : "text-[1.25em]"}`}>
-        Fishki
-      </span>
+      {horizontal ? (
+        <Image
+          src={horizontalLogoImage}
+          alt=""
+          priority
+          quality={100}
+          sizes="170px"
+          className="h-auto w-full object-contain"
+        />
+      ) : (
+        <>
+          <Image
+            src={logoImage}
+            alt=""
+            priority
+            quality={100}
+            sizes="64px"
+            className="h-auto w-[38%] max-w-16 shrink-0 object-contain"
+          />
+          <span className="font-display text-[1.25em] font-semibold tracking-tight text-[#002838]">
+            Fishki
+          </span>
+        </>
+      )}
     </Link>
   );
 }
