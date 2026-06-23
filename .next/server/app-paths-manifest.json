@@ -1,3 +1,7 @@
 {
-  "/(default)/page": "app/(default)/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/(default)/preorder-terms/page": "app/(default)/preorder-terms/page.js",
+  "/(default)/page": "app/(default)/page.js",
+  "/(default)/privacy/page": "app/(default)/privacy/page.js",
+  "/(default)/terms/page": "app/(default)/terms/page.js"
 }

@@ -45,10 +45,6 @@ export default function Header() {
     };
   }, []);
 
-  if (isMobile && !isVisible) {
-    return null;
-  }
-
   const navLinks = [
     { href: "/#how-it-works", label: t.header.how, className: "hidden md:inline-flex" },
     { href: "/#student-voices", label: t.header.studentVoices, className: "hidden md:inline-flex" },
@@ -58,7 +54,11 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed inset-x-0 top-2 z-40 sm:top-3">
+    <header
+      className={`fixed inset-x-0 top-2 z-40 transition-transform duration-200 ease-out sm:top-3 ${
+        isMobile && !isVisible ? "-translate-y-[120%]" : "translate-y-0"
+      }`}
+    >
       <div className="mx-auto max-w-7xl px-3 sm:px-5">
         <div className="flex min-w-0 items-center justify-between gap-2 rounded-[1.25rem] border border-[#B9DDD5] bg-[#F4F7F5]/90 px-3 py-2.5 shadow-[0_16px_50px_rgba(39,77,83,0.1)] backdrop-blur-xl sm:rounded-[1.4rem] sm:px-4 sm:py-3 xl:gap-3">
           <div className="flex min-w-0 items-center gap-3">
