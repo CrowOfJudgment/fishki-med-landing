@@ -1,10 +1,17 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { useT } from "@/lib/i18n-context";
+
+const PAYBYLINK_URL = "https://paybylink.pl/linkPay/817cf10ad7e92cd595dd328477eb7974";
 
 export default function Preorder() {
   const t = useT();
+  const [acceptedPreorderTerms, setAcceptedPreorderTerms] = useState(false);
+  const [acceptedTermsOfUse, setAcceptedTermsOfUse] = useState(false);
+  const [acceptedPrivacyPolicy, setAcceptedPrivacyPolicy] = useState(false);
+  const canBuy = acceptedPreorderTerms && acceptedTermsOfUse && acceptedPrivacyPolicy;
 
   return (
     <section id="preorder" className="scroll-mt-28 pb-10 pt-4 sm:pb-14">
@@ -96,6 +103,8 @@ export default function Preorder() {
                     <input
                       type="checkbox"
                       required
+                      checked={acceptedPreorderTerms}
+                      onChange={(event) => setAcceptedPreorderTerms(event.target.checked)}
                       className="mt-1 h-4 w-4 shrink-0 accent-[#0F766E]"
                     />
                     <span>
@@ -114,6 +123,8 @@ export default function Preorder() {
                     <input
                       type="checkbox"
                       required
+                      checked={acceptedTermsOfUse}
+                      onChange={(event) => setAcceptedTermsOfUse(event.target.checked)}
                       className="mt-1 h-4 w-4 shrink-0 accent-[#0F766E]"
                     />
                     <span>
@@ -121,11 +132,24 @@ export default function Preorder() {
                       <Link href="/terms" className="font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 hover:text-[#002838]">
                         {t.preorder.termsOfUseLink}
                       </Link>
-                      {t.preorder.documentsConsentMiddle}
+                      {t.preorder.documentsConsentAfter}
+                    </span>
+                  </label>
+
+                  <label className="flex cursor-pointer items-start gap-3 rounded-[1.15rem] border border-[#B9DDD5] bg-white p-4 text-sm leading-6 text-[#274D53]">
+                    <input
+                      type="checkbox"
+                      required
+                      checked={acceptedPrivacyPolicy}
+                      onChange={(event) => setAcceptedPrivacyPolicy(event.target.checked)}
+                      className="mt-1 h-4 w-4 shrink-0 accent-[#0F766E]"
+                    />
+                    <span>
+                      {t.preorder.privacyConsentBefore}
                       <Link href="/privacy" className="font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 hover:text-[#002838]">
                         {t.preorder.privacyLink}
                       </Link>
-                      {t.preorder.documentsConsentAfter}
+                      {t.preorder.privacyConsentAfter}
                     </span>
                   </label>
 
@@ -137,6 +161,23 @@ export default function Preorder() {
                     <span>{t.preorder.marketingConsent}</span>
                   </label>
                 </div>
+
+                <a
+                  href={canBuy ? PAYBYLINK_URL : undefined}
+                  aria-disabled={!canBuy}
+                  className={`mt-6 flex w-full items-center justify-center rounded-full px-5 py-3.5 text-sm font-semibold transition ${
+                    canBuy
+                      ? "bg-[#E86860] text-white shadow-[0_14px_32px_rgba(232,104,96,0.24)] hover:-translate-y-0.5 hover:bg-[#D85A52]"
+                      : "pointer-events-none bg-[#B9DDD5]/70 text-[#274D53]/60"
+                  }`}
+                >
+                  {t.preorder.buyCta}
+                </a>
+                {!canBuy ? (
+                  <p className="mt-3 text-center text-xs leading-5 text-[#274D53]">
+                    {t.preorder.buyCtaDisabled}
+                  </p>
+                ) : null}
 
                 <Link
                   href="/preorder-terms"

@@ -11,7 +11,7 @@
         { "type": "paragraph", "text": "https://www.fishki-med.com/" },
         { "type": "paragraph", "text": "and, once it becomes available, the Fishki application." },
         { "type": "paragraph", "text": "The owner and operator of the website is:" },
-        { "type": "paragraph", "text": "Mateusz Buczak Unregistered Business Activity\nAddress: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów, Poland\nEmail: mateuszbuczak1@gmail.com" },
+        { "type": "paragraph", "text": "Mateusz Buczak, operating as an unregistered business activity under Polish law\nAddress: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów, Poland\nEmail: mateuszbuczak1@gmail.com" },
         { "type": "paragraph", "text": "Hereinafter: the “Operator”." }
       ] },
       { "title": "2. Nature of the website", "blocks": [
@@ -33,7 +33,7 @@
         { "type": "paragraph", "text": "The user may unsubscribe at any time by clicking the unsubscribe link in an email or contacting the Operator." }
       ] },
       { "title": "5. Preorder", "blocks": [
-        { "type": "paragraph", "text": "The purchase of the Fishki Early Access preorder is governed by a separate document: the Fishki Early Access Preorder Terms." },
+        { "type": "paragraph", "text": "The purchase of the Fishki Early Access preorder is governed by a separate document: the Fishki Early Access Preorder and Sales Terms." },
         { "type": "paragraph", "text": "If these Terms of Use conflict with the Preorder Terms, the Preorder Terms take precedence for matters concerning the preorder purchase." }
       ] },
       { "title": "6. User account", "blocks": [
@@ -100,7 +100,7 @@
     "sections": [
       { "title": "1. Data controller", "blocks": [
         { "type": "paragraph", "text": "The controller of your personal data is:" },
-        { "type": "paragraph", "text": "Mateusz Buczak Unregistered Business Activity\nAddress: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów, Poland\nEmail: mateuszbuczak1@gmail.com" },
+        { "type": "paragraph", "text": "Mateusz Buczak, operating as an unregistered business activity under Polish law\nAddress: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów, Poland\nEmail: mateuszbuczak1@gmail.com" },
         { "type": "paragraph", "text": "Hereinafter: the “Controller”." },
         { "type": "paragraph", "text": "This Privacy Policy explains what data we process, for what purposes, on what legal basis and what rights you have. It may serve to provide the information required when data is collected, including the controller's identity, purposes, legal bases, retention period and data subject rights." }
       ] },

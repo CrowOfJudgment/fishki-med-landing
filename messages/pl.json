@@ -529,14 +529,17 @@
     "placeholderLabel": "Moduł zakupu preorderu",
     "placeholderText": "Tutaj pojawi się docelowy przycisk płatności. Przed zakupem użytkownik zaakceptuje warunki preorderu i zdecyduje, czy chce otrzymywać informacje marketingowe.",
     "purchaseConsentBefore": "Akceptuję ",
-    "termsLink": "warunki preorderu Wczesnego Dostępu do Fishki",
-    "purchaseConsentAfter": " i rozumiem, że kupuję wcześniejszy dostęp do aplikacji, która jest nadal rozwijana.",
+    "termsLink": "Regulamin sprzedaży preorderu Fishki",
+    "purchaseConsentAfter": ".",
     "documentsConsentBefore": "Zapoznałem/am się z ",
     "termsOfUseLink": "Warunkami użytkowania",
-    "documentsConsentMiddle": " i ",
-    "privacyLink": "Polityką prywatności",
     "documentsConsentAfter": ".",
+    "privacyConsentBefore": "Zapoznałem/am się z ",
+    "privacyLink": "Polityką prywatności",
+    "privacyConsentAfter": ".",
     "marketingConsent": "Chcę otrzymywać informacje marketingowe o rozwoju Fishki, premierze aplikacji, specjalnych ofertach i nowych funkcjach.",
+    "buyCta": "Kup Wczesny Dostęp",
+    "buyCtaDisabled": "Zaznacz obowiązkowe zgody, aby przejść do płatności.",
     "readTerms": "Przeczytaj warunki zakupu",
     "roadmapTitle": "Planowany zakres bety",
     "roadmap": [
@@ -579,7 +582,7 @@
   "preorderTerms": {
     "back": "Wróć do preorderu",
     "badge": "Regulamin preorderu",
-    "title": "Regulamin preorderu Fishki Early Access",
+    "title": "Regulamin sprzedaży preorderu Fishki Early Access",
     "lastUpdated": "Ostatnia aktualizacja: 20.06.2026 r.",
     "intro": "",
     "sections": [
@@ -587,7 +590,7 @@
         "title": "1. Sprzedawca",
         "blocks": [
           { "type": "paragraph", "text": "Sprzedawcą preorderu Fishki Early Access jest:" },
-          { "type": "paragraph", "text": "Mateusz Buczak Nierejestrowana Działalność Gospodarcza" },
+          { "type": "paragraph", "text": "Mateusz Buczak, osoba fizyczna prowadząca działalność nierejestrowaną" },
           { "type": "paragraph", "text": "Adres: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów" },
           { "type": "paragraph", "text": "E-mail kontaktowy: mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "Dalej: „Sprzedawca”." }

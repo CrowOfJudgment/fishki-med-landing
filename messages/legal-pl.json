@@ -11,7 +11,7 @@
         { "type": "paragraph", "text": "https://www.fishki-med.com/" },
         { "type": "paragraph", "text": "oraz, po jej udostępnieniu, z aplikacji Fishki." },
         { "type": "paragraph", "text": "Właścicielem i operatorem strony jest:" },
-        { "type": "paragraph", "text": "Mateusz Buczak Nierejestrowana Działalność Gospodarcza\nAdres: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów\nE-mail: mateuszbuczak1@gmail.com" },
+        { "type": "paragraph", "text": "Mateusz Buczak, osoba fizyczna prowadząca działalność nierejestrowaną\nAdres: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów\nE-mail: mateuszbuczak1@gmail.com" },
         { "type": "paragraph", "text": "Dalej: „Operator”." }
       ] },
       { "title": "2. Charakter strony", "blocks": [
@@ -33,7 +33,7 @@
         { "type": "paragraph", "text": "Użytkownik może w każdej chwili zrezygnować z komunikacji, klikając link rezygnacji w wiadomości e-mail albo kontaktując się z Operatorem." }
       ] },
       { "title": "5. Preorder", "blocks": [
-        { "type": "paragraph", "text": "Zasady zakupu preorderu Fishki Early Access określa osobny dokument: Regulamin preorderu Fishki Early Access." },
+        { "type": "paragraph", "text": "Zasady zakupu preorderu Fishki Early Access określa osobny dokument: Regulamin sprzedaży preorderu Fishki Early Access." },
         { "type": "paragraph", "text": "W przypadku rozbieżności między Warunkami użytkowania a Regulaminem preorderu, w zakresie zakupu preorderu pierwszeństwo ma Regulamin preorderu." }
       ] },
       { "title": "6. Konto użytkownika", "blocks": [
@@ -102,7 +102,7 @@
     "sections": [
       { "title": "1. Administrator danych", "blocks": [
         { "type": "paragraph", "text": "Administratorem Twoich danych osobowych jest:" },
-        { "type": "paragraph", "text": "Mateusz Buczak Nierejestrowana Działalność Gospodarcza\nAdres: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów\nE-mail: mateuszbuczak1@gmail.com" },
+        { "type": "paragraph", "text": "Mateusz Buczak, osoba fizyczna prowadząca działalność nierejestrowaną\nAdres: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów\nE-mail: mateuszbuczak1@gmail.com" },
         { "type": "paragraph", "text": "Dalej: „Administrator”." },
         { "type": "paragraph", "text": "Ta Polityka prywatności wyjaśnia, jakie dane przetwarzamy, w jakich celach, na jakiej podstawie i jakie prawa Ci przysługują. Polityka prywatności może być miejscem realizacji obowiązku informacyjnego wobec użytkownika, ponieważ przy zbieraniu danych trzeba jasno wskazać m.in. administratora, cele, podstawy, okres przetwarzania i prawa osoby, której dane dotyczą." }
       ] },

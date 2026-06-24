@@ -529,14 +529,17 @@
     "placeholderLabel": "Preorder purchase module",
     "placeholderText": "The final payment button will appear here. Before buying, the user will accept the preorder terms and choose whether to receive marketing updates.",
     "purchaseConsentBefore": "I accept the ",
-    "termsLink": "Fishki Early Access preorder terms",
-    "purchaseConsentAfter": " and understand that I am purchasing early access to an application that is still under development.",
+    "termsLink": "Fishki Preorder and Sales Terms",
+    "purchaseConsentAfter": ".",
     "documentsConsentBefore": "I have read the ",
     "termsOfUseLink": "Terms of use",
-    "documentsConsentMiddle": " and the ",
-    "privacyLink": "Privacy Policy",
     "documentsConsentAfter": ".",
+    "privacyConsentBefore": "I have read the ",
+    "privacyLink": "Privacy Policy",
+    "privacyConsentAfter": ".",
     "marketingConsent": "I want to receive marketing information about Fishki development, the app launch, special offers and new features.",
+    "buyCta": "Buy Early Access",
+    "buyCtaDisabled": "Accept the required terms to continue to payment.",
     "readTerms": "Read the purchase terms",
     "roadmapTitle": "Planned beta scope",
     "roadmap": [
@@ -577,7 +580,7 @@
   "preorderTerms": {
     "back": "Back to preorder",
     "badge": "Preorder terms",
-    "title": "Fishki Early Access Preorder Terms",
+    "title": "Fishki Early Access Preorder and Sales Terms",
     "lastUpdated": "Last updated: June 20, 2026",
     "intro": "",
     "sections": [
@@ -585,7 +588,7 @@
         "title": "1. Seller",
         "blocks": [
           { "type": "paragraph", "text": "The seller of the Fishki Early Access preorder is:" },
-          { "type": "paragraph", "text": "Mateusz Buczak Unregistered Business Activity" },
+          { "type": "paragraph", "text": "Mateusz Buczak, operating as an unregistered business activity under Polish law" },
           { "type": "paragraph", "text": "Address: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów, Poland" },
           { "type": "paragraph", "text": "Contact email: mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "Hereinafter: the “Seller”." }
