@@ -11,7 +11,17 @@ export default function Preorder() {
   const [acceptedPreorderTerms, setAcceptedPreorderTerms] = useState(false);
   const [acceptedTermsOfUse, setAcceptedTermsOfUse] = useState(false);
   const [acceptedPrivacyPolicy, setAcceptedPrivacyPolicy] = useState(false);
+  const [showConsentError, setShowConsentError] = useState(false);
   const canBuy = acceptedPreorderTerms && acceptedTermsOfUse && acceptedPrivacyPolicy;
+
+  const handleBuyClick = () => {
+    if (!canBuy) {
+      setShowConsentError(true);
+      return;
+    }
+
+    window.location.href = PAYBYLINK_URL;
+  };
 
   return (
     <section id="preorder" className="scroll-mt-28 pb-10 pt-4 sm:pb-14">
@@ -99,12 +109,22 @@ export default function Preorder() {
                 </p>
 
                 <div className="mt-6 space-y-3 text-left">
-                  <label className="flex cursor-pointer items-start gap-3 rounded-[1.15rem] border border-[#B9DDD5] bg-white p-4 text-sm leading-6 text-[#274D53]">
+                  <label className={`flex cursor-pointer items-start gap-3 rounded-[1.15rem] border bg-white p-4 text-sm leading-6 text-[#274D53] transition ${
+                    showConsentError && !acceptedPreorderTerms
+                      ? "border-[#E86860] shadow-[0_0_0_3px_rgba(232,104,96,0.12)]"
+                      : "border-[#B9DDD5]"
+                  }`}>
                     <input
                       type="checkbox"
                       required
                       checked={acceptedPreorderTerms}
-                      onChange={(event) => setAcceptedPreorderTerms(event.target.checked)}
+                      onChange={(event) => {
+                        const checked = event.target.checked;
+                        setAcceptedPreorderTerms(checked);
+                        if (checked && acceptedTermsOfUse && acceptedPrivacyPolicy) {
+                          setShowConsentError(false);
+                        }
+                      }}
                       className="mt-1 h-4 w-4 shrink-0 accent-[#0F766E]"
                     />
                     <span>
@@ -119,12 +139,22 @@ export default function Preorder() {
                     </span>
                   </label>
 
-                  <label className="flex cursor-pointer items-start gap-3 rounded-[1.15rem] border border-[#B9DDD5] bg-white p-4 text-sm leading-6 text-[#274D53]">
+                  <label className={`flex cursor-pointer items-start gap-3 rounded-[1.15rem] border bg-white p-4 text-sm leading-6 text-[#274D53] transition ${
+                    showConsentError && !acceptedTermsOfUse
+                      ? "border-[#E86860] shadow-[0_0_0_3px_rgba(232,104,96,0.12)]"
+                      : "border-[#B9DDD5]"
+                  }`}>
                     <input
                       type="checkbox"
                       required
                       checked={acceptedTermsOfUse}
-                      onChange={(event) => setAcceptedTermsOfUse(event.target.checked)}
+                      onChange={(event) => {
+                        const checked = event.target.checked;
+                        setAcceptedTermsOfUse(checked);
+                        if (acceptedPreorderTerms && checked && acceptedPrivacyPolicy) {
+                          setShowConsentError(false);
+                        }
+                      }}
                       className="mt-1 h-4 w-4 shrink-0 accent-[#0F766E]"
                     />
                     <span>
@@ -136,12 +166,22 @@ export default function Preorder() {
                     </span>
                   </label>
 
-                  <label className="flex cursor-pointer items-start gap-3 rounded-[1.15rem] border border-[#B9DDD5] bg-white p-4 text-sm leading-6 text-[#274D53]">
+                  <label className={`flex cursor-pointer items-start gap-3 rounded-[1.15rem] border bg-white p-4 text-sm leading-6 text-[#274D53] transition ${
+                    showConsentError && !acceptedPrivacyPolicy
+                      ? "border-[#E86860] shadow-[0_0_0_3px_rgba(232,104,96,0.12)]"
+                      : "border-[#B9DDD5]"
+                  }`}>
                     <input
                       type="checkbox"
                       required
                       checked={acceptedPrivacyPolicy}
-                      onChange={(event) => setAcceptedPrivacyPolicy(event.target.checked)}
+                      onChange={(event) => {
+                        const checked = event.target.checked;
+                        setAcceptedPrivacyPolicy(checked);
+                        if (acceptedPreorderTerms && acceptedTermsOfUse && checked) {
+                          setShowConsentError(false);
+                        }
+                      }}
                       className="mt-1 h-4 w-4 shrink-0 accent-[#0F766E]"
                     />
                     <span>
@@ -162,19 +202,19 @@ export default function Preorder() {
                   </label>
                 </div>
 
-                <a
-                  href={canBuy ? PAYBYLINK_URL : undefined}
-                  aria-disabled={!canBuy}
-                  className={`mt-6 flex w-full items-center justify-center rounded-full px-5 py-3.5 text-sm font-semibold transition ${
-                    canBuy
-                      ? "bg-[#E86860] text-white shadow-[0_14px_32px_rgba(232,104,96,0.24)] hover:-translate-y-0.5 hover:bg-[#D85A52]"
-                      : "pointer-events-none bg-[#B9DDD5]/70 text-[#274D53]/60"
+                <button
+                  type="button"
+                  onClick={handleBuyClick}
+                  className={`mt-6 flex w-full items-center justify-center rounded-full px-5 py-3.5 text-sm font-semibold text-white shadow-[0_14px_32px_rgba(232,104,96,0.24)] transition hover:-translate-y-0.5 ${
+                    showConsentError && !canBuy
+                      ? "bg-[#E86860] ring-4 ring-[#E86860]/20"
+                      : "bg-[#E86860] hover:bg-[#D85A52]"
                   }`}
                 >
                   {t.preorder.buyCta}
-                </a>
-                {!canBuy ? (
-                  <p className="mt-3 text-center text-xs leading-5 text-[#274D53]">
+                </button>
+                {showConsentError && !canBuy ? (
+                  <p className="mt-3 rounded-2xl border border-[#E86860]/35 bg-[#E86860]/10 px-4 py-3 text-center text-xs font-medium leading-5 text-[#002838]">
                     {t.preorder.buyCtaDisabled}
                   </p>
                 ) : null}

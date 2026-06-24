@@ -1,7 +1,7 @@
 {
   "/_not-found/page": "/_not-found",
-  "/(default)/page": "/",
   "/(default)/preorder-terms/page": "/preorder-terms",
-  "/(default)/terms/page": "/terms",
-  "/(default)/privacy/page": "/privacy"
+  "/(default)/privacy/page": "/privacy",
+  "/(default)/page": "/",
+  "/(default)/terms/page": "/terms"
 }
