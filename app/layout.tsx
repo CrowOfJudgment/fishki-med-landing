@@ -2,6 +2,7 @@ import "./css/style.css";
 import { headers } from "next/headers";
 import { I18nProvider } from "@/lib/i18n-context";
 import { getMessages, type Locale } from "@/lib/i18n";
+import type { Viewport } from "next";
 
 async function getLocale(): Promise<Locale> {
   const headerStore = await headers();
@@ -22,6 +23,14 @@ export async function generateMetadata() {
     },
   };
 }
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
+};
 
 export default async function RootLayout({
   children,

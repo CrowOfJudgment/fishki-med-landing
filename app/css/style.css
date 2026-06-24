@@ -208,6 +208,13 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+    overscroll-behavior-x: none;
+  }
+
   *,
   ::after,
   ::before,
