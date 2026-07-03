@@ -1,5 +1,6 @@
 import "./css/style.css";
 import { headers } from "next/headers";
+import { Analytics } from "@vercel/analytics/next";
 import { I18nProvider } from "@/lib/i18n-context";
 import { getMessages, type Locale } from "@/lib/i18n";
 import type { Viewport } from "next";
@@ -63,6 +64,7 @@ export default async function RootLayout({
             {children}
           </div>
         </I18nProvider>
+        <Analytics />
       </body>
     </html>
   );
