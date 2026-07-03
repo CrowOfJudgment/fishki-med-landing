@@ -356,6 +356,8 @@ export default function AppDemo() {
                   type="button"
                   onClick={() => selectStory(index)}
                   aria-pressed={active}
+                  data-analytics-click={`demo_story_${story.key}`}
+                  data-analytics-section="interactive_demo"
                   className={`rounded-[1.45rem] border p-5 text-left transition ${
                     active
                       ? "border-[#0F766E] bg-[#0F766E] text-white shadow-[0_16px_36px_rgba(15,118,110,0.18)]"
@@ -525,6 +527,8 @@ export default function AppDemo() {
             <button
               type="button"
               onClick={resetDemo}
+              data-analytics-click="demo_reset"
+              data-analytics-section="interactive_demo"
               className="rounded-xl bg-[#F4F7F5] px-5 py-3 text-sm font-semibold text-[#0F766E] shadow-sm transition active:scale-[0.98]"
             >
               {t.demo.resetInteractive}
@@ -541,6 +545,8 @@ export default function AppDemo() {
               <a
                 href="#waitlist-form"
                 aria-label={t.demo.postDemoCta.waitlistAria}
+                data-analytics-click="demo_waitlist"
+                data-analytics-section="post_demo_cta"
                 className="inline-flex items-center justify-center rounded-full bg-[#0F766E] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(15,118,110,0.2)] transition hover:-translate-y-0.5 hover:bg-[#002838]"
               >
                 {t.demo.postDemoCta.waitlist}
@@ -548,6 +554,8 @@ export default function AppDemo() {
               <a
                 href="#preorder"
                 aria-label={t.demo.postDemoCta.preorderAria}
+                data-analytics-click="demo_preorder"
+                data-analytics-section="post_demo_cta"
                 className="inline-flex items-center justify-center rounded-full bg-[#E86860] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(232,104,96,0.22)] transition hover:-translate-y-0.5 hover:bg-[#D85A52]"
               >
                 {t.demo.postDemoCta.preorder}

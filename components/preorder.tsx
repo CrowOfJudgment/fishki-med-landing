@@ -131,6 +131,8 @@ export default function Preorder() {
                       {t.preorder.purchaseConsentBefore}
                       <Link
                         href="/preorder-terms"
+                        data-analytics-click="preorder_terms_inline"
+                        data-analytics-section="preorder"
                         className="font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 hover:text-[#002838]"
                       >
                         {t.preorder.termsLink}
@@ -159,7 +161,12 @@ export default function Preorder() {
                     />
                     <span>
                       {t.preorder.documentsConsentBefore}
-                      <Link href="/terms" className="font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 hover:text-[#002838]">
+                      <Link
+                        href="/terms"
+                        data-analytics-click="preorder_terms_of_use_inline"
+                        data-analytics-section="preorder"
+                        className="font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 hover:text-[#002838]"
+                      >
                         {t.preorder.termsOfUseLink}
                       </Link>
                       {t.preorder.documentsConsentAfter}
@@ -186,7 +193,12 @@ export default function Preorder() {
                     />
                     <span>
                       {t.preorder.privacyConsentBefore}
-                      <Link href="/privacy" className="font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 hover:text-[#002838]">
+                      <Link
+                        href="/privacy"
+                        data-analytics-click="preorder_privacy_inline"
+                        data-analytics-section="preorder"
+                        className="font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 hover:text-[#002838]"
+                      >
                         {t.preorder.privacyLink}
                       </Link>
                       {t.preorder.privacyConsentAfter}
@@ -198,6 +210,8 @@ export default function Preorder() {
                 <button
                   type="button"
                   onClick={handleBuyClick}
+                  data-analytics-click={canBuy ? "preorder_buy" : "preorder_buy_missing_consents"}
+                  data-analytics-section="preorder"
                   className={`mt-6 flex w-full items-center justify-center rounded-full px-5 py-3.5 text-sm font-semibold text-white shadow-[0_14px_32px_rgba(232,104,96,0.24)] transition hover:-translate-y-0.5 ${
                     showConsentError && !canBuy
                       ? "bg-[#E86860] ring-4 ring-[#E86860]/20"
@@ -214,6 +228,8 @@ export default function Preorder() {
 
                 <Link
                   href="/preorder-terms"
+                  data-analytics-click="preorder_terms_read"
+                  data-analytics-section="preorder"
                   className="mx-auto mt-5 inline-flex items-center justify-center text-sm font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 transition hover:text-[#002838]"
                 >
                   {t.preorder.readTerms}

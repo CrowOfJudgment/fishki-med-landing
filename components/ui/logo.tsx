@@ -14,6 +14,8 @@ export default function Logo({
     <Link
       href="/#top"
       aria-label="Fishki"
+      data-analytics-click="logo_home"
+      data-analytics-section="navigation"
       className={`inline-flex shrink-0 items-center ${horizontal ? "" : "gap-2.5"} ${className}`.trim()}
     >
       {horizontal ? (

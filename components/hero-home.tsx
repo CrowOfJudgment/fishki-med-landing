@@ -28,12 +28,16 @@ export default function HeroHome() {
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <a
               href="#waitlist-form"
+              data-analytics-click="hero_waitlist"
+              data-analytics-section="hero"
               className="inline-flex items-center justify-center rounded-full bg-[#0F766E] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(15,118,110,0.22)] transition hover:-translate-y-0.5 hover:bg-[#002838]"
             >
               {t.hero.primaryCta}
             </a>
             <a
               href="#preorder"
+              data-analytics-click="hero_preorder"
+              data-analytics-section="hero"
               className="inline-flex items-center justify-center rounded-full bg-[#E86860] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(232,104,96,0.24)] transition hover:-translate-y-0.5 hover:bg-[#D85A52]"
             >
               {t.hero.secondaryCta}

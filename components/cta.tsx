@@ -107,6 +107,8 @@ export default function Cta() {
                 <a
                   href="#preorder"
                   aria-label={t.cta.preorderAria}
+                  data-analytics-click="waitlist_preorder"
+                  data-analytics-section="waitlist"
                   className="mt-4 inline-flex rounded-full bg-[#E86860] px-4 py-2 text-xs font-semibold text-white shadow-[0_10px_24px_rgba(232,104,96,0.18)] transition hover:bg-[#D85A52]"
                 >
                   {t.cta.preorderLink}

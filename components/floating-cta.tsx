@@ -20,6 +20,8 @@ export default function FloatingCTA() {
   return (
     <a
       href="/#preorder"
+      data-analytics-click="floating_preorder"
+      data-analytics-section="floating_cta"
       className={`
         fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] left-4 right-4 z-50 mx-auto flex w-fit transform-gpu items-center gap-3 rounded-full border border-[#E86860]/25 bg-[#E86860] px-4 py-3 text-sm font-semibold text-white shadow-[0_18px_50px_rgba(232,104,96,0.2)] transition-all duration-300 will-change-transform hover:-translate-y-0.5 hover:bg-[#D85A52] sm:bottom-6 sm:left-auto sm:right-6 sm:mx-0
         ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}

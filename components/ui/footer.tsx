@@ -51,6 +51,8 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   <li key={link.href}>
                     <Link
                       href={link.href}
+                      data-analytics-click={`footer_${link.href.replaceAll("/", "").replace("#", "") || "home"}`}
+                      data-analytics-section="footer"
                       className="group inline-flex items-center gap-2 text-sm font-medium text-[#274D53] transition hover:text-[#002838]"
                     >
                       <span className="h-1.5 w-1.5 rounded-full bg-[#78C2B7] transition group-hover:bg-[#0F766E]" />
