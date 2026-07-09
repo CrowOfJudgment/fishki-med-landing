@@ -121,17 +121,19 @@ export default function Cta() {
                 aria-hidden="true"
                 className="pointer-events-none absolute -inset-4 rounded-[2rem] bg-[#274D53]/5 blur-2xl"
               />
-              <iframe
-                data-tally-src={tallyForm.src}
-                title={tallyForm.title}
-                width="100%"
-                height="620"
-                className="relative block min-h-[520px] w-full rounded-[2rem] border border-[#B9DDD5] bg-white shadow-[0_24px_70px_rgba(39,77,83,0.12)] sm:min-h-[560px] lg:min-h-[620px]"
-                frameBorder="0"
-                marginHeight={0}
-                marginWidth={0}
-                loading="lazy"
-              />
+              <div className="relative overflow-hidden rounded-[2rem] border border-[#B9DDD5] bg-white p-3 shadow-[0_24px_70px_rgba(39,77,83,0.12)] sm:p-5">
+                <iframe
+                  data-tally-src={tallyForm.src}
+                  title={tallyForm.title}
+                  width="100%"
+                  height="620"
+                  className="block min-h-[520px] w-full rounded-[1.35rem] bg-white sm:min-h-[560px] lg:min-h-[620px]"
+                  frameBorder="0"
+                  marginHeight={0}
+                  marginWidth={0}
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
