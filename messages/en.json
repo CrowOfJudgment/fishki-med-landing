@@ -498,6 +498,26 @@
   "preorder": {
     "badge": "Preorder",
     "title": "Fishki Early Access for $15.99",
+    "pricing": {
+      "pl": {
+        "title": "Fishki Early Access for PLN 59",
+        "value": "PLN 59",
+        "note": "One-time payment. After the official launch, access will cost PLN 149 per year. If we are unable to launch the app, we provide a money-back guarantee.",
+        "comparison": "PLN 59 in preorder instead of the planned PLN 149 per year"
+      },
+      "eu": {
+        "title": "Fishki Early Access for €13.99",
+        "value": "€13.99",
+        "note": "One-time payment. The annual price will be higher after the official launch. If we are unable to launch the app, we provide a money-back guarantee.",
+        "comparison": "€13.99 in preorder at a preferential price"
+      },
+      "us": {
+        "title": "Fishki Early Access for $15.99",
+        "value": "$15.99",
+        "note": "One-time payment. The annual price will be higher after the official launch. If we are unable to launch the app, we provide a money-back guarantee.",
+        "comparison": "$15.99 in preorder at a preferential price"
+      }
+    },
     "subtitle": "Buy Early Access on preferential terms, test Fishki before the public launch and help shape the product.",
     "offerFacts": [
       {

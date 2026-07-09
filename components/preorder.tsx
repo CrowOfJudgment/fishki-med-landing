@@ -2,14 +2,19 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { useLocale, useT } from "@/lib/i18n-context";
+import { useT } from "@/lib/i18n-context";
+import type { PricingRegion } from "@/lib/pricing-region";
 
 const POLISH_PREORDER_PAYMENT_URL = "https://paybylink.pl/linkPay/817cf10ad7e92cd595dd328477eb7974";
 const INTERNATIONAL_PREORDER_PAYMENT_URL = "https://buy.stripe.com/6oU3cw00q2bSg5v9FufEk00";
 
-export default function Preorder() {
+export default function Preorder({
+  pricingRegion,
+}: {
+  pricingRegion: PricingRegion;
+}) {
   const t = useT();
-  const locale = useLocale();
+  const pricing = t.preorder.pricing[pricingRegion];
   const [acceptedPreorderTerms, setAcceptedPreorderTerms] = useState(false);
   const [acceptedTermsOfUse, setAcceptedTermsOfUse] = useState(false);
   const [acceptedPrivacyPolicy, setAcceptedPrivacyPolicy] = useState(false);
@@ -44,7 +49,7 @@ export default function Preorder() {
                 {t.preorder.badge}
               </span>
               <h2 className="mt-5 max-w-2xl font-display text-3xl font-semibold leading-tight text-balance text-[#002838] sm:text-4xl">
-                {t.preorder.title}
+                {pricing.title}
               </h2>
               <p className="mt-4 max-w-xl text-base leading-7 text-[#274D53]">
                 {t.preorder.subtitle}
@@ -66,10 +71,10 @@ export default function Preorder() {
                       {item.label}
                     </p>
                     <p className="mt-2 text-lg font-semibold text-[#002838]">
-                      {item.value}
+                      {index === 0 ? pricing.value : item.value}
                     </p>
                     <p className="mt-1 text-xs leading-5 text-[#274D53]">
-                      {item.note}
+                      {index === 0 ? pricing.note : item.note}
                     </p>
                   </article>
                 ),
@@ -87,13 +92,15 @@ export default function Preorder() {
                 </p>
               </div>
               <div className="mt-7 space-y-3">
-                {t.preorder.includes.map((item: string) => (
+                {t.preorder.includes.map((item: string, index: number) => (
                   <div key={item} className="flex items-start gap-3">
                     <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#B9DDD5] text-xs font-bold text-[#0F766E]">
                       ✓
                     </span>
                     <span className="text-sm leading-6 text-[#274D53]">
-                      {item}
+                      {index === t.preorder.includes.length - 1
+                        ? pricing.comparison
+                        : item}
                     </span>
                   </div>
                 ))}
@@ -217,7 +224,7 @@ export default function Preorder() {
                     data-analytics-click={canBuy ? "preorder_buy_paybylink" : "preorder_buy_missing_consents"}
                     data-analytics-section="preorder"
                     className={`flex min-h-12 w-full items-center justify-center rounded-full px-5 py-3.5 text-center text-sm font-semibold text-white shadow-[0_14px_32px_rgba(232,104,96,0.24)] transition hover:-translate-y-0.5 ${
-                      locale === "pl" ? "order-1" : "order-2"
+                      pricingRegion === "pl" ? "order-1" : "order-2"
                     } ${
                       showConsentError && !canBuy
                         ? "bg-[#E86860] ring-4 ring-[#E86860]/20"
@@ -232,7 +239,7 @@ export default function Preorder() {
                     data-analytics-click={canBuy ? "preorder_buy_stripe" : "preorder_buy_missing_consents"}
                     data-analytics-section="preorder"
                     className={`flex min-h-12 w-full items-center justify-center rounded-full border-2 bg-white px-5 py-3 text-center text-sm font-semibold text-[#002838] transition hover:-translate-y-0.5 hover:bg-[#E86860]/5 ${
-                      locale === "pl" ? "order-2" : "order-1"
+                      pricingRegion === "pl" ? "order-2" : "order-1"
                     } ${
                       showConsentError && !canBuy
                         ? "border-[#E86860] ring-4 ring-[#E86860]/20"

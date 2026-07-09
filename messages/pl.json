@@ -498,6 +498,26 @@
   "preorder": {
     "badge": "Preorder",
     "title": "Wczesny dostęp do Fishki za 59 zł",
+    "pricing": {
+      "pl": {
+        "title": "Wczesny dostęp do Fishki za 59 zł",
+        "value": "59 zł",
+        "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp będzie kosztował 149 zł rocznie. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
+        "comparison": "59 zł w preorderze zamiast planowanych 149 zł rocznie"
+      },
+      "eu": {
+        "title": "Wczesny dostęp do Fishki za 13,99 €",
+        "value": "13,99 €",
+        "note": "Płatność jednorazowa. Po oficjalnej premierze cena rocznego dostępu będzie wyższa. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
+        "comparison": "13,99 € w preorderze w preferencyjnej cenie"
+      },
+      "us": {
+        "title": "Wczesny dostęp do Fishki za 15,99 USD",
+        "value": "15,99 USD",
+        "note": "Płatność jednorazowa. Po oficjalnej premierze cena rocznego dostępu będzie wyższa. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
+        "comparison": "15,99 USD w preorderze w preferencyjnej cenie"
+      }
+    },
     "subtitle": "Kup Wczesny Dostęp na preferencyjnych warunkach, testuj Fishki przed publicznym startem i pomóż w rozwoju produktu.",
     "offerFacts": [
       {
