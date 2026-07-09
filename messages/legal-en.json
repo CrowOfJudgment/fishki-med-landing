@@ -123,7 +123,7 @@
         { "type": "paragraph", "text": "These may include:" },
         { "type": "list", "items": ["website hosting providers,", "form providers,", "payment operators,", "email tool providers,", "analytics providers,", "application infrastructure providers."] },
         { "type": "paragraph", "text": "We currently use the following providers in particular:" },
-        { "type": "list", "items": ["Vercel — website hosting,", "Tally — forms,", "PayByLink — payments."] },
+        { "type": "list", "items": ["Vercel — website hosting,", "Tally — forms,", "PayByLink — payments for the Polish version,", "Stripe — payments for the international version."] },
         { "type": "paragraph", "text": "Providers process data only to the extent necessary to provide services to the Controller." }
       ] },
       { "title": "5. Transfers outside the European Economic Area", "blocks": [

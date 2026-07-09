@@ -125,7 +125,7 @@
         { "type": "paragraph", "text": "Mogą to być w szczególności:" },
         { "type": "list", "items": ["dostawca hostingu strony,", "dostawca formularzy,", "operator płatności,", "dostawca narzędzi mailingowych,", "dostawca analityki,", "dostawca infrastruktury aplikacji."] },
         { "type": "paragraph", "text": "Obecnie korzystamy w szczególności z następujących dostawców:" },
-        { "type": "list", "items": ["Vercel — hosting strony,", "Tally — formularze,", "PayByLink — płatności."] },
+        { "type": "list", "items": ["Vercel — hosting strony,", "Tally — formularze,", "PayByLink — płatności dla polskiej wersji,", "Stripe — płatności dla wersji międzynarodowej."] },
         { "type": "paragraph", "text": "Dostawcy przetwarzają dane wyłącznie w zakresie potrzebnym do świadczenia usług na rzecz Administratora." }
       ] },
       { "title": "5. Przekazywanie danych poza Europejski Obszar Gospodarczy", "blocks": [

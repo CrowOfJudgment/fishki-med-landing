@@ -526,8 +526,7 @@
       "PLN 59 in preorder instead of the planned PLN 149 per year"
     ],
     "trust": "This is not a finished production app. You are buying early access to a product that is still being developed. You may withdraw from the purchase within 14 days without giving a reason.",
-    "placeholderLabel": "Preorder purchase module",
-    "placeholderText": "Before buying, the user will accept the preorder sales terms, terms of use and privacy policy.",
+    "placeholderLabel": "Buy Early Access",
     "purchaseConsentBefore": "I accept the ",
     "termsLink": "Fishki Preorder and Sales Terms",
     "purchaseConsentAfter": ".",
@@ -538,6 +537,8 @@
     "privacyLink": "Privacy Policy",
     "privacyConsentAfter": ".",
     "buyCta": "Buy Early Access",
+    "buyWithBlik": "Pay with BLIK or instant bank transfer",
+    "buyWithCard": "Pay by card, Apple Pay or Google Pay",
     "buyCtaDisabled": "Accept the required terms to continue to payment.",
     "readTerms": "Read the purchase terms",
     "roadmapTitle": "Planned beta scope",

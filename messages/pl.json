@@ -526,8 +526,7 @@
       "59 zł w preorderze zamiast planowanych 149 zł rocznie"
     ],
     "trust": "To nie jest gotowa aplikacja produkcyjna. Kupujesz wcześniejszy dostęp do produktu w trakcie tworzenia. Możesz odstąpić od zakupu w ciągu 14 dni bez podawania przyczyny.",
-    "placeholderLabel": "Moduł zakupu preorderu",
-    "placeholderText": "Przed zakupem użytkownik zaakceptuje regulamin sprzedaży preorderu, warunki użytkowania oraz politykę prywatności.",
+    "placeholderLabel": "Kup Wczesny Dostęp",
     "purchaseConsentBefore": "Akceptuję ",
     "termsLink": "Regulamin sprzedaży preorderu Fishki",
     "purchaseConsentAfter": ".",
@@ -538,6 +537,8 @@
     "privacyLink": "Polityką prywatności",
     "privacyConsentAfter": ".",
     "buyCta": "Kup Wczesny Dostęp",
+    "buyWithBlik": "Kup przez BLIK lub szybki przelew",
+    "buyWithCard": "Kup kartą, Apple Pay lub Google Pay",
     "buyCtaDisabled": "Zaznacz obowiązkowe zgody, aby przejść do płatności.",
     "readTerms": "Przeczytaj warunki zakupu",
     "roadmapTitle": "Planowany zakres bety",

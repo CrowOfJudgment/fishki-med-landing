@@ -2,25 +2,27 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { useT } from "@/lib/i18n-context";
+import { useLocale, useT } from "@/lib/i18n-context";
 
-const PAYBYLINK_URL = "https://paybylink.pl/linkPay/817cf10ad7e92cd595dd328477eb7974";
+const POLISH_PREORDER_PAYMENT_URL = "https://paybylink.pl/linkPay/817cf10ad7e92cd595dd328477eb7974";
+const INTERNATIONAL_PREORDER_PAYMENT_URL = "https://buy.stripe.com/6oU3cw00q2bSg5v9FufEk00";
 
 export default function Preorder() {
   const t = useT();
+  const locale = useLocale();
   const [acceptedPreorderTerms, setAcceptedPreorderTerms] = useState(false);
   const [acceptedTermsOfUse, setAcceptedTermsOfUse] = useState(false);
   const [acceptedPrivacyPolicy, setAcceptedPrivacyPolicy] = useState(false);
   const [showConsentError, setShowConsentError] = useState(false);
   const canBuy = acceptedPreorderTerms && acceptedTermsOfUse && acceptedPrivacyPolicy;
 
-  const handleBuyClick = () => {
+  const handleBuyClick = (paymentUrl: string) => {
     if (!canBuy) {
       setShowConsentError(true);
       return;
     }
 
-    window.location.href = PAYBYLINK_URL;
+    window.location.href = paymentUrl;
   };
 
   return (
@@ -36,8 +38,8 @@ export default function Preorder() {
             className="pointer-events-none absolute -left-20 bottom-0 h-56 w-56 rounded-full bg-[#B9DDD5]/35 blur-3xl"
           />
 
-          <div className="relative grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-            <div>
+          <div className="relative">
+            <div className="max-w-3xl">
               <span className="inline-flex rounded-full border border-[#B9DDD5] bg-[#E7F1EE] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]">
                 {t.preorder.badge}
               </span>
@@ -47,31 +49,36 @@ export default function Preorder() {
               <p className="mt-4 max-w-xl text-base leading-7 text-[#274D53]">
                 {t.preorder.subtitle}
               </p>
-              <div className="mt-7 grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
-                {t.preorder.offerFacts.map(
-                  (item: { label: string; value: string; note: string }, index: number) => (
-                    <article
-                      key={item.label}
-                      className={`rounded-[1.35rem] border p-4 ${
-                        index === 0
-                          ? "border-[#E86860]/35 bg-[#E86860]/8"
-                          : "border-[#B9DDD5] bg-[#F4F7F5]"
-                      }`}
-                    >
-                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#0F766E]">
-                        {item.label}
-                      </p>
-                      <p className="mt-2 text-lg font-semibold text-[#002838]">
-                        {item.value}
-                      </p>
-                      <p className="mt-1 text-xs leading-5 text-[#274D53]">
-                        {item.note}
-                      </p>
-                    </article>
-                  ),
-                )}
-              </div>
-              <div className="mt-4 rounded-[1.35rem] border border-[#B9DDD5] bg-[#F4F7F5] p-4">
+            </div>
+
+            <div className="mt-7 grid gap-3 sm:grid-cols-3">
+              {t.preorder.offerFacts.map(
+                (item: { label: string; value: string; note: string }, index: number) => (
+                  <article
+                    key={item.label}
+                    className={`rounded-[1.35rem] border p-4 sm:p-5 ${
+                      index === 0
+                        ? "border-[#E86860]/35 bg-[#E86860]/8"
+                        : "border-[#B9DDD5] bg-[#F4F7F5]"
+                    }`}
+                  >
+                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#0F766E]">
+                      {item.label}
+                    </p>
+                    <p className="mt-2 text-lg font-semibold text-[#002838]">
+                      {item.value}
+                    </p>
+                    <p className="mt-1 text-xs leading-5 text-[#274D53]">
+                      {item.note}
+                    </p>
+                  </article>
+                ),
+              )}
+            </div>
+
+            <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_0.95fr] lg:items-start">
+              <div>
+              <div className="rounded-[1.35rem] border border-[#B9DDD5] bg-[#F4F7F5] p-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#0F766E]">
                   {t.preorder.deliveryGuaranteeLabel}
                 </p>
@@ -94,9 +101,9 @@ export default function Preorder() {
               <p className="mt-6 rounded-2xl border border-[#B9DDD5] bg-[#F4F7F5] p-4 text-sm leading-6 text-[#274D53]">
                 {t.preorder.trust}
               </p>
-            </div>
+              </div>
 
-            <div className="space-y-4">
+              <div>
               <div
                 id="preorder-module"
                 className="rounded-[1.75rem] border border-[#78C2B7] bg-[#F4F7F5] p-6 sm:p-8"
@@ -104,11 +111,7 @@ export default function Preorder() {
                 <p className="text-center text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]">
                   {t.preorder.placeholderLabel}
                 </p>
-                <p className="mx-auto mt-3 max-w-md text-center text-sm leading-6 text-[#274D53]">
-                  {t.preorder.placeholderText}
-                </p>
-
-                <div className="mt-6 space-y-3 text-left">
+                <div className="mt-5 space-y-3 text-left">
                   <label className={`flex cursor-pointer items-start gap-3 rounded-[1.15rem] border bg-white p-4 text-sm leading-6 text-[#274D53] transition ${
                     showConsentError && !acceptedPreorderTerms
                       ? "border-[#E86860] shadow-[0_0_0_3px_rgba(232,104,96,0.12)]"
@@ -207,19 +210,38 @@ export default function Preorder() {
 
                 </div>
 
-                <button
-                  type="button"
-                  onClick={handleBuyClick}
-                  data-analytics-click={canBuy ? "preorder_buy" : "preorder_buy_missing_consents"}
-                  data-analytics-section="preorder"
-                  className={`mt-6 flex w-full items-center justify-center rounded-full px-5 py-3.5 text-sm font-semibold text-white shadow-[0_14px_32px_rgba(232,104,96,0.24)] transition hover:-translate-y-0.5 ${
-                    showConsentError && !canBuy
-                      ? "bg-[#E86860] ring-4 ring-[#E86860]/20"
-                      : "bg-[#E86860] hover:bg-[#D85A52]"
-                  }`}
-                >
-                  {t.preorder.buyCta}
-                </button>
+                <div className="mt-6 flex flex-col gap-3">
+                  <button
+                    type="button"
+                    onClick={() => handleBuyClick(POLISH_PREORDER_PAYMENT_URL)}
+                    data-analytics-click={canBuy ? "preorder_buy_paybylink" : "preorder_buy_missing_consents"}
+                    data-analytics-section="preorder"
+                    className={`flex min-h-12 w-full items-center justify-center rounded-full px-5 py-3.5 text-center text-sm font-semibold text-white shadow-[0_14px_32px_rgba(232,104,96,0.24)] transition hover:-translate-y-0.5 ${
+                      locale === "pl" ? "order-1" : "order-2"
+                    } ${
+                      showConsentError && !canBuy
+                        ? "bg-[#E86860] ring-4 ring-[#E86860]/20"
+                        : "bg-[#E86860] hover:bg-[#D85A52]"
+                    }`}
+                  >
+                    {t.preorder.buyWithBlik}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleBuyClick(INTERNATIONAL_PREORDER_PAYMENT_URL)}
+                    data-analytics-click={canBuy ? "preorder_buy_stripe" : "preorder_buy_missing_consents"}
+                    data-analytics-section="preorder"
+                    className={`flex min-h-12 w-full items-center justify-center rounded-full border-2 bg-white px-5 py-3 text-center text-sm font-semibold text-[#002838] transition hover:-translate-y-0.5 hover:bg-[#E86860]/5 ${
+                      locale === "pl" ? "order-2" : "order-1"
+                    } ${
+                      showConsentError && !canBuy
+                        ? "border-[#E86860] ring-4 ring-[#E86860]/20"
+                        : "border-[#E86860]"
+                    }`}
+                  >
+                    {t.preorder.buyWithCard}
+                  </button>
+                </div>
                 {showConsentError && !canBuy ? (
                   <p className="mt-3 rounded-2xl border border-[#E86860]/35 bg-[#E86860]/10 px-4 py-3 text-center text-xs font-medium leading-5 text-[#002838]">
                     {t.preorder.buyCtaDisabled}
@@ -235,10 +257,10 @@ export default function Preorder() {
                   {t.preorder.readTerms}
                 </Link>
               </div>
+              </div>
             </div>
-          </div>
 
-          <div className="relative mt-8 rounded-[1.75rem] border border-[#B9DDD5] bg-[#E7F1EE]/70 p-5 sm:p-6">
+          <div className="mt-8 rounded-[1.75rem] border border-[#B9DDD5] bg-[#E7F1EE]/70 p-5 sm:p-6">
             <h3 className="font-display text-2xl font-semibold text-[#002838]">
               {t.preorder.roadmapTitle}
             </h3>
@@ -257,6 +279,7 @@ export default function Preorder() {
                 </article>
               ))}
             </div>
+          </div>
           </div>
         </div>
       </div>
