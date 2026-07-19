@@ -33,12 +33,6 @@ export type ReviewMode = "smart" | "quick";
 export type ReviewResult = "again" | "hard" | "good" | "easy" | "dontKnow" | "know";
 export type StudyDirection = "frontBack" | "backFront" | "mixed";
 
-type DemoStory = {
-  key: "basic" | "cloze" | "study";
-  title: string;
-  description: string;
-  steps: string[];
-};
 type StudySummary = {
   total: number;
   know: number;
@@ -47,7 +41,6 @@ type StudySummary = {
 
 export default function AppDemo() {
   const t = useT();
-  const stories = t.demo.stories.items as DemoStory[];
   const steps = t.demo.steps as Array<{
     key: DemoStepKey;
     nav: string;
@@ -95,12 +88,8 @@ export default function AppDemo() {
   const [studyQueue, setStudyQueue] = useState<SavedCard[]>([]);
   const [cardsToRepeat, setCardsToRepeat] = useState<SavedCard[]>([]);
   const [studySummary, setStudySummary] = useState<StudySummary | null>(null);
-  const [selectedStoryIndex, setSelectedStoryIndex] = useState(0);
-  const [storyProgress, setStoryProgress] = useState(0);
-  const [storySavedCards, setStorySavedCards] = useState(0);
 
   const activeStep = steps[currentStep];
-  const selectedStory = stories[selectedStoryIndex];
   const selectedDeckData =
     decks.find((deck) => deck.id === selectedDeck) ?? decks[0];
   const buildStudyCards = (deck: DeckKey): SavedCard[] => {
@@ -152,9 +141,6 @@ export default function AppDemo() {
 
   const goNext = () => goToStep(currentStep + 1);
   const goBack = () => goToStep(currentStep - 1);
-  const advanceStory = (step: number) => {
-    setStoryProgress((current) => Math.max(current, step));
-  };
 
   const resetDemo = () => {
     setCurrentStep(0);
@@ -170,14 +156,11 @@ export default function AppDemo() {
     setStudyQueue([]);
     setCardsToRepeat([]);
     setStudySummary(null);
-    setStoryProgress(0);
-    setStorySavedCards(0);
   };
 
   const editDeck = (deck: DeckKey) => {
     setSelectedDeck(deck);
     setEditingCard(null);
-    advanceStory(selectedStory.key === "study" ? 0 : 1);
     goToStep(1);
   };
 
@@ -193,7 +176,6 @@ export default function AppDemo() {
     setCardsToRepeat([]);
     setStudySummary(null);
     setStudyQueue(cards);
-    advanceStory(selectedStory.key === "study" ? 1 : 4);
     goToStep(3);
   };
 
@@ -212,7 +194,6 @@ export default function AppDemo() {
 
     setDecks((current) => [...current, newDeck]);
     setSelectedDeck(newDeck.id);
-    advanceStory(1);
     goToStep(1);
   };
 
@@ -235,7 +216,6 @@ export default function AppDemo() {
         know: nextKnowCount,
         repeat: nextRepeatCount,
       });
-      advanceStory(selectedStory.steps.length);
       goToStep(5);
       return;
     }
@@ -279,13 +259,6 @@ export default function AppDemo() {
       );
     }
     setEditingCard(null);
-    const nextSavedCount = storySavedCards + 1;
-    setStorySavedCards(nextSavedCount);
-    if (selectedStory.key === "basic") {
-      advanceStory(nextSavedCount >= 2 ? 3 : 2);
-    } else if (selectedStory.key === "cloze") {
-      advanceStory(3);
-    }
     if (action === "back") goToStep(1);
   };
 
@@ -296,17 +269,7 @@ export default function AppDemo() {
 
   const createCard = () => {
     setEditingCard(null);
-    if (selectedStory.key === "basic") {
-      advanceStory(storySavedCards === 0 ? 1 : 2);
-    } else if (selectedStory.key === "cloze") {
-      advanceStory(2);
-    }
     goToStep(2);
-  };
-
-  const selectStory = (index: number) => {
-    setSelectedStoryIndex(index);
-    resetDemo();
   };
 
   const deleteCard = (cardId: string) => {
@@ -343,103 +306,8 @@ export default function AppDemo() {
           </p>
         </div>
 
-        <div className="mt-12">
-          <p className="mb-4 text-center text-xs font-bold uppercase tracking-[0.2em] text-[#274D53]/60">
-            {t.demo.stories.choose}
-          </p>
-          <div className="grid gap-3 md:grid-cols-3">
-            {stories.map((story, index) => {
-              const active = index === selectedStoryIndex;
-              return (
-                <button
-                  key={story.key}
-                  type="button"
-                  onClick={() => selectStory(index)}
-                  aria-pressed={active}
-                  data-analytics-click={`demo_story_${story.key}`}
-                  data-analytics-section="interactive_demo"
-                  className={`rounded-[1.45rem] border p-5 text-left transition ${
-                    active
-                      ? "border-[#0F766E] bg-[#0F766E] text-white shadow-[0_16px_36px_rgba(15,118,110,0.18)]"
-                      : "border-[#B9DDD5] bg-white/70 text-[#002838] hover:-translate-y-0.5 hover:border-[#78C2B7]"
-                  }`}
-                >
-                  <span className={`flex h-8 w-8 items-center justify-center rounded-xl text-xs font-bold ${
-                    active
-                      ? "bg-white/15 text-white"
-                      : "bg-[#E7F1EE] text-[#0F766E]"
-                  }`}>
-                    {index + 1}
-                  </span>
-                  <h3 className="mt-4 font-display text-lg font-semibold leading-tight">
-                    {story.title}
-                  </h3>
-                  <p className={`mt-2 text-sm leading-6 ${
-                    active ? "text-white/75" : "text-[#274D53]"
-                  }`}>
-                    {story.description}
-                  </p>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="mt-14 overflow-hidden rounded-[2rem] border border-[#B9DDD5] bg-[#E7F1EE] p-5 sm:p-8">
-          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_330px]">
-            <div className="rounded-[1.6rem] border border-[#B9DDD5] bg-[#F4F7F5] p-5 sm:p-7">
-              <span className="inline-flex rounded-full bg-[#E7F1EE] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#0F766E]">
-                {t.demo.stories.guide}
-              </span>
-              <h3 className="mt-4 font-display text-3xl font-semibold leading-tight text-[#002838]">
-                {selectedStory.title}
-              </h3>
-              <p className="mt-3 text-sm leading-7 text-[#274D53]">
-                {selectedStory.description}
-              </p>
-
-              <ol className="mt-6 space-y-3">
-                {selectedStory.steps.map((storyStep, index) => {
-                  const complete = index < storyProgress;
-                  const active = index === storyProgress;
-                  return (
-                    <li
-                      key={storyStep}
-                      className={`flex items-start gap-3 rounded-2xl border px-4 py-3 transition ${
-                        active
-                          ? "border-[#78C2B7] bg-[#E7F1EE]"
-                          : "border-transparent bg-white/70"
-                      }`}
-                    >
-                      <span className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[9px] font-bold ${
-                        complete
-                          ? "bg-[#0F766E] text-white"
-                          : active
-                            ? "bg-[#B9DDD5] text-[#0F766E]"
-                            : "bg-[#E7F1EE] text-[#274D53]/55"
-                      }`}>
-                        {complete ? "✓" : index + 1}
-                      </span>
-                      <span className={`text-sm leading-6 ${
-                        active
-                          ? "font-semibold text-[#002838]"
-                          : "text-[#274D53]"
-                      }`}>
-                        {storyStep}
-                      </span>
-                    </li>
-                  );
-                })}
-              </ol>
-
-              {storyProgress >= selectedStory.steps.length && (
-                <div className="mt-5 rounded-2xl bg-[#B9DDD5]/55 p-4 text-sm font-semibold text-[#0F766E]">
-                  {t.demo.stories.completed}
-                </div>
-              )}
-            </div>
-
-            <div>
+        <div className="mt-12 overflow-hidden rounded-[2rem] border border-[#B9DDD5] bg-[#E7F1EE] p-5 sm:p-8">
+          <div>
               <p className="mb-4 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-[#274D53]/60">
                 {t.demo.screenLabel}
               </p>
@@ -475,24 +343,12 @@ export default function AppDemo() {
                     onSaveCard={saveCard}
                     onEditCard={editCard}
                     onDeleteCard={deleteCard}
-                    onRevealAnswer={() =>
-                      setIsAnswerRevealed((current) => {
-                        if (!current) {
-                          advanceStory(selectedStory.key === "study" ? 3 : 5);
-                        }
-                        return !current;
-                      })
-                    }
+                    onRevealAnswer={() => setIsAnswerRevealed((current) => !current)}
                     onReviewModeChange={setReviewMode}
                     studyDirection={studyDirection}
                     onStudyDirectionChange={setStudyDirection}
                     onChooseReviewResult={chooseReviewResult}
-                    onNext={() => {
-                      if (currentStep === 3) {
-                        advanceStory(selectedStory.key === "study" ? 2 : 5);
-                      }
-                      goNext();
-                    }}
+                    onNext={goNext}
                     onBack={goBack}
                     onBackToDecks={() => goToStep(0)}
                     onRepeatUnknown={() => {
@@ -521,7 +377,6 @@ export default function AppDemo() {
               </PhoneMockup>
               </div>
             </div>
-          </div>
 
           <div className="mt-6 text-center">
             <button

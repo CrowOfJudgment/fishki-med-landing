@@ -267,26 +267,6 @@ export default function Preorder({
               </div>
             </div>
 
-          <div className="mt-8 rounded-[1.75rem] border border-[#B9DDD5] bg-[#E7F1EE]/70 p-5 sm:p-6">
-            <h3 className="font-display text-2xl font-semibold text-[#002838]">
-              {t.preorder.roadmapTitle}
-            </h3>
-            <div className="mt-5 grid gap-3 md:grid-cols-3">
-              {t.preorder.roadmap.map((item: { stage: string; text: string }) => (
-                <article
-                  key={item.stage}
-                  className="rounded-[1.25rem] border border-[#B9DDD5] bg-[#F4F7F5] p-5"
-                >
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0F766E]">
-                    {item.stage}
-                  </p>
-                  <p className="mt-3 text-sm leading-6 text-[#274D53]">
-                    {item.text}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
           </div>
         </div>
       </div>

@@ -7,53 +7,54 @@ export default function OfflineFirst() {
   const offline = t.features.offlineHighlight;
 
   return (
-    <div
-      id="offline"
-      className="relative mt-16 overflow-hidden rounded-[2.2rem] border border-[#78C2B7] bg-[#0F766E] p-6 text-white shadow-[0_28px_80px_rgba(15,118,110,0.24)] sm:mt-20 sm:p-8 lg:p-10"
-    >
-      <div className="pointer-events-none absolute -right-20 -top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-24 -left-16 h-56 w-56 rounded-full bg-[#78C2B7]/25 blur-3xl" />
+    <section id="offline" className="scroll-mt-28 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="relative overflow-hidden rounded-[2.2rem] border border-[#78C2B7] bg-[#0F766E] p-6 text-white shadow-[0_28px_80px_rgba(15,118,110,0.24)] sm:p-8 lg:p-10">
+          <div className="pointer-events-none absolute -right-20 -top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 -left-16 h-56 w-56 rounded-full bg-[#78C2B7]/25 blur-3xl" />
 
-      <div className="relative lg:grid lg:grid-cols-[0.9fr_1.1fr] lg:gap-x-12 lg:gap-y-6">
-        <div>
-          <div className="flex items-center justify-between">
-            <span className="inline-flex rounded-full bg-white/12 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-white/80">
-              {offline.badge}
-            </span>
-            <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/12 text-2xl font-light ring-1 ring-white/15">
-              ↓
-            </span>
-          </div>
+          <div className="relative lg:grid lg:grid-cols-[0.9fr_1.1fr] lg:gap-x-12 lg:gap-y-6">
+            <div>
+              <div className="flex items-center justify-between">
+                <span className="inline-flex rounded-full bg-white/12 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-white/80">
+                  {offline.badge}
+                </span>
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/12 text-2xl font-light ring-1 ring-white/15">
+                  ↓
+                </span>
+              </div>
 
-          <h2 className="mt-8 font-display text-3xl font-semibold leading-tight sm:text-4xl">
-            {offline.heading}
-          </h2>
-          <p className="mt-4 text-sm leading-7 text-white/75">
-            {offline.text}
-          </p>
-        </div>
-
-        <div className="mt-7 space-y-3 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mt-0 lg:self-center">
-          {offline.downloads.map((item: string, index: number) => (
-            <div
-              key={item}
-              className="flex items-center gap-4 rounded-2xl bg-white/10 p-4 ring-1 ring-white/15"
-            >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/12 text-lg font-light">
-                {index === 2 ? "✓" : "↓"}
-              </span>
-              <span className="text-sm font-semibold">{item}</span>
-              <span className="ml-auto text-xs font-semibold text-white/45">
-                {index === 0 ? "38 MB" : index === 1 ? "126 MB" : "420 MB"}
-              </span>
+              <h2 className="mt-8 font-display text-3xl font-semibold leading-tight sm:text-4xl">
+                {offline.heading}
+              </h2>
+              <p className="mt-4 text-sm leading-7 text-white/75">
+                {offline.text}
+              </p>
             </div>
-          ))}
-        </div>
 
-        <p className="mt-7 border-t border-white/15 pt-5 text-xs font-semibold leading-6 text-white/65 lg:col-start-1 lg:row-start-2 lg:mt-0">
-          {offline.places}
-        </p>
+            <div className="mt-7 space-y-3 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mt-0 lg:self-center">
+              {offline.downloads.map((item: string, index: number) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-4 rounded-2xl bg-white/10 p-4 ring-1 ring-white/15"
+                >
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/12 text-lg font-light">
+                    {index === 2 ? "✓" : "↓"}
+                  </span>
+                  <span className="text-sm font-semibold">{item}</span>
+                  <span className="ml-auto text-xs font-semibold text-white/45">
+                    {index === 0 ? "38 MB" : index === 1 ? "126 MB" : "420 MB"}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-7 border-t border-white/15 pt-5 text-xs font-semibold leading-6 text-white/65 lg:col-start-1 lg:row-start-2 lg:mt-0">
+              {offline.places}
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

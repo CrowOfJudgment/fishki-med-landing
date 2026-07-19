@@ -4,8 +4,8 @@
     "description": "Twórz fiszki medyczne z notatek, zdjęć, atlasów i wykładów. Ucz się offline i powtarzaj materiał według planu do kolokwium, egzaminu albo sesji."
   },
   "header": {
+    "problem": "Dlaczego Fishki",
     "studentVoices": "Głos studentów",
-    "whyFishki": "Dlaczego Fishki",
     "forMedicine": "Dla medycyny",
     "features": "Funkcje",
     "how": "Jak to działa",
@@ -41,20 +41,20 @@
       "save": "Zapisz kartę"
     }
   },
-  "comparison": {
+  "problem": {
     "badge": "Bez zbędnego kompromisu",
-    "heading": "Dlaczego Fishki?",
+    "heading": "Dlaczego Fishki",
     "intro": "Studenci medycyny potrzebują szybkiego edytora i poważnego systemu powtórek. Dzisiejsze narzędzia zwykle oferują tylko jedno z nich.",
-    "products": [
+    "tools": [
       {
-        "name": "Tradycyjne aplikacje",
+        "name": "Anki",
         "label": "Skuteczne, ale skomplikowane",
         "text": "Mocny algorytm powtórek, lecz przestarzały interfejs, trudna konfiguracja i powolne tworzenie rozbudowanych kart.",
         "points": ["Przestarzały interfejs", "Wysoki próg wejścia", "Niewygodny edytor"]
       },
       {
-        "name": "Proste aplikacje do fiszek",
-        "label": "Proste, ale ograniczone",
+        "name": "Quizlet",
+        "label": "Prosty, ale ograniczony",
         "text": "Przyjemne i szybkie tworzenie kart, ale za mało kontroli nad sesją i przygotowaniem do wymagających egzaminów.",
         "points": ["Brak zaawansowanych powtórek", "Mała elastyczność", "Ograniczona kontrola nauki"]
       },
@@ -62,7 +62,7 @@
         "name": "Fishki",
         "label": "Proste tworzenie. Zaawansowane powtórki.",
         "text": "Szybki edytor, elastyczne tryby nauki i narzędzia do obrazów, tabel oraz długich odpowiedzi medycznych.",
-        "points": ["Proste tworzenie fiszek", "Wybór między szybkimi i zaawansowanymi trybami nauki", "Dostosowane pod naukę medycyny"]
+        "points": ["Proste tworzenie fiszek", "Wybór między szybkimi i zaawansowanymi trybami nauki", "Dostosowane pod naukę medycyny", "Wygodny tryb nauki offline"]
       }
     ]
   },
@@ -508,14 +508,14 @@
       "eu": {
         "title": "Wczesny dostęp do Fishki za 13,99 €",
         "value": "13,99 €",
-        "note": "Płatność jednorazowa. Po oficjalnej premierze cena rocznego dostępu będzie wyższa. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
-        "comparison": "13,99 € w preorderze w preferencyjnej cenie"
+        "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp będzie kosztował 35 € rocznie. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
+        "comparison": "13,99 € w preorderze zamiast planowanych 35 € rocznie"
       },
       "us": {
         "title": "Wczesny dostęp do Fishki za 15,99 USD",
         "value": "15,99 USD",
-        "note": "Płatność jednorazowa. Po oficjalnej premierze cena rocznego dostępu będzie wyższa. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
-        "comparison": "15,99 USD w preorderze w preferencyjnej cenie"
+        "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp będzie kosztował 40 USD rocznie. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
+        "comparison": "15,99 USD w preorderze zamiast planowanych 40 USD rocznie"
       }
     },
     "subtitle": "Kup Wczesny Dostęp na preferencyjnych warunkach, testuj Fishki przed publicznym startem i pomóż w rozwoju produktu.",
@@ -560,22 +560,7 @@
     "buyWithBlik": "Kup przez BLIK lub szybki przelew",
     "buyWithCard": "Kup kartą, Apple Pay lub Google Pay",
     "buyCtaDisabled": "Zaznacz obowiązkowe zgody, aby przejść do płatności.",
-    "readTerms": "Przeczytaj warunki zakupu",
-    "roadmapTitle": "Planowany zakres bety",
-    "roadmap": [
-      {
-        "stage": "Etap 1",
-        "text": "Talie, fiszki tekstowe, obrazy, luki w tekście, podstawowy tryb nauki."
-      },
-      {
-        "stage": "Etap 2",
-        "text": "Zakrywanie obrazu, lepszy planner powtórek, tryb offline dla pobranych talii."
-      },
-      {
-        "stage": "Etap 3",
-        "text": "Statystyki, import, publiczna biblioteka i funkcje współdzielenia."
-      }
-    ]
+    "readTerms": "Przeczytaj warunki zakupu"
   },
   "footer": {
     "tagline": "Proste tworzenie fiszek i poważny system powtórek dla studentów medycyny.",

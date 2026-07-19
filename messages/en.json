@@ -4,8 +4,8 @@
     "description": "Create medical flashcards from notes, images, atlases and lectures. Study offline and review with a plan for your next test, exam or finals."
   },
   "header": {
+    "problem": "Why Fishki",
     "studentVoices": "Student voices",
-    "whyFishki": "Why Fishki",
     "forMedicine": "For medicine",
     "features": "Features",
     "how": "How it works",
@@ -41,19 +41,19 @@
       "save": "Save card"
     }
   },
-  "comparison": {
+  "problem": {
     "badge": "Without the usual trade-off",
-    "heading": "Why Fishki?",
+    "heading": "Why Fishki",
     "intro": "Medical students need a fast editor and a serious review system. Today's tools usually deliver only one of them.",
-    "products": [
+    "tools": [
       {
-        "name": "Traditional apps",
+        "name": "Anki",
         "label": "Powerful, but complicated",
         "text": "Strong review algorithms, but a dated interface, difficult setup and slow creation of richer cards.",
         "points": ["Dated interface", "Steep learning curve", "Cumbersome editor"]
       },
       {
-        "name": "Simple flashcard apps",
+        "name": "Quizlet",
         "label": "Simple, but limited",
         "text": "Pleasant and fast card creation, but too little control for demanding medical exam preparation.",
         "points": ["No advanced reviews", "Low flexibility", "Limited study control"]
@@ -62,7 +62,7 @@
         "name": "Fishki",
         "label": "Simple creation. Advanced reviews.",
         "text": "A fast editor, flexible study modes and tools for images, tables and long medical answers.",
-        "points": ["Simple flashcard creation", "Choice between quick and advanced study modes", "Designed for medical study"]
+        "points": ["Simple flashcard creation", "Choice between quick and advanced study modes", "Designed for medical study", "Comfortable offline study mode"]
       }
     ]
   },
@@ -508,14 +508,14 @@
       "eu": {
         "title": "Fishki Early Access for €13.99",
         "value": "€13.99",
-        "note": "One-time payment. The annual price will be higher after the official launch. If we are unable to launch the app, we provide a money-back guarantee.",
-        "comparison": "€13.99 in preorder at a preferential price"
+        "note": "One-time payment. After the official launch, access will cost €35 per year. If we are unable to launch the app, we provide a money-back guarantee.",
+        "comparison": "€13.99 in preorder instead of the planned €35 per year"
       },
       "us": {
         "title": "Fishki Early Access for $15.99",
         "value": "$15.99",
-        "note": "One-time payment. The annual price will be higher after the official launch. If we are unable to launch the app, we provide a money-back guarantee.",
-        "comparison": "$15.99 in preorder at a preferential price"
+        "note": "One-time payment. After the official launch, access will cost $40 per year. If we are unable to launch the app, we provide a money-back guarantee.",
+        "comparison": "$15.99 in preorder instead of the planned $40 per year"
       }
     },
     "subtitle": "Buy Early Access on preferential terms, test Fishki before the public launch and help shape the product.",
@@ -560,22 +560,7 @@
     "buyWithBlik": "Pay with BLIK or instant bank transfer",
     "buyWithCard": "Pay by card, Apple Pay or Google Pay",
     "buyCtaDisabled": "Accept the required terms to continue to payment.",
-    "readTerms": "Read the purchase terms",
-    "roadmapTitle": "Planned beta scope",
-    "roadmap": [
-      {
-        "stage": "Stage 1",
-        "text": "Decks, text flashcards, images, cloze deletion and the basic study mode."
-      },
-      {
-        "stage": "Stage 2",
-        "text": "Image occlusion, better review planner and offline mode for downloaded decks."
-      },
-      {
-        "stage": "Stage 3",
-        "text": "Stats, import, public library and sharing features."
-      }
-    ]
+    "readTerms": "Read the purchase terms"
   },
   "footer": {
     "tagline": "Simple flashcard creation and a serious review system for medical students.",
