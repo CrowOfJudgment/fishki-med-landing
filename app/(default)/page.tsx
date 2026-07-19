@@ -19,8 +19,8 @@ export default async function Home() {
     <main id="top" className="flex flex-col">
       <Hero />
       <FloatingCTA />
-      <Problem />
       <ResearchInsight />
+      <Problem />
       <AppDemo />
       <Cta />
       <Preorder pricingRegion={pricingRegion} />

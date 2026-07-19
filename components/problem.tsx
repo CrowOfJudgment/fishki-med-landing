@@ -64,9 +64,11 @@ export default function Problem() {
                 <h3 className="mt-4 font-display text-2xl font-semibold">
                   {tool.label}
                 </h3>
-                <p className={`mt-4 text-sm leading-7 ${featured ? "text-white/80" : "text-[#274D53]"}`}>
-                  {tool.text}
-                </p>
+                {tool.text ? (
+                  <p className={`mt-4 text-sm leading-7 ${featured ? "text-white/80" : "text-[#274D53]"}`}>
+                    {tool.text}
+                  </p>
+                ) : null}
                 <ul className="mt-7 space-y-3">
                   {tool.points.map((point) => (
                     <li key={point} className="flex items-start gap-3 text-sm font-medium leading-6">

@@ -18,8 +18,8 @@
   },
   "hero": {
     "badge": "Fiszki zaprojektowane dla studentów medycyny",
-    "title": "Fiszki medyczne bez walki z edytorem",
-    "subtitle": "Twórz fiszki z notatek, zdjęć, atlasów i wykładów. Ucz się offline i powtarzaj materiał według planu do kolokwium, egzaminu albo sesji.",
+    "title": "Przestań wybierać między Anki a Quizletem",
+    "subtitle": "Fishki łączy szybki, intuicyjny edytor nowoczesnych aplikacji do fiszek z mocnym systemem powtórek, którego studenci medycyny naprawdę potrzebują.",
     "primaryCta": "Dołącz do listy oczekujących",
     "secondaryCta": "Zarezerwuj wczesny dostęp",
     "validation": "Tworzone na podstawie rozmów ze studentami medycyny korzystającymi z aplikacji do fiszek.",
@@ -47,22 +47,22 @@
     "intro": "Studenci medycyny potrzebują szybkiego edytora i poważnego systemu powtórek. Dzisiejsze narzędzia zwykle oferują tylko jedno z nich.",
     "tools": [
       {
-        "name": "Anki",
+        "name": "Tradycyjne aplikacje",
         "label": "Skuteczne, ale skomplikowane",
-        "text": "Mocny algorytm powtórek, lecz przestarzały interfejs, trudna konfiguracja i powolne tworzenie rozbudowanych kart.",
+        "text": "",
         "points": ["Przestarzały interfejs", "Wysoki próg wejścia", "Niewygodny edytor"]
       },
       {
-        "name": "Quizlet",
+        "name": "Proste aplikacje",
         "label": "Prosty, ale ograniczony",
-        "text": "Przyjemne i szybkie tworzenie kart, ale za mało kontroli nad sesją i przygotowaniem do wymagających egzaminów.",
+        "text": "",
         "points": ["Brak zaawansowanych powtórek", "Mała elastyczność", "Ograniczona kontrola nauki"]
       },
       {
         "name": "Fishki",
         "label": "Proste tworzenie. Zaawansowane powtórki.",
-        "text": "Szybki edytor, elastyczne tryby nauki i narzędzia do obrazów, tabel oraz długich odpowiedzi medycznych.",
-        "points": ["Proste tworzenie fiszek", "Wybór między szybkimi i zaawansowanymi trybami nauki", "Dostosowane pod naukę medycyny", "Wygodny tryb nauki offline"]
+        "text": "",
+        "points": ["Proste i szybkie tworzenie fiszek", "Wybór między szybkimi i zaawansowanymi trybami nauki", "Dostosowane pod naukę medycyny", "Wygodny tryb nauki offline"]
       }
     ]
   },
@@ -111,7 +111,7 @@
     "showcaseIntro": "Zobacz spójną historię tworzenia, szybkiej nauki, planowania egzaminu oraz pracy offline.",
     "playBadge": "Pierwsza fiszka w 10 sekund",
     "playHeading": "Wypróbuj demo i stwórz swoją pierwszą fiszkę",
-    "playIntro": "Twórz talie i fiszki, edytuj je, usuwaj gestem oraz uruchom szybką naukę. Wszystko działa lokalnie w tym prototypie.",
+    "playIntro": "",
     "postDemoCta": {
       "title": "Prototyp pokazuje kierunek produktu. Jeżeli chcesz wesprzeć rozwój Fishki, możesz wybrać swój poziom zaangażowania.",
       "text": "Możesz dołączyć do darmowej listy oczekujących albo zarezerwować wczesny dostęp ze specjalnymi benefitami, jeśli chcesz wcześniej testować Fishki i mieć wpływ na priorytety.",
@@ -466,13 +466,9 @@
   "proof": {
     "badge": "Budowane na podstawie rozmów ze studentami",
     "heading": "Co studenci medycyny chcieliby mieć w narzędziu do fiszek",
-    "description": "W naszych rozmowach ze studentami najczęściej powtarzały się te same problemy: zbyt wolne tworzenie fiszek, słabe wsparcie obrazów, chaos w powtórkach i brak wygodnego trybu offline. Fishki skupia się właśnie na tych problemach i zapewnia szybsze tworzenie, lepszą pracę z obrazami, tryby nauki, plan przed egzaminem i pewny offline.",
+    "description": "",
+    "footer": "W rozmowach ze studentami medycyny najczęściej wracały te same frustracje: tworzenie fiszek trwa zbyt długo, praca z obrazami jest niewygodna, powtórki bywają uciążliwe, a nauka offline nie zawsze jest niezawodna. Fishki powstaje po to, żeby rozwiązać właśnie te problemy.",
     "quotes": [
-      {
-        "name": "Łukasz",
-        "role": "student 3. roku medycyny",
-        "quote": "Chciałbym oznaczać tylko te fragmenty odpowiedzi, których nie pamiętam - i ćwiczyć je mocniej przed egzaminem."
-      },
       {
         "name": "Hania",
         "role": "studentka 5. roku medycyny",
@@ -482,11 +478,6 @@
         "name": "Kasia",
         "role": "studentka 2. roku medycyny",
         "quote": "Najlepsze byłoby połączenie Anki i Quizleta: szybka powtórka oraz normalne powtórki rozłożone w czasie."
-      },
-      {
-        "name": "Marta",
-        "role": "studentka 4. roku medycyny",
-        "quote": "Offline musi po prostu działać — bez stresu, że talia nie pobrała się przed nauką w pociągu."
       },
       {
         "name": "Adam",
@@ -537,7 +528,7 @@
       }
     ],
     "deliveryGuaranteeLabel": "Gwarancja terminu",
-    "deliveryGuarantee": "Celujemy z premierą aplikacji na koniec roku 2026, ale chcemy dać sobie trochę zapasu. Jeśli premiera aplikacji nie odbędzie się do 31 marca 2027 roku, każdy kupujący będzie mógł poprosić o pełny zwrot preorderu w ciągu najbliższych dwóch miesięcy od tej daty.",
+    "deliveryGuarantee": "Gwarancja zwrotu środków jeśli nie wypuścimy aplikacji do 31 marca 2027.",
     "includes": [
       "Dostęp do wersji testowej przed oficjalną premierą",
       "12 miesięcy planu premium po publicznym starcie",

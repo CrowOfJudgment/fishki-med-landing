@@ -46,8 +46,8 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { href: "/#problem", label: t.header.problem, className: "hidden md:inline-flex" },
     { href: "/#student-voices", label: t.header.studentVoices, className: "hidden md:inline-flex" },
+    { href: "/#problem", label: t.header.problem, className: "hidden md:inline-flex" },
     { href: "/#demo", label: t.header.demo, className: "hidden min-[1000px]:inline-flex" },
   ];
 

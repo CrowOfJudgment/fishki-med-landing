@@ -301,9 +301,11 @@ export default function AppDemo() {
           <h2 className="mt-5 font-display text-4xl font-semibold leading-tight text-balance text-[#002838] sm:text-5xl">
             {t.demo.playHeading}
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#274D53]">
-            {t.demo.playIntro}
-          </p>
+          {t.demo.playIntro ? (
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#274D53]">
+              {t.demo.playIntro}
+            </p>
+          ) : null}
         </div>
 
         <div className="mt-12 overflow-hidden rounded-[2rem] border border-[#B9DDD5] bg-[#E7F1EE] p-5 sm:p-8">

@@ -32,18 +32,18 @@ export default function ResearchInsight() {
               <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-[#002838] sm:text-4xl">
                 {t.proof.heading}
               </h2>
-              <p className="mt-3 text-sm leading-6 text-[#274D53] sm:text-base sm:leading-7">
-                {t.proof.description}
-              </p>
+              {t.proof.description ? (
+                <p className="mt-3 text-sm leading-6 text-[#274D53] sm:text-base sm:leading-7">
+                  {t.proof.description}
+                </p>
+              ) : null}
             </div>
 
             <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {t.proof.quotes.map((item: ProofQuote, index: number) => (
                 <article
                   key={`${item.name}-${index}`}
-                  className={`rounded-[1.55rem] border border-[#B9DDD5] bg-white/80 p-5 shadow-sm ${
-                    index === 0 ? "lg:col-span-2" : ""
-                  }`}
+                  className="rounded-[1.55rem] border border-[#B9DDD5] bg-white/80 p-5 shadow-sm"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div>
@@ -67,6 +67,11 @@ export default function ResearchInsight() {
                 </article>
               ))}
             </div>
+            {t.proof.footer ? (
+              <p className="mx-auto mt-7 max-w-3xl text-center text-lg leading-8 text-[#274D53]">
+                {t.proof.footer}
+              </p>
+            ) : null}
           </div>
         </div>
       </div>
