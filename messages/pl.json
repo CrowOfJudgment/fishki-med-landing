@@ -609,7 +609,7 @@
             "możliwość testowania aplikacji i zgłaszania opinii,",
             "możliwość wpływania na priorytety rozwoju produktu, w tym głosowania na kolejność wdrażania funkcji,",
             "12 miesięcy dostępu do planu premium po publicznym uruchomieniu aplikacji,",
-            "cenę preorderową 59 PLN zamiast planowanej ceny 149 PLN rocznie po premierze."
+            "cenę preorderową zależną od regionu: 59 PLN w Polsce, 13,99 EUR w Europie poza Polską albo 15,99 USD w USA i pozostałych krajach, zamiast planowanej ceny rocznej po premierze: odpowiednio 149 PLN, 35 EUR albo 40 USD."
           ] },
           { "type": "paragraph", "text": "Zakres funkcji dostępnych w Early Access może być ograniczony względem planowanej wersji finalnej." }
         ]
@@ -617,7 +617,8 @@
       {
         "title": "4. Cena preorderu",
         "blocks": [
-          { "type": "paragraph", "text": "Cena preorderu wynosi 59 PLN brutto." },
+          { "type": "paragraph", "text": "Cena preorderu zależy od regionu użytkownika i wynosi: 59 PLN w Polsce, 13,99 EUR w Europie poza Polską albo 15,99 USD w USA i pozostałych krajach." },
+          { "type": "paragraph", "text": "Planowana cena rocznego dostępu po publicznym uruchomieniu aplikacji wynosi odpowiednio: 149 PLN w Polsce, 35 EUR w Europie poza Polską albo 40 USD w USA i pozostałych krajach." },
           { "type": "paragraph", "text": "Jest to jednorazowa płatność obejmująca świadczenia opisane w niniejszym regulaminie." },
           { "type": "paragraph", "text": "Sprzedawca może w przyszłości zmienić cenę preorderu lub zakończyć jego sprzedaż. Zmiana ceny nie wpływa na osoby, które kupiły preorder przed zmianą." }
         ]
