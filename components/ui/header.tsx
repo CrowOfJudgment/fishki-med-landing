@@ -46,9 +46,11 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { href: "/#student-voices", label: t.header.studentVoices, className: "hidden md:inline-flex" },
-    { href: "/#problem", label: t.header.problem, className: "hidden md:inline-flex" },
-    { href: "/#demo", label: t.header.demo, className: "hidden min-[1000px]:inline-flex" },
+    { href: "/#how-it-works", label: t.header.how, className: "hidden md:inline-flex" },
+    { href: "/#student-voices", label: t.header.studentVoices, className: "hidden min-[860px]:inline-flex" },
+    { href: "/#why-fishki", label: t.header.problem, className: "hidden min-[980px]:inline-flex" },
+    { href: "/#demo", label: t.header.demo, className: "hidden min-[1080px]:inline-flex" },
+    { href: "/#for-medicine", label: t.header.forMedicine, className: "hidden min-[1180px]:inline-flex" },
   ];
 
   return (

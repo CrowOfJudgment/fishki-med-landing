@@ -9,7 +9,10 @@ export default function Footer({ border = false }: { border?: boolean }) {
   const year = new Date().getFullYear();
 
   const productLinks = [
+    { href: "/#how-it-works", label: t.footer.how },
+    { href: "/#why-fishki", label: t.header.problem },
     { href: "/#demo", label: t.footer.demo },
+    { href: "/#for-medicine", label: t.header.forMedicine },
     { href: "/#waitlist-form", label: t.footer.waitlist },
     { href: "/terms", label: t.footer.terms },
     { href: "/privacy", label: t.footer.privacy },

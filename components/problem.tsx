@@ -29,7 +29,7 @@ export default function Problem() {
   const t = useT();
 
   return (
-    <section id="problem" className="scroll-mt-28 py-20 sm:py-24">
+    <section id="why-fishki" className="scroll-mt-28 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex rounded-full border border-[#B9DDD5] bg-[#E7F1EE] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]">
