@@ -7,6 +7,7 @@ import { useT } from "@/lib/i18n-context";
 
 export default function Header() {
   const t = useT();
+  const webAppUrl = process.env.NEXT_PUBLIC_APP_URL?.trim();
   const [isMobile, setIsMobile] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
@@ -46,11 +47,31 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { href: "/#how-it-works", label: t.header.how, className: "hidden md:inline-flex" },
-    { href: "/#student-voices", label: t.header.studentVoices, className: "hidden min-[860px]:inline-flex" },
-    { href: "/#why-fishki", label: t.header.problem, className: "hidden min-[980px]:inline-flex" },
-    { href: "/#demo", label: t.header.demo, className: "hidden min-[1080px]:inline-flex" },
-    { href: "/#for-medicine", label: t.header.forMedicine, className: "hidden min-[1180px]:inline-flex" },
+    {
+      href: "/#how-it-works",
+      label: t.header.how,
+      className: "hidden md:inline-flex",
+    },
+    {
+      href: "/#student-voices",
+      label: t.header.studentVoices,
+      className: "hidden min-[860px]:inline-flex",
+    },
+    {
+      href: "/#why-fishki",
+      label: t.header.problem,
+      className: "hidden min-[980px]:inline-flex",
+    },
+    {
+      href: "/#demo",
+      label: t.header.demo,
+      className: "hidden min-[1080px]:inline-flex",
+    },
+    {
+      href: "/#for-medicine",
+      label: t.header.forMedicine,
+      className: "hidden min-[1180px]:inline-flex",
+    },
   ];
 
   return (
@@ -62,7 +83,10 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-3 sm:px-5">
         <div className="flex min-w-0 items-center justify-between gap-2 rounded-[1.25rem] border border-[#B9DDD5] bg-[#F4F7F5]/90 px-3 py-2.5 shadow-[0_16px_50px_rgba(39,77,83,0.1)] backdrop-blur-xl sm:rounded-[1.4rem] sm:px-4 sm:py-3 xl:gap-3">
           <div className="flex min-w-0 items-center gap-3">
-            <Logo horizontal className="w-[128px] sm:w-[142px] lg:w-[154px] xl:w-[170px]" />
+            <Logo
+              horizontal
+              className="w-[128px] sm:w-[142px] lg:w-[154px] xl:w-[170px]"
+            />
           </div>
 
           <nav className="min-w-0 items-center gap-0.5 md:flex xl:gap-1">
@@ -80,6 +104,17 @@ export default function Header() {
           </nav>
 
           <div className="flex shrink-0 items-center gap-2">
+            {webAppUrl && (
+              <a
+                href={webAppUrl}
+                aria-label={t.header.openAppAria}
+                data-analytics-click="header_open_app"
+                data-analytics-section="header"
+                className="hidden h-9 shrink-0 items-center justify-center whitespace-nowrap rounded-full border border-[#B9DDD5] bg-white/80 px-3 text-xs font-semibold text-[#0F766E] transition hover:-translate-y-0.5 hover:bg-white min-[720px]:inline-flex xl:px-4 xl:text-sm"
+              >
+                {t.header.openApp}
+              </a>
+            )}
             <Link
               href="/#waitlist-form"
               aria-label={t.header.ctaAria ?? t.header.cta}

@@ -14,7 +14,9 @@
     "cta": "Lista oczekujących",
     "ctaAria": "Dołącz do listy oczekujących",
     "preorderCta": "Wczesny dostęp",
-    "preorderCtaAria": "Przejdź do rezerwacji wczesnego dostępu"
+    "preorderCtaAria": "Przejdź do rezerwacji wczesnego dostępu",
+    "openApp": "Otwórz aplikację",
+    "openAppAria": "Otwórz aplikację webową Fishki"
   },
   "hero": {
     "badge": "Fiszki zaprojektowane dla studentów medycyny",
@@ -50,19 +52,32 @@
         "name": "Tradycyjne aplikacje",
         "label": "Skuteczne, ale skomplikowane",
         "text": "",
-        "points": ["Przestarzały interfejs", "Wysoki próg wejścia", "Niewygodny edytor"]
+        "points": [
+          "Przestarzały interfejs",
+          "Wysoki próg wejścia",
+          "Niewygodny edytor"
+        ]
       },
       {
         "name": "Proste aplikacje",
         "label": "Prosty, ale ograniczony",
         "text": "",
-        "points": ["Brak zaawansowanych powtórek", "Mała elastyczność", "Ograniczona kontrola nauki"]
+        "points": [
+          "Brak zaawansowanych powtórek",
+          "Mała elastyczność",
+          "Ograniczona kontrola nauki"
+        ]
       },
       {
         "name": "Fishki",
         "label": "Proste tworzenie. Zaawansowane powtórki.",
         "text": "",
-        "points": ["Proste i szybkie tworzenie fiszek", "Wybór między szybkimi i zaawansowanymi trybami nauki", "Dostosowane pod naukę medycyny", "Wygodny tryb nauki offline"]
+        "points": [
+          "Proste i szybkie tworzenie fiszek",
+          "Wybór między szybkimi i zaawansowanymi trybami nauki",
+          "Dostosowane pod naukę medycyny",
+          "Wygodny tryb nauki offline"
+        ]
       }
     ]
   },
@@ -171,14 +186,62 @@
       "goTo": "Przejdź do ekranu"
     },
     "fixedScreens": [
-      { "key": "decks", "number": "01", "label": "Talie", "title": "Zacznij od uporządkowanego materiału", "description": "Wybierz talię do edycji albo od razu rozpocznij naukę konkretnego przedmiotu." },
-      { "key": "editor", "number": "02", "label": "Edytor", "title": "Twórz bogate fiszki bez konfiguracji", "description": "Dodawaj tekst, zdjęcia, luki w tekście oraz zakrywaj elementy na obrazie." },
-      { "key": "quickSetup", "number": "03", "label": "Szybka nauka", "title": "Wybierz kierunek kart", "description": "Powtarzaj przód–tył, tył–przód albo mieszaj oba kierunki w jednej szybkiej sesji." },
-      { "key": "review", "number": "04", "label": "Powtórka", "title": "Oceniaj bez zbędnego tarcia", "description": "Odwracaj fiszki i wybieraj tylko „Umiem” albo „Nie umiem” w trybie Szybkiej Nauki lub wybierz bardziej zaawansowane Inteligentne Powtórki." },
-      { "key": "plannerSetup", "number": "05", "label": "Planner", "title": "Powiedz, do czego i kiedy się uczysz", "description": "Wybierz egzamin, jego datę, talie do opanowania oraz liczbę dni dostępnych na naukę." },
-      { "key": "plannerToday", "number": "06", "label": "Plan dnia", "title": "Konkretny plan na każdy dzień", "description": "Fishki rozdzielają nowe, powtórkowe i trudne karty tak, aby materiał był gotowy przed egzaminem." },
-      { "key": "testMode", "number": "07", "label": "Wkrótce", "title": "Sprawdź, czy naprawdę umiesz", "description": "Tryb testu pozwoli wpisywać odpowiedzi, wybierać opcje lub odpowiadać ustnie, zamiast tylko rozpoznawać tył karty." },
-      { "key": "offline", "number": "08", "label": "Offline", "title": "Zabierz cały przedmiot ze sobą", "description": "Pobierz talię, folder albo cały przedmiot i ucz się bez internetu na uczelni, w pociągu lub bibliotece." }
+      {
+        "key": "decks",
+        "number": "01",
+        "label": "Talie",
+        "title": "Zacznij od uporządkowanego materiału",
+        "description": "Wybierz talię do edycji albo od razu rozpocznij naukę konkretnego przedmiotu."
+      },
+      {
+        "key": "editor",
+        "number": "02",
+        "label": "Edytor",
+        "title": "Twórz bogate fiszki bez konfiguracji",
+        "description": "Dodawaj tekst, zdjęcia, luki w tekście oraz zakrywaj elementy na obrazie."
+      },
+      {
+        "key": "quickSetup",
+        "number": "03",
+        "label": "Szybka nauka",
+        "title": "Wybierz kierunek kart",
+        "description": "Powtarzaj przód–tył, tył–przód albo mieszaj oba kierunki w jednej szybkiej sesji."
+      },
+      {
+        "key": "review",
+        "number": "04",
+        "label": "Powtórka",
+        "title": "Oceniaj bez zbędnego tarcia",
+        "description": "Odwracaj fiszki i wybieraj tylko „Umiem” albo „Nie umiem” w trybie Szybkiej Nauki lub wybierz bardziej zaawansowane Inteligentne Powtórki."
+      },
+      {
+        "key": "plannerSetup",
+        "number": "05",
+        "label": "Planner",
+        "title": "Powiedz, do czego i kiedy się uczysz",
+        "description": "Wybierz egzamin, jego datę, talie do opanowania oraz liczbę dni dostępnych na naukę."
+      },
+      {
+        "key": "plannerToday",
+        "number": "06",
+        "label": "Plan dnia",
+        "title": "Konkretny plan na każdy dzień",
+        "description": "Fishki rozdzielają nowe, powtórkowe i trudne karty tak, aby materiał był gotowy przed egzaminem."
+      },
+      {
+        "key": "testMode",
+        "number": "07",
+        "label": "Wkrótce",
+        "title": "Sprawdź, czy naprawdę umiesz",
+        "description": "Tryb testu pozwoli wpisywać odpowiedzi, wybierać opcje lub odpowiadać ustnie, zamiast tylko rozpoznawać tył karty."
+      },
+      {
+        "key": "offline",
+        "number": "08",
+        "label": "Offline",
+        "title": "Zabierz cały przedmiot ze sobą",
+        "description": "Pobierz talię, folder albo cały przedmiot i ucz się bez internetu na uczelni, w pociągu lub bibliotece."
+      }
     ],
     "tapHint": "Dwa przepływy produktu",
     "createFlow": "Tworzenie i zarządzanie",
@@ -420,12 +483,36 @@
     "heading": "Materiał medyczny rzadko mieści się w jednym zdaniu.",
     "intro": "Fishki mają wspierać obrazy, schematy, klasyfikacje i odpowiedzi złożone z wielu punktów - bez upychania ich w zbyt prosty format.",
     "items": [
-      { "label": "Anatomia", "title": "Podpisy struktur", "text": "Zakrywaj nazwy na rycinach i ucz się relacji przestrzennych." },
-      { "label": "Farmakologia", "title": "Działania niepożądane", "text": "Łącz lek, mechanizm, wskazania i działania uboczne w jednej talii." },
-      { "label": "Patologia", "title": "Obrazy i preparaty", "text": "Dodawaj zdjęcia po obu stronach i zaznaczaj charakterystyczne cechy." },
-      { "label": "Interna", "title": "Klasyfikacje chorób", "text": "Rozbijaj kryteria, skale i różnicowanie na krótkie pytania." },
-      { "label": "Fizjologia", "title": "Mechanizmy i zależności", "text": "Twórz karty odwrócone i sprawdzaj rozumienie w obu kierunkach." },
-      { "label": "Egzaminy", "title": "Odpowiedzi punktowe", "text": "Oznacz dokładnie ten element wielopunktowej odpowiedzi, którego zabrakło." }
+      {
+        "label": "Anatomia",
+        "title": "Podpisy struktur",
+        "text": "Zakrywaj nazwy na rycinach i ucz się relacji przestrzennych."
+      },
+      {
+        "label": "Farmakologia",
+        "title": "Działania niepożądane",
+        "text": "Łącz lek, mechanizm, wskazania i działania uboczne w jednej talii."
+      },
+      {
+        "label": "Patologia",
+        "title": "Obrazy i preparaty",
+        "text": "Dodawaj zdjęcia po obu stronach i zaznaczaj charakterystyczne cechy."
+      },
+      {
+        "label": "Interna",
+        "title": "Klasyfikacje chorób",
+        "text": "Rozbijaj kryteria, skale i różnicowanie na krótkie pytania."
+      },
+      {
+        "label": "Fizjologia",
+        "title": "Mechanizmy i zależności",
+        "text": "Twórz karty odwrócone i sprawdzaj rozumienie w obu kierunkach."
+      },
+      {
+        "label": "Egzaminy",
+        "title": "Odpowiedzi punktowe",
+        "text": "Oznacz dokładnie ten element wielopunktowej odpowiedzi, którego zabrakło."
+      }
     ]
   },
   "howItWorks": {
@@ -585,175 +672,316 @@
       {
         "title": "1. Sprzedawca",
         "blocks": [
-          { "type": "paragraph", "text": "Sprzedawcą preorderu Fishki Early Access jest:" },
-          { "type": "paragraph", "text": "Mateusz Buczak, osoba fizyczna prowadząca działalność nierejestrowaną" },
-          { "type": "paragraph", "text": "Adres: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów" },
-          { "type": "paragraph", "text": "E-mail kontaktowy: mateuszbuczak1@gmail.com" },
+          {
+            "type": "paragraph",
+            "text": "Sprzedawcą preorderu Fishki Early Access jest:"
+          },
+          {
+            "type": "paragraph",
+            "text": "Mateusz Buczak, osoba fizyczna prowadząca działalność nierejestrowaną"
+          },
+          {
+            "type": "paragraph",
+            "text": "Adres: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów"
+          },
+          {
+            "type": "paragraph",
+            "text": "E-mail kontaktowy: mateuszbuczak1@gmail.com"
+          },
           { "type": "paragraph", "text": "Dalej: „Sprzedawca”." }
         ]
       },
       {
         "title": "2. Czym jest Fishki",
         "blocks": [
-          { "type": "paragraph", "text": "Fishki to aplikacja edukacyjna tworzona z myślą o studentach medycyny. Jej celem jest ułatwienie tworzenia fiszek, nauki z powtórkami, pracy z materiałami graficznymi oraz planowania nauki do kolokwiów, egzaminów i egzaminów końcowych." },
-          { "type": "paragraph", "text": "Fishki jest produktem w trakcie tworzenia. Zakup preorderu nie oznacza zakupu gotowej, finalnej aplikacji produkcyjnej." }
+          {
+            "type": "paragraph",
+            "text": "Fishki to aplikacja edukacyjna tworzona z myślą o studentach medycyny. Jej celem jest ułatwienie tworzenia fiszek, nauki z powtórkami, pracy z materiałami graficznymi oraz planowania nauki do kolokwiów, egzaminów i egzaminów końcowych."
+          },
+          {
+            "type": "paragraph",
+            "text": "Fishki jest produktem w trakcie tworzenia. Zakup preorderu nie oznacza zakupu gotowej, finalnej aplikacji produkcyjnej."
+          }
         ]
       },
       {
         "title": "3. Czym jest preorder Fishki Early Access",
         "blocks": [
-          { "type": "paragraph", "text": "Preorder Fishki Early Access to zakup wcześniejszego dostępu do aplikacji Fishki na preferencyjnych warunkach." },
-          { "type": "paragraph", "text": "W ramach preorderu użytkownik otrzymuje:" },
-          { "type": "list", "items": [
-            "dostęp do testowej wersji Fishki przed publicznym uruchomieniem aplikacji,",
-            "możliwość testowania aplikacji i zgłaszania opinii,",
-            "możliwość wpływania na priorytety rozwoju produktu, w tym głosowania na kolejność wdrażania funkcji,",
-            "12 miesięcy dostępu do planu premium po publicznym uruchomieniu aplikacji,",
-            "cenę preorderową zależną od regionu: 59 PLN w Polsce, 13,99 EUR w Europie poza Polską albo 15,99 USD w USA i pozostałych krajach, zamiast planowanej ceny rocznej po premierze: odpowiednio 149 PLN, 35 EUR albo 40 USD."
-          ] },
-          { "type": "paragraph", "text": "Zakres funkcji dostępnych w Early Access może być ograniczony względem planowanej wersji finalnej." }
+          {
+            "type": "paragraph",
+            "text": "Preorder Fishki Early Access to zakup wcześniejszego dostępu do aplikacji Fishki na preferencyjnych warunkach."
+          },
+          {
+            "type": "paragraph",
+            "text": "W ramach preorderu użytkownik otrzymuje:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "dostęp do testowej wersji Fishki przed publicznym uruchomieniem aplikacji,",
+              "możliwość testowania aplikacji i zgłaszania opinii,",
+              "możliwość wpływania na priorytety rozwoju produktu, w tym głosowania na kolejność wdrażania funkcji,",
+              "12 miesięcy dostępu do planu premium po publicznym uruchomieniu aplikacji,",
+              "cenę preorderową zależną od regionu: 59 PLN w Polsce, 13,99 EUR w Europie poza Polską albo 15,99 USD w USA i pozostałych krajach, zamiast planowanej ceny rocznej po premierze: odpowiednio 149 PLN, 35 EUR albo 40 USD."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Zakres funkcji dostępnych w Early Access może być ograniczony względem planowanej wersji finalnej."
+          }
         ]
       },
       {
         "title": "4. Cena preorderu",
         "blocks": [
-          { "type": "paragraph", "text": "Cena preorderu zależy od regionu użytkownika i wynosi: 59 PLN w Polsce, 13,99 EUR w Europie poza Polską albo 15,99 USD w USA i pozostałych krajach." },
-          { "type": "paragraph", "text": "Planowana cena rocznego dostępu po publicznym uruchomieniu aplikacji wynosi odpowiednio: 149 PLN w Polsce, 35 EUR w Europie poza Polską albo 40 USD w USA i pozostałych krajach." },
-          { "type": "paragraph", "text": "Jest to jednorazowa płatność obejmująca świadczenia opisane w niniejszym regulaminie." },
-          { "type": "paragraph", "text": "Sprzedawca może w przyszłości zmienić cenę preorderu lub zakończyć jego sprzedaż. Zmiana ceny nie wpływa na osoby, które kupiły preorder przed zmianą." }
+          {
+            "type": "paragraph",
+            "text": "Cena preorderu zależy od regionu użytkownika i wynosi: 59 PLN w Polsce, 13,99 EUR w Europie poza Polską albo 15,99 USD w USA i pozostałych krajach."
+          },
+          {
+            "type": "paragraph",
+            "text": "Planowana cena rocznego dostępu po publicznym uruchomieniu aplikacji wynosi odpowiednio: 149 PLN w Polsce, 35 EUR w Europie poza Polską albo 40 USD w USA i pozostałych krajach."
+          },
+          {
+            "type": "paragraph",
+            "text": "Jest to jednorazowa płatność obejmująca świadczenia opisane w niniejszym regulaminie."
+          },
+          {
+            "type": "paragraph",
+            "text": "Sprzedawca może w przyszłości zmienić cenę preorderu lub zakończyć jego sprzedaż. Zmiana ceny nie wpływa na osoby, które kupiły preorder przed zmianą."
+          }
         ]
       },
       {
         "title": "5. Planowany termin udostępnienia aplikacji",
         "blocks": [
-          { "type": "paragraph", "text": "Pierwsza wersja testowa Fishki Early Access jest planowana do końca września 2026 roku." },
-          { "type": "paragraph", "text": "Oficjalne uruchomienie aplikacji jest planowane do końca 2026 roku." },
-          { "type": "paragraph", "text": "Terminy te mają charakter szacunkowy i mogą ulec zmianie, ponieważ aplikacja jest nadal rozwijana." },
-          { "type": "paragraph", "text": "Jeżeli oficjalna premiera aplikacji nie odbędzie się do 31 marca 2027 roku, każdy kupujący będzie mógł zażądać pełnego zwrotu kwoty zapłaconej za preorder w ciągu dwóch miesięcy od tej daty." }
+          {
+            "type": "paragraph",
+            "text": "Pierwsza wersja testowa Fishki Early Access jest planowana do końca września 2026 roku."
+          },
+          {
+            "type": "paragraph",
+            "text": "Oficjalne uruchomienie aplikacji jest planowane do końca 2026 roku."
+          },
+          {
+            "type": "paragraph",
+            "text": "Terminy te mają charakter szacunkowy i mogą ulec zmianie, ponieważ aplikacja jest nadal rozwijana."
+          },
+          {
+            "type": "paragraph",
+            "text": "Jeżeli oficjalna premiera aplikacji nie odbędzie się do 31 marca 2027 roku, każdy kupujący będzie mógł zażądać pełnego zwrotu kwoty zapłaconej za preorder w ciągu dwóch miesięcy od tej daty."
+          }
         ]
       },
       {
         "title": "6. Zakres planowanej wersji Early Access",
         "blocks": [
-          { "type": "paragraph", "text": "Planowany zakres rozwoju aplikacji obejmuje w szczególności:" },
-          { "type": "list", "items": [
-            "tworzenie talii i fiszek tekstowych,",
-            "dodawanie obrazów,",
-            "fiszki typu cloze deletion,",
-            "podstawowy tryb nauki,",
-            "image occlusion,",
-            "planner powtórek,",
-            "tryb offline dla pobranych materiałów,",
-            "statystyki, import, bibliotekę publiczną i funkcje udostępniania — w późniejszych etapach."
-          ] },
-          { "type": "paragraph", "text": "Sprzedawca nie gwarantuje, że wszystkie powyższe funkcje będą dostępne w pierwszej wersji Early Access." }
+          {
+            "type": "paragraph",
+            "text": "Planowany zakres rozwoju aplikacji obejmuje w szczególności:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "tworzenie talii i fiszek tekstowych,",
+              "dodawanie obrazów,",
+              "fiszki typu cloze deletion,",
+              "podstawowy tryb nauki,",
+              "image occlusion,",
+              "planner powtórek,",
+              "tryb offline dla pobranych materiałów,",
+              "statystyki, import, bibliotekę publiczną i funkcje udostępniania — w późniejszych etapach."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Sprzedawca nie gwarantuje, że wszystkie powyższe funkcje będą dostępne w pierwszej wersji Early Access."
+          }
         ]
       },
       {
         "title": "7. Charakter wersji Early Access",
         "blocks": [
-          { "type": "paragraph", "text": "Użytkownik przyjmuje do wiadomości, że wersja Early Access:" },
-          { "type": "list", "items": [
-            "może zawierać błędy techniczne,",
-            "może mieć ograniczony zakres funkcji,",
-            "może działać niestabilnie,",
-            "może być czasowo niedostępna z powodu prac technicznych,",
-            "może różnić się od makiet, demo, materiałów marketingowych i opisów na stronie,",
-            "może zmieniać się w trakcie rozwoju produktu."
-          ] },
-          { "type": "paragraph", "text": "Sprzedawca będzie podejmował rozsądne działania w celu rozwijania i poprawiania aplikacji, ale nie gwarantuje wdrożenia każdej funkcji sugerowanej przez użytkowników." }
+          {
+            "type": "paragraph",
+            "text": "Użytkownik przyjmuje do wiadomości, że wersja Early Access:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "może zawierać błędy techniczne,",
+              "może mieć ograniczony zakres funkcji,",
+              "może działać niestabilnie,",
+              "może być czasowo niedostępna z powodu prac technicznych,",
+              "może różnić się od makiet, demo, materiałów marketingowych i opisów na stronie,",
+              "może zmieniać się w trakcie rozwoju produktu."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Sprzedawca będzie podejmował rozsądne działania w celu rozwijania i poprawiania aplikacji, ale nie gwarantuje wdrożenia każdej funkcji sugerowanej przez użytkowników."
+          }
         ]
       },
       {
         "title": "8. Jak działa zakup preorderu",
         "blocks": [
           { "type": "paragraph", "text": "Zakup preorderu następuje przez:" },
-          { "type": "list", "items": [
-            "kliknięcie przycisku zakupu na stronie,",
-            "podanie danych wymaganych do realizacji zakupu,",
-            "zaakceptowanie niniejszego regulaminu,",
-            "dokonanie płatności przez dostępnego operatora płatności."
-          ] },
-          { "type": "paragraph", "text": "Po dokonaniu płatności użytkownik otrzyma potwierdzenie zakupu na podany adres e-mail." },
-          { "type": "paragraph", "text": "Użytkownik powinien podać prawdziwy i aktualny adres e-mail, ponieważ będzie on używany do przekazania informacji o dostępie do aplikacji, komunikacji dotyczącej preorderu, zwrotów i reklamacji." }
+          {
+            "type": "list",
+            "items": [
+              "kliknięcie przycisku zakupu na stronie,",
+              "podanie danych wymaganych do realizacji zakupu,",
+              "zaakceptowanie niniejszego regulaminu,",
+              "dokonanie płatności przez dostępnego operatora płatności."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Po dokonaniu płatności użytkownik otrzyma potwierdzenie zakupu na podany adres e-mail."
+          },
+          {
+            "type": "paragraph",
+            "text": "Użytkownik powinien podać prawdziwy i aktualny adres e-mail, ponieważ będzie on używany do przekazania informacji o dostępie do aplikacji, komunikacji dotyczącej preorderu, zwrotów i reklamacji."
+          }
         ]
       },
       {
         "title": "9. Prawo odstąpienia od umowy",
         "blocks": [
-          { "type": "paragraph", "text": "Użytkownik będący konsumentem może odstąpić od umowy w terminie 14 dni od zakupu preorderu bez podawania przyczyny." },
-          { "type": "paragraph", "text": "Aby odstąpić od umowy, należy wysłać wiadomość e-mail na adres:" },
+          {
+            "type": "paragraph",
+            "text": "Użytkownik będący konsumentem może odstąpić od umowy w terminie 14 dni od zakupu preorderu bez podawania przyczyny."
+          },
+          {
+            "type": "paragraph",
+            "text": "Aby odstąpić od umowy, należy wysłać wiadomość e-mail na adres:"
+          },
           { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "Przykładowa treść wiadomości:" },
-          { "type": "quote", "text": "Odstępuję od umowy zakupu preorderu Fishki Early Access. Proszę o zwrot płatności.\nAdres e-mail użyty przy zakupie: [adres e-mail]." },
-          { "type": "paragraph", "text": "Zwrot zostanie dokonany przy użyciu tego samego sposobu płatności, którego użyto przy zakupie, chyba że strony uzgodnią inny sposób zwrotu." }
+          {
+            "type": "quote",
+            "text": "Odstępuję od umowy zakupu preorderu Fishki Early Access. Proszę o zwrot płatności.\nAdres e-mail użyty przy zakupie: [adres e-mail]."
+          },
+          {
+            "type": "paragraph",
+            "text": "Zwrot zostanie dokonany przy użyciu tego samego sposobu płatności, którego użyto przy zakupie, chyba że strony uzgodnią inny sposób zwrotu."
+          }
         ]
       },
       {
         "title": "10. Dodatkowa gwarancja zwrotu",
         "blocks": [
-          { "type": "paragraph", "text": "Niezależnie od ustawowego prawa odstąpienia od umowy, Sprzedawca przyznaje użytkownikowi dodatkowe prawo do zwrotu." },
-          { "type": "paragraph", "text": "Jeżeli oficjalna premiera aplikacji nie odbędzie się do 31 marca 2027 roku, użytkownik może zażądać pełnego zwrotu kwoty zapłaconej za preorder w ciągu dwóch miesięcy od tej daty." },
-          { "type": "paragraph", "text": "Żądanie zwrotu należy wysłać na adres:" },
+          {
+            "type": "paragraph",
+            "text": "Niezależnie od ustawowego prawa odstąpienia od umowy, Sprzedawca przyznaje użytkownikowi dodatkowe prawo do zwrotu."
+          },
+          {
+            "type": "paragraph",
+            "text": "Jeżeli oficjalna premiera aplikacji nie odbędzie się do 31 marca 2027 roku, użytkownik może zażądać pełnego zwrotu kwoty zapłaconej za preorder w ciągu dwóch miesięcy od tej daty."
+          },
+          {
+            "type": "paragraph",
+            "text": "Żądanie zwrotu należy wysłać na adres:"
+          },
           { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
-          { "type": "paragraph", "text": "Zwrot obejmuje kwotę faktycznie zapłaconą przez użytkownika za preorder." }
+          {
+            "type": "paragraph",
+            "text": "Zwrot obejmuje kwotę faktycznie zapłaconą przez użytkownika za preorder."
+          }
         ]
       },
       {
         "title": "11. Komunikacja z użytkownikami preorderu",
         "blocks": [
-          { "type": "paragraph", "text": "Sprzedawca może kontaktować się z użytkownikiem w sprawach dotyczących:" },
-          { "type": "list", "items": [
-            "potwierdzenia zakupu,",
-            "dostępu do aplikacji,",
-            "statusu rozwoju Fishki,",
-            "testowania aplikacji,",
-            "zbierania opinii,",
-            "głosowania na priorytety funkcji,",
-            "reklamacji i zwrotów."
-          ] },
-          { "type": "paragraph", "text": "Komunikacja będzie prowadzona na adres e-mail podany przy zakupie." }
+          {
+            "type": "paragraph",
+            "text": "Sprzedawca może kontaktować się z użytkownikiem w sprawach dotyczących:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "potwierdzenia zakupu,",
+              "dostępu do aplikacji,",
+              "statusu rozwoju Fishki,",
+              "testowania aplikacji,",
+              "zbierania opinii,",
+              "głosowania na priorytety funkcji,",
+              "reklamacji i zwrotów."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Komunikacja będzie prowadzona na adres e-mail podany przy zakupie."
+          }
         ]
       },
       {
         "title": "12. Reklamacje",
         "blocks": [
-          { "type": "paragraph", "text": "Użytkownik może złożyć reklamację dotyczącą preorderu lub działania aplikacji, wysyłając wiadomość na adres:" },
+          {
+            "type": "paragraph",
+            "text": "Użytkownik może złożyć reklamację dotyczącą preorderu lub działania aplikacji, wysyłając wiadomość na adres:"
+          },
           { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "Reklamacja powinna zawierać:" },
-          { "type": "list", "items": [
-            "adres e-mail użyty przy zakupie,",
-            "opis problemu,",
-            "oczekiwane rozwiązanie."
-          ] },
-          { "type": "paragraph", "text": "Sprzedawca odpowie na reklamację w terminie 14 dni od jej otrzymania." }
+          {
+            "type": "list",
+            "items": [
+              "adres e-mail użyty przy zakupie,",
+              "opis problemu,",
+              "oczekiwane rozwiązanie."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Sprzedawca odpowie na reklamację w terminie 14 dni od jej otrzymania."
+          }
         ]
       },
       {
         "title": "13. Dane osobowe",
         "blocks": [
-          { "type": "paragraph", "text": "Dane osobowe użytkownika są przetwarzane w celu obsługi preorderu, płatności, dostępu do aplikacji, komunikacji, zwrotów i reklamacji." },
-          { "type": "paragraph", "text": "Szczegółowe informacje dotyczące przetwarzania danych znajdują się w Polityce prywatności." }
+          {
+            "type": "paragraph",
+            "text": "Dane osobowe użytkownika są przetwarzane w celu obsługi preorderu, płatności, dostępu do aplikacji, komunikacji, zwrotów i reklamacji."
+          },
+          {
+            "type": "paragraph",
+            "text": "Szczegółowe informacje dotyczące przetwarzania danych znajdują się w Polityce prywatności."
+          }
         ]
       },
       {
         "title": "14. Zmiany regulaminu preorderu",
         "blocks": [
-          { "type": "paragraph", "text": "Sprzedawca może zmienić niniejszy regulamin, w szczególności w przypadku:" },
-          { "type": "list", "items": [
-            "zmiany funkcjonalności aplikacji,",
-            "zmiany operatora płatności,",
-            "zmiany przepisów prawa,",
-            "zmiany danych Sprzedawcy,",
-            "potrzeby doprecyzowania zasad preorderu."
-          ] },
-          { "type": "paragraph", "text": "Zmiany nie pogorszą sytuacji użytkowników, którzy kupili preorder przed wejściem zmian w życie, chyba że zmiana wynika z obowiązujących przepisów prawa." }
+          {
+            "type": "paragraph",
+            "text": "Sprzedawca może zmienić niniejszy regulamin, w szczególności w przypadku:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "zmiany funkcjonalności aplikacji,",
+              "zmiany operatora płatności,",
+              "zmiany przepisów prawa,",
+              "zmiany danych Sprzedawcy,",
+              "potrzeby doprecyzowania zasad preorderu."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Zmiany nie pogorszą sytuacji użytkowników, którzy kupili preorder przed wejściem zmian w życie, chyba że zmiana wynika z obowiązujących przepisów prawa."
+          }
         ]
       },
       {
         "title": "15. Postanowienia końcowe",
         "blocks": [
-          { "type": "paragraph", "text": "W sprawach nieuregulowanych niniejszym regulaminem zastosowanie ma prawo polskie." },
+          {
+            "type": "paragraph",
+            "text": "W sprawach nieuregulowanych niniejszym regulaminem zastosowanie ma prawo polskie."
+          },
           { "type": "paragraph", "text": "Kontakt w sprawach preorderu:" },
           { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }
         ]

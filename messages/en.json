@@ -14,7 +14,9 @@
     "cta": "Join waitlist",
     "ctaAria": "Join the waitlist",
     "preorderCta": "Early Access",
-    "preorderCtaAria": "Go to the Early Access reservation"
+    "preorderCtaAria": "Go to the Early Access reservation",
+    "openApp": "Open app",
+    "openAppAria": "Open the Fishki web app"
   },
   "hero": {
     "badge": "Flashcards designed for medical students",
@@ -50,19 +52,32 @@
         "name": "Traditional apps",
         "label": "Powerful, but complicated",
         "text": "",
-        "points": ["Dated interface", "Steep learning curve", "Cumbersome editor"]
+        "points": [
+          "Dated interface",
+          "Steep learning curve",
+          "Cumbersome editor"
+        ]
       },
       {
         "name": "Simple apps",
         "label": "Simple, but limited",
         "text": "",
-        "points": ["No advanced reviews", "Low flexibility", "Limited study control"]
+        "points": [
+          "No advanced reviews",
+          "Low flexibility",
+          "Limited study control"
+        ]
       },
       {
         "name": "Fishki",
         "label": "Simple creation. Advanced reviews.",
         "text": "",
-        "points": ["Simple and fast flashcard creation", "Choice between quick and advanced study modes", "Designed for medical study", "Comfortable offline study mode"]
+        "points": [
+          "Simple and fast flashcard creation",
+          "Choice between quick and advanced study modes",
+          "Designed for medical study",
+          "Comfortable offline study mode"
+        ]
       }
     ]
   },
@@ -171,14 +186,62 @@
       "goTo": "Go to screen"
     },
     "fixedScreens": [
-      { "key": "decks", "number": "01", "label": "Decks", "title": "Start with organized material", "description": "Choose a deck to edit or immediately begin studying a specific subject." },
-      { "key": "editor", "number": "02", "label": "Editor", "title": "Create rich cards without setup", "description": "Add text, images, cloze deletions and cover elements in images." },
-      { "key": "quickSetup", "number": "03", "label": "Quick study", "title": "Choose the card direction", "description": "Study front-to-back, back-to-front or mix both directions in one quick session." },
-      { "key": "review", "number": "04", "label": "Review", "title": "Rate without extra friction", "description": "Flip cards and choose only “I know” or “I don't know” in Quick Study mode, or choose the more advanced Smart Reviews." },
-      { "key": "plannerSetup", "number": "05", "label": "Planner", "title": "Tell Fishki what and when you study", "description": "Choose the exam, its date, decks to master and the number of days available." },
-      { "key": "plannerToday", "number": "06", "label": "Daily plan", "title": "A concrete plan for each day", "description": "Fishki distributes new, review and difficult cards so the material is ready before the exam." },
-      { "key": "testMode", "number": "07", "label": "Coming soon", "title": "Check whether you truly know it", "description": "Test mode will let you type, choose or speak an answer instead of only recognizing the back of a card." },
-      { "key": "offline", "number": "08", "label": "Offline", "title": "Take an entire subject with you", "description": "Download a deck, folder or whole subject and study without internet at university, on a train or in the library." }
+      {
+        "key": "decks",
+        "number": "01",
+        "label": "Decks",
+        "title": "Start with organized material",
+        "description": "Choose a deck to edit or immediately begin studying a specific subject."
+      },
+      {
+        "key": "editor",
+        "number": "02",
+        "label": "Editor",
+        "title": "Create rich cards without setup",
+        "description": "Add text, images, cloze deletions and cover elements in images."
+      },
+      {
+        "key": "quickSetup",
+        "number": "03",
+        "label": "Quick study",
+        "title": "Choose the card direction",
+        "description": "Study front-to-back, back-to-front or mix both directions in one quick session."
+      },
+      {
+        "key": "review",
+        "number": "04",
+        "label": "Review",
+        "title": "Rate without extra friction",
+        "description": "Flip cards and choose only “I know” or “I don't know” in Quick Study mode, or choose the more advanced Smart Reviews."
+      },
+      {
+        "key": "plannerSetup",
+        "number": "05",
+        "label": "Planner",
+        "title": "Tell Fishki what and when you study",
+        "description": "Choose the exam, its date, decks to master and the number of days available."
+      },
+      {
+        "key": "plannerToday",
+        "number": "06",
+        "label": "Daily plan",
+        "title": "A concrete plan for each day",
+        "description": "Fishki distributes new, review and difficult cards so the material is ready before the exam."
+      },
+      {
+        "key": "testMode",
+        "number": "07",
+        "label": "Coming soon",
+        "title": "Check whether you truly know it",
+        "description": "Test mode will let you type, choose or speak an answer instead of only recognizing the back of a card."
+      },
+      {
+        "key": "offline",
+        "number": "08",
+        "label": "Offline",
+        "title": "Take an entire subject with you",
+        "description": "Download a deck, folder or whole subject and study without internet at university, on a train or in the library."
+      }
     ],
     "tapHint": "Two product flows",
     "createFlow": "Create and manage",
@@ -420,12 +483,36 @@
     "heading": "Medical material rarely fits into one sentence.",
     "intro": "Fishki is designed to support images, diagrams, classifications and multi-point answers without forcing them into an oversimplified format.",
     "items": [
-      { "label": "Anatomy", "title": "Structure labels", "text": "Cover labels on illustrations and learn spatial relationships." },
-      { "label": "Pharmacology", "title": "Adverse effects", "text": "Connect a drug, mechanism, indications and adverse effects in one deck." },
-      { "label": "Pathology", "title": "Images and specimens", "text": "Add images to both sides and mark characteristic findings." },
-      { "label": "Internal medicine", "title": "Disease classifications", "text": "Break criteria, scales and differential diagnoses into focused questions." },
-      { "label": "Physiology", "title": "Mechanisms and relationships", "text": "Create reverse cards and test understanding in both directions." },
-      { "label": "Exams", "title": "Multi-point answers", "text": "Mark the exact point you missed in a longer structured answer." }
+      {
+        "label": "Anatomy",
+        "title": "Structure labels",
+        "text": "Cover labels on illustrations and learn spatial relationships."
+      },
+      {
+        "label": "Pharmacology",
+        "title": "Adverse effects",
+        "text": "Connect a drug, mechanism, indications and adverse effects in one deck."
+      },
+      {
+        "label": "Pathology",
+        "title": "Images and specimens",
+        "text": "Add images to both sides and mark characteristic findings."
+      },
+      {
+        "label": "Internal medicine",
+        "title": "Disease classifications",
+        "text": "Break criteria, scales and differential diagnoses into focused questions."
+      },
+      {
+        "label": "Physiology",
+        "title": "Mechanisms and relationships",
+        "text": "Create reverse cards and test understanding in both directions."
+      },
+      {
+        "label": "Exams",
+        "title": "Multi-point answers",
+        "text": "Mark the exact point you missed in a longer structured answer."
+      }
     ]
   },
   "howItWorks": {
@@ -583,175 +670,316 @@
       {
         "title": "1. Seller",
         "blocks": [
-          { "type": "paragraph", "text": "The seller of the Fishki Early Access preorder is:" },
-          { "type": "paragraph", "text": "Mateusz Buczak, operating as an unregistered business activity under Polish law" },
-          { "type": "paragraph", "text": "Address: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów, Poland" },
-          { "type": "paragraph", "text": "Contact email: mateuszbuczak1@gmail.com" },
+          {
+            "type": "paragraph",
+            "text": "The seller of the Fishki Early Access preorder is:"
+          },
+          {
+            "type": "paragraph",
+            "text": "Mateusz Buczak, operating as an unregistered business activity under Polish law"
+          },
+          {
+            "type": "paragraph",
+            "text": "Address: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów, Poland"
+          },
+          {
+            "type": "paragraph",
+            "text": "Contact email: mateuszbuczak1@gmail.com"
+          },
           { "type": "paragraph", "text": "Hereinafter: the “Seller”." }
         ]
       },
       {
         "title": "2. What Fishki is",
         "blocks": [
-          { "type": "paragraph", "text": "Fishki is an educational application being developed for medical students. Its purpose is to make creating flashcards, studying with reviews, working with visual materials and planning study for tests, exams and final exams easier." },
-          { "type": "paragraph", "text": "Fishki is a product under development. Purchasing the preorder does not mean purchasing a finished, final production application." }
+          {
+            "type": "paragraph",
+            "text": "Fishki is an educational application being developed for medical students. Its purpose is to make creating flashcards, studying with reviews, working with visual materials and planning study for tests, exams and final exams easier."
+          },
+          {
+            "type": "paragraph",
+            "text": "Fishki is a product under development. Purchasing the preorder does not mean purchasing a finished, final production application."
+          }
         ]
       },
       {
         "title": "3. What the Fishki Early Access preorder is",
         "blocks": [
-          { "type": "paragraph", "text": "The Fishki Early Access preorder is the purchase of earlier access to the Fishki application on preferential terms." },
-          { "type": "paragraph", "text": "As part of the preorder, the user receives:" },
-          { "type": "list", "items": [
-            "access to a test version of Fishki before the public launch of the application,",
-            "the ability to test the application and submit feedback,",
-            "the ability to influence product development priorities, including voting on the order in which features are implemented,",
-            "12 months of access to the premium plan after the public launch of the application,",
-            "a region-based preorder price: PLN 59 in Poland, €13.99 in Europe outside Poland or $15.99 in the United States and other countries, instead of the planned annual post-launch price of PLN 149, €35 or $40 respectively."
-          ] },
-          { "type": "paragraph", "text": "The scope of features available in Early Access may be limited compared with the planned final version." }
+          {
+            "type": "paragraph",
+            "text": "The Fishki Early Access preorder is the purchase of earlier access to the Fishki application on preferential terms."
+          },
+          {
+            "type": "paragraph",
+            "text": "As part of the preorder, the user receives:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "access to a test version of Fishki before the public launch of the application,",
+              "the ability to test the application and submit feedback,",
+              "the ability to influence product development priorities, including voting on the order in which features are implemented,",
+              "12 months of access to the premium plan after the public launch of the application,",
+              "a region-based preorder price: PLN 59 in Poland, €13.99 in Europe outside Poland or $15.99 in the United States and other countries, instead of the planned annual post-launch price of PLN 149, €35 or $40 respectively."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The scope of features available in Early Access may be limited compared with the planned final version."
+          }
         ]
       },
       {
         "title": "4. Preorder price",
         "blocks": [
-          { "type": "paragraph", "text": "The preorder price depends on the user's region and is: PLN 59 in Poland, €13.99 in Europe outside Poland or $15.99 in the United States and other countries." },
-          { "type": "paragraph", "text": "The planned annual price after the public launch is respectively: PLN 149 in Poland, €35 in Europe outside Poland or $40 in the United States and other countries." },
-          { "type": "paragraph", "text": "This is a one-time payment covering the benefits described in these terms." },
-          { "type": "paragraph", "text": "The Seller may change the preorder price or end its sale in the future. A price change does not affect people who purchased the preorder before the change." }
+          {
+            "type": "paragraph",
+            "text": "The preorder price depends on the user's region and is: PLN 59 in Poland, €13.99 in Europe outside Poland or $15.99 in the United States and other countries."
+          },
+          {
+            "type": "paragraph",
+            "text": "The planned annual price after the public launch is respectively: PLN 149 in Poland, €35 in Europe outside Poland or $40 in the United States and other countries."
+          },
+          {
+            "type": "paragraph",
+            "text": "This is a one-time payment covering the benefits described in these terms."
+          },
+          {
+            "type": "paragraph",
+            "text": "The Seller may change the preorder price or end its sale in the future. A price change does not affect people who purchased the preorder before the change."
+          }
         ]
       },
       {
         "title": "5. Planned application availability date",
         "blocks": [
-          { "type": "paragraph", "text": "The first Fishki Early Access test version is planned by the end of September 2026." },
-          { "type": "paragraph", "text": "The official application launch is planned by the end of 2026." },
-          { "type": "paragraph", "text": "These dates are estimates and may change because the application is still under development." },
-          { "type": "paragraph", "text": "If the application does not officially launch by March 31, 2027, every purchaser may request a full refund of the amount paid for the preorder within two months of that date." }
+          {
+            "type": "paragraph",
+            "text": "The first Fishki Early Access test version is planned by the end of September 2026."
+          },
+          {
+            "type": "paragraph",
+            "text": "The official application launch is planned by the end of 2026."
+          },
+          {
+            "type": "paragraph",
+            "text": "These dates are estimates and may change because the application is still under development."
+          },
+          {
+            "type": "paragraph",
+            "text": "If the application does not officially launch by March 31, 2027, every purchaser may request a full refund of the amount paid for the preorder within two months of that date."
+          }
         ]
       },
       {
         "title": "6. Planned Early Access scope",
         "blocks": [
-          { "type": "paragraph", "text": "The planned scope of application development includes in particular:" },
-          { "type": "list", "items": [
-            "creating decks and text flashcards,",
-            "adding images,",
-            "cloze deletion flashcards,",
-            "a basic study mode,",
-            "image occlusion,",
-            "a review planner,",
-            "offline mode for downloaded materials,",
-            "statistics, import, a public library and sharing features at later stages."
-          ] },
-          { "type": "paragraph", "text": "The Seller does not guarantee that all of the above features will be available in the first Early Access version." }
+          {
+            "type": "paragraph",
+            "text": "The planned scope of application development includes in particular:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "creating decks and text flashcards,",
+              "adding images,",
+              "cloze deletion flashcards,",
+              "a basic study mode,",
+              "image occlusion,",
+              "a review planner,",
+              "offline mode for downloaded materials,",
+              "statistics, import, a public library and sharing features at later stages."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The Seller does not guarantee that all of the above features will be available in the first Early Access version."
+          }
         ]
       },
       {
         "title": "7. Nature of Early Access",
         "blocks": [
-          { "type": "paragraph", "text": "The user acknowledges that Early Access:" },
-          { "type": "list", "items": [
-            "may contain technical errors,",
-            "may have a limited feature set,",
-            "may operate unstably,",
-            "may be temporarily unavailable due to technical work,",
-            "may differ from mockups, demos, marketing materials and descriptions on the website,",
-            "may change during product development."
-          ] },
-          { "type": "paragraph", "text": "The Seller will take reasonable steps to develop and improve the application but does not guarantee the implementation of every feature suggested by users." }
+          {
+            "type": "paragraph",
+            "text": "The user acknowledges that Early Access:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "may contain technical errors,",
+              "may have a limited feature set,",
+              "may operate unstably,",
+              "may be temporarily unavailable due to technical work,",
+              "may differ from mockups, demos, marketing materials and descriptions on the website,",
+              "may change during product development."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The Seller will take reasonable steps to develop and improve the application but does not guarantee the implementation of every feature suggested by users."
+          }
         ]
       },
       {
         "title": "8. How the preorder purchase works",
         "blocks": [
           { "type": "paragraph", "text": "The preorder is purchased by:" },
-          { "type": "list", "items": [
-            "clicking the purchase button on the website,",
-            "providing the information required to complete the purchase,",
-            "accepting these terms,",
-            "making a payment through the available payment provider."
-          ] },
-          { "type": "paragraph", "text": "After payment, the user will receive a purchase confirmation at the email address provided." },
-          { "type": "paragraph", "text": "The user should provide a true and current email address because it will be used to provide information about access to the application and for communications concerning the preorder, refunds and complaints." }
+          {
+            "type": "list",
+            "items": [
+              "clicking the purchase button on the website,",
+              "providing the information required to complete the purchase,",
+              "accepting these terms,",
+              "making a payment through the available payment provider."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "After payment, the user will receive a purchase confirmation at the email address provided."
+          },
+          {
+            "type": "paragraph",
+            "text": "The user should provide a true and current email address because it will be used to provide information about access to the application and for communications concerning the preorder, refunds and complaints."
+          }
         ]
       },
       {
         "title": "9. Right of withdrawal",
         "blocks": [
-          { "type": "paragraph", "text": "A user who is a consumer may withdraw from the agreement within 14 days of purchasing the preorder without giving a reason." },
-          { "type": "paragraph", "text": "To withdraw from the agreement, send an email to:" },
+          {
+            "type": "paragraph",
+            "text": "A user who is a consumer may withdraw from the agreement within 14 days of purchasing the preorder without giving a reason."
+          },
+          {
+            "type": "paragraph",
+            "text": "To withdraw from the agreement, send an email to:"
+          },
           { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "Example message:" },
-          { "type": "quote", "text": "I withdraw from the Fishki Early Access preorder purchase agreement. Please refund the payment.\nEmail address used for the purchase: [email address]." },
-          { "type": "paragraph", "text": "The refund will be made using the same payment method used for the purchase unless the parties agree on another refund method." }
+          {
+            "type": "quote",
+            "text": "I withdraw from the Fishki Early Access preorder purchase agreement. Please refund the payment.\nEmail address used for the purchase: [email address]."
+          },
+          {
+            "type": "paragraph",
+            "text": "The refund will be made using the same payment method used for the purchase unless the parties agree on another refund method."
+          }
         ]
       },
       {
         "title": "10. Additional refund guarantee",
         "blocks": [
-          { "type": "paragraph", "text": "Independently of the statutory right of withdrawal, the Seller grants the user an additional right to a refund." },
-          { "type": "paragraph", "text": "If the application does not officially launch by March 31, 2027, the user may request a full refund of the amount paid for the preorder within two months of that date." },
-          { "type": "paragraph", "text": "The refund request should be sent to:" },
+          {
+            "type": "paragraph",
+            "text": "Independently of the statutory right of withdrawal, the Seller grants the user an additional right to a refund."
+          },
+          {
+            "type": "paragraph",
+            "text": "If the application does not officially launch by March 31, 2027, the user may request a full refund of the amount paid for the preorder within two months of that date."
+          },
+          {
+            "type": "paragraph",
+            "text": "The refund request should be sent to:"
+          },
           { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
-          { "type": "paragraph", "text": "The refund covers the amount actually paid by the user for the preorder." }
+          {
+            "type": "paragraph",
+            "text": "The refund covers the amount actually paid by the user for the preorder."
+          }
         ]
       },
       {
         "title": "11. Communication with preorder users",
         "blocks": [
-          { "type": "paragraph", "text": "The Seller may contact the user regarding:" },
-          { "type": "list", "items": [
-            "purchase confirmation,",
-            "access to the application,",
-            "Fishki development status,",
-            "application testing,",
-            "collecting feedback,",
-            "voting on feature priorities,",
-            "complaints and refunds."
-          ] },
-          { "type": "paragraph", "text": "Communication will be sent to the email address provided during the purchase." }
+          {
+            "type": "paragraph",
+            "text": "The Seller may contact the user regarding:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "purchase confirmation,",
+              "access to the application,",
+              "Fishki development status,",
+              "application testing,",
+              "collecting feedback,",
+              "voting on feature priorities,",
+              "complaints and refunds."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Communication will be sent to the email address provided during the purchase."
+          }
         ]
       },
       {
         "title": "12. Complaints",
         "blocks": [
-          { "type": "paragraph", "text": "The user may submit a complaint concerning the preorder or the application by sending a message to:" },
+          {
+            "type": "paragraph",
+            "text": "The user may submit a complaint concerning the preorder or the application by sending a message to:"
+          },
           { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "The complaint should include:" },
-          { "type": "list", "items": [
-            "the email address used for the purchase,",
-            "a description of the issue,",
-            "the expected solution."
-          ] },
-          { "type": "paragraph", "text": "The Seller will respond to the complaint within 14 days of receiving it." }
+          {
+            "type": "list",
+            "items": [
+              "the email address used for the purchase,",
+              "a description of the issue,",
+              "the expected solution."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The Seller will respond to the complaint within 14 days of receiving it."
+          }
         ]
       },
       {
         "title": "13. Personal data",
         "blocks": [
-          { "type": "paragraph", "text": "The user's personal data is processed to handle the preorder, payment, access to the application, communications, refunds and complaints." },
-          { "type": "paragraph", "text": "Detailed information concerning data processing is available in the Privacy Policy." }
+          {
+            "type": "paragraph",
+            "text": "The user's personal data is processed to handle the preorder, payment, access to the application, communications, refunds and complaints."
+          },
+          {
+            "type": "paragraph",
+            "text": "Detailed information concerning data processing is available in the Privacy Policy."
+          }
         ]
       },
       {
         "title": "14. Changes to the preorder terms",
         "blocks": [
-          { "type": "paragraph", "text": "The Seller may amend these terms, in particular in the event of:" },
-          { "type": "list", "items": [
-            "changes to the application's functionality,",
-            "a change of payment provider,",
-            "changes in applicable law,",
-            "changes to the Seller's details,",
-            "the need to clarify the preorder rules."
-          ] },
-          { "type": "paragraph", "text": "Changes will not worsen the position of users who purchased the preorder before the changes took effect unless the change results from applicable law." }
+          {
+            "type": "paragraph",
+            "text": "The Seller may amend these terms, in particular in the event of:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "changes to the application's functionality,",
+              "a change of payment provider,",
+              "changes in applicable law,",
+              "changes to the Seller's details,",
+              "the need to clarify the preorder rules."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Changes will not worsen the position of users who purchased the preorder before the changes took effect unless the change results from applicable law."
+          }
         ]
       },
       {
         "title": "15. Final provisions",
         "blocks": [
-          { "type": "paragraph", "text": "Polish law applies to matters not regulated by these terms." },
+          {
+            "type": "paragraph",
+            "text": "Polish law applies to matters not regulated by these terms."
+          },
           { "type": "paragraph", "text": "Contact regarding the preorder:" },
           { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }
         ]

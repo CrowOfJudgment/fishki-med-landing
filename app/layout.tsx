@@ -8,7 +8,8 @@ import type { Viewport } from "next";
 
 async function getLocale(): Promise<Locale> {
   const headerStore = await headers();
-  const acceptLanguage = headerStore.get("accept-language")?.toLowerCase() ?? "";
+  const acceptLanguage =
+    headerStore.get("accept-language")?.toLowerCase() ?? "";
   return acceptLanguage.startsWith("pl") ? "pl" : "en";
 }
 
@@ -20,8 +21,15 @@ export async function generateMetadata() {
     title: messages.seo.title,
     description: messages.seo.description,
     icons: {
-      icon: [{ url: "/favicon.ico?v=2", type: "image/x-icon", sizes: "16x16 32x32 48x48" }],
-      shortcut: "/favicon.ico?v=2",
+      icon: [
+        {
+          url: "/fishki-icon.png?v=3",
+          type: "image/png",
+          sizes: "1024x1024",
+        },
+      ],
+      shortcut: "/fishki-icon.png?v=3",
+      apple: "/fishki-icon.png?v=3",
     },
   };
 }
