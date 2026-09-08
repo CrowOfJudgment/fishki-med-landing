@@ -559,7 +559,7 @@
       {
         "name": "Hania",
         "role": "studentka 5. roku medycyny",
-        "quote": "Chcę powtórek jak w Anki, ale z prostszą synchronizacją między tabletem, telefonem i trybem offline."
+        "quote": "Chcę powtórek jak w Anki, ale z prostszą synchronizacją między telefonem, komputerem i trybem offline."
       },
       {
         "name": "Kasia",
@@ -629,7 +629,7 @@
     "emailLabel": "E-mail",
     "platformLabel": "Na jakim urządzeniu chcesz testować Fishki?",
     "platformOptions": {
-      "IOS": "iPhone / iPad",
+      "IOS": "iPhone",
       "ANDROID": "Android",
       "BOTH": "Oba systemy",
       "UNDECIDED": "Jeszcze nie wiem"

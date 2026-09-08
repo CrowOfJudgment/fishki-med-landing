@@ -559,7 +559,7 @@
       {
         "name": "Hannah",
         "role": "fifth-year medical student",
-        "quote": "I want reviews like in Anki, but with simpler syncing between my tablet, phone and offline mode."
+        "quote": "I want reviews like in Anki, but with simpler syncing between my phone, computer and offline mode."
       },
       {
         "name": "Kate",
@@ -629,7 +629,7 @@
     "emailLabel": "Email",
     "platformLabel": "Which device do you want to test Fishki on?",
     "platformOptions": {
-      "IOS": "iPhone / iPad",
+      "IOS": "iPhone",
       "ANDROID": "Android",
       "BOTH": "Both platforms",
       "UNDECIDED": "Not sure yet"
