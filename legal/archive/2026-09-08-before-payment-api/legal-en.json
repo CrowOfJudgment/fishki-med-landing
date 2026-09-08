@@ -106,7 +106,7 @@
       ] },
       { "title": "2. Data we may process", "blocks": [
         { "type": "paragraph", "text": "Depending on how you use the website or application, we may process:" },
-        { "type": "list", "items": ["email address,", "full name where provided,", "preferred device platform for application testing (iOS, Android, both or undecided),", "answers submitted through the waitlist form,", "preorder purchase information, including the checkout identifier, amount, currency and transaction status,", "payment data provided by the payment provider,", "technical data such as IP address, device type, browser, operating system and cookie identifiers,", "website or application usage data,", "content added by the user after the application launches."] }
+        { "type": "list", "items": ["email address,", "first name, surname or username if provided,", "answers submitted through the waitlist form,", "preorder purchase information,", "payment data provided by the payment provider,", "technical data such as IP address, device type, browser, operating system and cookie identifiers,", "website or application usage data,", "content added by the user after the application launches."] }
       ] },
       { "title": "3. Purposes and legal bases for processing", "blocks": [
         { "type": "paragraph", "text": "We process data for the following purposes:" },

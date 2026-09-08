@@ -575,32 +575,32 @@
   },
   "preorder": {
     "badge": "Preorder",
-    "title": "Fishki Early Access for $18.99",
+    "title": "Fishki Early Access for $15.99",
     "pricing": {
       "pl": {
-        "title": "Fishki Early Access for PLN 69",
-        "value": "PLN 69",
+        "title": "Fishki Early Access for PLN 59",
+        "value": "PLN 59",
         "note": "One-time payment. After the official launch, access will cost PLN 149 per year. If we are unable to launch the app, we provide a money-back guarantee.",
-        "comparison": "PLN 69 in preorder instead of the planned PLN 149 per year"
+        "comparison": "PLN 59 in preorder instead of the planned PLN 149 per year"
       },
       "eu": {
-        "title": "Fishki Early Access for €16.99",
-        "value": "€16.99",
+        "title": "Fishki Early Access for €13.99",
+        "value": "€13.99",
         "note": "One-time payment. After the official launch, access will cost €35 per year. If we are unable to launch the app, we provide a money-back guarantee.",
-        "comparison": "€16.99 in preorder instead of the planned €35 per year"
+        "comparison": "€13.99 in preorder instead of the planned €35 per year"
       },
       "us": {
-        "title": "Fishki Early Access for $18.99",
-        "value": "$18.99",
+        "title": "Fishki Early Access for $15.99",
+        "value": "$15.99",
         "note": "One-time payment. After the official launch, access will cost $40 per year. If we are unable to launch the app, we provide a money-back guarantee.",
-        "comparison": "$18.99 in preorder instead of the planned $40 per year"
+        "comparison": "$15.99 in preorder instead of the planned $40 per year"
       }
     },
     "subtitle": "Buy Early Access on preferential terms, test Fishki before the public launch and help shape the product.",
     "offerFacts": [
       {
         "label": "Preorder price",
-        "value": "$18.99",
+        "value": "$15.99",
         "note": "One-time payment. After the official launch, access will cost PLN 149 per year. If we are unable to launch the app, we provide a money-back guarantee."
       },
       {
@@ -621,19 +621,12 @@
       "12 months of the premium plan after the public launch",
       "The ability to share feedback and influence product development",
       "Voting on feature implementation priorities",
-      "$18.99 in preorder instead of the planned $40 per year"
+      "$15.99 in preorder instead of the planned PLN 149 per year"
     ],
     "trust": "This is not a finished production app. You are buying early access to a product that is still being developed. You may withdraw from the purchase within 14 days without giving a reason.",
     "placeholderLabel": "Buy Early Access",
     "fullNameLabel": "Full name",
     "emailLabel": "Email",
-    "platformLabel": "Which device do you want to test Fishki on?",
-    "platformOptions": {
-      "IOS": "iPhone / iPad",
-      "ANDROID": "Android",
-      "BOTH": "Both platforms",
-      "UNDECIDED": "Not sure yet"
-    },
     "accountEmailHint": "Use the same email when creating your Fishki account — we will assign beta access and 12 months of Premium after launch to it.",
     "formSaveError": "We could not save your details. Please try again — we will not redirect you to payment until your registration is safely stored.",
     "purchaseConsentBefore": "I accept the ",
@@ -648,8 +641,7 @@
     "buyCta": "Buy Early Access",
     "buyWithBlik": "Pay with BLIK or instant bank transfer",
     "buyWithCard": "Pay by card, Apple Pay or Google Pay",
-    "buyCtaDisabled": "Enter your full name and a valid email, choose a device, then accept the required terms.",
-    "redirecting": "Preparing secure checkout…",
+    "buyCtaDisabled": "Enter your full name and a valid email, then accept the required terms.",
     "readTerms": "Read the purchase terms"
   },
   "footer": {
@@ -664,14 +656,6 @@
     "privacy": "Privacy Policy",
     "preorderTerms": "Preorder terms"
   },
-  "preorderThankYou": {
-    "badge": "Payment received",
-    "title": "Thank you for purchasing Fishki Early Access!",
-    "body": "Your payment provider is now sending us the transaction confirmation. This usually takes a moment. We will assign beta access to the email address entered before payment.",
-    "accountHint": "Use exactly the same email address when creating your Fishki account. Once the payment is confirmed, the Beta Tester plan will activate automatically.",
-    "receiptHint": "Your selected payment provider will send the payment confirmation or receipt.",
-    "back": "Back to homepage"
-  },
   "terms": {
     "back": "Back to homepage",
     "badge": "Document",
@@ -684,7 +668,7 @@
     "back": "Back to preorder",
     "badge": "Preorder terms",
     "title": "Fishki Early Access Preorder and Sales Terms",
-    "lastUpdated": "Last updated: September 8, 2026",
+    "lastUpdated": "Last updated: June 20, 2026",
     "intro": "",
     "sections": [
       {
@@ -740,7 +724,7 @@
               "the ability to test the application and submit feedback,",
               "the ability to influence product development priorities, including voting on the order in which features are implemented,",
               "12 months of access to the premium plan after the public launch of the application,",
-              "a region-based preorder price: PLN 69 in Poland, €16.99 in Europe outside Poland or $18.99 in the United States and other countries, instead of the planned annual post-launch price of PLN 149, €35 or $40 respectively."
+              "a region-based preorder price: PLN 59 in Poland, €13.99 in Europe outside Poland or $15.99 in the United States and other countries, instead of the planned annual post-launch price of PLN 149, €35 or $40 respectively."
             ]
           },
           {
@@ -754,7 +738,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text": "The preorder price depends on the user's region and is: PLN 69 in Poland, €16.99 in Europe outside Poland or $18.99 in the United States and other countries."
+            "text": "The preorder price depends on the user's region and is: PLN 59 in Poland, €13.99 in Europe outside Poland or $15.99 in the United States and other countries."
           },
           {
             "type": "paragraph",

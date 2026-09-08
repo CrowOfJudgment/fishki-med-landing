@@ -108,7 +108,7 @@
       ] },
       { "title": "2. Jakie dane możemy przetwarzać", "blocks": [
         { "type": "paragraph", "text": "W zależności od sposobu korzystania ze strony lub aplikacji możemy przetwarzać:" },
-        { "type": "list", "items": ["adres e-mail,", "imię i nazwisko, jeżeli zostaną podane,", "preferowany system urządzenia do testowania aplikacji (iOS, Android, oba lub brak decyzji),", "odpowiedzi udzielone w formularzu waitlisty,", "dane dotyczące zakupu preorderu, w tym identyfikator sesji płatniczej, kwotę, walutę i status transakcji,", "dane płatnicze w zakresie przekazanym przez operatora płatności,", "dane techniczne, takie jak adres IP, typ urządzenia, przeglądarka, system operacyjny, identyfikatory cookies,", "dane dotyczące korzystania ze strony lub aplikacji,", "treści dodane przez użytkownika w aplikacji, po jej uruchomieniu."] }
+        { "type": "list", "items": ["adres e-mail,", "imię lub nazwę użytkownika, jeżeli zostaną podane,", "odpowiedzi udzielone w formularzu waitlisty,", "dane dotyczące zakupu preorderu,", "dane płatnicze w zakresie przekazanym przez operatora płatności,", "dane techniczne, takie jak adres IP, typ urządzenia, przeglądarka, system operacyjny, identyfikatory cookies,", "dane dotyczące korzystania ze strony lub aplikacji,", "treści dodane przez użytkownika w aplikacji, po jej uruchomieniu."] }
       ] },
       { "title": "3. Cele i podstawy przetwarzania danych", "blocks": [
         { "type": "paragraph", "text": "Przetwarzamy dane w następujących celach:" },

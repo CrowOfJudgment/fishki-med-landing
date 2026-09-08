@@ -1,12 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useLocale, useT } from "@/lib/i18n-context";
 import type { PricingRegion } from "@/lib/pricing-region";
+import {
+  apiPricingRegion,
+  isSafeCheckoutUrl,
+  payByLinkAvailable,
+  PREORDER_DOCUMENT_VERSIONS,
+} from "@/lib/preorder-checkout";
 
-const POLISH_PREORDER_PAYMENT_URL = "https://paybylink.pl/linkPay/817cf10ad7e92cd595dd328477eb7974";
-const INTERNATIONAL_PREORDER_PAYMENT_URL = "https://buy.stripe.com/6oU3cw00q2bSg5v9FufEk00";
+type PaymentProvider = "STRIPE" | "PAY_BY_LINK";
+type PreferredPlatform = "IOS" | "ANDROID" | "BOTH" | "UNDECIDED";
 
 export default function Preorder({
   pricingRegion,
@@ -22,21 +28,24 @@ export default function Preorder({
   const [showConsentError, setShowConsentError] = useState(false);
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
+  const [preferredPlatform, setPreferredPlatform] =
+    useState<PreferredPlatform | null>(null);
   const [website, setWebsite] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [submissionError, setSubmissionError] = useState<string | null>(null);
+  const submissionIds = useRef<Partial<Record<PaymentProvider, string>>>({});
   const validName = fullName.trim().length >= 2;
   const validEmail = /^\S+@\S+\.\S+$/.test(email.trim());
   const canBuy =
     validName &&
     validEmail &&
+    preferredPlatform !== null &&
     acceptedPreorderTerms &&
     acceptedTermsOfUse &&
     acceptedPrivacyPolicy;
 
   const handleBuyClick = async (
-    paymentUrl: string,
-    paymentProvider: "STRIPE" | "PAY_BY_LINK",
+    paymentProvider: PaymentProvider,
   ) => {
     if (!canBuy) {
       setShowConsentError(true);
@@ -45,29 +54,30 @@ export default function Preorder({
     setSubmitting(true);
     setSubmissionError(null);
     try {
+      const submissionId = submissionIds.current[paymentProvider]
+        ?? crypto.randomUUID();
+      submissionIds.current[paymentProvider] = submissionId;
       const response = await fetch("/api/preorders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          submissionId: crypto.randomUUID(),
+          submissionId,
           fullName: fullName.trim(),
           email: email.trim(),
           paymentProvider,
-          pricingRegion:
-            pricingRegion === "pl"
-              ? "PL"
-              : pricingRegion === "eu"
-                ? "EU"
-                : "INTERNATIONAL",
+          pricingRegion: apiPricingRegion(pricingRegion),
           locale,
-          preorderTermsVersion: "2026-07-21",
-          termsOfUseVersion: "2026-06-20",
-          privacyPolicyVersion: "2026-09-08",
+          preferredPlatform,
+          ...PREORDER_DOCUMENT_VERSIONS,
           website,
         }),
       });
       if (!response.ok) throw new Error("Preorder registration failed");
-      window.location.assign(paymentUrl);
+      const result = (await response.json()) as { checkoutUrl?: unknown };
+      if (!isSafeCheckoutUrl(result.checkoutUrl)) {
+        throw new Error("Checkout URL is missing");
+      }
+      window.location.assign(result.checkoutUrl);
     } catch {
       setSubmissionError(t.preorder.formSaveError);
       setSubmitting(false);
@@ -196,6 +206,33 @@ export default function Preorder({
                   <p className="text-xs leading-5 text-[#274D53]">
                     {t.preorder.accountEmailHint}
                   </p>
+                  <fieldset className="rounded-[1.15rem] border border-[#B9DDD5] bg-white p-4">
+                    <legend className="px-1 text-sm font-semibold text-[#002838]">
+                      {t.preorder.platformLabel}
+                    </legend>
+                    <div className="mt-2 grid grid-cols-2 gap-2">
+                      {(["IOS", "ANDROID", "BOTH", "UNDECIDED"] as const).map((platform) => (
+                        <label
+                          key={platform}
+                          className={`flex min-h-11 cursor-pointer items-center gap-2 rounded-xl border px-3 text-sm transition ${
+                            preferredPlatform === platform
+                              ? "border-[#0F766E] bg-[#E7F1EE] text-[#002838]"
+                              : "border-[#D8E8E4] text-[#274D53]"
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="preferred-platform"
+                            value={platform}
+                            checked={preferredPlatform === platform}
+                            onChange={() => setPreferredPlatform(platform)}
+                            className="accent-[#0F766E]"
+                          />
+                          {t.preorder.platformOptions[platform]}
+                        </label>
+                      ))}
+                    </div>
+                  </fieldset>
                   <label className="absolute -left-[10000px]" aria-hidden="true">
                     Website
                     <input
@@ -304,37 +341,35 @@ export default function Preorder({
                 </div>
 
                 <div className="mt-6 flex flex-col gap-3">
+                  {payByLinkAvailable(pricingRegion) ? (
+                    <button
+                      type="button"
+                      onClick={() => void handleBuyClick("PAY_BY_LINK")}
+                      disabled={submitting}
+                      data-analytics-click={canBuy ? "preorder_buy_paybylink" : "preorder_buy_missing_consents"}
+                      data-analytics-section="preorder"
+                      className={`flex min-h-12 w-full items-center justify-center rounded-full px-5 py-3.5 text-center text-sm font-semibold text-white shadow-[0_14px_32px_rgba(232,104,96,0.24)] transition hover:-translate-y-0.5 ${
+                        showConsentError && !canBuy
+                          ? "bg-[#E86860] ring-4 ring-[#E86860]/20"
+                          : "bg-[#E86860] hover:bg-[#D85A52]"
+                      }`}
+                    >
+                      {submitting ? t.preorder.redirecting : t.preorder.buyWithBlik}
+                    </button>
+                  ) : null}
                   <button
                     type="button"
-                    onClick={() => void handleBuyClick(POLISH_PREORDER_PAYMENT_URL, "PAY_BY_LINK")}
-                    disabled={submitting}
-                    data-analytics-click={canBuy ? "preorder_buy_paybylink" : "preorder_buy_missing_consents"}
-                    data-analytics-section="preorder"
-                    className={`flex min-h-12 w-full items-center justify-center rounded-full px-5 py-3.5 text-center text-sm font-semibold text-white shadow-[0_14px_32px_rgba(232,104,96,0.24)] transition hover:-translate-y-0.5 ${
-                      pricingRegion === "pl" ? "order-1" : "order-2"
-                    } ${
-                      showConsentError && !canBuy
-                        ? "bg-[#E86860] ring-4 ring-[#E86860]/20"
-                        : "bg-[#E86860] hover:bg-[#D85A52]"
-                    }`}
-                  >
-                    {t.preorder.buyWithBlik}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => void handleBuyClick(INTERNATIONAL_PREORDER_PAYMENT_URL, "STRIPE")}
+                    onClick={() => void handleBuyClick("STRIPE")}
                     disabled={submitting}
                     data-analytics-click={canBuy ? "preorder_buy_stripe" : "preorder_buy_missing_consents"}
                     data-analytics-section="preorder"
                     className={`flex min-h-12 w-full items-center justify-center rounded-full border-2 bg-white px-5 py-3 text-center text-sm font-semibold text-[#002838] transition hover:-translate-y-0.5 hover:bg-[#E86860]/5 ${
-                      pricingRegion === "pl" ? "order-2" : "order-1"
-                    } ${
                       showConsentError && !canBuy
                         ? "border-[#E86860] ring-4 ring-[#E86860]/20"
                         : "border-[#E86860]"
                     }`}
                   >
-                    {t.preorder.buyWithCard}
+                    {submitting ? t.preorder.redirecting : t.preorder.buyWithCard}
                   </button>
                 </div>
                 {showConsentError && !canBuy ? (

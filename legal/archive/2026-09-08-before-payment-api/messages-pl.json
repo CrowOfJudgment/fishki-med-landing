@@ -575,32 +575,32 @@
   },
   "preorder": {
     "badge": "Preorder",
-    "title": "Wczesny dostęp do Fishki za 69 zł",
+    "title": "Wczesny dostęp do Fishki za 59 zł",
     "pricing": {
       "pl": {
-        "title": "Wczesny dostęp do Fishki za 69 zł",
-        "value": "69 zł",
+        "title": "Wczesny dostęp do Fishki za 59 zł",
+        "value": "59 zł",
         "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp będzie kosztował 149 zł rocznie. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
-        "comparison": "69 zł w preorderze zamiast planowanych 149 zł rocznie"
+        "comparison": "59 zł w preorderze zamiast planowanych 149 zł rocznie"
       },
       "eu": {
-        "title": "Wczesny dostęp do Fishki za 16,99 €",
-        "value": "16,99 €",
+        "title": "Wczesny dostęp do Fishki za 13,99 €",
+        "value": "13,99 €",
         "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp będzie kosztował 35 € rocznie. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
-        "comparison": "16,99 € w preorderze zamiast planowanych 35 € rocznie"
+        "comparison": "13,99 € w preorderze zamiast planowanych 35 € rocznie"
       },
       "us": {
-        "title": "Wczesny dostęp do Fishki za 18,99 USD",
-        "value": "18,99 USD",
+        "title": "Wczesny dostęp do Fishki za 15,99 USD",
+        "value": "15,99 USD",
         "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp będzie kosztował 40 USD rocznie. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
-        "comparison": "18,99 USD w preorderze zamiast planowanych 40 USD rocznie"
+        "comparison": "15,99 USD w preorderze zamiast planowanych 40 USD rocznie"
       }
     },
     "subtitle": "Kup Wczesny Dostęp na preferencyjnych warunkach, testuj Fishki przed publicznym startem i pomóż w rozwoju produktu.",
     "offerFacts": [
       {
         "label": "Cena preorderu",
-        "value": "69 zł",
+        "value": "59 zł",
         "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp będzie kosztował 149 zł rocznie. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków."
       },
       {
@@ -621,19 +621,12 @@
       "12 miesięcy planu premium po publicznym starcie",
       "Możliwość zgłaszania opinii i wpływania na rozwój produktu",
       "Głosowania nad priorytetem wdrażania funkcji",
-      "69 zł w preorderze zamiast planowanych 149 zł rocznie"
+      "59 zł w preorderze zamiast planowanych 149 zł rocznie"
     ],
     "trust": "To nie jest gotowa aplikacja produkcyjna. Kupujesz wcześniejszy dostęp do produktu w trakcie tworzenia. Możesz odstąpić od zakupu w ciągu 14 dni bez podawania przyczyny.",
     "placeholderLabel": "Kup Wczesny Dostęp",
     "fullNameLabel": "Imię i nazwisko",
     "emailLabel": "E-mail",
-    "platformLabel": "Na jakim urządzeniu chcesz testować Fishki?",
-    "platformOptions": {
-      "IOS": "iPhone / iPad",
-      "ANDROID": "Android",
-      "BOTH": "Oba systemy",
-      "UNDECIDED": "Jeszcze nie wiem"
-    },
     "accountEmailHint": "Użyj tego samego adresu e-mail podczas zakładania konta Fishki — na niego przypiszemy dostęp do bety i 12 miesięcy Premium po premierze.",
     "formSaveError": "Nie udało się zapisać danych. Spróbuj ponownie — nie przekierujemy Cię do płatności, dopóki zgłoszenie nie zostanie bezpiecznie zapisane.",
     "purchaseConsentBefore": "Akceptuję ",
@@ -648,8 +641,7 @@
     "buyCta": "Kup Wczesny Dostęp",
     "buyWithBlik": "Kup przez BLIK lub szybki przelew",
     "buyWithCard": "Kup kartą, Apple Pay lub Google Pay",
-    "buyCtaDisabled": "Uzupełnij imię i nazwisko, poprawny e-mail, wybierz urządzenie i zaznacz obowiązkowe zgody.",
-    "redirecting": "Przygotowujemy bezpieczną płatność…",
+    "buyCtaDisabled": "Uzupełnij imię i nazwisko, poprawny e-mail oraz zaznacz obowiązkowe zgody.",
     "readTerms": "Przeczytaj warunki zakupu"
   },
   "footer": {
@@ -666,14 +658,6 @@
     "preorderTerms": "Warunki preorderu",
     "contactPlaceholder": "Miejsce na adres email kontaktowy."
   },
-  "preorderThankYou": {
-    "badge": "Płatność przyjęta",
-    "title": "Dziękujemy za zakup Fishki Early Access!",
-    "body": "Operator płatności przekazuje nam teraz potwierdzenie transakcji. Zwykle trwa to chwilę. Dostęp do bety przypiszemy do adresu e-mail podanego przed płatnością.",
-    "accountHint": "Podczas tworzenia konta Fishki użyj dokładnie tego samego adresu e-mail. Gdy płatność zostanie potwierdzona, plan Beta Tester aktywuje się automatycznie.",
-    "receiptHint": "Potwierdzenie płatności lub rachunek otrzymasz od wybranego operatora płatności.",
-    "back": "Wróć na stronę główną"
-  },
   "terms": {
     "back": "Wróć na stronę główną",
     "badge": "Dokument",
@@ -686,7 +670,7 @@
     "back": "Wróć do preorderu",
     "badge": "Regulamin preorderu",
     "title": "Regulamin sprzedaży preorderu Fishki Early Access",
-    "lastUpdated": "Ostatnia aktualizacja: 08.09.2026 r.",
+    "lastUpdated": "Ostatnia aktualizacja: 20.06.2026 r.",
     "intro": "",
     "sections": [
       {
@@ -742,7 +726,7 @@
               "możliwość testowania aplikacji i zgłaszania opinii,",
               "możliwość wpływania na priorytety rozwoju produktu, w tym głosowania na kolejność wdrażania funkcji,",
               "12 miesięcy dostępu do planu premium po publicznym uruchomieniu aplikacji,",
-              "cenę preorderową zależną od regionu: 69 PLN w Polsce, 16,99 EUR w Europie poza Polską albo 18,99 USD w USA i pozostałych krajach, zamiast planowanej ceny rocznej po premierze: odpowiednio 149 PLN, 35 EUR albo 40 USD."
+              "cenę preorderową zależną od regionu: 59 PLN w Polsce, 13,99 EUR w Europie poza Polską albo 15,99 USD w USA i pozostałych krajach, zamiast planowanej ceny rocznej po premierze: odpowiednio 149 PLN, 35 EUR albo 40 USD."
             ]
           },
           {
@@ -756,7 +740,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text": "Cena preorderu zależy od regionu użytkownika i wynosi: 69 PLN w Polsce, 16,99 EUR w Europie poza Polską albo 18,99 USD w USA i pozostałych krajach."
+            "text": "Cena preorderu zależy od regionu użytkownika i wynosi: 59 PLN w Polsce, 13,99 EUR w Europie poza Polską albo 15,99 USD w USA i pozostałych krajach."
           },
           {
             "type": "paragraph",
