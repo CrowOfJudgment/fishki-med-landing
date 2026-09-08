@@ -95,7 +95,7 @@
     "back": "Back to homepage",
     "badge": "Privacy",
     "title": "Fishki Privacy Policy",
-    "lastUpdated": "Last updated: June 20, 2026",
+    "lastUpdated": "Last updated: September 8, 2026",
     "intro": "",
     "sections": [
       { "title": "1. Data controller", "blocks": [
@@ -123,7 +123,7 @@
         { "type": "paragraph", "text": "These may include:" },
         { "type": "list", "items": ["website hosting providers,", "form providers,", "payment operators,", "email tool providers,", "analytics providers,", "application infrastructure providers."] },
         { "type": "paragraph", "text": "We currently use the following providers in particular:" },
-        { "type": "list", "items": ["Vercel — website hosting,", "Tally — forms,", "PayByLink — payments for the Polish version,", "Stripe — payments for the international version."] },
+        { "type": "list", "items": ["Vercel — website hosting,", "Tally — waitlist forms,", "Railway — application API hosting and preorder form processing,", "Supabase — database, user accounts and application data storage,", "PayByLink — payments for the Polish version,", "Stripe — payments for the international version."] },
         { "type": "paragraph", "text": "Providers process data only to the extent necessary to provide services to the Controller." }
       ] },
       { "title": "5. Transfers outside the European Economic Area", "blocks": [

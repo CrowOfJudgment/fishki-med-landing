@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { useT } from "@/lib/i18n-context";
+import { useLocale, useT } from "@/lib/i18n-context";
 import type { PricingRegion } from "@/lib/pricing-region";
 
 const POLISH_PREORDER_PAYMENT_URL = "https://paybylink.pl/linkPay/817cf10ad7e92cd595dd328477eb7974";
@@ -14,20 +14,64 @@ export default function Preorder({
   pricingRegion: PricingRegion;
 }) {
   const t = useT();
+  const locale = useLocale();
   const pricing = t.preorder.pricing[pricingRegion];
   const [acceptedPreorderTerms, setAcceptedPreorderTerms] = useState(false);
   const [acceptedTermsOfUse, setAcceptedTermsOfUse] = useState(false);
   const [acceptedPrivacyPolicy, setAcceptedPrivacyPolicy] = useState(false);
   const [showConsentError, setShowConsentError] = useState(false);
-  const canBuy = acceptedPreorderTerms && acceptedTermsOfUse && acceptedPrivacyPolicy;
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [website, setWebsite] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [submissionError, setSubmissionError] = useState<string | null>(null);
+  const validName = fullName.trim().length >= 2;
+  const validEmail = /^\S+@\S+\.\S+$/.test(email.trim());
+  const canBuy =
+    validName &&
+    validEmail &&
+    acceptedPreorderTerms &&
+    acceptedTermsOfUse &&
+    acceptedPrivacyPolicy;
 
-  const handleBuyClick = (paymentUrl: string) => {
+  const handleBuyClick = async (
+    paymentUrl: string,
+    paymentProvider: "STRIPE" | "PAY_BY_LINK",
+  ) => {
     if (!canBuy) {
       setShowConsentError(true);
       return;
     }
-
-    window.location.href = paymentUrl;
+    setSubmitting(true);
+    setSubmissionError(null);
+    try {
+      const response = await fetch("/api/preorders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          submissionId: crypto.randomUUID(),
+          fullName: fullName.trim(),
+          email: email.trim(),
+          paymentProvider,
+          pricingRegion:
+            pricingRegion === "pl"
+              ? "PL"
+              : pricingRegion === "eu"
+                ? "EU"
+                : "INTERNATIONAL",
+          locale,
+          preorderTermsVersion: "2026-07-21",
+          termsOfUseVersion: "2026-06-20",
+          privacyPolicyVersion: "2026-09-08",
+          website,
+        }),
+      });
+      if (!response.ok) throw new Error("Preorder registration failed");
+      window.location.assign(paymentUrl);
+    } catch {
+      setSubmissionError(t.preorder.formSaveError);
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -119,6 +163,48 @@ export default function Preorder({
                   {t.preorder.placeholderLabel}
                 </p>
                 <div className="mt-5 space-y-3 text-left">
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    <label className="text-sm font-semibold text-[#002838]">
+                      {t.preorder.fullNameLabel}
+                      <input
+                        value={fullName}
+                        onChange={(event) => setFullName(event.target.value)}
+                        autoComplete="name"
+                        className={`mt-2 block min-h-12 w-full rounded-2xl border bg-white px-4 text-base font-normal outline-none transition focus:border-[#0F766E] focus:ring-4 focus:ring-[#78C2B7]/20 ${
+                          showConsentError && !validName
+                            ? "border-[#E86860]"
+                            : "border-[#B9DDD5]"
+                        }`}
+                      />
+                    </label>
+                    <label className="text-sm font-semibold text-[#002838]">
+                      {t.preorder.emailLabel}
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(event) => setEmail(event.target.value)}
+                        autoComplete="email"
+                        inputMode="email"
+                        className={`mt-2 block min-h-12 w-full rounded-2xl border bg-white px-4 text-base font-normal outline-none transition focus:border-[#0F766E] focus:ring-4 focus:ring-[#78C2B7]/20 ${
+                          showConsentError && !validEmail
+                            ? "border-[#E86860]"
+                            : "border-[#B9DDD5]"
+                        }`}
+                      />
+                    </label>
+                  </div>
+                  <p className="text-xs leading-5 text-[#274D53]">
+                    {t.preorder.accountEmailHint}
+                  </p>
+                  <label className="absolute -left-[10000px]" aria-hidden="true">
+                    Website
+                    <input
+                      value={website}
+                      onChange={(event) => setWebsite(event.target.value)}
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </label>
                   <label className={`flex cursor-pointer items-start gap-3 rounded-[1.15rem] border bg-white p-4 text-sm leading-6 text-[#274D53] transition ${
                     showConsentError && !acceptedPreorderTerms
                       ? "border-[#E86860] shadow-[0_0_0_3px_rgba(232,104,96,0.12)]"
@@ -220,7 +306,8 @@ export default function Preorder({
                 <div className="mt-6 flex flex-col gap-3">
                   <button
                     type="button"
-                    onClick={() => handleBuyClick(POLISH_PREORDER_PAYMENT_URL)}
+                    onClick={() => void handleBuyClick(POLISH_PREORDER_PAYMENT_URL, "PAY_BY_LINK")}
+                    disabled={submitting}
                     data-analytics-click={canBuy ? "preorder_buy_paybylink" : "preorder_buy_missing_consents"}
                     data-analytics-section="preorder"
                     className={`flex min-h-12 w-full items-center justify-center rounded-full px-5 py-3.5 text-center text-sm font-semibold text-white shadow-[0_14px_32px_rgba(232,104,96,0.24)] transition hover:-translate-y-0.5 ${
@@ -235,7 +322,8 @@ export default function Preorder({
                   </button>
                   <button
                     type="button"
-                    onClick={() => handleBuyClick(INTERNATIONAL_PREORDER_PAYMENT_URL)}
+                    onClick={() => void handleBuyClick(INTERNATIONAL_PREORDER_PAYMENT_URL, "STRIPE")}
+                    disabled={submitting}
                     data-analytics-click={canBuy ? "preorder_buy_stripe" : "preorder_buy_missing_consents"}
                     data-analytics-section="preorder"
                     className={`flex min-h-12 w-full items-center justify-center rounded-full border-2 bg-white px-5 py-3 text-center text-sm font-semibold text-[#002838] transition hover:-translate-y-0.5 hover:bg-[#E86860]/5 ${
@@ -252,6 +340,11 @@ export default function Preorder({
                 {showConsentError && !canBuy ? (
                   <p className="mt-3 rounded-2xl border border-[#E86860]/35 bg-[#E86860]/10 px-4 py-3 text-center text-xs font-medium leading-5 text-[#002838]">
                     {t.preorder.buyCtaDisabled}
+                  </p>
+                ) : null}
+                {submissionError ? (
+                  <p role="alert" className="mt-3 rounded-2xl border border-[#E86860]/35 bg-[#E86860]/10 px-4 py-3 text-center text-xs font-medium leading-5 text-[#002838]">
+                    {submissionError}
                   </p>
                 ) : null}
 

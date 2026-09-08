@@ -97,7 +97,7 @@
     "back": "Wróć na stronę główną",
     "badge": "Prywatność",
     "title": "Polityka prywatności Fishki",
-    "lastUpdated": "Ostatnia aktualizacja: 20.06.2026 r.",
+    "lastUpdated": "Ostatnia aktualizacja: 08.09.2026 r.",
     "intro": "",
     "sections": [
       { "title": "1. Administrator danych", "blocks": [
@@ -125,7 +125,7 @@
         { "type": "paragraph", "text": "Mogą to być w szczególności:" },
         { "type": "list", "items": ["dostawca hostingu strony,", "dostawca formularzy,", "operator płatności,", "dostawca narzędzi mailingowych,", "dostawca analityki,", "dostawca infrastruktury aplikacji."] },
         { "type": "paragraph", "text": "Obecnie korzystamy w szczególności z następujących dostawców:" },
-        { "type": "list", "items": ["Vercel — hosting strony,", "Tally — formularze,", "PayByLink — płatności dla polskiej wersji,", "Stripe — płatności dla wersji międzynarodowej."] },
+        { "type": "list", "items": ["Vercel — hosting strony,", "Tally — formularze waitlisty,", "Railway — hosting API aplikacji i obsługa formularza preorderu,", "Supabase — baza danych, konta użytkowników i przechowywanie danych aplikacji,", "PayByLink — płatności dla polskiej wersji,", "Stripe — płatności dla wersji międzynarodowej."] },
         { "type": "paragraph", "text": "Dostawcy przetwarzają dane wyłącznie w zakresie potrzebnym do świadczenia usług na rzecz Administratora." }
       ] },
       { "title": "5. Przekazywanie danych poza Europejski Obszar Gospodarczy", "blocks": [

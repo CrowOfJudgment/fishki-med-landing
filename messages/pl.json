@@ -625,6 +625,10 @@
     ],
     "trust": "To nie jest gotowa aplikacja produkcyjna. Kupujesz wcześniejszy dostęp do produktu w trakcie tworzenia. Możesz odstąpić od zakupu w ciągu 14 dni bez podawania przyczyny.",
     "placeholderLabel": "Kup Wczesny Dostęp",
+    "fullNameLabel": "Imię i nazwisko",
+    "emailLabel": "E-mail",
+    "accountEmailHint": "Użyj tego samego adresu e-mail podczas zakładania konta Fishki — na niego przypiszemy dostęp do bety i 12 miesięcy Premium po premierze.",
+    "formSaveError": "Nie udało się zapisać danych. Spróbuj ponownie — nie przekierujemy Cię do płatności, dopóki zgłoszenie nie zostanie bezpiecznie zapisane.",
     "purchaseConsentBefore": "Akceptuję ",
     "termsLink": "Regulamin sprzedaży preorderu Fishki",
     "purchaseConsentAfter": ".",
@@ -637,7 +641,7 @@
     "buyCta": "Kup Wczesny Dostęp",
     "buyWithBlik": "Kup przez BLIK lub szybki przelew",
     "buyWithCard": "Kup kartą, Apple Pay lub Google Pay",
-    "buyCtaDisabled": "Zaznacz obowiązkowe zgody, aby przejść do płatności.",
+    "buyCtaDisabled": "Uzupełnij imię i nazwisko, poprawny e-mail oraz zaznacz obowiązkowe zgody.",
     "readTerms": "Przeczytaj warunki zakupu"
   },
   "footer": {

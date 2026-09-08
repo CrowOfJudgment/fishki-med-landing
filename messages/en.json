@@ -625,6 +625,10 @@
     ],
     "trust": "This is not a finished production app. You are buying early access to a product that is still being developed. You may withdraw from the purchase within 14 days without giving a reason.",
     "placeholderLabel": "Buy Early Access",
+    "fullNameLabel": "Full name",
+    "emailLabel": "Email",
+    "accountEmailHint": "Use the same email when creating your Fishki account — we will assign beta access and 12 months of Premium after launch to it.",
+    "formSaveError": "We could not save your details. Please try again — we will not redirect you to payment until your registration is safely stored.",
     "purchaseConsentBefore": "I accept the ",
     "termsLink": "Fishki Preorder and Sales Terms",
     "purchaseConsentAfter": ".",
@@ -637,7 +641,7 @@
     "buyCta": "Buy Early Access",
     "buyWithBlik": "Pay with BLIK or instant bank transfer",
     "buyWithCard": "Pay by card, Apple Pay or Google Pay",
-    "buyCtaDisabled": "Accept the required terms to continue to payment.",
+    "buyCtaDisabled": "Enter your full name and a valid email, then accept the required terms.",
     "readTerms": "Read the purchase terms"
   },
   "footer": {
