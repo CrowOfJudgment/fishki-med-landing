@@ -7,11 +7,10 @@ import type { PricingRegion } from "@/lib/pricing-region";
 import {
   apiPricingRegion,
   isSafeCheckoutUrl,
-  payByLinkAvailable,
   PREORDER_DOCUMENT_VERSIONS,
+  PREORDER_PAYMENT_PROVIDER,
 } from "@/lib/preorder-checkout";
 
-type PaymentProvider = "STRIPE" | "PAY_BY_LINK";
 type PreferredPlatform = "IOS" | "ANDROID" | "BOTH" | "UNDECIDED";
 
 export default function Preorder({
@@ -33,7 +32,7 @@ export default function Preorder({
   const [website, setWebsite] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [submissionError, setSubmissionError] = useState<string | null>(null);
-  const submissionIds = useRef<Partial<Record<PaymentProvider, string>>>({});
+  const submissionId = useRef<string | null>(null);
   const validName = fullName.trim().length >= 2;
   const validEmail = /^\S+@\S+\.\S+$/.test(email.trim());
   const canBuy =
@@ -44,9 +43,7 @@ export default function Preorder({
     acceptedTermsOfUse &&
     acceptedPrivacyPolicy;
 
-  const handleBuyClick = async (
-    paymentProvider: PaymentProvider,
-  ) => {
+  const handleBuyClick = async () => {
     if (!canBuy) {
       setShowConsentError(true);
       return;
@@ -54,17 +51,15 @@ export default function Preorder({
     setSubmitting(true);
     setSubmissionError(null);
     try {
-      const submissionId = submissionIds.current[paymentProvider]
-        ?? crypto.randomUUID();
-      submissionIds.current[paymentProvider] = submissionId;
+      submissionId.current ??= crypto.randomUUID();
       const response = await fetch("/api/preorders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          submissionId,
+          submissionId: submissionId.current,
           fullName: fullName.trim(),
           email: email.trim(),
-          paymentProvider,
+          paymentProvider: PREORDER_PAYMENT_PROVIDER,
           pricingRegion: apiPricingRegion(pricingRegion),
           locale,
           preferredPlatform,
@@ -341,25 +336,9 @@ export default function Preorder({
                 </div>
 
                 <div className="mt-6 flex flex-col gap-3">
-                  {payByLinkAvailable(pricingRegion) ? (
-                    <button
-                      type="button"
-                      onClick={() => void handleBuyClick("PAY_BY_LINK")}
-                      disabled={submitting}
-                      data-analytics-click={canBuy ? "preorder_buy_paybylink" : "preorder_buy_missing_consents"}
-                      data-analytics-section="preorder"
-                      className={`flex min-h-12 w-full items-center justify-center rounded-full px-5 py-3.5 text-center text-sm font-semibold text-white shadow-[0_14px_32px_rgba(232,104,96,0.24)] transition hover:-translate-y-0.5 ${
-                        showConsentError && !canBuy
-                          ? "bg-[#E86860] ring-4 ring-[#E86860]/20"
-                          : "bg-[#E86860] hover:bg-[#D85A52]"
-                      }`}
-                    >
-                      {submitting ? t.preorder.redirecting : t.preorder.buyWithBlik}
-                    </button>
-                  ) : null}
                   <button
                     type="button"
-                    onClick={() => void handleBuyClick("STRIPE")}
+                    onClick={() => void handleBuyClick()}
                     disabled={submitting}
                     data-analytics-click={canBuy ? "preorder_buy_stripe" : "preorder_buy_missing_consents"}
                     data-analytics-section="preorder"

@@ -6,14 +6,12 @@ export const PREORDER_DOCUMENT_VERSIONS = {
   privacyPolicyVersion: "2026-09-08-v2",
 } as const;
 
+export const PREORDER_PAYMENT_PROVIDER = "STRIPE" as const;
+
 export function apiPricingRegion(region: PricingRegion) {
   if (region === "pl") return "PL" as const;
   if (region === "eu") return "EU" as const;
   return "INTERNATIONAL" as const;
-}
-
-export function payByLinkAvailable(region: PricingRegion) {
-  return region === "pl";
 }
 
 export function isSafeCheckoutUrl(value: unknown): value is string {

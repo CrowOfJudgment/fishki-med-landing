@@ -3,8 +3,8 @@ import test from "node:test";
 import {
   apiPricingRegion,
   isSafeCheckoutUrl,
-  payByLinkAvailable,
   PREORDER_DOCUMENT_VERSIONS,
+  PREORDER_PAYMENT_PROVIDER,
 } from "../lib/preorder-checkout.ts";
 
 test("maps every displayed region to the backend contract", () => {
@@ -13,10 +13,8 @@ test("maps every displayed region to the backend contract", () => {
   assert.equal(apiPricingRegion("us"), "INTERNATIONAL");
 });
 
-test("offers PayByLink only for the PLN checkout", () => {
-  assert.equal(payByLinkAvailable("pl"), true);
-  assert.equal(payByLinkAvailable("eu"), false);
-  assert.equal(payByLinkAvailable("us"), false);
+test("uses Stripe as the only preorder checkout provider", () => {
+  assert.equal(PREORDER_PAYMENT_PROVIDER, "STRIPE");
 });
 
 test("accepts only absolute HTTPS checkout URLs", () => {
