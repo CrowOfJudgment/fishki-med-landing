@@ -647,7 +647,9 @@
     "privacyConsentAfter": ".",
     "buyCta": "Buy Early Access",
     "buyWithBlik": "Pay with BLIK or instant bank transfer",
-    "buyWithCard": "Pay by card, Apple Pay or Google Pay",
+    "buyWithCard": "Buy the preorder",
+    "alreadyPurchasedError": "A preorder purchase and beta access are already assigned to this email address.",
+    "paymentProcessingError": "The payment for this email address has already been received and is being processed.",
     "buyCtaDisabled": "Enter your full name and a valid email, choose a device, then accept the required terms.",
     "redirecting": "Preparing secure checkout…",
     "readTerms": "Read the purchase terms"

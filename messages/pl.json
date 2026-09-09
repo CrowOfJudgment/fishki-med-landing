@@ -647,7 +647,9 @@
     "privacyConsentAfter": ".",
     "buyCta": "Kup Wczesny Dostęp",
     "buyWithBlik": "Kup przez BLIK lub szybki przelew",
-    "buyWithCard": "Kup kartą, Apple Pay lub Google Pay",
+    "buyWithCard": "Kup preorder",
+    "alreadyPurchasedError": "Ten adres e-mail ma już przypisany zakup preorderu i dostęp do bety.",
+    "paymentProcessingError": "Płatność dla tego adresu e-mail została już przyjęta i jest właśnie przetwarzana.",
     "buyCtaDisabled": "Uzupełnij imię i nazwisko, poprawny e-mail, wybierz urządzenie i zaznacz obowiązkowe zgody.",
     "redirecting": "Przygotowujemy bezpieczną płatność…",
     "readTerms": "Przeczytaj warunki zakupu"

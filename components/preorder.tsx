@@ -7,6 +7,7 @@ import type { PricingRegion } from "@/lib/pricing-region";
 import {
   apiPricingRegion,
   isSafeCheckoutUrl,
+  preorderProblemMessageKey,
   PREORDER_DOCUMENT_VERSIONS,
   PREORDER_PAYMENT_PROVIDER,
 } from "@/lib/preorder-checkout";
@@ -67,7 +68,18 @@ export default function Preorder({
           website,
         }),
       });
-      if (!response.ok) throw new Error("Preorder registration failed");
+      if (!response.ok) {
+        const problem = (await response.json().catch(() => null)) as
+          | { code?: unknown }
+          | null;
+        const messageKey = preorderProblemMessageKey(problem);
+        if (messageKey) {
+          setSubmissionError(t.preorder[messageKey]);
+          setSubmitting(false);
+          return;
+        }
+        throw new Error("Preorder registration failed");
+      }
       const result = (await response.json()) as { checkoutUrl?: unknown };
       if (!isSafeCheckoutUrl(result.checkoutUrl)) {
         throw new Error("Checkout URL is missing");

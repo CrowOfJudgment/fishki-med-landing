@@ -3,6 +3,7 @@ import test from "node:test";
 import {
   apiPricingRegion,
   isSafeCheckoutUrl,
+  preorderProblemMessageKey,
   PREORDER_DOCUMENT_VERSIONS,
   PREORDER_PAYMENT_PROVIDER,
 } from "../lib/preorder-checkout.ts";
@@ -31,4 +32,17 @@ test("pins the exact legal document versions accepted at purchase", () => {
     termsOfUseVersion: "2026-06-20",
     privacyPolicyVersion: "2026-09-08-v2",
   });
+});
+
+test("maps duplicate preorder problems to dedicated customer messages", () => {
+  assert.equal(
+    preorderProblemMessageKey({ code: "PREORDER_ALREADY_PURCHASED" }),
+    "alreadyPurchasedError",
+  );
+  assert.equal(
+    preorderProblemMessageKey({ code: "PREORDER_PAYMENT_PROCESSING" }),
+    "paymentProcessingError",
+  );
+  assert.equal(preorderProblemMessageKey({ code: "SOMETHING_ELSE" }), null);
+  assert.equal(preorderProblemMessageKey(null), null);
 });

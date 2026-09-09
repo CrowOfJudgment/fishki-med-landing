@@ -22,3 +22,14 @@ export function isSafeCheckoutUrl(value: unknown): value is string {
     return false;
   }
 }
+
+export function preorderProblemMessageKey(value: unknown) {
+  if (!value || typeof value !== "object" || !("code" in value)) return null;
+  if (value.code === "PREORDER_ALREADY_PURCHASED") {
+    return "alreadyPurchasedError" as const;
+  }
+  if (value.code === "PREORDER_PAYMENT_PROCESSING") {
+    return "paymentProcessingError" as const;
+  }
+  return null;
+}
