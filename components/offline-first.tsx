@@ -33,18 +33,15 @@ export default function OfflineFirst() {
             </div>
 
             <div className="mt-7 space-y-3 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mt-0 lg:self-center">
-              {offline.downloads.map((item: string, index: number) => (
+              {offline.downloads.map((item: string) => (
                 <div
                   key={item}
                   className="flex items-center gap-4 rounded-2xl bg-white/10 p-4 ring-1 ring-white/15"
                 >
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/12 text-lg font-light">
-                    {index === 2 ? "✓" : "↓"}
+                    ✓
                   </span>
                   <span className="text-sm font-semibold">{item}</span>
-                  <span className="ml-auto text-xs font-semibold text-white/45">
-                    {index === 0 ? "38 MB" : index === 1 ? "126 MB" : "420 MB"}
-                  </span>
                 </div>
               ))}
             </div>

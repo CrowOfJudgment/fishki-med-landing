@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Fishki — fiszki medyczne bez walki z edytorem",
-    "description": "Twórz fiszki medyczne z notatek, zdjęć, atlasów i wykładów. Ucz się offline i powtarzaj materiał według planu do kolokwium, egzaminu albo sesji."
+    "title": "Fishki - medyczne fiszki i inteligentny plan nauki",
+    "description": "Fishki to działająca beta aplikacji do medycznych fiszek: FSRS, planowanie egzaminów, import materiałów, obrazy i nauka offline."
   },
   "header": {
     "problem": "Dlaczego Fishki",
@@ -10,25 +10,25 @@
     "features": "Funkcje",
     "how": "Jak to działa",
     "demo": "Demo",
-    "waitlist": "Lista oczekujących",
-    "cta": "Lista oczekujących",
-    "ctaAria": "Dołącz do listy oczekujących",
-    "preorderCta": "Wczesny dostęp",
-    "preorderCtaAria": "Przejdź do rezerwacji wczesnego dostępu",
+    "waitlist": "Aktualności",
+    "cta": "Aktualności",
+    "ctaAria": "Zapisz się na aktualności o Fishki",
+    "preorderCta": "Dostęp do bety",
+    "preorderCtaAria": "Przejdź do zakupu dostępu do bety",
     "openApp": "Otwórz aplikację",
     "openAppAria": "Otwórz aplikację webową Fishki"
   },
   "hero": {
-    "badge": "Fiszki zaprojektowane dla studentów medycyny",
-    "title": "Przestań wybierać między Anki a Quizletem",
-    "subtitle": "Fishki łączy szybki, intuicyjny edytor nowoczesnych aplikacji do fiszek z mocnym systemem powtórek, którego studenci medycyny naprawdę potrzebują.",
-    "primaryCta": "Dołącz do listy oczekujących",
-    "secondaryCta": "Zarezerwuj wczesny dostęp",
-    "validation": "Tworzone na podstawie rozmów ze studentami medycyny korzystającymi z aplikacji do fiszek.",
+    "badge": "Beta Fishki jest już dostępna",
+    "title": "Medyczne fiszki, które podpowiadają, czego uczyć się dzisiaj",
+    "subtitle": "Twórz fiszki z tekstu i obrazów, korzystaj z inteligentnych powtórek i przygotowuj się do kilku egzaminów jednocześnie. Kup Wczesny dostęp i dołącz do zamkniętej bety Fishki.",
+    "primaryCta": "Zobacz, jak działają Fishki",
+    "secondaryCta": "Dołącz do bety",
+    "validation": "Pierwsi studenci medycyny już testują Fishki. Dołącz do nich i pomóż nam dopracować aplikację przed publicznym startem.",
     "highlights": [
-      "Szybkie tworzenie fiszek",
-      "Powtórki rozłożone w czasie",
-      "Nauka offline"
+      "Inteligentne powtórki FSRS",
+      "Planowanie nauki do egzaminów",
+      "Import materiałów, obrazy i nauka offline"
     ],
     "mockup": {
       "deck": "Farmakologia",
@@ -44,9 +44,9 @@
     }
   },
   "problem": {
-    "badge": "Bez zbędnego kompromisu",
+    "badge": "Prostota bez rezygnacji ze skuteczności",
     "heading": "Dlaczego Fishki",
-    "intro": "Studenci medycyny potrzebują szybkiego edytora i poważnego systemu powtórek. Dzisiejsze narzędzia zwykle oferują tylko jedno z nich.",
+    "intro": "Szybkie tworzenie fiszek nie powinno oznaczać rezygnacji ze skutecznych powtórek. Fishki łączą prosty edytor z systemem przygotowanym do nauki dużej ilości materiału.",
     "tools": [
       {
         "name": "Tradycyjne aplikacje",
@@ -60,7 +60,7 @@
       },
       {
         "name": "Proste aplikacje",
-        "label": "Prosty, ale ograniczony",
+        "label": "Proste, ale ograniczone",
         "text": "",
         "points": [
           "Brak zaawansowanych powtórek",
@@ -70,12 +70,12 @@
       },
       {
         "name": "Fishki",
-        "label": "Proste tworzenie. Zaawansowane powtórki.",
+        "label": "Proste tworzenie. Skuteczna nauka.",
         "text": "",
         "points": [
           "Proste i szybkie tworzenie fiszek",
-          "Wybór między szybkimi i zaawansowanymi trybami nauki",
-          "Dostosowane pod naukę medycyny",
+          "Dwa tryby nauki: szybki i inteligentny",
+          "Stworzone z myślą o nauce medycyny",
           "Wygodny tryb nauki offline"
         ]
       }
@@ -89,8 +89,8 @@
     "offlineHighlight": {
       "badge": "Offline-first",
       "heading": "Nauka nie powinna zależeć od zasięgu.",
-      "text": "Pobierz dokładnie tyle materiału, ile potrzebujesz. Talia, folder lub cały przedmiot pozostają dostępne bez internetu, a postęp synchronizuje się później.",
-      "downloads": ["Talia", "Folder", "Przedmiot"],
+      "text": "Twórz fiszki i ucz się bez internetu. Dane pozostają na urządzeniu, a zmiany synchronizują się po odzyskaniu połączenia.",
+      "downloads": ["Talie i fiszki dostępne lokalnie", "Obrazy zapisane razem z fiszkami", "Historia nauki i harmonogram powtórek"],
       "places": "Na uczelni · w pociągu · w bibliotece · między zajęciami"
     },
     "items": [
@@ -112,28 +112,28 @@
       {
         "icon": "offline",
         "heading": "Miej materiały offline",
-        "text": "Pobieraj talie, foldery albo całe przedmioty i ucz się także bez internetu."
+        "text": "Twórz fiszki, przeglądaj talie i ucz się także bez internetu. Zmiany zsynchronizują się po odzyskaniu połączenia."
       }
     ]
   },
   "demo": {
-    "badge": "Klikalny prototyp produktu",
-    "heading": "Stwórz pierwszą medyczną fiszkę w kilka sekund.",
-    "intro": "Przejdź przez krótkie demo i zobacz, jak Fishki zamieniają medyczne notatki w czyste fiszki gotowe do skutecznej powtórki.",
-    "screenLabel": "Interaktywny prototyp",
+    "badge": "Interaktywny podgląd bety",
+    "heading": "Stwórz pierwszą medyczną fiszkę w kilka chwil",
+    "intro": "Wypróbuj interaktywne demo i zobacz, jak łatwo zamienić medyczne notatki w fiszki gotowe do nauki.",
+    "screenLabel": "Interaktywny podgląd",
     "showcaseBadge": "Jak działa Fishki",
     "showcaseHeading": "Od pierwszej fiszki do planu na egzamin",
-    "showcaseIntro": "Zobacz spójną historię tworzenia, szybkiej nauki, planowania egzaminu oraz pracy offline.",
-    "playBadge": "Pierwsza fiszka w 10 sekund",
+    "showcaseIntro": "Zobacz cały proces: od utworzenia fiszki, przez inteligentne powtórki, aż po plan nauki do egzaminu.",
+    "playBadge": "Utwórz pierwszą fiszkę",
     "playHeading": "Wypróbuj demo i stwórz swoją pierwszą fiszkę",
     "playIntro": "",
     "postDemoCta": {
-      "title": "Prototyp pokazuje kierunek produktu. Jeżeli chcesz wesprzeć rozwój Fishki, możesz wybrać swój poziom zaangażowania.",
-      "text": "Możesz dołączyć do darmowej listy oczekujących albo zarezerwować wczesny dostęp ze specjalnymi benefitami, jeśli chcesz wcześniej testować Fishki i mieć wpływ na priorytety.",
-      "waitlist": "Dołącz do listy oczekujących",
-      "waitlistAria": "Dołącz do darmowej listy oczekujących Fishki",
-      "preorder": "Zarezerwuj wczesny dostęp",
-      "preorderAria": "Przejdź do sekcji wczesnego dostępu"
+      "title": "Fishki są już w becie i rozwijają się razem z pierwszymi użytkownikami.",
+      "text": "Kup Wczesny dostęp, aby otrzymać prywatny dostęp do testów oraz 12 miesięcy planu Premium po publicznym starcie. Jeśli jeszcze nie chcesz kupować, zapisz się na aktualności.",
+      "waitlist": "Chcę otrzymywać aktualności",
+      "waitlistAria": "Zapisz się na aktualności o Fishki",
+      "preorder": "Uzyskaj dostęp do bety",
+      "preorderAria": "Przejdź do zakupu dostępu do bety"
     },
     "stories": {
       "choose": "Wybierz historyjkę",
@@ -191,7 +191,7 @@
         "number": "01",
         "label": "Talie",
         "title": "Zacznij od uporządkowanego materiału",
-        "description": "Wybierz talię do edycji albo od razu rozpocznij naukę konkretnego przedmiotu."
+        "description": "Otwórz wybraną talię, edytuj jej fiszki albo od razu rozpocznij naukę."
       },
       {
         "key": "editor",
@@ -205,20 +205,20 @@
         "number": "03",
         "label": "Szybka nauka",
         "title": "Wybierz kierunek kart",
-        "description": "Powtarzaj przód–tył, tył–przód albo mieszaj oba kierunki w jednej szybkiej sesji."
+        "description": "Powtarzaj przód-tył, tył-przód albo mieszaj oba kierunki w jednej szybkiej sesji."
       },
       {
         "key": "review",
         "number": "04",
         "label": "Powtórka",
-        "title": "Oceniaj bez zbędnego tarcia",
-        "description": "Odwracaj fiszki i wybieraj tylko „Umiem” albo „Nie umiem” w trybie Szybkiej Nauki lub wybierz bardziej zaawansowane Inteligentne Powtórki."
+        "title": "Skup się na odpowiedzi, nie na obsłudze",
+        "description": "W Szybkiej nauce wystarczy ocena „Umiem” lub „Nie umiem”. Inteligentne powtórki dokładniej dopasują kolejne terminy nauki."
       },
       {
         "key": "plannerSetup",
         "number": "05",
         "label": "Planner",
-        "title": "Powiedz, do czego i kiedy się uczysz",
+        "title": "Ustaw egzamin i zakres materiału",
         "description": "Wybierz egzamin, jego datę, talie do opanowania oraz liczbę dni dostępnych na naukę."
       },
       {
@@ -226,21 +226,7 @@
         "number": "06",
         "label": "Plan dnia",
         "title": "Konkretny plan na każdy dzień",
-        "description": "Fishki rozdzielają nowe, powtórkowe i trudne karty tak, aby materiał był gotowy przed egzaminem."
-      },
-      {
-        "key": "testMode",
-        "number": "07",
-        "label": "Wkrótce",
-        "title": "Sprawdź, czy naprawdę umiesz",
-        "description": "Tryb testu pozwoli wpisywać odpowiedzi, wybierać opcje lub odpowiadać ustnie, zamiast tylko rozpoznawać tył karty."
-      },
-      {
-        "key": "offline",
-        "number": "08",
-        "label": "Offline",
-        "title": "Zabierz cały przedmiot ze sobą",
-        "description": "Pobierz talię, folder albo cały przedmiot i ucz się bez internetu na uczelni, w pociągu lub bibliotece."
+        "description": "Fishki dopasowują codzienny plan do terminu egzaminu, zakresu materiału i Twojego tempa nauki."
       }
     ],
     "tapHint": "Dwa przepływy produktu",
@@ -277,7 +263,7 @@
         "flow": "study",
         "nav": "Wybierz tryb",
         "title": "Wybierz sposób nauki",
-        "description": "Szybka nauka jest dostępna od razu. Inteligentne powtórki są zaplanowane jako kolejny etap produktu."
+        "description": "Wybierz swobodną szybką naukę albo inteligentne powtórki wyznaczane przez FSRS. Oba tryby korzystają ze wspólnego postępu."
       },
       {
         "key": "review",
@@ -298,7 +284,7 @@
       "decksTitle": "Twoje talie",
       "decksTab": "Fiszki",
       "plannerTab": "Nauka",
-      "downloadsTab": "Offline",
+      "downloadsTab": "Odkrywaj",
       "profileTab": "Profil",
       "addDeck": "Dodaj talię",
       "searchDecks": "Szukaj talii",
@@ -308,8 +294,8 @@
       "cancel": "Anuluj",
       "createDeck": "Utwórz talię",
       "backNavigation": "Wstecz",
-      "deckAnatomy": "Anatomia — kończyna górna",
-      "deckPharmacology": "Farmakologia — antybiotyki",
+      "deckAnatomy": "Anatomia - kończyna górna",
+      "deckPharmacology": "Farmakologia - antybiotyki",
       "deckPathology": "Patofizjologia",
       "due": "na dziś",
       "cards": "kart",
@@ -324,7 +310,7 @@
       "sampleCardOne": "Kości kończyny górnej",
       "sampleCardTwo": "Splot ramienny",
       "sampleCardThree": "Mięśnie stożka rotatorów",
-      "sampleCardFour": "Nerw przeponowy — C3–C5",
+      "sampleCardFour": "Nerw przeponowy - C3-C5",
       "sampleCardFive": "Tętnica pachowa i jej gałęzie",
       "sampleCardSix": "Przestrzenie anatomiczne pachy",
       "sampleCardSeven": "Unerwienie mięśni ramienia",
@@ -346,14 +332,14 @@
       "front": "Przód",
       "back": "Tył",
       "frontText": "Jaki nerw unerwia przeponę?",
-      "backText": "Nerw przeponowy — C3, C4, C5.",
+      "backText": "Nerw przeponowy - C3, C4, C5.",
       "note": "Notatka",
       "clozeBefore": "Przepona jest unerwiona przez",
       "clozeTermOne": "nerw przeponowy",
       "clozeMiddle": "wychodzący z segmentów",
-      "clozeTermTwo": "C3–C5",
+      "clozeTermTwo": "C3-C5",
       "clozeQuestion": "Przepona jest unerwiona przez […] wychodzący z segmentów […].",
-      "clozeAnswer": "nerw przeponowy · C3–C5",
+      "clozeAnswer": "nerw przeponowy · C3-C5",
       "imageArea": "Miejsce na obraz medyczny",
       "addImage": "Dodaj obraz",
       "removeImage": "Usuń obraz",
@@ -384,7 +370,6 @@
       "previewTitle": "Podgląd fiszki",
       "chooseStudyMode": "Wybierz tryb nauki",
       "availableNow": "Dostępne",
-      "comingSoon": "Wkrótce",
       "quickStudyTitle": "Szybka nauka",
       "quickStudyDescription": "Błyskawiczna sesja z prostą oceną „Umiem / Nie umiem”. Idealna przed kolokwium lub po wykładzie.",
       "quickStudyInfo": "Informacje o szybkiej nauce",
@@ -407,7 +392,7 @@
       "frontSide": "Przód karty",
       "backSide": "Odpowiedź",
       "question": "Jaki nerw unerwia przeponę?",
-      "answer": "Nerw przeponowy — C3, C4, C5.",
+      "answer": "Nerw przeponowy - C3, C4, C5.",
       "showAnswer": "Pokaż odpowiedź",
       "continueReview": "Przejdź do oceny",
       "reviewTitle": "Pierwsza powtórka",
@@ -446,18 +431,6 @@
       "todayPharmacology": "Trudne fiszki z farmakologii",
       "plannedForToday": "Zaplanowane na dziś",
       "startTodayPlan": "Rozpocznij plan na dziś",
-      "testModeTitle": "Tryb testu",
-      "testModeInfo": "Informacje o trybie testu",
-      "testModeHeading": "Symulacja sprawdzianu z talii",
-      "testModeDescription": "Nie odkrywaj tylko odpowiedzi. Najpierw odpowiedz samodzielnie, a dopiero później porównaj wynik.",
-      "testTyped": "Wpisywanie odpowiedzi",
-      "testChoice": "Wybór jednej z opcji",
-      "testSpoken": "Odpowiedź ustna",
-      "testMental": "Odpowiedź mentalna i porównanie",
-      "testUseCases": "Przed kolokwium, egzaminem i wtedy, gdy chcesz sprawdzić realne przypominanie zamiast rozpoznawania.",
-      "studyPlannerModeTitle": "Plan nauki",
-      "studyPlannerModeInfo": "Informacje o planie nauki",
-      "studyPlannerModeDescription": "To tryb pracy rozkładający cały materiał na dni prowadzące do egzaminu.",
       "plannerChooseExam": "Wybierz egzamin",
       "plannerChooseDate": "Ustaw datę egzaminu",
       "plannerChooseDecks": "Wskaż zestawy do opanowania",
@@ -465,23 +438,13 @@
       "plannerTodayExample": "Przykładowy plan na dziś:",
       "plannerExampleAnatomy": "40 nowych fiszek z anatomii",
       "plannerExamplePhysiology": "25 powtórek z fizjologii",
-      "plannerExamplePharmacology": "10 trudnych fiszek z farmakologii",
-      "offlineTitle": "Nauka offline",
-      "offlineReady": "Gotowe offline",
-      "offlineHeading": "Ucz się bez połączenia",
-      "offlineDescription": "Pobrane materiały działają bez internetu, a postęp zsynchronizuje się później.",
-      "offlineDeck": "Talia",
-      "offlineFolder": "Folder",
-      "offlineSubject": "Cały przedmiot",
-      "offlineFolderName": "Anatomia — semestr 1",
-      "offlineSubjectName": "Farmakologia",
-      "offlinePlaces": "Na uczelni · w pociągu · w bibliotece · między zajęciami"
+      "plannerExamplePharmacology": "10 trudnych fiszek z farmakologii"
     }
   },
   "useCases": {
     "badge": "Stworzone pod medycynę",
     "heading": "Materiał medyczny rzadko mieści się w jednym zdaniu.",
-    "intro": "Fishki mają wspierać obrazy, schematy, klasyfikacje i odpowiedzi złożone z wielu punktów - bez upychania ich w zbyt prosty format.",
+    "intro": "Fishki obsługują obrazy, schematy, klasyfikacje i rozbudowane zagadnienia medyczne bez komplikowania tworzenia fiszek.",
     "items": [
       {
         "label": "Anatomia",
@@ -496,7 +459,7 @@
       {
         "label": "Patologia",
         "title": "Obrazy i preparaty",
-        "text": "Dodawaj zdjęcia po obu stronach i zaznaczaj charakterystyczne cechy."
+        "text": "Dodawaj zdjęcia po obu stronach fiszki i zakrywaj najważniejsze elementy obrazu."
       },
       {
         "label": "Interna",
@@ -506,12 +469,12 @@
       {
         "label": "Fizjologia",
         "title": "Mechanizmy i zależności",
-        "text": "Twórz karty odwrócone i sprawdzaj rozumienie w obu kierunkach."
+        "text": "Powtarzaj materiał od przodu do tyłu, od tyłu do przodu albo w obu kierunkach."
       },
       {
         "label": "Egzaminy",
-        "title": "Odpowiedzi punktowe",
-        "text": "Oznacz dokładnie ten element wielopunktowej odpowiedzi, którego zabrakło."
+        "title": "Złożone zagadnienia",
+        "text": "Rozbijaj dłuższy materiał na konkretne fiszki i wracaj do tych, które sprawiają największą trudność."
       }
     ]
   },
@@ -537,24 +500,24 @@
     ]
   },
   "cta": {
-    "badge": "Lista oczekujących",
-    "title": "Zostaw maila, a damy znać, kiedy Fishki będą dostępne.",
-    "subtitle": "Dołącz do listy oczekujących, jeśli chcesz śledzić rozwój Fishki i dostać informację o starcie produktu.",
+    "badge": "Aktualności",
+    "title": "Bądź na bieżąco z Fishki",
+    "subtitle": "Zostaw swój e-mail, a damy Ci znać o nowych wersjach bety, kolejnych platformach i publicznym starcie Fishki.",
     "benefits": [
-      "Informacja, kiedy Fishki będą dostępne",
-      "Konkretne aktualizacje o produkcie",
+      "Informacje o nowych wersjach bety",
+      "Konkretne aktualizacje o produkcie i platformach",
       "Bez spamu i bez zobowiązań"
     ],
-    "cta": "Lista oczekujących",
-    "formNote": "Formularz zajmuje około minuty. Jeśli chcesz mocniej wesprzeć rozwój Fishki i skorzystać ze specjalnych benefitów, sprawdź też wczesny dostęp w preorderze.",
-    "preorderLink": "Chcę zobaczyć wczesny dostęp",
-    "preorderAria": "Przejdź do płatnej rezerwacji wczesnego dostępu"
+    "cta": "Zapisz mnie na aktualności",
+    "formNote": "Jeśli chcesz otrzymywać tylko informacje o rozwoju Fishki, zapisz się na aktualności. Jeśli chcesz testować aplikację, wybierz Wczesny dostęp.",
+    "preorderLink": "Chcę uzyskać dostęp do bety",
+    "preorderAria": "Przejdź do zakupu dostępu do bety"
   },
   "proof": {
-    "badge": "Budowane na podstawie rozmów z 32 studentami",
-    "heading": "Co studenci medycyny chcieliby mieć w narzędziu do fiszek",
+    "badge": "Fishki powstają razem ze studentami",
+    "heading": "32 rozmowy ze studentami pokazały, czego brakuje obecnym aplikacjom",
     "description": "",
-    "footer": "Po rozmowach ze studentami medycyny wyłonił się jasny wzorzec: tworzenie fiszek trwa zbyt długo, praca z obrazami jest niewygodna, powtórki bywają uciążliwe, a nauka offline nie zawsze jest niezawodna. Fishki powstaje po to, żeby rozwiązać właśnie te problemy.",
+    "footer": "Studenci wskazali konkretne problemy: wolne tworzenie fiszek, niewygodną pracę z obrazami, uciążliwe powtórki i zawodną naukę offline. Rozwijamy Fishki razem z testerami, odpowiadając na te potrzeby krok po kroku.",
     "quotes": [
       {
         "name": "Hania",
@@ -574,29 +537,44 @@
     ]
   },
   "preorder": {
-    "badge": "Preorder",
-    "title": "Wczesny dostęp do Fishki za 69 zł",
+    "badge": "Zamknięta beta",
+    "title": "Dołącz do bety Fishki za 69 zł",
     "pricing": {
       "pl": {
-        "title": "Wczesny dostęp do Fishki za 69 zł",
+        "title": "Dołącz do bety Fishki za 69 zł",
         "value": "69 zł",
         "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp będzie kosztował 149 zł rocznie. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
         "comparison": "69 zł w preorderze zamiast planowanych 149 zł rocznie"
       },
       "eu": {
-        "title": "Wczesny dostęp do Fishki za 16,99 €",
+        "title": "Dołącz do bety Fishki za 16,99 €",
         "value": "16,99 €",
         "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp będzie kosztował 35 € rocznie. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
         "comparison": "16,99 € w preorderze zamiast planowanych 35 € rocznie"
       },
       "us": {
-        "title": "Wczesny dostęp do Fishki za 18,99 USD",
+        "title": "Dołącz do bety Fishki za 18,99 USD",
         "value": "18,99 USD",
         "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp będzie kosztował 40 USD rocznie. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
         "comparison": "18,99 USD w preorderze zamiast planowanych 40 USD rocznie"
       }
     },
-    "subtitle": "Kup Wczesny Dostęp na preferencyjnych warunkach, testuj Fishki przed publicznym startem i pomóż w rozwoju produktu.",
+    "subtitle": "Pierwsi studenci już korzystają z Fishki. Kup Wczesny dostęp, dołącz do zamkniętej bety i pomóż nam dopracować aplikację przed publicznym startem.",
+    "accessStepsLabel": "Jak otrzymasz dostęp",
+    "accessSteps": [
+      {
+        "title": "Kup Wczesny dostęp",
+        "text": "Podaj adres e-mail, którego użyjesz także do konta Fishki."
+      },
+      {
+        "title": "Odbierz prywatne zaproszenie",
+        "text": "Po potwierdzeniu płatności wyślemy dostęp do zamkniętej bety dla wybranego systemu."
+      },
+      {
+        "title": "Utwórz konto i rozpocznij testy",
+        "text": "Konto utworzone na tym samym adresie otrzyma dostęp testera bety."
+      }
+    ],
     "offerFacts": [
       {
         "label": "Cena preorderu",
@@ -604,27 +582,26 @@
         "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp będzie kosztował 149 zł rocznie. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków."
       },
       {
-        "label": "Zakres oferty",
-        "value": "Wczesny Dostęp + 12 miesięcy premium",
-        "note": "Dostęp testowy jest planowany na koniec września 2026."
+        "label": "Co otrzymujesz",
+        "value": "Dostęp do bety + 12 miesięcy Premium",
+        "note": "Po potwierdzeniu zakupu otrzymasz instrukcję i prywatne zaproszenie do dostępnej wersji na swoim systemie."
       },
       {
-        "label": "Oficjalny start aplikacji",
+        "label": "Planowany publiczny start",
         "value": "Do końca 2026 roku",
         "note": "Termin może ulec zmianie."
       }
     ],
     "deliveryGuaranteeLabel": "Gwarancja terminu",
-    "deliveryGuarantee": "Gwarancja zwrotu środków jeśli nie wypuścimy aplikacji do 31 marca 2027.",
+    "deliveryGuarantee": "Zwrócimy Ci pieniądze, jeśli Fishki nie zostaną publicznie udostępnione do 31 marca 2027 roku.",
     "includes": [
-      "Dostęp do wersji testowej przed oficjalną premierą",
+      "Prywatny dostęp do działającej wersji beta przed oficjalną premierą",
       "12 miesięcy planu premium po publicznym starcie",
       "Możliwość zgłaszania opinii i wpływania na rozwój produktu",
-      "Głosowania nad priorytetem wdrażania funkcji",
       "69 zł w preorderze zamiast planowanych 149 zł rocznie"
     ],
-    "trust": "To nie jest gotowa aplikacja produkcyjna. Kupujesz wcześniejszy dostęp do produktu w trakcie tworzenia. Możesz odstąpić od zakupu w ciągu 14 dni bez podawania przyczyny.",
-    "placeholderLabel": "Kup Wczesny Dostęp",
+    "trust": "To działająca wersja beta, a nie gotowy produkt. Funkcje mogą się zmieniać, a błędy są możliwe. Możesz odstąpić od zakupu w ciągu 14 dni bez podawania przyczyny.",
+    "placeholderLabel": "Kup dostęp do bety",
     "fullNameLabel": "Imię i nazwisko",
     "emailLabel": "E-mail",
     "platformLabel": "Na jakim urządzeniu chcesz testować Fishki?",
@@ -634,8 +611,8 @@
       "BOTH": "Oba systemy",
       "UNDECIDED": "Jeszcze nie wiem"
     },
-    "accountEmailHint": "Użyj tego samego adresu e-mail podczas zakładania konta Fishki — na niego przypiszemy dostęp do bety i 12 miesięcy Premium po premierze.",
-    "formSaveError": "Nie udało się zapisać danych. Spróbuj ponownie — nie przekierujemy Cię do płatności, dopóki zgłoszenie nie zostanie bezpiecznie zapisane.",
+    "accountEmailHint": "Użyj tego samego adresu e-mail podczas zakładania konta Fishki - na niego przypiszemy dostęp do bety i 12 miesięcy Premium po premierze.",
+    "formSaveError": "Nie udało się zapisać danych. Spróbuj ponownie - nie przekierujemy Cię do płatności, dopóki zgłoszenie nie zostanie bezpiecznie zapisane.",
     "purchaseConsentBefore": "Akceptuję ",
     "termsLink": "Regulamin sprzedaży preorderu Fishki",
     "purchaseConsentAfter": ".",
@@ -645,9 +622,9 @@
     "privacyConsentBefore": "Zapoznałem/am się z ",
     "privacyLink": "Polityką prywatności",
     "privacyConsentAfter": ".",
-    "buyCta": "Kup Wczesny Dostęp",
+    "buyCta": "Kup dostęp do bety",
     "buyWithBlik": "Kup przez BLIK lub szybki przelew",
-    "buyWithCard": "Kup preorder",
+    "buyWithCard": "Przejdź do bezpiecznej płatności",
     "alreadyPurchasedError": "Ten adres e-mail ma już przypisany zakup preorderu i dostęp do bety.",
     "paymentProcessingError": "Płatność dla tego adresu e-mail została już przyjęta i jest właśnie przetwarzana.",
     "buyCtaDisabled": "Uzupełnij imię i nazwisko, poprawny e-mail, wybierz urządzenie i zaznacz obowiązkowe zgody.",
@@ -660,7 +637,7 @@
     "features": "Funkcje",
     "how": "Jak to działa",
     "demo": "Demo",
-    "waitlist": "Lista oczekujących",
+    "waitlist": "Aktualności",
     "social": "Kontakt",
     "copyright": "Tworzone z myślą o studentach medycyny.",
     "terms": "Warunki użytkowania",
@@ -742,7 +719,7 @@
             "items": [
               "dostęp do testowej wersji Fishki przed publicznym uruchomieniem aplikacji,",
               "możliwość testowania aplikacji i zgłaszania opinii,",
-              "możliwość wpływania na priorytety rozwoju produktu, w tym głosowania na kolejność wdrażania funkcji,",
+              "możliwość przekazywania opinii dotyczących rozwoju produktu,",
               "12 miesięcy dostępu do planu premium po publicznym uruchomieniu aplikacji,",
               "cenę preorderową zależną od regionu: 69 PLN w Polsce, 16,99 EUR w Europie poza Polską albo 18,99 USD w USA i pozostałych krajach, zamiast planowanej ceny rocznej po premierze: odpowiednio 149 PLN, 35 EUR albo 40 USD."
             ]
@@ -787,6 +764,10 @@
           },
           {
             "type": "paragraph",
+            "text": "Przez pełną wersję aplikacji rozumie się jej publiczne udostępnienie wszystkim użytkownikom. Określenie to nie oznacza gwarancji wdrożenia konkretnych funkcji ani niezmienności ich zakresu, ponieważ Fishki będzie nadal rozwijane także po publicznym uruchomieniu."
+          },
+          {
+            "type": "paragraph",
             "text": "Terminy te mają charakter szacunkowy i mogą ulec zmianie, ponieważ aplikacja jest nadal rozwijana."
           },
           {
@@ -812,7 +793,7 @@
               "image occlusion,",
               "planner powtórek,",
               "tryb offline dla pobranych materiałów,",
-              "statystyki, import, bibliotekę publiczną i funkcje udostępniania — w późniejszych etapach."
+              "statystyki, import, bibliotekę publiczną i funkcje udostępniania - w późniejszych etapach."
             ]
           },
           {
@@ -928,7 +909,6 @@
               "statusu rozwoju Fishki,",
               "testowania aplikacji,",
               "zbierania opinii,",
-              "głosowania na priorytety funkcji,",
               "reklamacji i zwrotów."
             ]
           },
@@ -1011,6 +991,6 @@
     ]
   },
   "floatingCta": {
-    "text": "Zarezerwuj wczesny dostęp"
+    "text": "Uzyskaj dostęp do bety"
   }
 }

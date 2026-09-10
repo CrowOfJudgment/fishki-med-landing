@@ -22,12 +22,12 @@ export default async function Home() {
       <Hero />
       <FloatingCTA />
       <StaticDemoSection />
-      <ResearchInsight />
-      <Problem />
+      <Preorder pricingRegion={pricingRegion} />
       <AppDemo />
       <UseCases />
+      <ResearchInsight />
+      <Problem />
       <Cta />
-      <Preorder pricingRegion={pricingRegion} />
     </main>
   );
 }

@@ -1218,8 +1218,8 @@ function PreviewScreen({
             <h3 className="min-w-0 flex-1 text-sm font-semibold text-[#002838]">
               {ui.smartStudyTitle}
             </h3>
-            <span className="rounded-full bg-[#E86860]/10 px-2.5 py-1 text-[8px] font-bold text-[#E86860]">
-              {ui.comingSoon}
+            <span className="rounded-full bg-[#0F766E]/10 px-2.5 py-1 text-[8px] font-bold text-[#0F766E]">
+              {ui.availableNow}
             </span>
           </div>
           <p className="mt-3 rounded-xl bg-white/80 p-3 text-[9px] leading-4 text-[#274D53]">
@@ -1227,67 +1227,6 @@ function PreviewScreen({
           </p>
         </div>
 
-        <div className="mt-3 rounded-[1.3rem] border border-[#B9DDD5] bg-[#E7F1EE]/70 p-5">
-          <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-lg font-bold text-[#0F766E]">
-              ?
-            </span>
-            <h3 className="min-w-0 flex-1 text-sm font-semibold text-[#002838]">
-              {ui.testModeTitle}
-            </h3>
-            <span className="rounded-full bg-[#E86860]/10 px-2.5 py-1 text-[8px] font-bold text-[#E86860]">
-              {ui.comingSoon}
-            </span>
-          </div>
-          <div className="mt-3 rounded-xl bg-white/80 p-3 text-[9px] leading-4 text-[#274D53]">
-            <p>{ui.testModeDescription}</p>
-            <div className="mt-2 space-y-1">
-              {[ui.testTyped, ui.testChoice, ui.testSpoken, ui.testMental].map(
-                (item) => (
-                  <p key={item}>• {item}</p>
-                ),
-              )}
-            </div>
-            <p className="mt-2 font-semibold text-[#0F766E]">
-              {ui.testUseCases}
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-3 rounded-[1.3rem] border border-[#B9DDD5] bg-[#E7F1EE]/70 p-5">
-          <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-lg text-[#0F766E]">
-              □
-            </span>
-            <h3 className="min-w-0 flex-1 text-sm font-semibold text-[#002838]">
-              {ui.studyPlannerModeTitle}
-            </h3>
-            <span className="rounded-full bg-[#E86860]/10 px-2.5 py-1 text-[8px] font-bold text-[#E86860]">
-              {ui.comingSoon}
-            </span>
-          </div>
-          <div className="mt-3 rounded-xl bg-white/80 p-3 text-[9px] leading-4 text-[#274D53]">
-            <p>{ui.studyPlannerModeDescription}</p>
-            <div className="mt-2 space-y-1">
-              {[
-                ui.plannerChooseExam,
-                ui.plannerChooseDate,
-                ui.plannerChooseDecks,
-                ui.plannerChooseDays,
-              ].map((item) => (
-                <p key={item}>• {item}</p>
-              ))}
-            </div>
-            <p className="mt-2 font-semibold text-[#0F766E]">
-              {ui.plannerTodayExample}
-            </p>
-            <div className="mt-1 space-y-1">
-              <p>• {ui.plannerExampleAnatomy}</p>
-              <p>• {ui.plannerExamplePhysiology}</p>
-              <p>• {ui.plannerExamplePharmacology}</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

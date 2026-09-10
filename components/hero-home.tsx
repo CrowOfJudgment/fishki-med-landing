@@ -6,7 +6,10 @@ export default function HeroHome() {
   const t = useT();
 
   return (
-    <section id="top" className="relative overflow-hidden scroll-mt-28 py-12 sm:py-16 lg:py-20">
+    <section
+      id="top"
+      className="relative overflow-hidden scroll-mt-28 py-12 sm:py-16 lg:py-20"
+    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_18%,rgba(185,221,213,0.65),transparent_30%),radial-gradient(circle_at_88%_22%,rgba(120,194,183,0.2),transparent_28%)]"
@@ -27,8 +30,8 @@ export default function HeroHome() {
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <a
-              href="#waitlist-form"
-              data-analytics-click="hero_waitlist"
+              href="#how-it-works"
+              data-analytics-click="hero_product"
               data-analytics-section="hero"
               className="inline-flex items-center justify-center rounded-full bg-[#0F766E] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(15,118,110,0.22)] transition hover:-translate-y-0.5 hover:bg-[#002838]"
             >

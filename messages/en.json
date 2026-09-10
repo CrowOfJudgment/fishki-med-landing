@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Fishki - medical flashcards without fighting the editor",
-    "description": "Create medical flashcards from notes, images, atlases and lectures. Study offline and review with a plan for your next test, exam or finals."
+    "title": "Fishki - smarter medical flashcards and exam-ready study plans",
+    "description": "Turn notes and medical images into flashcards, review with FSRS, plan for exams and keep studying offline with Fishki."
   },
   "header": {
     "problem": "Why Fishki",
@@ -10,25 +10,25 @@
     "features": "Features",
     "how": "How it works",
     "demo": "Demo",
-    "waitlist": "Waitlist",
-    "cta": "Join waitlist",
-    "ctaAria": "Join the waitlist",
-    "preorderCta": "Early Access",
-    "preorderCtaAria": "Go to the Early Access reservation",
+    "waitlist": "Updates",
+    "cta": "Updates",
+    "ctaAria": "Sign up for Fishki updates",
+    "preorderCta": "Beta access",
+    "preorderCtaAria": "Go to beta access purchase",
     "openApp": "Open app",
     "openAppAria": "Open the Fishki web app"
   },
   "hero": {
-    "badge": "Flashcards designed for medical students",
-    "title": "Stop choosing between Anki and Quizlet",
-    "subtitle": "Fishki combines the fast, intuitive editor of modern flashcard apps with the powerful review system medical students actually need.",
-    "primaryCta": "Join the waitlist",
-    "secondaryCta": "Reserve Early Access",
-    "validation": "Built from conversations with medical students using flashcard apps.",
+    "badge": "Private beta - now open to early testers",
+    "title": "Medical flashcards that keep you on track for every exam",
+    "subtitle": "Turn notes and images into study-ready cards, let FSRS schedule your reviews and balance multiple exams without building a study system from scratch.",
+    "primaryCta": "See the app in action",
+    "secondaryCta": "Get beta access",
+    "validation": "Medical students are already testing Fishki. Join them today and help shape the app before its public launch.",
     "highlights": [
-      "Fast card creation",
-      "Spaced repetition",
-      "Offline learning"
+      "Evidence-based FSRS scheduling",
+      "Adaptive exam planning",
+      "Flexible imports, images and offline access"
     ],
     "mockup": {
       "deck": "Pharmacology",
@@ -46,25 +46,25 @@
   "problem": {
     "badge": "Without the usual trade-off",
     "heading": "Why Fishki",
-    "intro": "Medical students need a fast editor and a serious review system. Today's tools usually deliver only one of them.",
+    "intro": "Medical students need both a fast card editor and a review system they can trust. Most tools make them choose.",
     "tools": [
       {
-        "name": "Traditional apps",
+        "name": "Legacy study apps",
         "label": "Powerful, but complicated",
         "text": "",
         "points": [
-          "Dated interface",
+          "Outdated interface",
           "Steep learning curve",
           "Cumbersome editor"
         ]
       },
       {
-        "name": "Simple apps",
+        "name": "Quick flashcard apps",
         "label": "Simple, but limited",
         "text": "",
         "points": [
-          "No advanced reviews",
-          "Low flexibility",
+          "No smart review scheduling",
+          "Limited flexibility",
           "Limited study control"
         ]
       },
@@ -73,67 +73,67 @@
         "label": "Simple creation. Advanced reviews.",
         "text": "",
         "points": [
-          "Simple and fast flashcard creation",
-          "Choice between quick and advanced study modes",
-          "Designed for medical study",
-          "Comfortable offline study mode"
+          "Fast, focused flashcard creation",
+          "Quick study and smart review modes",
+          "Built for medical school",
+          "Reliable offline study"
         ]
       }
     ]
   },
   "features": {
     "badge": "4 pillars",
-    "heading": "The essentials without feature overload.",
-    "intro": "Fishki focuses on what shortens the path from class material to active recall.",
+    "heading": "Everything you need, without the clutter.",
+    "intro": "Fishki shortens the path from lecture material to active recall.",
     "planned": "Planned",
     "offlineHighlight": {
       "badge": "Offline-first",
-      "heading": "Studying should not depend on your signal.",
-      "text": "Download exactly as much material as you need. A deck, folder or entire subject stays available without internet and progress syncs later.",
-      "downloads": ["Deck", "Folder", "Subject"],
+      "heading": "Your study session should not depend on your connection.",
+      "text": "Create flashcards and study without a connection. Your data stays on your device and syncs when you are back online.",
+      "downloads": ["Decks and flashcards available locally", "Images stored with your flashcards", "Study history and review schedule"],
       "places": "At university · on a train · in the library · between classes"
     },
     "items": [
       {
         "icon": "edit",
         "heading": "Create flashcards faster",
-        "text": "Add text, images, cloze deletion and key facts from your notes without digging through complex settings."
+        "text": "Add text, images and cloze deletions without digging through layers of settings."
       },
       {
         "icon": "image",
         "heading": "Study images, not just text",
-        "text": "Use images and covered elements on images for anatomy, histology, diagrams and class materials."
+        "text": "Use images and image occlusion for anatomy, histology, diagrams and lecture materials."
       },
       {
         "icon": "reviews",
         "heading": "Review with a plan",
-        "text": "Fishki suggests what to review today, so the material does not disappear right before the exam."
+        "text": "Fishki tells you what to review today, so important material is still there when the exam arrives."
       },
       {
         "icon": "offline",
         "heading": "Keep materials offline",
-        "text": "Download decks, folders or whole subjects and study even without internet."
+        "text": "Keep your study material on your device and continue even without internet."
       }
     ]
   },
   "demo": {
-    "badge": "Clickable product prototype",
+    "badge": "Interactive beta preview",
     "heading": "Create your first medical flashcard in seconds.",
-    "intro": "Click through a quick demo and see how Fishki turns medical notes into clean, review-ready flashcards.",
-    "screenLabel": "Interactive prototype",
+    "intro": "Explore the demo and see how Fishki turns medical notes into clear, review-ready flashcards.",
+    "screenLabel": "Interactive preview",
     "showcaseBadge": "How Fishki works",
     "showcaseHeading": "From the first flashcard to an exam plan",
-    "showcaseIntro": "Swipe through a coherent story of creating cards, quick study, exam planning and offline learning.",
+    "showcaseIntro": "Follow the full flow from creating flashcards to quick study, smart reviews and exam planning.",
     "playBadge": "First flashcard in 10 seconds",
     "playHeading": "Try the demo and create your first flashcard",
     "playIntro": "",
     "postDemoCta": {
-      "title": "The prototype shows the product direction. If you want to support Fishki’s development, you can choose your level of commitment.",
-      "text": "Join the free waitlist, or reserve Early Access with special benefits if you want to test Fishki earlier and influence priorities.",
-      "waitlist": "Join the waitlist",
-      "waitlistAria": "Join the free Fishki waitlist",
-      "preorder": "Reserve Early Access",
-      "preorderAria": "Go to the Early Access section"
+      "title": "The Fishki beta is live, and medical students are already putting it to work.",
+      "text": "Get Early Access to start testing now and receive 12 months of Premium after the public launch. Not ready yet? Sign up for product updates.",
+      "waitlist": "Send me updates",
+      "waitlistAria": "Sign up for Fishki updates",
+      "preorder": "Get beta access",
+      "preorderAria": "Go to beta access purchase"
     },
     "stories": {
       "choose": "Choose a story",
@@ -190,15 +190,15 @@
         "key": "decks",
         "number": "01",
         "label": "Decks",
-        "title": "Start with organized material",
-        "description": "Choose a deck to edit or immediately begin studying a specific subject."
+        "title": "Keep every subject organized",
+        "description": "Open a deck to edit its cards or jump straight into a focused study session."
       },
       {
         "key": "editor",
         "number": "02",
         "label": "Editor",
-        "title": "Create rich cards without setup",
-        "description": "Add text, images, cloze deletions and cover elements in images."
+        "title": "Create rich cards without the setup",
+        "description": "Combine text, images, cloze deletions and image occlusion in one focused editor."
       },
       {
         "key": "quickSetup",
@@ -211,36 +211,22 @@
         "key": "review",
         "number": "04",
         "label": "Review",
-        "title": "Rate without extra friction",
-        "description": "Flip cards and choose only “I know” or “I don't know” in Quick Study mode, or choose the more advanced Smart Reviews."
+        "title": "Review without breaking your flow",
+        "description": "Use simple ratings in Quick Study or let Smart Reviews adapt the schedule to your memory."
       },
       {
         "key": "plannerSetup",
         "number": "05",
         "label": "Planner",
-        "title": "Tell Fishki what and when you study",
-        "description": "Choose the exam, its date, decks to master and the number of days available."
+        "title": "Tell Fishki what you need to learn and by when",
+        "description": "Set your exam date, choose the relevant decks and define the time you can realistically study."
       },
       {
         "key": "plannerToday",
         "number": "06",
         "label": "Daily plan",
-        "title": "A concrete plan for each day",
-        "description": "Fishki distributes new, review and difficult cards so the material is ready before the exam."
-      },
-      {
-        "key": "testMode",
-        "number": "07",
-        "label": "Coming soon",
-        "title": "Check whether you truly know it",
-        "description": "Test mode will let you type, choose or speak an answer instead of only recognizing the back of a card."
-      },
-      {
-        "key": "offline",
-        "number": "08",
-        "label": "Offline",
-        "title": "Take an entire subject with you",
-        "description": "Download a deck, folder or whole subject and study without internet at university, on a train or in the library."
+        "title": "Know exactly what to study today",
+        "description": "Fishki balances new material, scheduled reviews and difficult cards to keep you moving toward exam day."
       }
     ],
     "tapHint": "Two product flows",
@@ -277,7 +263,7 @@
         "flow": "study",
         "nav": "Choose mode",
         "title": "Choose how you want to study",
-        "description": "Quick study is available now. Smart reviews are planned as the next product stage."
+        "description": "Choose free-form quick study or smart reviews scheduled by FSRS. Both modes share the same progress."
       },
       {
         "key": "review",
@@ -298,7 +284,7 @@
       "decksTitle": "Your decks",
       "decksTab": "Flashcards",
       "plannerTab": "Study",
-      "downloadsTab": "Offline",
+      "downloadsTab": "Discover",
       "profileTab": "Profile",
       "addDeck": "Add deck",
       "searchDecks": "Search decks",
@@ -309,7 +295,7 @@
       "createDeck": "Create deck",
       "backNavigation": "Back",
       "deckAnatomy": "Anatomy - Upper limb",
-      "deckPharmacology": "Pharmacology — Antibiotics",
+      "deckPharmacology": "Pharmacology - Antibiotics",
       "deckPathology": "Pathophysiology",
       "due": "due today",
       "cards": "cards",
@@ -324,7 +310,7 @@
       "sampleCardOne": "Bones of the upper limb",
       "sampleCardTwo": "Brachial plexus",
       "sampleCardThree": "Rotator cuff muscles",
-      "sampleCardFour": "Phrenic nerve — C3–C5",
+      "sampleCardFour": "Phrenic nerve - C3-C5",
       "sampleCardFive": "Axillary artery and its branches",
       "sampleCardSix": "Anatomical spaces of the axilla",
       "sampleCardSeven": "Innervation of the arm muscles",
@@ -346,14 +332,14 @@
       "front": "Front",
       "back": "Back",
       "frontText": "What nerve innervates the diaphragm?",
-      "backText": "Phrenic nerve — C3, C4, C5.",
+      "backText": "Phrenic nerve - C3, C4, C5.",
       "note": "Note",
       "clozeBefore": "The diaphragm is innervated by the",
       "clozeTermOne": "phrenic nerve",
       "clozeMiddle": "arising from",
-      "clozeTermTwo": "C3–C5",
+      "clozeTermTwo": "C3-C5",
       "clozeQuestion": "The diaphragm is innervated by the […] arising from […].",
-      "clozeAnswer": "phrenic nerve · C3–C5",
+      "clozeAnswer": "phrenic nerve · C3-C5",
       "imageArea": "Medical image area",
       "addImage": "Add image",
       "removeImage": "Remove image",
@@ -384,7 +370,6 @@
       "previewTitle": "Flashcard preview",
       "chooseStudyMode": "Choose study mode",
       "availableNow": "Available",
-      "comingSoon": "Coming soon",
       "quickStudyTitle": "Quick study",
       "quickStudyDescription": "A fast session with a simple “I know / I don't know” choice. Ideal before an exam or after a lecture.",
       "quickStudyInfo": "Quick study information",
@@ -407,7 +392,7 @@
       "frontSide": "Card front",
       "backSide": "Answer",
       "question": "What nerve innervates the diaphragm?",
-      "answer": "Phrenic nerve — C3, C4, C5.",
+      "answer": "Phrenic nerve - C3, C4, C5.",
       "showAnswer": "Show answer",
       "continueReview": "Continue to rating",
       "reviewTitle": "First review",
@@ -446,18 +431,6 @@
       "todayPharmacology": "Difficult pharmacology cards",
       "plannedForToday": "Planned for today",
       "startTodayPlan": "Start today's plan",
-      "testModeTitle": "Test mode",
-      "testModeInfo": "Test mode information",
-      "testModeHeading": "Simulate a test from your deck",
-      "testModeDescription": "Do not simply reveal the answer. Respond independently first, then compare it with the correct answer.",
-      "testTyped": "Type the answer",
-      "testChoice": "Choose one option",
-      "testSpoken": "Answer aloud",
-      "testMental": "Answer mentally and compare",
-      "testUseCases": "Before a quiz or exam, and whenever you want to test real recall instead of recognition.",
-      "studyPlannerModeTitle": "Study plan",
-      "studyPlannerModeInfo": "Study plan information",
-      "studyPlannerModeDescription": "A work mode that distributes all material across the days leading up to an exam.",
       "plannerChooseExam": "Choose an exam",
       "plannerChooseDate": "Set the exam date",
       "plannerChooseDecks": "Select decks to master",
@@ -465,28 +438,18 @@
       "plannerTodayExample": "Example plan for today:",
       "plannerExampleAnatomy": "40 new anatomy flashcards",
       "plannerExamplePhysiology": "25 physiology reviews",
-      "plannerExamplePharmacology": "10 difficult pharmacology cards",
-      "offlineTitle": "Offline learning",
-      "offlineReady": "Ready offline",
-      "offlineHeading": "Study without a connection",
-      "offlineDescription": "Downloaded material works without internet and progress syncs later.",
-      "offlineDeck": "Deck",
-      "offlineFolder": "Folder",
-      "offlineSubject": "Entire subject",
-      "offlineFolderName": "Anatomy — semester 1",
-      "offlineSubjectName": "Pharmacology",
-      "offlinePlaces": "At university · on a train · in the library · between classes"
+      "plannerExamplePharmacology": "10 difficult pharmacology cards"
     }
   },
   "useCases": {
     "badge": "Built for medicine",
-    "heading": "Medical material rarely fits into one sentence.",
-    "intro": "Fishki is designed to support images, diagrams, classifications and multi-point answers without forcing them into an oversimplified format.",
+    "heading": "Medical knowledge rarely fits on a basic text card.",
+    "intro": "Fishki gives images, diagrams, classifications and structured answers the space they need without making card creation complicated.",
     "items": [
       {
         "label": "Anatomy",
-        "title": "Structure labels",
-        "text": "Cover labels on illustrations and learn spatial relationships."
+        "title": "Label anatomical structures",
+        "text": "Hide labels on illustrations and test spatial relationships with image occlusion."
       },
       {
         "label": "Pharmacology",
@@ -496,28 +459,28 @@
       {
         "label": "Pathology",
         "title": "Images and specimens",
-        "text": "Add images to both sides and mark characteristic findings."
+        "text": "Add images to either side and highlight the findings that matter."
       },
       {
         "label": "Internal medicine",
-        "title": "Disease classifications",
-        "text": "Break criteria, scales and differential diagnoses into focused questions."
+        "title": "Clinical classifications",
+        "text": "Turn criteria, scoring systems and differential diagnoses into focused questions."
       },
       {
         "label": "Physiology",
         "title": "Mechanisms and relationships",
-        "text": "Create reverse cards and test understanding in both directions."
+        "text": "Create reversible cards and test your understanding in both directions."
       },
       {
         "label": "Exams",
-        "title": "Multi-point answers",
-        "text": "Mark the exact point you missed in a longer structured answer."
+        "title": "Complex topics",
+        "text": "Break longer material into focused flashcards and return to the cards that need the most work."
       }
     ]
   },
   "howItWorks": {
     "badge": "How it works",
-    "heading": "A simple study rhythm without building a system from scratch.",
+    "heading": "A clear study routine without building a system from scratch.",
     "steps": [
       {
         "number": "01",
@@ -527,34 +490,34 @@
       {
         "number": "02",
         "title": "Choose quick review or spaced repetition.",
-        "text": "Review your way before a class or let the system schedule long-term learning."
+        "text": "Run a quick session before class or let FSRS schedule long-term reviews for you."
       },
       {
         "number": "03",
         "title": "Track weak cards and prepare for exams.",
-        "text": "Return to mistakes, set an exam date and control the size of every session."
+        "text": "Revisit difficult cards, set an exam date and keep each session manageable."
       }
     ]
   },
   "cta": {
-    "badge": "Waitlist",
-    "title": "Let us know you want to hear when Fishki launches.",
-    "subtitle": "Join the waitlist and we will let you know when Fishki becomes available.",
+    "badge": "Product updates",
+    "title": "Follow Fishki as the beta grows.",
+    "subtitle": "Leave your email to hear about major beta updates, new platforms and the public launch.",
     "benefits": [
-      "A message when Fishki launches",
-      "Concrete product updates",
+      "Updates about new beta releases",
+      "Useful product and platform updates",
       "No spam and no commitment"
     ],
-    "cta": "Join the waitlist",
-    "formNote": "The form takes about a minute. If you want to support the project more directly and get special benefits, also check the preorder.",
-    "preorderLink": "See preorder",
-    "preorderAria": "Go to the paid Early Access reservation"
+    "cta": "Fishki updates",
+    "formNote": "The form takes about a minute. If you want to start testing now, choose Early Access instead.",
+    "preorderLink": "Get beta access",
+    "preorderAria": "Go to beta access purchase"
   },
   "proof": {
-    "badge": "Built based on conversations with 32 students",
-    "heading": "What medical students want from a flashcard tool",
+    "badge": "Shaped by conversations with 32 students",
+    "heading": "Built around how medical students actually study",
     "description": "",
-    "footer": "After talking to medical students, a clear pattern emerged: creating flashcards takes too long, images are awkward to work with, reviews feel cumbersome and offline learning isn't reliable. Fishki is built to solve exactly those problems.",
+    "footer": "Medical students told us the same things repeatedly: creating cards takes too long, images are awkward to use, review systems feel cumbersome and offline study is unreliable. Fishki tackles those problems directly.",
     "quotes": [
       {
         "name": "Hannah",
@@ -574,29 +537,44 @@
     ]
   },
   "preorder": {
-    "badge": "Preorder",
-    "title": "Fishki Early Access for $18.99",
+    "badge": "Early Access",
+    "title": "Get Fishki Early Access for $18.99",
     "pricing": {
       "pl": {
-        "title": "Fishki Early Access for PLN 69",
+        "title": "Get Fishki Early Access for PLN 69",
         "value": "PLN 69",
-        "note": "One-time payment. After the official launch, access will cost PLN 149 per year. If we are unable to launch the app, we provide a money-back guarantee.",
-        "comparison": "PLN 69 in preorder instead of the planned PLN 149 per year"
+        "note": "One-time payment. The planned price after launch is PLN 149 per year. Your purchase is covered by our launch guarantee.",
+        "comparison": "Pay PLN 69 now instead of the planned PLN 149 annual price"
       },
       "eu": {
-        "title": "Fishki Early Access for €16.99",
+        "title": "Get Fishki Early Access for €16.99",
         "value": "€16.99",
-        "note": "One-time payment. After the official launch, access will cost €35 per year. If we are unable to launch the app, we provide a money-back guarantee.",
-        "comparison": "€16.99 in preorder instead of the planned €35 per year"
+        "note": "One-time payment. The planned price after launch is €35 per year. Your purchase is covered by our launch guarantee.",
+        "comparison": "Pay €16.99 now instead of the planned €35 annual price"
       },
       "us": {
-        "title": "Fishki Early Access for $18.99",
+        "title": "Get Fishki Early Access for $18.99",
         "value": "$18.99",
-        "note": "One-time payment. After the official launch, access will cost $40 per year. If we are unable to launch the app, we provide a money-back guarantee.",
-        "comparison": "$18.99 in preorder instead of the planned $40 per year"
+        "note": "One-time payment. The planned price after launch is $40 per year. Your purchase is covered by our launch guarantee.",
+        "comparison": "Pay $18.99 now instead of the planned $40 annual price"
       }
     },
-    "subtitle": "Buy Early Access on preferential terms, test Fishki before the public launch and help shape the product.",
+    "subtitle": "Medical students are already testing Fishki. Get Early Access, join them today and help shape the app before its public launch.",
+    "accessStepsLabel": "How you get access",
+    "accessSteps": [
+      {
+        "title": "Get Early Access",
+        "text": "Purchase access using the same email address you will use for your Fishki account."
+      },
+      {
+        "title": "Receive a private invitation",
+        "text": "Once your payment is confirmed, we will send a private beta invitation for your selected platform."
+      },
+      {
+        "title": "Sign in and start testing",
+        "text": "Create your account with the same email to activate the Beta Tester plan and start using the app."
+      }
+    ],
     "offerFacts": [
       {
         "label": "Preorder price",
@@ -605,37 +583,36 @@
       },
       {
         "label": "What is included",
-        "value": "Early Access + 12 months of premium",
-        "note": "Test access is planned for the end of September 2026."
+        "value": "Private beta access + 12 months of Premium",
+        "note": "You will receive setup instructions and a private invitation for the currently available version on your platform."
       },
       {
-        "label": "Official app launch",
+        "label": "Planned public launch",
         "value": "By the end of 2026",
-        "note": "This date may change."
+        "note": "The launch window may change as the beta develops."
       }
     ],
-    "deliveryGuaranteeLabel": "Delivery guarantee",
-    "deliveryGuarantee": "Money-back guarantee if we do not launch the app by March 31, 2027.",
+    "deliveryGuaranteeLabel": "Launch guarantee",
+    "deliveryGuarantee": "Receive a full refund if Fishki has not launched publicly by March 31, 2027.",
     "includes": [
-      "Access to the test version before the official launch",
-      "12 months of the premium plan after the public launch",
-      "The ability to share feedback and influence product development",
-      "Voting on feature implementation priorities",
+      "Private access to the active beta before the public launch",
+      "12 months of Premium after the public launch",
+      "A direct way to share feedback and help shape the product",
       "$18.99 in preorder instead of the planned $40 per year"
     ],
-    "trust": "This is not a finished production app. You are buying early access to a product that is still being developed. You may withdraw from the purchase within 14 days without giving a reason.",
-    "placeholderLabel": "Buy Early Access",
+    "trust": "You are joining an active beta, not purchasing a finished production app. Features may change and you may encounter bugs. You can withdraw from the purchase within 14 days without giving a reason.",
+    "placeholderLabel": "Get Early Access",
     "fullNameLabel": "Full name",
     "emailLabel": "Email",
-    "platformLabel": "Which device do you want to test Fishki on?",
+    "platformLabel": "Which device will you use to test Fishki?",
     "platformOptions": {
       "IOS": "iPhone",
       "ANDROID": "Android",
       "BOTH": "Both platforms",
       "UNDECIDED": "Not sure yet"
     },
-    "accountEmailHint": "Use the same email when creating your Fishki account — we will assign beta access and 12 months of Premium after launch to it.",
-    "formSaveError": "We could not save your details. Please try again — we will not redirect you to payment until your registration is safely stored.",
+    "accountEmailHint": "Use this email when creating your Fishki account. Your beta access and 12 months of Premium after launch will be linked to it.",
+    "formSaveError": "We could not save your details. Please try again - we will not redirect you to payment until your registration is safely stored.",
     "purchaseConsentBefore": "I accept the ",
     "termsLink": "Fishki Preorder and Sales Terms",
     "purchaseConsentAfter": ".",
@@ -645,22 +622,22 @@
     "privacyConsentBefore": "I have read the ",
     "privacyLink": "Privacy Policy",
     "privacyConsentAfter": ".",
-    "buyCta": "Buy Early Access",
+    "buyCta": "Get Early Access",
     "buyWithBlik": "Pay with BLIK or instant bank transfer",
-    "buyWithCard": "Buy the preorder",
-    "alreadyPurchasedError": "A preorder purchase and beta access are already assigned to this email address.",
-    "paymentProcessingError": "The payment for this email address has already been received and is being processed.",
+    "buyWithCard": "Get beta access",
+    "alreadyPurchasedError": "This email already has an Early Access purchase and beta access assigned to it.",
+    "paymentProcessingError": "We have already received a payment for this email and are processing it now.",
     "buyCtaDisabled": "Enter your full name and a valid email, choose a device, then accept the required terms.",
-    "redirecting": "Preparing secure checkout…",
-    "readTerms": "Read the purchase terms"
+    "redirecting": "Opening secure checkout…",
+    "readTerms": "View purchase terms"
   },
   "footer": {
-    "tagline": "Simple flashcard creation and a serious review system for medical students.",
+    "tagline": "Fast flashcard creation and smarter review planning for medical students.",
     "product": "Product",
     "features": "Features",
     "how": "How it works",
     "demo": "Demo",
-    "waitlist": "Waitlist",
+    "waitlist": "Updates",
     "copyright": "Built with medical students in mind.",
     "terms": "Terms of use",
     "privacy": "Privacy Policy",
@@ -668,10 +645,10 @@
   },
   "preorderThankYou": {
     "badge": "Payment received",
-    "title": "Thank you for purchasing Fishki Early Access!",
-    "body": "Your payment provider is now sending us the transaction confirmation. This usually takes a moment. We will assign beta access to the email address entered before payment.",
-    "accountHint": "Use exactly the same email address when creating your Fishki account. Once the payment is confirmed, the Beta Tester plan will activate automatically.",
-    "receiptHint": "Your selected payment provider will send the payment confirmation or receipt.",
+    "title": "Welcome to Fishki Early Access!",
+    "body": "We are confirming your payment now. This usually takes only a moment. Your beta access will be linked to the email address you entered before checkout.",
+    "accountHint": "Create your Fishki account with the same email address. Once payment is confirmed, your Beta Tester plan will activate automatically.",
+    "receiptHint": "Stripe will send your payment confirmation or receipt separately.",
     "back": "Back to homepage"
   },
   "terms": {
@@ -740,7 +717,7 @@
             "items": [
               "access to a test version of Fishki before the public launch of the application,",
               "the ability to test the application and submit feedback,",
-              "the ability to influence product development priorities, including voting on the order in which features are implemented,",
+              "the ability to provide feedback about product development,",
               "12 months of access to the premium plan after the public launch of the application,",
               "a region-based preorder price: PLN 69 in Poland, €16.99 in Europe outside Poland or $18.99 in the United States and other countries, instead of the planned annual post-launch price of PLN 149, €35 or $40 respectively."
             ]
@@ -782,6 +759,10 @@
           {
             "type": "paragraph",
             "text": "The official application launch is planned by the end of 2026."
+          },
+          {
+            "type": "paragraph",
+            "text": "The full version of the application means that Fishki is made publicly available to all users. This term does not guarantee the implementation of any specific feature or an unchanged feature scope, as Fishki will continue to evolve after its public launch."
           },
           {
             "type": "paragraph",
@@ -926,7 +907,6 @@
               "Fishki development status,",
               "application testing,",
               "collecting feedback,",
-              "voting on feature priorities,",
               "complaints and refunds."
             ]
           },
@@ -1009,6 +989,6 @@
     ]
   },
   "floatingCta": {
-    "text": "Reserve Early Access"
+    "text": "Get beta access"
   }
 }

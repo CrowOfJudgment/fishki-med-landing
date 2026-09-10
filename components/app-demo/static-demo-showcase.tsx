@@ -268,100 +268,6 @@ function PlannerTodayScreen({ ui }: { ui: Record<string, string> }) {
   );
 }
 
-function TestModeScreen({ ui }: { ui: Record<string, string> }) {
-  return (
-    <div className="flex h-full flex-col">
-      <StaticAppHeader title={ui.testModeTitle} meta={ui.comingSoon} />
-      <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-5">
-        <div className="rounded-[1.3rem] border border-[#B9DDD5] bg-white p-5 shadow-sm">
-          <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#E7F1EE] text-lg font-bold text-[#0F766E]">
-            ?
-          </span>
-          <h3 className="mt-4 text-sm font-semibold text-[#002838]">
-            {ui.testModeHeading}
-          </h3>
-          <p className="mt-2 text-[10px] leading-5 text-[#274D53]">
-            {ui.testModeDescription}
-          </p>
-        </div>
-        <div className="mt-3 space-y-2">
-          {[
-            ["Aa", ui.testTyped],
-            ["✓", ui.testChoice],
-            ["◉", ui.testSpoken],
-            ["◇", ui.testMental],
-          ].map(([icon, label]) => (
-            <div
-              key={label}
-              className="flex items-center gap-3 rounded-[0.9rem] bg-white px-4 py-3 shadow-sm"
-            >
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#E7F1EE] text-[9px] font-bold text-[#0F766E]">
-                {icon}
-              </span>
-              <span className="text-[9px] font-semibold text-[#002838]">
-                {label}
-              </span>
-            </div>
-          ))}
-        </div>
-        <div className="mt-3 rounded-[0.9rem] bg-[#E86860]/10 p-3 text-[8px] font-semibold leading-4 text-[#E86860]">
-          {ui.testUseCases}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function OfflineScreen({ ui }: { ui: Record<string, string> }) {
-  return (
-    <div className="relative flex h-full flex-col overflow-hidden">
-      <StaticAppHeader title={ui.offlineTitle} />
-      <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-20 pt-4">
-        <div className="rounded-[1.3rem] bg-[#0F766E] p-5 text-white shadow-[0_10px_30px_rgba(15,118,110,0.2)]">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 text-lg">
-            ↓
-          </span>
-          <h3 className="mt-4 text-sm font-semibold">{ui.offlineHeading}</h3>
-          <p className="mt-2 text-[9px] leading-4 text-white/75">
-            {ui.offlineDescription}
-          </p>
-        </div>
-        <div className="mt-3 overflow-hidden rounded-[1.2rem] bg-white shadow-sm">
-          {[
-            [ui.offlineDeck, ui.deckAnatomy, "38 MB"],
-            [ui.offlineFolder, ui.offlineFolderName, "126 MB"],
-            [ui.offlineSubject, ui.offlineSubjectName, "420 MB"],
-          ].map(([type, name, size], index) => (
-            <div
-              key={type}
-              className="flex items-center gap-3 border-b border-[#274D53]/8 p-4 last:border-0"
-            >
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#E7F1EE] text-sm font-bold text-[#0F766E]">
-                {index === 2 ? "✓" : "↓"}
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="text-[8px] font-bold uppercase tracking-[0.14em] text-[#0F766E]">
-                  {type}
-                </p>
-                <p className="mt-1 truncate text-[9px] font-semibold text-[#002838]">
-                  {name}
-                </p>
-              </div>
-              <span className="text-[8px] font-semibold text-[#274D53]/55">
-                {size}
-              </span>
-            </div>
-          ))}
-        </div>
-        <p className="mt-4 rounded-[0.9rem] bg-[#E7F1EE] p-3 text-center text-[8px] font-semibold leading-4 text-[#274D53]">
-          {ui.offlinePlaces}
-        </p>
-      </div>
-      <StaticBottomNav ui={ui} active="downloads" />
-    </div>
-  );
-}
-
 function StaticStoryScreen({
   screenKey,
   ui,
@@ -371,8 +277,7 @@ function StaticStoryScreen({
 }) {
   if (screenKey === "plannerSetup") return <PlannerSetupScreen ui={ui} />;
   if (screenKey === "plannerToday") return <PlannerTodayScreen ui={ui} />;
-  if (screenKey === "testMode") return <TestModeScreen ui={ui} />;
-  return <OfflineScreen ui={ui} />;
+  return null;
 }
 
 export default function StaticDemoShowcase({
@@ -527,7 +432,7 @@ export default function StaticDemoShowcase({
       </div>
 
       <div className="relative grid min-h-[700px] items-center gap-10 px-5 pb-9 pt-5 sm:px-9 lg:grid-cols-[0.9fr_1.1fr] lg:px-14 lg:pb-12">
-        <div className="order-2 lg:order-1">
+        <div className="order-2 min-h-[230px] lg:order-1 lg:min-h-0">
           <span className="inline-flex rounded-full border border-[#B9DDD5] bg-[#F4F7F5] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-[#0F766E]">
             {screen.number} · {screen.label}
           </span>
