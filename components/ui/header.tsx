@@ -53,18 +53,18 @@ export default function Header() {
       className: "hidden md:inline-flex",
     },
     {
+      href: "/#for-medicine",
+      label: t.header.forMedicine,
+      className: "hidden min-[860px]:inline-flex",
+    },
+    {
       href: "/#student-voices",
       label: t.header.studentVoices,
-      className: "hidden min-[860px]:inline-flex",
+      className: "hidden min-[980px]:inline-flex",
     },
     {
       href: "/#why-fishki",
       label: t.header.problem,
-      className: "hidden min-[980px]:inline-flex",
-    },
-    {
-      href: "/#for-medicine",
-      label: t.header.forMedicine,
       className: "hidden min-[1080px]:inline-flex",
     },
   ];

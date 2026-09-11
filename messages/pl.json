@@ -123,7 +123,7 @@
     "screenLabel": "Interaktywny podgląd",
     "showcaseBadge": "Jak działa Fishki",
     "showcaseHeading": "Zobacz, jak wygląda prawdziwa nauka w Fishki",
-    "showcaseIntro": "Przygotowaliśmy 15 realistycznych fiszek medycznych. Zobacz zwykłe pytania, fiszki z lukami, obrazy, zakrywanie obrazu i planowanie powtórek w jednym przepływie.",
+    "showcaseIntro": "Zajrzyj do prawdziwej aplikacji na iPhonie. Poniżej zobaczysz najważniejsze ekrany Fishki - od tworzenia fiszek po codzienną naukę i planowanie powtórek.",
     "playBadge": "Utwórz pierwszą fiszkę",
     "playHeading": "Wypróbuj demo i stwórz swoją pierwszą fiszkę",
     "playIntro": "",
@@ -198,7 +198,7 @@
         "number": "02",
         "label": "Fiszki",
         "title": "Każda informacja w najlepszym formacie",
-        "description": "W jednej talii możesz łączyć klasyczne pytania, fiszki z lukami, obrazy i zakrywanie obrazu. Przykładowy zestaw zawiera po pięć dopracowanych kart z każdego przedmiotu."
+        "description": "W jednej talii możesz łączyć klasyczne pytania, fiszki z lukami, obrazy i zakrywanie obrazu. Wszystkie materiały pozostają uporządkowane i gotowe do nauki."
       },
       {
         "key": "editor",
@@ -208,22 +208,29 @@
         "description": "Zaznacz kluczowy fragment, a Fishki utworzą z niego lukę i zachowają odpowiedź na odwrocie. Bez ręcznego przepisywania tej samej treści."
       },
       {
-        "key": "imageStudy",
+        "key": "smartReview",
         "number": "04",
+        "label": "Inteligentne powtórki",
+        "title": "Powtarzaj we właściwym momencie",
+        "description": "Fishki układają kolejkę na podstawie FSRS. Oceniasz odpowiedź prostym gestem, a aplikacja wyznacza najlepszy termin kolejnej powtórki."
+      },
+      {
+        "key": "imageStudy",
+        "number": "05",
         "label": "Obrazy",
         "title": "Ucz się na schematach, które naprawdę coś wyjaśniają",
         "description": "Dodawaj obrazy do przodu lub tyłu fiszki. Cała grafika pozostaje widoczna, więc nie tracisz ważnych szczegółów mechanizmu lub preparatu."
       },
       {
         "key": "occlusionStudy",
-        "number": "05",
+        "number": "06",
         "label": "Zakrywanie obrazu",
         "title": "Sprawdzaj struktury bez zdradzania odpowiedzi",
         "description": "Zakryj węzeł, naczynie lub fragment preparatu i spróbuj rozpoznać go z pamięci. Po odwróceniu karty zobaczysz pełny obraz z zaznaczonym miejscem."
       },
       {
         "key": "plannerToday",
-        "number": "06",
+        "number": "07",
         "label": "Plan dnia",
         "title": "Otwierasz aplikację i wiesz, czego uczyć się dziś",
         "description": "FSRS i planner egzaminacyjny łączą nowe fiszki, wymagane powtórki i trudny materiał w jeden realistyczny plan dnia."

@@ -123,7 +123,7 @@
     "screenLabel": "Interactive preview",
     "showcaseBadge": "How Fishki works",
     "showcaseHeading": "See what real studying looks like in Fishki",
-    "showcaseIntro": "We built 15 realistic medical flashcards to show the complete flow: focused questions, cloze deletions, images, image occlusion and adaptive review planning.",
+    "showcaseIntro": "Take a look inside the real iPhone app. Explore the key Fishki screens - from creating flashcards to daily study and adaptive review planning.",
     "playBadge": "First flashcard in 10 seconds",
     "playHeading": "Try the demo and create your first flashcard",
     "playIntro": "",
@@ -198,7 +198,7 @@
         "number": "02",
         "label": "Flashcards",
         "title": "Use the right format for every fact",
-        "description": "Mix classic questions, cloze deletions, images and image occlusion in the same deck. Each sample subject includes five carefully written cards."
+        "description": "Mix classic questions, cloze deletions, images and image occlusion in the same deck. Everything stays organized and ready to study."
       },
       {
         "key": "editor",
@@ -208,22 +208,29 @@
         "description": "Select a key phrase and Fishki turns it into a cloze while keeping the answer on the back. No need to rewrite the same fact twice."
       },
       {
-        "key": "imageStudy",
+        "key": "smartReview",
         "number": "04",
+        "label": "Smart reviews",
+        "title": "Review at the right moment",
+        "description": "Fishki builds your queue with FSRS. Rate each answer with a simple gesture, and the app schedules the next review for the right time."
+      },
+      {
+        "key": "imageStudy",
+        "number": "05",
         "label": "Images",
         "title": "Study from diagrams that explain the mechanism",
         "description": "Add an image to either side of a card. Fishki keeps the full graphic visible, so important structures and labels are never cropped away."
       },
       {
         "key": "occlusionStudy",
-        "number": "05",
+        "number": "06",
         "label": "Image occlusion",
         "title": "Test structures without revealing the answer",
         "description": "Cover a node, vessel or part of a specimen and identify it from memory. Flip the card to reveal the complete image and the marked location."
       },
       {
         "key": "plannerToday",
-        "number": "06",
+        "number": "07",
         "label": "Daily plan",
         "title": "Open Fishki and know what to study today",
         "description": "FSRS and the exam planner combine new cards, due reviews and difficult material into one realistic daily plan."

@@ -1,6 +1,22 @@
 "use client";
 
+import Image from "next/image";
 import { useT } from "@/lib/i18n-context";
+
+const screenshotPaths: Record<string, string> = {
+  decks: "/images/app-screenshots/01-decks.png",
+  deckContents: "/images/app-screenshots/02-deck-contents.png",
+  editor: "/images/app-screenshots/03-card-editor.png",
+  smartReview: "/images/app-screenshots/04-smart-review.png",
+  plannerToday: "/images/app-screenshots/06-study-plan.png",
+};
+
+type ShowcaseScreen = {
+  key: string;
+  label: string;
+  title: string;
+  description: string;
+};
 
 export default function ProductShowcaseSection() {
   const t = useT();
@@ -20,7 +36,42 @@ export default function ProductShowcaseSection() {
           </p>
         </div>
 
-        {/* Only real iPhone screenshots belong above this CTA. */}
+        <div className="mt-12 grid snap-x snap-mandatory grid-flow-col auto-cols-[84%] gap-5 overflow-x-auto px-[8%] pb-6 sm:auto-cols-[56%] sm:px-[22%] lg:grid-flow-row lg:grid-cols-3 lg:overflow-visible lg:px-0 xl:grid-cols-5">
+          {t.demo.fixedScreens.flatMap((screen: ShowcaseScreen) => {
+            const src = screenshotPaths[screen.key];
+            if (!src) return [];
+
+            return (
+              <article
+                key={screen.key}
+                className="snap-center rounded-[2rem] border border-[#B9DDD5] bg-white/80 p-3 shadow-[0_22px_60px_rgba(39,77,83,0.11)] backdrop-blur-xl"
+              >
+                <div className="overflow-hidden rounded-[1.45rem] border border-[#D8E8E4] bg-[#F4F7F5]">
+                  <Image
+                    src={src}
+                    alt={`${screen.label}: ${screen.title}`}
+                    width={1206}
+                    height={2622}
+                    sizes="(min-width: 1280px) 210px, (min-width: 1024px) 29vw, (min-width: 640px) 56vw, 84vw"
+                    className="h-auto w-full"
+                  />
+                </div>
+                <div className="px-2 pb-3 pt-5">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0F766E]">
+                    {screen.label}
+                  </p>
+                  <h3 className="mt-2 font-display text-xl font-semibold leading-tight text-[#002838]">
+                    {screen.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-[#274D53]">
+                    {screen.description}
+                  </p>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+
         <div className="mx-auto mt-12 max-w-4xl rounded-[2rem] border border-[#B9DDD5] bg-white/75 px-6 py-8 text-center shadow-[0_22px_60px_rgba(39,77,83,0.1)] backdrop-blur-xl sm:px-10 sm:py-10">
           <h3 className="font-display text-2xl font-semibold leading-tight text-[#002838] sm:text-3xl">
             {t.demo.postDemoCta.title}

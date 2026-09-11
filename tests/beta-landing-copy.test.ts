@@ -5,6 +5,7 @@ import test from "node:test";
 type LandingMessages = {
   hero: { badge: string; subtitle: string; validation: string };
   demo: {
+    showcaseIntro: string;
     postDemoCta: {
       title: string;
       text: string;
@@ -12,7 +13,12 @@ type LandingMessages = {
       preorder: string;
     };
     steps: Array<{ key: string; description: string }>;
-    fixedScreens: Array<{ key: string; label: string; description: string }>;
+    fixedScreens: Array<{
+      key: string;
+      label: string;
+      title: string;
+      description: string;
+    }>;
     ui: Record<string, string>;
   };
   preorder: {
@@ -60,6 +66,7 @@ test("product showcase contains only features available in the beta", () => {
     "decks",
     "deckContents",
     "editor",
+    "smartReview",
     "imageStudy",
     "occlusionStudy",
     "plannerToday",
@@ -112,6 +119,55 @@ test("mocked and interactive demos are removed while the beta CTA remains", () =
     assert.ok(cta.waitlist);
     assert.ok(cta.preorder);
   }
+});
+
+test("header section links follow the landing page order", () => {
+  const header = readFileSync(
+    new URL("../components/ui/header.tsx", import.meta.url),
+    "utf8",
+  );
+  const orderedSections = [
+    "/#how-it-works",
+    "/#for-medicine",
+    "/#student-voices",
+    "/#why-fishki",
+  ];
+
+  const positions = orderedSections.map((section) => header.indexOf(section));
+  assert.ok(positions.every((position) => position >= 0));
+  assert.deepEqual(positions, positions.toSorted((a, b) => a - b));
+});
+
+test("screenshot introduction describes real app screens without card-count filler", () => {
+  for (const locale of ["pl", "en"] as const) {
+    const intro = messages(locale).demo.showcaseIntro;
+    assert.doesNotMatch(intro, /15|realistycznych fiszek|realistic medical flashcards/i);
+    assert.match(intro, /iPhon/i);
+  }
+});
+
+test("product showcase renders only genuine simulator screenshots", () => {
+  const showcaseSection = readFileSync(
+    new URL("../components/product-showcase-section.tsx", import.meta.url),
+    "utf8",
+  );
+  const screenshotPaths = [
+    "01-decks.png",
+    "02-deck-contents.png",
+    "03-card-editor.png",
+    "04-smart-review.png",
+    "06-study-plan.png",
+  ];
+
+  for (const screenshot of screenshotPaths) {
+    assert.match(showcaseSection, new RegExp(screenshot.replace(".", "\\.")));
+    const image = readFileSync(
+      new URL(`../public/images/app-screenshots/${screenshot}`, import.meta.url),
+    );
+    assert.ok(image.length > 100_000, `${screenshot} should be a real screenshot`);
+  }
+
+  assert.doesNotMatch(showcaseSection, /mockup|interactive demo/i);
 });
 
 test("medical screenshot plan covers the real beta flows", () => {
