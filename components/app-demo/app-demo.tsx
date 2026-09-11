@@ -20,6 +20,7 @@ export type DemoDeck = {
   cards: number;
   due: number;
   accent: string;
+  tags?: string[];
   custom?: boolean;
 };
 export type SavedCard = {
@@ -53,22 +54,22 @@ export default function AppDemo() {
     {
       id: "anatomy",
       title: t.demo.ui.deckAnatomy,
-      cards: 7,
-      due: 34,
+      cards: 5,
+      due: 5,
       accent: "#0F766E",
     },
     {
       id: "pharmacology",
       title: t.demo.ui.deckPharmacology,
-      cards: 7,
-      due: 18,
+      cards: 5,
+      due: 5,
       accent: "#78C2B7",
     },
     {
       id: "pathophysiology",
       title: t.demo.ui.deckPathology,
-      cards: 7,
-      due: 12,
+      cards: 5,
+      due: 5,
       accent: "#E86860",
     },
   ]);
@@ -98,18 +99,16 @@ export default function AppDemo() {
     if (deckData?.custom) return userCards;
 
     const exampleCards = [
-      t.demo.ui.sampleCardOne,
-      t.demo.ui.sampleCardTwo,
-      t.demo.ui.sampleCardThree,
-      t.demo.ui.sampleCardFour,
-      t.demo.ui.sampleCardFive,
-      t.demo.ui.sampleCardSix,
-      t.demo.ui.sampleCardSeven,
-    ].map((title, index) => ({
+      [t.demo.ui.sampleCardOne, t.demo.ui.sampleCardAnswerOne],
+      [t.demo.ui.sampleCardTwo, t.demo.ui.sampleCardAnswerTwo],
+      [t.demo.ui.sampleCardThree, t.demo.ui.sampleCardAnswerThree],
+      [t.demo.ui.sampleCardFour, t.demo.ui.sampleCardAnswerFour],
+      [t.demo.ui.sampleCardFive, t.demo.ui.sampleCardAnswerFive],
+    ].map(([title, back], index) => ({
       id: `study-${index + 1}`,
       title,
       studyFront: title,
-      back: t.demo.ui.sampleCardAnswer,
+      back,
     }));
 
     return [...userCards, ...exampleCards];

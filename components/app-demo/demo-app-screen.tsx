@@ -195,6 +195,24 @@ function DeckScreen({
                         {deck.cards} {ui.cards}
                       </p>
                     </div>
+                    {!!deck.tags?.length && (
+                      <div className="mt-1.5 flex min-w-0 gap-1 overflow-hidden">
+                        {deck.tags.slice(0, 3).map((tag, index) => (
+                          <span
+                            key={tag}
+                            className={`shrink-0 rounded-full px-1.5 py-0.5 text-[6px] font-semibold ${
+                              index === 0
+                                ? "bg-[#E7F1EE] text-[#0F766E]"
+                                : index === 1
+                                  ? "bg-[#FDE9E7] text-[#B84740]"
+                                  : "bg-[#E8EFF8] text-[#315F84]"
+                            }`}
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                     <div className="mt-3 grid grid-cols-2 gap-2">
                       <button
                         type="button"
@@ -445,18 +463,16 @@ function CardTypeScreen({
   onEditCard: (card: SavedCard) => void;
 }) {
   const exampleCards = [
-    ui.sampleCardOne,
-    ui.sampleCardTwo,
-    ui.sampleCardThree,
-    ui.sampleCardFour,
-    ui.sampleCardFive,
-    ui.sampleCardSix,
-    ui.sampleCardSeven,
-  ].map((title, index) => ({
+    [ui.sampleCardOne, ui.sampleCardAnswerOne],
+    [ui.sampleCardTwo, ui.sampleCardAnswerTwo],
+    [ui.sampleCardThree, ui.sampleCardAnswerThree],
+    [ui.sampleCardFour, ui.sampleCardAnswerFour],
+    [ui.sampleCardFive, ui.sampleCardAnswerFive],
+  ].map(([title, back], index) => ({
     id: `sample-${index}`,
     title,
     studyFront: title,
-    back: ui.sampleCardAnswer,
+    back,
     saved: false,
   }));
   const sampleCards: Array<{

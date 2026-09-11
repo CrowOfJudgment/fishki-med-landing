@@ -24,8 +24,6 @@ type StaticScreen = {
 const interactiveSlideSteps: Record<string, DemoStepKey> = {
   decks: "decks",
   editor: "editor",
-  quickSetup: "preview",
-  review: "review",
 };
 
 function Chevron({ direction }: { direction: "left" | "right" }) {
@@ -268,6 +266,116 @@ function PlannerTodayScreen({ ui }: { ui: Record<string, string> }) {
   );
 }
 
+function DemoCardTypeIcon({ type }: { type: "basic" | "cloze" | "image" | "occlusion" }) {
+  if (type === "cloze") return <span className="font-bold">&#123;...&#125;</span>;
+  if (type === "image") return <span className="text-sm">▣</span>;
+  if (type === "occlusion") return <span className="text-sm">▧</span>;
+  return <span className="text-sm">A</span>;
+}
+
+function DeckContentsScreen({ ui }: { ui: Record<string, string> }) {
+  const cards = [
+    [ui.demoCardAnatomyOne, "basic"],
+    [ui.demoCardAnatomyTwo, "cloze"],
+    [ui.demoCardAnatomyThree, "image"],
+    [ui.demoCardAnatomyFour, "occlusion"],
+    [ui.demoCardAnatomyFive, "basic"],
+  ] as const;
+
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden">
+      <StaticAppHeader title={ui.deckAnatomy} meta="5" />
+      <div className="min-h-0 flex-1 overflow-hidden px-3 pb-20 pt-3">
+        <div className="overflow-hidden rounded-[1.2rem] bg-white shadow-sm">
+          {cards.map(([title, type], index) => (
+            <div
+              key={title}
+              className="flex min-h-[4.15rem] items-center gap-3 border-b border-[#274D53]/8 px-3.5 py-3 last:border-0"
+            >
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#E7F1EE] text-[8px] font-semibold text-[#0F766E]">
+                <DemoCardTypeIcon type={type} />
+              </span>
+              <div className="min-w-0 flex-1">
+                <p className="line-clamp-2 text-[10px] font-semibold leading-4 text-[#002838]">
+                  {title}
+                </p>
+                <span className="mt-1 inline-flex rounded-full bg-[#E7F1EE] px-1.5 py-0.5 text-[6px] font-semibold text-[#0F766E]">
+                  {ui.demoTagThorax}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <span className="mx-auto mt-4 block w-fit rounded-full bg-white/90 px-4 py-2.5 text-[9px] font-semibold text-[#0F766E] shadow-sm">
+          + {ui.addFlashcard}
+        </span>
+      </div>
+      <StaticBottomNav ui={ui} active="decks" />
+    </div>
+  );
+}
+
+function ImageStudyScreen({ ui }: { ui: Record<string, string> }) {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden">
+      <StaticAppHeader title={ui.deckPharmacology} meta="3 / 5" />
+      <div className="flex min-h-0 flex-1 flex-col px-3 pb-4 pt-3">
+        <div className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-[1.45rem] border border-[#B9DDD5] bg-white p-4 shadow-sm">
+          <p className="text-center text-[8px] font-bold uppercase tracking-[0.18em] text-[#0F766E]">
+            {ui.front}
+          </p>
+          <div className="mt-3 overflow-hidden rounded-xl bg-[#E7F1EE] p-2">
+            <img
+              src="/images/app-demo/beta-lactam-wall.png"
+              alt=""
+              className="h-48 w-full object-contain"
+            />
+          </div>
+          <p className="mt-4 text-center text-[12px] font-semibold leading-5 text-[#002838]">
+            {ui.demoImageQuestion}
+          </p>
+          <span className="mx-auto mt-auto rounded-full bg-[#E7F1EE] px-3 py-1.5 text-[7px] font-semibold text-[#0F766E]">
+            {ui.demoTagMechanism}
+          </span>
+        </div>
+        <p className="mt-3 text-center text-[8px] font-semibold text-[#274D53]/55">
+          {ui.tapForBack}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function OcclusionStudyScreen({ ui }: { ui: Record<string, string> }) {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden">
+      <StaticAppHeader title={ui.deckAnatomy} meta="4 / 5" />
+      <div className="flex min-h-0 flex-1 flex-col px-3 pb-4 pt-3">
+        <div className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-[1.45rem] border border-[#B9DDD5] bg-white p-4 shadow-sm">
+          <p className="text-center text-[8px] font-bold uppercase tracking-[0.18em] text-[#0F766E]">
+            {ui.front}
+          </p>
+          <p className="mt-3 text-center text-[11px] font-semibold leading-4 text-[#002838]">
+            {ui.demoOcclusionQuestion}
+          </p>
+          <div className="relative mt-3 overflow-hidden rounded-xl bg-[#E7F1EE] p-2">
+            <img
+              src="/images/app-demo/heart-conduction.png"
+              alt=""
+              className="h-64 w-full object-contain"
+            />
+            <span className="absolute left-[43%] top-[27%] h-[12%] w-[25%] rounded-full border-2 border-[#E86860] bg-[#E86860] shadow-sm" />
+            <span className="absolute bottom-[21%] left-[42%] h-[10%] w-[31%] rounded-lg border-2 border-[#E86860] bg-[#E86860] shadow-sm" />
+          </div>
+          <p className="mt-auto pt-3 text-center text-[8px] font-semibold text-[#274D53]/55">
+            {ui.demoOcclusionHint}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function StaticStoryScreen({
   screenKey,
   ui,
@@ -277,6 +385,9 @@ function StaticStoryScreen({
 }) {
   if (screenKey === "plannerSetup") return <PlannerSetupScreen ui={ui} />;
   if (screenKey === "plannerToday") return <PlannerTodayScreen ui={ui} />;
+  if (screenKey === "deckContents") return <DeckContentsScreen ui={ui} />;
+  if (screenKey === "imageStudy") return <ImageStudyScreen ui={ui} />;
+  if (screenKey === "occlusionStudy") return <OcclusionStudyScreen ui={ui} />;
   return null;
 }
 
@@ -301,23 +412,26 @@ export default function StaticDemoShowcase({
     {
       id: "anatomy",
       title: ui.deckAnatomy,
-      cards: 30,
+      cards: 5,
       due: 0,
       accent: "#0F766E",
+      tags: [ui.demoTagThorax, ui.demoTagExam],
     },
     {
       id: "pharmacology",
       title: ui.deckPharmacology,
-      cards: 127,
+      cards: 5,
       due: 0,
       accent: "#78C2B7",
+      tags: [ui.demoTagAntibiotics, ui.demoTagMechanism],
     },
     {
       id: "pathophysiology",
       title: ui.deckPathology,
-      cards: 84,
+      cards: 5,
       due: 0,
       accent: "#E86860",
+      tags: [ui.demoTagInflammation, ui.demoTagHistology],
     },
   ];
   const studyCard: SavedCard = {

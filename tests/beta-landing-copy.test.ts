@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import test from "node:test";
 
 type LandingMessages = {
@@ -9,6 +9,7 @@ type LandingMessages = {
     screenLabel: string;
     steps: Array<{ key: string; description: string }>;
     fixedScreens: Array<{ key: string; label: string; description: string }>;
+    ui: Record<string, string>;
   };
   preorder: {
     subtitle: string;
@@ -53,10 +54,10 @@ test("English landing copy avoids literal or awkward product phrasing", () => {
 test("product showcase contains only features available in the beta", () => {
   const expectedScreens = [
     "decks",
+    "deckContents",
     "editor",
-    "quickSetup",
-    "review",
-    "plannerSetup",
+    "imageStudy",
+    "occlusionStudy",
     "plannerToday",
   ];
 
@@ -83,6 +84,44 @@ test("product showcase contains only features available in the beta", () => {
 
   assert.doesNotMatch(interactiveDemo, /ui\.testMode|ui\.comingSoon/);
   assert.doesNotMatch(staticDemo, /TestModeScreen|OfflineScreen/);
+});
+
+test("medical showcase uses three five-card decks and bundled visual assets", () => {
+  const staticDemo = readFileSync(
+    new URL("../components/app-demo/static-demo-showcase.tsx", import.meta.url),
+    "utf8",
+  );
+
+  assert.equal((staticDemo.match(/cards: 5,/g) ?? []).length, 3);
+  assert.match(staticDemo, /beta-lactam-wall\.png/);
+  assert.match(staticDemo, /heart-conduction\.png/);
+  assert.ok(
+    existsSync(
+      new URL(
+        "../public/images/app-demo/beta-lactam-wall.png",
+        import.meta.url,
+      ),
+    ),
+  );
+  assert.ok(
+    existsSync(
+      new URL(
+        "../public/images/app-demo/heart-conduction.png",
+        import.meta.url,
+      ),
+    ),
+  );
+
+  for (const locale of ["pl", "en"] as const) {
+    const ui = messages(locale).demo.ui;
+    assert.ok(ui.deckAnatomy);
+    assert.ok(ui.deckPharmacology);
+    assert.ok(ui.deckPathology);
+    assert.ok(ui.demoCardAnatomyOne);
+    assert.ok(ui.demoCardAnatomyFive);
+    assert.ok(ui.demoImageQuestion);
+    assert.ok(ui.demoOcclusionQuestion);
+  }
 });
 
 test("offline section describes only local features present in the beta", () => {
