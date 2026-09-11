@@ -1,14 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import { useT } from "@/lib/i18n-context";
+import { useLocale, useT } from "@/lib/i18n-context";
 
-const screenshotPaths: Record<string, string> = {
-  decks: "/images/app-screenshots/01-decks.png",
-  deckContents: "/images/app-screenshots/02-deck-contents.png",
-  editor: "/images/app-screenshots/03-card-editor.png",
-  smartReview: "/images/app-screenshots/04-smart-review.png",
-  plannerToday: "/images/app-screenshots/06-study-plan.png",
+const screenshotPaths: Record<"pl" | "en", Record<string, string>> = {
+  pl: {
+    decks: "/images/app-screenshots/01-decks.png",
+    deckContents: "/images/app-screenshots/02-deck-contents.png",
+    editor: "/images/app-screenshots/03-card-editor.png",
+    smartReview: "/images/app-screenshots/04-smart-review.png",
+    plannerToday: "/images/app-screenshots/06-study-plan.png",
+  },
+  en: {
+    decks: "/images/app-screenshots/en/01-decks.png",
+    deckContents: "/images/app-screenshots/en/02-deck-contents.png",
+    editor: "/images/app-screenshots/en/03-card-editor.png",
+    smartReview: "/images/app-screenshots/en/04-smart-review.png",
+    plannerToday: "/images/app-screenshots/en/06-study-plan.png",
+  },
 };
 
 type ShowcaseScreen = {
@@ -20,6 +29,7 @@ type ShowcaseScreen = {
 
 export default function ProductShowcaseSection() {
   const t = useT();
+  const locale = useLocale();
 
   return (
     <section id="how-it-works" className="scroll-mt-28 py-20 sm:py-28">
@@ -38,7 +48,7 @@ export default function ProductShowcaseSection() {
 
         <div className="mt-12 grid snap-x snap-mandatory grid-flow-col auto-cols-[84%] gap-5 overflow-x-auto px-[8%] pb-6 sm:auto-cols-[56%] sm:px-[22%] lg:grid-flow-row lg:grid-cols-3 lg:overflow-visible lg:px-0 xl:grid-cols-5">
           {t.demo.fixedScreens.flatMap((screen: ShowcaseScreen) => {
-            const src = screenshotPaths[screen.key];
+            const src = screenshotPaths[locale][screen.key];
             if (!src) return [];
 
             return (

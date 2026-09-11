@@ -161,12 +161,22 @@ test("product showcase renders only genuine simulator screenshots", () => {
 
   for (const screenshot of screenshotPaths) {
     assert.match(showcaseSection, new RegExp(screenshot.replace(".", "\\.")));
-    const image = readFileSync(
-      new URL(`../public/images/app-screenshots/${screenshot}`, import.meta.url),
-    );
-    assert.ok(image.length > 100_000, `${screenshot} should be a real screenshot`);
+    for (const directory of ["", "en/"]) {
+      const image = readFileSync(
+        new URL(
+          `../public/images/app-screenshots/${directory}${screenshot}`,
+          import.meta.url,
+        ),
+      );
+      assert.ok(
+        image.length > 100_000,
+        `${directory}${screenshot} should be a real screenshot`,
+      );
+    }
   }
 
+  assert.match(showcaseSection, /useLocale/);
+  assert.match(showcaseSection, /app-screenshots\/en/);
   assert.doesNotMatch(showcaseSection, /mockup|interactive demo/i);
 });
 
