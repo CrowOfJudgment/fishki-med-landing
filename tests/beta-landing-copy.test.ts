@@ -1,12 +1,16 @@
 import assert from "node:assert/strict";
-import { existsSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 
 type LandingMessages = {
   hero: { badge: string; subtitle: string; validation: string };
   demo: {
-    badge: string;
-    screenLabel: string;
+    postDemoCta: {
+      title: string;
+      text: string;
+      waitlist: string;
+      preorder: string;
+    };
     steps: Array<{ key: string; description: string }>;
     fixedScreens: Array<{ key: string; label: string; description: string }>;
     ui: Record<string, string>;
@@ -73,44 +77,54 @@ test("product showcase contains only features available in the beta", () => {
     assert.doesNotMatch(showcase, /folder|entire subject|cały przedmiot/i);
   }
 
-  const interactiveDemo = readFileSync(
-    new URL("../components/app-demo/demo-app-screen.tsx", import.meta.url),
-    "utf8",
-  );
-  const staticDemo = readFileSync(
-    new URL("../components/app-demo/static-demo-showcase.tsx", import.meta.url),
-    "utf8",
-  );
-
-  assert.doesNotMatch(interactiveDemo, /ui\.testMode|ui\.comingSoon/);
-  assert.doesNotMatch(staticDemo, /TestModeScreen|OfflineScreen/);
 });
 
-test("medical showcase uses three five-card decks and bundled visual assets", () => {
-  const staticDemo = readFileSync(
-    new URL("../components/app-demo/static-demo-showcase.tsx", import.meta.url),
+test("mocked and interactive demos are removed while the beta CTA remains", () => {
+  const page = readFileSync(
+    new URL("../app/(default)/page.tsx", import.meta.url),
+    "utf8",
+  );
+  const showcaseSection = readFileSync(
+    new URL("../components/product-showcase-section.tsx", import.meta.url),
+    "utf8",
+  );
+  const header = readFileSync(
+    new URL("../components/ui/header.tsx", import.meta.url),
+    "utf8",
+  );
+  const footer = readFileSync(
+    new URL("../components/ui/footer.tsx", import.meta.url),
     "utf8",
   );
 
-  assert.equal((staticDemo.match(/cards: 5,/g) ?? []).length, 3);
-  assert.match(staticDemo, /beta-lactam-wall\.png/);
-  assert.match(staticDemo, /heart-conduction\.png/);
-  assert.ok(
-    existsSync(
-      new URL(
-        "../public/images/app-demo/beta-lactam-wall.png",
-        import.meta.url,
-      ),
-    ),
+  assert.doesNotMatch(page, /AppDemo|StaticDemo|PhoneMockup/);
+  assert.doesNotMatch(header, /\/#demo/);
+  assert.doesNotMatch(footer, /\/#demo/);
+  assert.doesNotMatch(showcaseSection, /DemoAppScreen|PhoneMockup|StaticDemo/);
+  assert.match(showcaseSection, /t\.demo\.postDemoCta\.title/);
+  assert.match(showcaseSection, /href="#waitlist-form"/);
+  assert.match(showcaseSection, /href="#preorder"/);
+
+  for (const locale of ["pl", "en"] as const) {
+    const cta = messages(locale).demo.postDemoCta;
+    assert.ok(cta.title);
+    assert.ok(cta.text);
+    assert.ok(cta.waitlist);
+    assert.ok(cta.preorder);
+  }
+});
+
+test("medical screenshot plan covers the real beta flows", () => {
+  const screenshotPlan = readFileSync(
+    new URL("../docs/LANDING_SCREENSHOTS.md", import.meta.url),
+    "utf8",
   );
-  assert.ok(
-    existsSync(
-      new URL(
-        "../public/images/app-demo/heart-conduction.png",
-        import.meta.url,
-      ),
-    ),
-  );
+
+  assert.match(screenshotPlan, /wyłącznie zrzuty.*działającej aplikacji/is);
+  assert.match(screenshotPlan, /01-decks\.png/);
+  assert.match(screenshotPlan, /03-card-editor\.png/);
+  assert.match(screenshotPlan, /05-image-occlusion\.png/);
+  assert.match(screenshotPlan, /06-study-plan\.png/);
 
   for (const locale of ["pl", "en"] as const) {
     const ui = messages(locale).demo.ui;
@@ -142,8 +156,8 @@ for (const locale of ["pl", "en"] as const) {
     const marketingCopy = [
       copy.hero.badge,
       copy.hero.subtitle,
-      copy.demo.badge,
-      copy.demo.screenLabel,
+      copy.demo.postDemoCta.title,
+      copy.demo.postDemoCta.text,
       copy.preorder.subtitle,
       ...copy.preorder.offerFacts.map((fact) => fact.note),
     ].join(" ");

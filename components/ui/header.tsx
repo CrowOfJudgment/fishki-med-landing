@@ -63,14 +63,9 @@ export default function Header() {
       className: "hidden min-[980px]:inline-flex",
     },
     {
-      href: "/#demo",
-      label: t.header.demo,
-      className: "hidden min-[1080px]:inline-flex",
-    },
-    {
       href: "/#for-medicine",
       label: t.header.forMedicine,
-      className: "hidden min-[1180px]:inline-flex",
+      className: "hidden min-[1080px]:inline-flex",
     },
   ];
 
