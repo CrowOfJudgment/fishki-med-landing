@@ -188,15 +188,18 @@ test("product showcase renders only genuine simulator screenshots", () => {
   assert.doesNotMatch(showcaseSection, /mockup|interactive demo/i);
 });
 
-test("screenshots use large stacked feature rows instead of a compact grid", () => {
+test("screenshots use one large automatically advancing carousel", () => {
   const showcaseSection = readFileSync(
     new URL("../components/product-showcase-section.tsx", import.meta.url),
     "utf8",
   );
 
-  assert.match(showcaseSection, /max-w-5xl flex-col/);
-  assert.match(showcaseSection, /max-w-\[25rem\]/);
-  assert.match(showcaseSection, /lg:flex-row-reverse/);
+  assert.match(showcaseSection, /AUTOPLAY_INTERVAL_MS = 5000/);
+  assert.match(showcaseSection, /setInterval/);
+  assert.match(showcaseSection, /SWIPE_THRESHOLD_PX = 48/);
+  assert.match(showcaseSection, /aria-roledescription="carousel"/);
+  assert.match(showcaseSection, /max-w-\[27rem\]/);
+  assert.match(showcaseSection, /unoptimized/);
   assert.doesNotMatch(showcaseSection, /xl:grid-cols-5|lg:grid-cols-3/);
 });
 
