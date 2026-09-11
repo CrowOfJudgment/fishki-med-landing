@@ -42,7 +42,10 @@ test("landing clearly says that first testers already have access", () => {
   const polish = messages("pl");
   const english = messages("en");
 
-  assert.match(polish.hero.validation, /pierwsi studenci medycyny już testują/i);
+  assert.match(
+    polish.hero.validation,
+    /pierwsi studenci medycyny już testują/i,
+  );
   assert.match(polish.preorder.subtitle, /pierwsi studenci już korzystają/i);
   assert.match(english.hero.validation, /students are already testing/i);
   assert.match(english.preorder.subtitle, /join them today/i);
@@ -83,7 +86,6 @@ test("product showcase contains only features available in the beta", () => {
     assert.doesNotMatch(showcase, /test.?mode|tryb test|coming soon|wkrótce/i);
     assert.doesNotMatch(showcase, /folder|entire subject|cały przedmiot/i);
   }
-
 });
 
 test("mocked and interactive demos are removed while the beta CTA remains", () => {
@@ -135,13 +137,19 @@ test("header section links follow the landing page order", () => {
 
   const positions = orderedSections.map((section) => header.indexOf(section));
   assert.ok(positions.every((position) => position >= 0));
-  assert.deepEqual(positions, positions.toSorted((a, b) => a - b));
+  assert.deepEqual(
+    positions,
+    positions.toSorted((a, b) => a - b),
+  );
 });
 
 test("screenshot introduction describes real app screens without card-count filler", () => {
   for (const locale of ["pl", "en"] as const) {
     const intro = messages(locale).demo.showcaseIntro;
-    assert.doesNotMatch(intro, /15|realistycznych fiszek|realistic medical flashcards/i);
+    assert.doesNotMatch(
+      intro,
+      /15|realistycznych fiszek|realistic medical flashcards/i,
+    );
     assert.match(intro, /iPhon/i);
   }
 });
@@ -178,6 +186,32 @@ test("product showcase renders only genuine simulator screenshots", () => {
   assert.match(showcaseSection, /useLocale/);
   assert.match(showcaseSection, /app-screenshots\/en/);
   assert.doesNotMatch(showcaseSection, /mockup|interactive demo/i);
+});
+
+test("screenshots use large stacked feature rows instead of a compact grid", () => {
+  const showcaseSection = readFileSync(
+    new URL("../components/product-showcase-section.tsx", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(showcaseSection, /max-w-5xl flex-col/);
+  assert.match(showcaseSection, /max-w-\[25rem\]/);
+  assert.match(showcaseSection, /lg:flex-row-reverse/);
+  assert.doesNotMatch(showcaseSection, /xl:grid-cols-5|lg:grid-cols-3/);
+});
+
+test("floating beta CTA expands while scrolling and collapses after idle", () => {
+  const floatingCta = readFileSync(
+    new URL("../components/floating-cta.tsx", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(floatingCta, /setExpanded\(shouldShow\)/);
+  assert.match(floatingCta, /setTimeout\(\(\) => setExpanded\(false\), 900\)/);
+  assert.match(floatingCta, /expanded \? "w-\[min\(18rem/);
+  assert.match(floatingCta, /: "w-12 px-0"/);
+  assert.match(floatingCta, /motion-reduce:transition-none/);
+  assert.match(floatingCta, /aria-label=\{t\.floatingCta\.text\}/);
 });
 
 test("medical screenshot plan covers the real beta flows", () => {
