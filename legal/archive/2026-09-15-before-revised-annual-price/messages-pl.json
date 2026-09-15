@@ -579,14 +579,14 @@
       "eu": {
         "title": "Dołącz do bety Fishki za 16,99 €",
         "value": "16,99 €",
-        "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp będzie kosztował 49,99 € rocznie. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
-        "comparison": "16,99 € w preorderze zamiast planowanych 49,99 € rocznie"
+        "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp będzie kosztował 129,99 € rocznie. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
+        "comparison": "16,99 € w preorderze zamiast planowanych 129,99 € rocznie"
       },
       "us": {
         "title": "Dołącz do bety Fishki za 18,99 USD",
         "value": "18,99 USD",
-        "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp będzie kosztował 59,99 USD rocznie. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
-        "comparison": "18,99 USD w preorderze zamiast planowanych 59,99 USD rocznie"
+        "note": "Płatność jednorazowa. Po oficjalnej premierze dostęp będzie kosztował 149,99 USD rocznie. Jeśli nie uda nam się wypuścić aplikacji, dajemy gwarancję zwrotu środków.",
+        "comparison": "18,99 USD w preorderze zamiast planowanych 149,99 USD rocznie"
       }
     },
     "subtitle": "Pierwsi studenci już korzystają z Fishki. Kup Wczesny dostęp, dołącz do zamkniętej bety i pomóż nam dopracować aplikację przed publicznym startem.",
@@ -751,7 +751,7 @@
               "możliwość testowania aplikacji i zgłaszania opinii,",
               "możliwość przekazywania opinii dotyczących rozwoju produktu,",
               "12 miesięcy dostępu do planu premium po publicznym uruchomieniu aplikacji,",
-              "cenę preorderową zależną od regionu: 69 PLN w Polsce, 16,99 EUR w Europie poza Polską albo 18,99 USD w USA i pozostałych krajach, zamiast planowanej ceny rocznej po premierze: odpowiednio 149 PLN, 49,99 EUR albo 59,99 USD."
+              "cenę preorderową zależną od regionu: 69 PLN w Polsce, 16,99 EUR w Europie poza Polską albo 18,99 USD w USA i pozostałych krajach, zamiast planowanej ceny rocznej po premierze: odpowiednio 149 PLN, 129,99 EUR albo 149,99 USD."
             ]
           },
           {
@@ -769,7 +769,7 @@
           },
           {
             "type": "paragraph",
-            "text": "Planowana cena rocznego dostępu po publicznym uruchomieniu aplikacji wynosi odpowiednio: 149 PLN w Polsce, 49,99 EUR w Europie poza Polską albo 59,99 USD w USA i pozostałych krajach."
+            "text": "Planowana cena rocznego dostępu po publicznym uruchomieniu aplikacji wynosi odpowiednio: 149 PLN w Polsce, 129,99 EUR w Europie poza Polską albo 149,99 USD w USA i pozostałych krajach."
           },
           {
             "type": "paragraph",

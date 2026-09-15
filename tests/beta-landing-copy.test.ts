@@ -98,11 +98,15 @@ test("annual launch prices stay consistent in both locales", () => {
     "utf8",
   );
 
-  assert.match(polish, /129,99 € rocznie/);
-  assert.match(polish, /149,99 USD rocznie/);
-  assert.match(english, /€129\.99 per year/);
-  assert.match(english, /\$149\.99 per year/);
+  assert.match(polish, /49,99 € rocznie/);
+  assert.match(polish, /59,99 USD rocznie/);
+  assert.match(english, /€49\.99 per year/);
+  assert.match(english, /\$59\.99 per year/);
   assert.doesNotMatch(`${polish}\n${english}`, /€35|35 €|35 EUR|\$40|40 USD/);
+  assert.doesNotMatch(
+    `${polish}\n${english}`,
+    /€129\.99|129,99 €|129,99 EUR|\$149\.99|149,99 USD/,
+  );
 });
 
 test("mocked and interactive demos are removed while the beta CTA remains", () => {

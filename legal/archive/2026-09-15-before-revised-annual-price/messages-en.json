@@ -579,14 +579,14 @@
       "eu": {
         "title": "Get Fishki Early Access for €16.99",
         "value": "€16.99",
-        "note": "One-time payment. The planned price after launch is €49.99 per year. Your purchase is covered by our launch guarantee.",
-        "comparison": "Pay €16.99 now instead of the planned €49.99 annual price"
+        "note": "One-time payment. The planned price after launch is €129.99 per year. Your purchase is covered by our launch guarantee.",
+        "comparison": "Pay €16.99 now instead of the planned €129.99 annual price"
       },
       "us": {
         "title": "Get Fishki Early Access for $18.99",
         "value": "$18.99",
-        "note": "One-time payment. The planned price after launch is $59.99 per year. Your purchase is covered by our launch guarantee.",
-        "comparison": "Pay $18.99 now instead of the planned $59.99 annual price"
+        "note": "One-time payment. The planned price after launch is $149.99 per year. Your purchase is covered by our launch guarantee.",
+        "comparison": "Pay $18.99 now instead of the planned $149.99 annual price"
       }
     },
     "subtitle": "Medical students are already testing Fishki. Get Early Access, join them today and help shape the app before its public launch.",
@@ -628,7 +628,7 @@
       "Private access to the active beta before the public launch",
       "12 months of Premium after the public launch",
       "A direct way to share feedback and help shape the product",
-      "$18.99 in preorder instead of the planned $59.99 per year"
+      "$18.99 in preorder instead of the planned $149.99 per year"
     ],
     "trust": "You are joining an active beta, not purchasing a finished production app. Features may change and you may encounter bugs. You can withdraw from the purchase within 14 days without giving a reason.",
     "placeholderLabel": "Get Early Access",
@@ -749,7 +749,7 @@
               "the ability to test the application and submit feedback,",
               "the ability to provide feedback about product development,",
               "12 months of access to the premium plan after the public launch of the application,",
-              "a region-based preorder price: PLN 69 in Poland, €16.99 in Europe outside Poland or $18.99 in the United States and other countries, instead of the planned annual post-launch price of PLN 149, €49.99 or $59.99 respectively."
+              "a region-based preorder price: PLN 69 in Poland, €16.99 in Europe outside Poland or $18.99 in the United States and other countries, instead of the planned annual post-launch price of PLN 149, €129.99 or $149.99 respectively."
             ]
           },
           {
@@ -767,7 +767,7 @@
           },
           {
             "type": "paragraph",
-            "text": "The planned annual price after the public launch is respectively: PLN 149 in Poland, €49.99 in Europe outside Poland or $59.99 in the United States and other countries."
+            "text": "The planned annual price after the public launch is respectively: PLN 149 in Poland, €129.99 in Europe outside Poland or $149.99 in the United States and other countries."
           },
           {
             "type": "paragraph",

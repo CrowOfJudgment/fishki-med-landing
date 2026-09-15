@@ -1,7 +1,7 @@
 import type { PricingRegion } from "./pricing-region";
 
 export const PREORDER_DOCUMENT_VERSIONS = {
-  preorderTermsVersion: "2026-09-15",
+  preorderTermsVersion: "2026-09-15-v2",
   termsOfUseVersion: "2026-06-20",
   privacyPolicyVersion: "2026-09-08-v2",
 } as const;
