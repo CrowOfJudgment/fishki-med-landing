@@ -199,6 +199,9 @@ test("screenshots use one large automatically advancing carousel", () => {
   assert.match(showcaseSection, /SWIPE_THRESHOLD_PX = 48/);
   assert.match(showcaseSection, /aria-roledescription="carousel"/);
   assert.match(showcaseSection, /max-w-\[27rem\]/);
+  assert.match(showcaseSection, /rounded-\[4\.5rem\]/);
+  assert.match(showcaseSection, /border-\[10px\]/);
+  assert.match(showcaseSection, /rounded-\[3\.75rem\]/);
   assert.match(showcaseSection, /unoptimized/);
   assert.doesNotMatch(showcaseSection, /xl:grid-cols-5|lg:grid-cols-3/);
 });
@@ -210,7 +213,8 @@ test("floating beta CTA expands while scrolling and collapses after idle", () =>
   );
 
   assert.match(floatingCta, /setExpanded\(shouldShow\)/);
-  assert.match(floatingCta, /setTimeout\(\(\) => setExpanded\(false\), 900\)/);
+  assert.match(floatingCta, /setTimeout\(\(\) => setExpanded\(false\), 700\)/);
+  assert.match(floatingCta, /duration-300/);
   assert.match(floatingCta, /expanded \? "w-\[min\(18rem/);
   assert.match(floatingCta, /: "w-12 px-0"/);
   assert.match(floatingCta, /motion-reduce:transition-none/);

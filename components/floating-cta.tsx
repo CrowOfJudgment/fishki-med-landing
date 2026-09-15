@@ -17,7 +17,7 @@ export default function FloatingCTA() {
 
       if (collapseTimer) clearTimeout(collapseTimer);
       if (shouldShow) {
-        collapseTimer = setTimeout(() => setExpanded(false), 900);
+        collapseTimer = setTimeout(() => setExpanded(false), 700);
       }
     };
 

@@ -171,7 +171,7 @@ export default function ProductShowcaseSection() {
             <div className="order-1 flex items-center justify-center lg:order-2">
               <div
                 key={`image-${screen.number}`}
-                className="w-full max-w-[27rem] overflow-hidden rounded-[1.75rem] border border-[#D8E8E4] bg-[#F4F7F5] shadow-[0_24px_60px_rgba(0,40,56,0.16)] motion-safe:animate-[demo-in_280ms_ease-out]"
+                className="w-full max-w-[27rem] overflow-hidden rounded-[4.5rem] border-[10px] border-[#0B1418] bg-[#0B1418] shadow-[0_24px_60px_rgba(0,40,56,0.2)] motion-safe:animate-[demo-in_280ms_ease-out]"
               >
                 <Image
                   src={screen.src}
@@ -179,7 +179,7 @@ export default function ProductShowcaseSection() {
                   width={1206}
                   height={2622}
                   sizes="(min-width: 1024px) 432px, (min-width: 640px) 432px, calc(100vw - 72px)"
-                  className="h-auto w-full select-none"
+                  className="h-auto w-full select-none rounded-[3.75rem]"
                   draggable={false}
                   unoptimized
                   priority={active === 0}
