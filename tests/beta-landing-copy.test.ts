@@ -88,6 +88,23 @@ test("product showcase contains only features available in the beta", () => {
   }
 });
 
+test("annual launch prices stay consistent in both locales", () => {
+  const polish = readFileSync(
+    new URL("../messages/pl.json", import.meta.url),
+    "utf8",
+  );
+  const english = readFileSync(
+    new URL("../messages/en.json", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(polish, /129,99 € rocznie/);
+  assert.match(polish, /149,99 USD rocznie/);
+  assert.match(english, /€129\.99 per year/);
+  assert.match(english, /\$149\.99 per year/);
+  assert.doesNotMatch(`${polish}\n${english}`, /€35|35 €|35 EUR|\$40|40 USD/);
+});
+
 test("mocked and interactive demos are removed while the beta CTA remains", () => {
   const page = readFileSync(
     new URL("../app/(default)/page.tsx", import.meta.url),
