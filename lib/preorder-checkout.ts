@@ -1,9 +1,9 @@
 import type { PricingRegion } from "./pricing-region";
 
 export const PREORDER_DOCUMENT_VERSIONS = {
-  preorderTermsVersion: "2026-09-15-v2",
-  termsOfUseVersion: "2026-06-20",
-  privacyPolicyVersion: "2026-09-08-v2",
+  preorderTermsVersion: "2026-09-17-v1",
+  termsOfUseVersion: "2026-09-17-v1",
+  privacyPolicyVersion: "2026-09-17-v1",
 } as const;
 
 export const PREORDER_PAYMENT_PROVIDER = "STRIPE" as const;

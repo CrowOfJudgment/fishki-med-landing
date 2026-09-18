@@ -673,7 +673,7 @@
     "terms": "Warunki użytkowania",
     "privacy": "Polityka prywatności",
     "preorderTerms": "Warunki preorderu",
-    "contactPlaceholder": "support@fishki-med.com"
+    "contactPlaceholder": "Miejsce na adres email kontaktowy."
   },
   "preorderThankYou": {
     "badge": "Płatność przyjęta",
@@ -695,7 +695,7 @@
     "back": "Wróć do preorderu",
     "badge": "Regulamin preorderu",
     "title": "Regulamin sprzedaży preorderu Fishki Early Access",
-    "lastUpdated": "Ostatnia aktualizacja: 17.09.2026 r.",
+    "lastUpdated": "Ostatnia aktualizacja: 15.09.2026 r.",
     "intro": "",
     "sections": [
       {
@@ -715,7 +715,7 @@
           },
           {
             "type": "paragraph",
-            "text": "E-mail kontaktowy: support@fishki-med.com"
+            "text": "E-mail kontaktowy: mateuszbuczak1@gmail.com"
           },
           { "type": "paragraph", "text": "Dalej: „Sprzedawca”." }
         ]
@@ -890,7 +890,7 @@
             "type": "paragraph",
             "text": "Aby odstąpić od umowy, należy wysłać wiadomość e-mail na adres:"
           },
-          { "type": "paragraph", "text": "support@fishki-med.com" },
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "Przykładowa treść wiadomości:" },
           {
             "type": "quote",
@@ -917,7 +917,7 @@
             "type": "paragraph",
             "text": "Żądanie zwrotu należy wysłać na adres:"
           },
-          { "type": "paragraph", "text": "support@fishki-med.com" },
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           {
             "type": "paragraph",
             "text": "Zwrot obejmuje kwotę faktycznie zapłaconą przez użytkownika za preorder."
@@ -945,10 +945,6 @@
           {
             "type": "paragraph",
             "text": "Komunikacja będzie prowadzona na adres e-mail podany przy zakupie."
-          },
-          {
-            "type": "paragraph",
-            "text": "Wiadomości e-mail mogą być dostarczane za pośrednictwem zewnętrznego dostawcy komunikacji e-mail, obecnie Resend."
           }
         ]
       },
@@ -959,7 +955,7 @@
             "type": "paragraph",
             "text": "Użytkownik może złożyć reklamację dotyczącą preorderu lub działania aplikacji, wysyłając wiadomość na adres:"
           },
-          { "type": "paragraph", "text": "support@fishki-med.com" },
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "Reklamacja powinna zawierać:" },
           {
             "type": "list",
@@ -1019,7 +1015,7 @@
             "text": "W sprawach nieuregulowanych niniejszym regulaminem zastosowanie ma prawo polskie."
           },
           { "type": "paragraph", "text": "Kontakt w sprawach preorderu:" },
-          { "type": "paragraph", "text": "support@fishki-med.com" }
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }
         ]
       }
     ]

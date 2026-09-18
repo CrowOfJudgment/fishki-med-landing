@@ -3,7 +3,7 @@
     "back": "Back to homepage",
     "badge": "Terms of use",
     "title": "Fishki Terms of Use",
-    "lastUpdated": "Last updated: September 17, 2026",
+    "lastUpdated": "Last updated: June 20, 2026",
     "intro": "",
     "sections": [
       {
@@ -24,9 +24,9 @@
           },
           {
             "type": "paragraph",
-            "text": "Mateusz Buczak, operating as an unregistered business activity under Polish law\nAddress: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów, Poland\nEmail: support@fishki-med.com"
+            "text": "Mateusz Buczak, operating as an unregistered business activity under Polish law\nAddress: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów, Poland\nEmail: mateuszbuczak1@gmail.com"
           },
-          { "type": "paragraph", "text": "Hereinafter: the \"Operator\"." }
+          { "type": "paragraph", "text": "Hereinafter: the --�Operator--�." }
         ]
       },
       {
@@ -101,10 +101,6 @@
           {
             "type": "paragraph",
             "text": "The user may unsubscribe at any time by clicking the unsubscribe link in an email or contacting the Operator."
-          },
-          {
-            "type": "paragraph",
-            "text": "Email messages may be delivered through an external email service provider, currently Resend."
           }
         ]
       },
@@ -282,7 +278,7 @@
             "type": "paragraph",
             "text": "Complaints concerning the website or application may be sent to:"
           },
-          { "type": "paragraph", "text": "support@fishki-med.com" },
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "A complaint should include:" },
           {
             "type": "list",
@@ -334,7 +330,7 @@
         "title": "16. Contact",
         "blocks": [
           { "type": "paragraph", "text": "Contact the Operator at:" },
-          { "type": "paragraph", "text": "support@fishki-med.com" }
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }
         ]
       }
     ]
@@ -343,7 +339,7 @@
     "back": "Back to homepage",
     "badge": "Privacy",
     "title": "Fishki Privacy Policy",
-    "lastUpdated": "Last updated: September 17, 2026",
+    "lastUpdated": "Last updated: September 8, 2026",
     "intro": "",
     "sections": [
       {
@@ -355,9 +351,9 @@
           },
           {
             "type": "paragraph",
-            "text": "Mateusz Buczak, operating as an unregistered business activity under Polish law\nAddress: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów, Poland\nEmail: support@fishki-med.com"
+            "text": "Mateusz Buczak, operating as an unregistered business activity under Polish law\nAddress: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów, Poland\nEmail: mateuszbuczak1@gmail.com"
           },
-          { "type": "paragraph", "text": "Hereinafter: the \"Controller\"." },
+          { "type": "paragraph", "text": "Hereinafter: the --�Controller--�." },
           {
             "type": "paragraph",
             "text": "This Privacy Policy explains what data we process, for what purposes, on what legal basis and what rights you have. It may serve to provide the information required when data is collected, including the controller's identity, purposes, legal bases, retention period and data subject rights."
@@ -382,7 +378,6 @@
               "payment data provided by the payment provider,",
               "technical data such as IP address, device type, browser, operating system and cookie identifiers,",
               "website or application usage data,",
-              "the content of support requests, bug reports and feature suggestions, together with contact details associated with a submission,",
               "content added by the user after the application launches."
             ]
           }
@@ -422,10 +417,6 @@
           {
             "type": "paragraph",
             "text": "3.7. Accounting and tax obligations\nFor preorder purchases, we may process data required for accounting and tax settlements.\n\nLegal basis: a legal obligation incumbent on the Controller."
-          },
-          {
-            "type": "paragraph",
-            "text": "3.8. Support and user submissions\nWe process data to receive and store questions, bug reports and feature suggestions, notify the Controller about new submissions and respond to users.\n\nLegal basis: performance of a contract, steps taken at the user's request or the Controller's legitimate interest in providing support and developing the product."
           }
         ]
       },
@@ -459,7 +450,6 @@
               "Tally - waitlist forms,",
               "Railway - application API hosting and preorder form processing,",
               "Supabase - database, user accounts and application data storage,",
-              "Resend - email delivery and notifications concerning accounts, purchases, support and user submissions,",
               "PayByLink - payments for the Polish version,",
               "Stripe - payments for the international version."
             ]
@@ -498,7 +488,6 @@
               "preorder data - for the period required to perform the contract and handle complaints, refunds and potential claims,",
               "accounting and tax data - for the period required by law,",
               "technical and analytics data - for the period set in the relevant analytics tool or cookie settings,",
-              "support requests, bug reports and feature suggestions - for the period required to handle the submission, develop the product and establish, pursue or defend claims,",
               "user account data - while the account exists and afterwards for the period required for claims or legal obligations."
             ]
           }
@@ -526,7 +515,7 @@
             "text": "Withdrawal of consent does not affect the lawfulness of processing carried out before it was withdrawn."
           },
           { "type": "paragraph", "text": "To exercise your rights, contact:" },
-          { "type": "paragraph", "text": "support@fishki-med.com" }
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }
         ]
       },
       {
@@ -634,7 +623,7 @@
             "type": "paragraph",
             "text": "For privacy and personal data matters, contact:"
           },
-          { "type": "paragraph", "text": "support@fishki-med.com" }
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }
         ]
       }
     ]

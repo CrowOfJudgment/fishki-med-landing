@@ -66,6 +66,12 @@ export default function Footer({ border = false }: { border?: boolean }) {
 
             <div>
               <div className="rounded-2xl border border-[#B9DDD5] bg-[#F4F7F5] p-5">
+                <a
+                  href="mailto:support@fishki-med.com"
+                  className="text-sm font-semibold text-[#0F766E] transition hover:text-[#002838]"
+                >
+                  support@fishki-med.com
+                </a>
                 <p className="mt-4 text-sm leading-6 text-[#274D53]">
                   © {year} Fishki. {t.footer.copyright}
                 </p>

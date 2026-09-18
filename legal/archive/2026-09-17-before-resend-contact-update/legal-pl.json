@@ -3,7 +3,7 @@
     "back": "Wróć na stronę główną",
     "badge": "Warunki użytkowania",
     "title": "Warunki użytkowania Fishki",
-    "lastUpdated": "Ostatnia aktualizacja: 17.09.2026 r.",
+    "lastUpdated": "Ostatnia aktualizacja: 20.06.2026 r.",
     "intro": "",
     "sections": [
       {
@@ -24,9 +24,9 @@
           },
           {
             "type": "paragraph",
-            "text": "Mateusz Buczak, osoba fizyczna prowadząca działalność nierejestrowaną\nAdres: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów\nE-mail: support@fishki-med.com"
+            "text": "Mateusz Buczak, osoba fizyczna prowadząca działalność nierejestrowaną\nAdres: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów\nE-mail: mateuszbuczak1@gmail.com"
           },
-          { "type": "paragraph", "text": "Dalej: \"Operator\"." }
+          { "type": "paragraph", "text": "Dalej: --�Operator--�." }
         ]
       },
       {
@@ -101,10 +101,6 @@
           {
             "type": "paragraph",
             "text": "Użytkownik może w każdej chwili zrezygnować z komunikacji, klikając link rezygnacji w wiadomości e-mail albo kontaktując się z Operatorem."
-          },
-          {
-            "type": "paragraph",
-            "text": "Wiadomości e-mail mogą być dostarczane za pośrednictwem zewnętrznego dostawcy komunikacji e-mail, obecnie Resend."
           }
         ]
       },
@@ -296,7 +292,7 @@
             "type": "paragraph",
             "text": "Reklamacje dotyczące działania strony lub aplikacji można zgłaszać na adres:"
           },
-          { "type": "paragraph", "text": "support@fishki-med.com" },
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "Reklamacja powinna zawierać:" },
           {
             "type": "list",
@@ -348,7 +344,7 @@
         "title": "16. Kontakt",
         "blocks": [
           { "type": "paragraph", "text": "Kontakt z Operatorem:" },
-          { "type": "paragraph", "text": "support@fishki-med.com" }
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }
         ]
       }
     ]
@@ -357,7 +353,7 @@
     "back": "Wróć na stronę główną",
     "badge": "Prywatność",
     "title": "Polityka prywatności Fishki",
-    "lastUpdated": "Ostatnia aktualizacja: 17.09.2026 r.",
+    "lastUpdated": "Ostatnia aktualizacja: 08.09.2026 r.",
     "intro": "",
     "sections": [
       {
@@ -369,9 +365,9 @@
           },
           {
             "type": "paragraph",
-            "text": "Mateusz Buczak, osoba fizyczna prowadząca działalność nierejestrowaną\nAdres: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów\nE-mail: support@fishki-med.com"
+            "text": "Mateusz Buczak, osoba fizyczna prowadząca działalność nierejestrowaną\nAdres: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów\nE-mail: mateuszbuczak1@gmail.com"
           },
-          { "type": "paragraph", "text": "Dalej: \"Administrator\"." },
+          { "type": "paragraph", "text": "Dalej: --�Administrator--�." },
           {
             "type": "paragraph",
             "text": "Ta Polityka prywatności wyjaśnia, jakie dane przetwarzamy, w jakich celach, na jakiej podstawie i jakie prawa Ci przysługują. Polityka prywatności może być miejscem realizacji obowiązku informacyjnego wobec użytkownika, ponieważ przy zbieraniu danych trzeba jasno wskazać m.in. administratora, cele, podstawy, okres przetwarzania i prawa osoby, której dane dotyczą."
@@ -396,7 +392,6 @@
               "dane płatnicze w zakresie przekazanym przez operatora płatności,",
               "dane techniczne, takie jak adres IP, typ urządzenia, przeglądarka, system operacyjny, identyfikatory cookies,",
               "dane dotyczące korzystania ze strony lub aplikacji,",
-              "treść zgłoszeń dotyczących wsparcia, błędów i propozycji funkcji oraz dane kontaktowe powiązane ze zgłoszeniem,",
               "treści dodane przez użytkownika w aplikacji, po jej uruchomieniu."
             ]
           }
@@ -436,10 +431,6 @@
           {
             "type": "paragraph",
             "text": "3.7. Obowiązki księgowe i podatkowe\nW przypadku zakupu preorderu możemy przetwarzać dane wymagane do rozliczeń księgowych i podatkowych.\n\nPodstawa prawna: obowiązek prawny ciążący na Administratorze."
-          },
-          {
-            "type": "paragraph",
-            "text": "3.8. Obsługa wsparcia i zgłoszeń użytkowników\nDane przetwarzamy, aby przyjmować i przechowywać pytania, zgłoszenia błędów oraz propozycje funkcji, powiadamiać Administratora o nowych zgłoszeniach i udzielać odpowiedzi.\n\nPodstawa prawna: wykonanie umowy, podjęcie działań na żądanie użytkownika lub prawnie uzasadniony interes Administratora polegający na zapewnieniu wsparcia i rozwijaniu produktu."
           }
         ]
       },
@@ -473,7 +464,6 @@
               "Tally - formularze waitlisty,",
               "Railway - hosting API aplikacji i obsługa formularza preorderu,",
               "Supabase - baza danych, konta użytkowników i przechowywanie danych aplikacji,",
-              "Resend - wysyłka wiadomości e-mail oraz obsługa powiadomień dotyczących konta, zakupu, wsparcia i zgłoszeń użytkowników,",
               "PayByLink - płatności dla polskiej wersji,",
               "Stripe - płatności dla wersji międzynarodowej."
             ]
@@ -512,7 +502,6 @@
               "dane dotyczące preorderu - przez okres potrzebny do wykonania umowy, obsługi reklamacji, zwrotów i ewentualnych roszczeń,",
               "dane księgowe i podatkowe - przez okres wymagany przepisami prawa,",
               "dane techniczne i analityczne - przez okres wynikający z ustawień danego narzędzia analitycznego lub cookies,",
-              "dane zgłoszeń dotyczących wsparcia, błędów i propozycji funkcji - przez okres potrzebny do obsługi zgłoszenia, rozwoju produktu oraz ustalenia, dochodzenia lub obrony roszczeń,",
               "dane konta użytkownika - przez okres posiadania konta, a potem przez okres wymagany do obsługi roszczeń lub obowiązków prawnych."
             ]
           }
@@ -543,7 +532,7 @@
             "type": "paragraph",
             "text": "Aby skorzystać ze swoich praw, napisz na:"
           },
-          { "type": "paragraph", "text": "support@fishki-med.com" }
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }
         ]
       },
       {
@@ -652,7 +641,7 @@
             "type": "paragraph",
             "text": "W sprawach dotyczących prywatności i danych osobowych napisz na:"
           },
-          { "type": "paragraph", "text": "support@fishki-med.com" }
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }
         ]
       }
     ]

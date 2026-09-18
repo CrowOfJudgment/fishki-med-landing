@@ -28,9 +28,9 @@ test("accepts only absolute HTTPS checkout URLs", () => {
 
 test("pins the exact legal document versions accepted at purchase", () => {
   assert.deepEqual(PREORDER_DOCUMENT_VERSIONS, {
-    preorderTermsVersion: "2026-09-15-v2",
-    termsOfUseVersion: "2026-06-20",
-    privacyPolicyVersion: "2026-09-08-v2",
+    preorderTermsVersion: "2026-09-17-v1",
+    termsOfUseVersion: "2026-09-17-v1",
+    privacyPolicyVersion: "2026-09-17-v1",
   });
 });
 

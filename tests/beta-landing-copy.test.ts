@@ -354,3 +354,25 @@ test("preorder terms define the public full version without promising features",
     assert.match(source, /nie oznacza gwarancji|does not guarantee/i);
   }
 });
+
+test("active legal documents disclose Resend and use the Fishki support address", () => {
+  for (const locale of ["pl", "en"] as const) {
+    const landing = readFileSync(
+      new URL(`../messages/${locale}.json`, import.meta.url),
+      "utf8",
+    );
+    const legal = readFileSync(
+      new URL(`../messages/legal-${locale}.json`, import.meta.url),
+      "utf8",
+    );
+    const activeDocuments = `${landing}\n${legal}`;
+
+    assert.match(activeDocuments, /support@fishki-med\.com/);
+    assert.match(activeDocuments, /Resend/);
+    assert.doesNotMatch(activeDocuments, /mateuszbuczak1@gmail\.com/);
+    assert.match(
+      legal,
+      /zgłoszeń dotyczących wsparcia|support requests, bug reports/i,
+    );
+  }
+});

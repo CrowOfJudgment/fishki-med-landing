@@ -693,7 +693,7 @@
     "back": "Back to preorder",
     "badge": "Preorder terms",
     "title": "Fishki Early Access Preorder and Sales Terms",
-    "lastUpdated": "Last updated: September 17, 2026",
+    "lastUpdated": "Last updated: September 15, 2026",
     "intro": "",
     "sections": [
       {
@@ -713,7 +713,7 @@
           },
           {
             "type": "paragraph",
-            "text": "Contact email: support@fishki-med.com"
+            "text": "Contact email: mateuszbuczak1@gmail.com"
           },
           { "type": "paragraph", "text": "Hereinafter: the “Seller”." }
         ]
@@ -888,7 +888,7 @@
             "type": "paragraph",
             "text": "To withdraw from the agreement, send an email to:"
           },
-          { "type": "paragraph", "text": "support@fishki-med.com" },
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "Example message:" },
           {
             "type": "quote",
@@ -915,7 +915,7 @@
             "type": "paragraph",
             "text": "The refund request should be sent to:"
           },
-          { "type": "paragraph", "text": "support@fishki-med.com" },
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           {
             "type": "paragraph",
             "text": "The refund covers the amount actually paid by the user for the preorder."
@@ -943,10 +943,6 @@
           {
             "type": "paragraph",
             "text": "Communication will be sent to the email address provided during the purchase."
-          },
-          {
-            "type": "paragraph",
-            "text": "Email messages may be delivered through an external email service provider, currently Resend."
           }
         ]
       },
@@ -957,7 +953,7 @@
             "type": "paragraph",
             "text": "The user may submit a complaint concerning the preorder or the application by sending a message to:"
           },
-          { "type": "paragraph", "text": "support@fishki-med.com" },
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" },
           { "type": "paragraph", "text": "The complaint should include:" },
           {
             "type": "list",
@@ -1017,7 +1013,7 @@
             "text": "Polish law applies to matters not regulated by these terms."
           },
           { "type": "paragraph", "text": "Contact regarding the preorder:" },
-          { "type": "paragraph", "text": "support@fishki-med.com" }
+          { "type": "paragraph", "text": "mateuszbuczak1@gmail.com" }
         ]
       }
     ]
