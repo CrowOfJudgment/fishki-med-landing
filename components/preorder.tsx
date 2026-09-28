@@ -197,6 +197,28 @@ export default function Preorder({
                 <p className="mt-6 rounded-2xl border border-[#B9DDD5] bg-[#F4F7F5] p-4 text-sm leading-6 text-[#274D53]">
                   {t.preorder.trust}
                 </p>
+                <div className="mt-7">
+                  <h3 className="text-lg font-semibold text-[#002838]">
+                    {t.preorder.faqTitle}
+                  </h3>
+                  <div className="mt-3 space-y-2">
+                    {t.preorder.faq.map(
+                      (item: { question: string; answer: string }) => (
+                        <details
+                          key={item.question}
+                          className="rounded-2xl border border-[#B9DDD5] bg-[#F4F7F5] p-4"
+                        >
+                          <summary className="cursor-pointer text-sm font-semibold text-[#002838]">
+                            {item.question}
+                          </summary>
+                          <p className="mt-2 text-sm leading-6 text-[#274D53]">
+                            {item.answer}
+                          </p>
+                        </details>
+                      ),
+                    )}
+                  </div>
+                </div>
               </div>
 
               <div>

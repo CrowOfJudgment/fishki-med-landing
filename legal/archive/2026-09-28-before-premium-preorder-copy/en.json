@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Fishki Premium - preorder 12 months",
-    "description": "Fishki medical flashcards, smart reviews and study planning. Preorder 12 months of Fishki Premium starting on the public launch date."
+    "title": "Fishki - smarter medical flashcards and exam-ready study plans",
+    "description": "Turn notes and medical images into flashcards, review with FSRS, plan for exams and keep studying offline with Fishki."
   },
   "header": {
     "problem": "Why Fishki",
@@ -13,18 +13,18 @@
     "waitlist": "Updates",
     "cta": "Updates",
     "ctaAria": "Sign up for Fishki updates",
-    "preorderCta": "Preorder Premium",
-    "preorderCtaAria": "Go to the Fishki Premium annual preorder",
+    "preorderCta": "Beta access",
+    "preorderCtaAria": "Go to beta access purchase",
     "openApp": "Open app",
     "openAppAria": "Open the Fishki web app"
   },
   "hero": {
-    "badge": "Fishki Premium preorder",
+    "badge": "Private beta - now open to early testers",
     "title": "Medical flashcards that keep you on track for every exam",
-    "subtitle": "Create flashcards with text and images, use smart reviews and prepare for several exams at once. Preorder 12 months of Fishki Premium, starting on the public launch date.",
+    "subtitle": "Turn notes and images into study-ready cards, let FSRS schedule your reviews and balance multiple exams without building a study system from scratch.",
     "primaryCta": "See the app in action",
-    "secondaryCta": "Preorder Premium",
-    "validation": "Medical students are already testing Fishki. Preorder customers may also receive a free invitation to the private beta before launch.",
+    "secondaryCta": "Get beta access",
+    "validation": "Medical students are already testing Fishki. Join them today and help shape the app before its public launch.",
     "highlights": [
       "Evidence-based FSRS scheduling",
       "Adaptive exam planning",
@@ -121,7 +121,7 @@
     ]
   },
   "demo": {
-    "badge": "App preview",
+    "badge": "Interactive beta preview",
     "heading": "Create your first medical flashcard in seconds.",
     "intro": "Explore the demo and see how Fishki turns medical notes into clear, review-ready flashcards.",
     "screenLabel": "Interactive preview",
@@ -132,12 +132,12 @@
     "playHeading": "Try the demo and create your first flashcard",
     "playIntro": "",
     "postDemoCta": {
-      "title": "Fishki is growing with feedback from its first testers.",
-      "text": "Preorder 12 months of Fishki Premium starting at the public launch. Before launch, we may also invite you to the private beta at no charge. If you only want product updates, join the mailing list.",
+      "title": "The Fishki beta is live, and medical students are already putting it to work.",
+      "text": "Get Early Access to start testing now and receive 12 months of Premium after the public launch. Not ready yet? Sign up for product updates.",
       "waitlist": "Send me updates",
       "waitlistAria": "Sign up for Fishki updates",
-      "preorder": "Preorder Premium",
-      "preorderAria": "Go to the Fishki Premium annual preorder"
+      "preorder": "Get beta access",
+      "preorderAria": "Go to beta access purchase"
     },
     "stories": {
       "choose": "Choose a story",
@@ -539,9 +539,9 @@
       "No spam and no commitment"
     ],
     "cta": "Fishki updates",
-    "formNote": "Sign up for updates if you only want to follow Fishki development. You can preorder the annual Premium subscription below.",
-    "preorderLink": "Preorder Premium",
-    "preorderAria": "Go to the Fishki Premium annual preorder"
+    "formNote": "The form takes about a minute. If you want to start testing now, choose Early Access instead.",
+    "preorderLink": "Get beta access",
+    "preorderAria": "Go to beta access purchase"
   },
   "proof": {
     "badge": "Shaped by conversations with 32 students",
@@ -567,84 +567,84 @@
     ]
   },
   "preorder": {
-    "badge": "Annual subscription preorder",
-    "title": "12 months of Fishki Premium for $18.99",
+    "badge": "Early Access",
+    "title": "Get Fishki Early Access for $18.99",
     "pricing": {
       "pl": {
-        "title": "12 months of Fishki Premium for PLN 69",
+        "title": "Get Fishki Early Access for PLN 69",
         "value": "PLN 69",
-        "note": "One-time payment for 12 months of Premium from public launch. The planned price after launch is PLN 149 per year. Our launch refund guarantee applies.",
-        "comparison": "PLN 69 for a year of Premium in preorder instead of the planned PLN 149 annual price"
+        "note": "One-time payment. The planned price after launch is PLN 149 per year. Your purchase is covered by our launch guarantee.",
+        "comparison": "Pay PLN 69 now instead of the planned PLN 149 annual price"
       },
       "eu": {
-        "title": "12 months of Fishki Premium for €16.99",
+        "title": "Get Fishki Early Access for €16.99",
         "value": "€16.99",
-        "note": "One-time payment for 12 months of Premium from public launch. The planned price after launch is €49.99 per year. Our launch refund guarantee applies.",
-        "comparison": "€16.99 for a year of Premium in preorder instead of the planned €49.99 annual price"
+        "note": "One-time payment. The planned price after launch is €49.99 per year. Your purchase is covered by our launch guarantee.",
+        "comparison": "Pay €16.99 now instead of the planned €49.99 annual price"
       },
       "us": {
-        "title": "12 months of Fishki Premium for $18.99",
+        "title": "Get Fishki Early Access for $18.99",
         "value": "$18.99",
-        "note": "One-time payment for 12 months of Premium from public launch. The planned price after launch is $59.99 per year. Our launch refund guarantee applies.",
-        "comparison": "$18.99 for a year of Premium in preorder instead of the planned $59.99 annual price"
+        "note": "One-time payment. The planned price after launch is $59.99 per year. Your purchase is covered by our launch guarantee.",
+        "comparison": "Pay $18.99 now instead of the planned $59.99 annual price"
       }
     },
-    "subtitle": "Preorder 12 months of Fishki Premium now. Your subscription starts on the public launch date. Medical students are already testing Fishki; preorder customers may also receive a free private beta invitation.",
-    "accessStepsLabel": "How the preorder works",
+    "subtitle": "Medical students are already testing Fishki. Get Early Access, join them today and help shape the app before its public launch.",
+    "accessStepsLabel": "How you get access",
     "accessSteps": [
       {
-        "title": "Preorder Premium",
-        "text": "Enter the email address you will use for your Fishki account and pay once for the 12-month subscription."
+        "title": "Get Early Access",
+        "text": "Purchase access using the same email address you will use for your Fishki account."
       },
       {
-        "title": "Wait for the public launch",
-        "text": "Your 12 months of Fishki Premium will be linked to that email from the launch date."
+        "title": "Receive a private invitation",
+        "text": "Once your payment is confirmed, we will send a private beta invitation for your selected platform."
       },
       {
-        "title": "Optionally test the beta",
-        "text": "Before launch, we may invite you to free private beta testing. The invitation is separate from the subscription you bought."
+        "title": "Sign in and start testing",
+        "text": "Create your account with the same email to activate the Beta Tester plan and start using the app."
       }
     ],
     "offerFacts": [
       {
         "label": "Preorder price",
         "value": "$18.99",
-        "note": "One-time payment for 12 months of Premium from public launch. The planned price after launch is $59.99 per year. Our launch refund guarantee applies."
+        "note": "One-time payment. After the official launch, access will cost PLN 149 per year. If we are unable to launch the app, we provide a money-back guarantee."
       },
       {
-        "label": "What you are buying",
-        "value": "12 months of Fishki Premium",
-        "note": "The annual subscription starts on the public launch date. A beta invitation may be an additional free benefit."
+        "label": "What is included",
+        "value": "Private beta access + 12 months of Premium",
+        "note": "You will receive setup instructions and a private invitation for the currently available version on your platform."
       },
       {
         "label": "Planned public launch",
         "value": "By the end of 2026",
-        "note": "The launch window may change; the refund guarantee below still applies."
+        "note": "The launch window may change as the beta develops."
       }
     ],
     "deliveryGuaranteeLabel": "Launch guarantee",
-    "deliveryGuarantee": "If Fishki has not launched publicly by March 31, 2027, you may request a full refund within the following two months.",
+    "deliveryGuarantee": "Receive a full refund if Fishki has not launched publicly by March 31, 2027.",
     "includes": [
-      "12 months of Fishki Premium from the public launch date",
-      "One-time payment with no automatic renewal",
-      "Possible free private beta invitation before launch",
-      "$18.99 in preorder instead of the planned $59.99 annual price"
+      "Private access to the active beta before the public launch",
+      "12 months of Premium after the public launch",
+      "A direct way to share feedback and help shape the product",
+      "$18.99 in preorder instead of the planned $59.99 per year"
     ],
-    "trust": "You are preordering an annual Premium subscription that starts on the public launch date. The private beta is a separate, free testing opportunity; an invitation is not guaranteed. Consumers can withdraw within 14 days without giving a reason.",
-    "placeholderLabel": "Preorder 12 months of Premium",
+    "trust": "You are joining an active beta, not purchasing a finished production app. Features may change and you may encounter bugs. You can withdraw from the purchase within 14 days without giving a reason.",
+    "placeholderLabel": "Get Early Access",
     "fullNameLabel": "Full name",
     "emailLabel": "Email",
-    "platformLabel": "Which device would you prefer if you receive a beta invitation?",
+    "platformLabel": "Which device will you use to test Fishki?",
     "platformOptions": {
       "IOS": "iPhone",
       "ANDROID": "Android",
       "BOTH": "Both platforms",
       "UNDECIDED": "Not sure yet"
     },
-    "accountEmailHint": "Use the same email address when creating your Fishki account. We will link 12 months of Premium from launch to it, and may also send a free beta invitation.",
+    "accountEmailHint": "Use this email when creating your Fishki account. Your beta access and 12 months of Premium after launch will be linked to it.",
     "formSaveError": "We could not save your details. Please try again - we will not redirect you to payment until your registration is safely stored.",
     "purchaseConsentBefore": "I accept the ",
-    "termsLink": "Fishki Premium Preorder and Sales Terms",
+    "termsLink": "Fishki Preorder and Sales Terms",
     "purchaseConsentAfter": ".",
     "documentsConsentBefore": "I have read the ",
     "termsOfUseLink": "Terms of use",
@@ -652,33 +652,14 @@
     "privacyConsentBefore": "I have read the ",
     "privacyLink": "Privacy Policy",
     "privacyConsentAfter": ".",
-    "buyCta": "Preorder Premium",
-    "buyWithBlik": "Preorder with BLIK or bank transfer",
-    "buyWithCard": "Preorder 12 months of Premium",
-    "alreadyPurchasedError": "This email already has a Fishki Premium preorder.",
+    "buyCta": "Get Early Access",
+    "buyWithBlik": "Pay with BLIK or instant bank transfer",
+    "buyWithCard": "Get beta access",
+    "alreadyPurchasedError": "This email already has an Early Access purchase and beta access assigned to it.",
     "paymentProcessingError": "We have already received a payment for this email and are processing it now.",
     "buyCtaDisabled": "Enter your full name and a valid email, choose a device, then accept the required terms.",
     "redirecting": "Opening secure checkout…",
-    "readTerms": "View purchase terms",
-    "faq": [
-      {
-        "question": "What exactly am I buying?",
-        "answer": "A preorder for a 12-month Fishki Premium subscription. The Premium period starts on the public launch date."
-      },
-      {
-        "question": "Am I paying for beta access?",
-        "answer": "No. Private beta testing is free and optional. Fishki may invite preorder customers before launch, but a purchase does not guarantee an invitation."
-      },
-      {
-        "question": "Will the subscription renew automatically?",
-        "answer": "No. This is a one-time payment for 12 months of Premium from public launch; the preorder does not renew automatically."
-      },
-      {
-        "question": "What if launch is delayed?",
-        "answer": "If Fishki has not launched publicly by March 31, 2027, you may request a full refund within the following two months. Consumers also have 14 days to withdraw without giving a reason."
-      }
-    ],
-    "faqTitle": "Frequently asked questions"
+    "readTerms": "View purchase terms"
   },
   "footer": {
     "tagline": "Fast flashcard creation and smarter review planning for medical students.",
@@ -693,11 +674,11 @@
     "preorderTerms": "Preorder terms"
   },
   "preorderThankYou": {
-    "badge": "Preorder submitted",
-    "title": "Thank you for preordering Fishki Premium!",
-    "body": "The payment provider is confirming your transaction now. Once confirmed, we will link 12 months of Fishki Premium to the email you used at checkout, starting on the public launch date.",
-    "accountHint": "Create your Fishki account using the email address entered at checkout. Before launch, we may also invite you to free private beta testing; the invitation is optional and does not affect your Premium purchase.",
-    "receiptHint": "Stripe will send your payment confirmation or receipt separately. This is not a beta invitation.",
+    "badge": "Payment received",
+    "title": "Welcome to Fishki Early Access!",
+    "body": "We are confirming your payment now. This usually takes only a moment. Your beta access will be linked to the email address you entered before checkout.",
+    "accountHint": "Create your Fishki account with the same email address. Once payment is confirmed, your Beta Tester plan will activate automatically.",
+    "receiptHint": "Stripe will send your payment confirmation or receipt separately.",
     "back": "Back to homepage"
   },
   "terms": {
@@ -711,8 +692,8 @@
   "preorderTerms": {
     "back": "Back to preorder",
     "badge": "Preorder terms",
-    "title": "Fishki Premium 12-Month Subscription Preorder and Sales Terms",
-    "lastUpdated": "Last updated: September 28, 2026",
+    "title": "Fishki Early Access Preorder and Sales Terms",
+    "lastUpdated": "Last updated: September 17, 2026",
     "intro": "",
     "sections": [
       {
@@ -720,7 +701,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text": "The seller of the Fishki Premium 12-month subscription preorder is:"
+            "text": "The seller of the Fishki Early Access preorder is:"
           },
           {
             "type": "paragraph",
@@ -734,10 +715,7 @@
             "type": "paragraph",
             "text": "Contact email: support@fishki-med.com"
           },
-          {
-            "type": "paragraph",
-            "text": "Hereinafter: the “Seller”."
-          }
+          { "type": "paragraph", "text": "Hereinafter: the “Seller”." }
         ]
       },
       {
@@ -749,28 +727,34 @@
           },
           {
             "type": "paragraph",
-            "text": "Fishki is a product under development. The subject of this agreement is the preorder of an annual Fishki Premium subscription, not access to a test version or the purchase of a finished app on the payment date."
+            "text": "Fishki is a product under development. Purchasing the preorder does not mean purchasing a finished, final production application."
           }
         ]
       },
       {
-        "title": "3. Subject of the agreement and optional beta testing",
+        "title": "3. What the Fishki Early Access preorder is",
         "blocks": [
           {
             "type": "paragraph",
-            "text": "The subject of the agreement is a preorder for a 12-month Fishki Premium subscription. The subscription period starts on the public launch date, when Fishki becomes available to all users. The purchase does not start the paid Premium period before that date."
+            "text": "The Fishki Early Access preorder is the purchase of earlier access to the Fishki application on preferential terms."
           },
           {
             "type": "paragraph",
-            "text": "The buyer makes a one-time payment for one 12-month Premium period. The preorder does not renew automatically or create further payments."
+            "text": "As part of the preorder, the user receives:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "access to a test version of Fishki before the public launch of the application,",
+              "the ability to test the application and submit feedback,",
+              "the ability to provide feedback about product development,",
+              "12 months of access to the premium plan after the public launch of the application,",
+              "a region-based preorder price: PLN 69 in Poland, €16.99 in Europe outside Poland or $18.99 in the United States and other countries, instead of the planned annual post-launch price of PLN 149, €49.99 or $59.99 respectively."
+            ]
           },
           {
             "type": "paragraph",
-            "text": "Before public launch, the Seller may additionally invite the buyer to free, private beta testing on a selected platform. Participation is voluntary, depends on invitation availability, and is neither the subject of the sale nor a condition for starting or retaining the Premium subscription. Purchasing the preorder does not guarantee a beta invitation."
-          },
-          {
-            "type": "paragraph",
-            "text": "No invitation, declining testing or the end of testing does not shorten the purchased 12 months of Premium from public launch."
+            "text": "The scope of features available in Early Access may be limited compared with the planned final version."
           }
         ]
       },
@@ -787,7 +771,7 @@
           },
           {
             "type": "paragraph",
-            "text": "This is a one-time payment solely for the preorder of a 12-month Fishki Premium subscription. Any beta testing invitation is free."
+            "text": "This is a one-time payment covering the benefits described in these terms."
           },
           {
             "type": "paragraph",
@@ -796,11 +780,15 @@
         ]
       },
       {
-        "title": "5. Public launch and subscription start",
+        "title": "5. Planned application availability date",
         "blocks": [
           {
             "type": "paragraph",
-            "text": "The public launch of Fishki is planned by the end of 2026. The purchased 12-month Fishki Premium period starts on that date."
+            "text": "The first Fishki Early Access test version is planned by the end of September 2026."
+          },
+          {
+            "type": "paragraph",
+            "text": "The official application launch is planned by the end of 2026."
           },
           {
             "type": "paragraph",
@@ -808,7 +796,7 @@
           },
           {
             "type": "paragraph",
-            "text": "The planned launch date may change because the application is still under development."
+            "text": "These dates are estimates and may change because the application is still under development."
           },
           {
             "type": "paragraph",
@@ -817,11 +805,11 @@
         ]
       },
       {
-        "title": "6. Planned application development",
+        "title": "6. Planned Early Access scope",
         "blocks": [
           {
             "type": "paragraph",
-            "text": "Planned Fishki development includes in particular:"
+            "text": "The planned scope of application development includes in particular:"
           },
           {
             "type": "list",
@@ -838,16 +826,16 @@
           },
           {
             "type": "paragraph",
-            "text": "This list describes the product direction and does not guarantee that every feature will be available on the public launch date. The right to use the Premium plan for 12 months remains the subject of the agreement."
+            "text": "The Seller does not guarantee that all of the above features will be available in the first Early Access version."
           }
         ]
       },
       {
-        "title": "7. Nature of free beta testing",
+        "title": "7. Nature of Early Access",
         "blocks": [
           {
             "type": "paragraph",
-            "text": "If the Seller invites the buyer to free, private beta testing, the test version:"
+            "text": "The user acknowledges that Early Access:"
           },
           {
             "type": "list",
@@ -862,17 +850,14 @@
           },
           {
             "type": "paragraph",
-            "text": "Beta testing may change or end before launch. Participation is not a paid service and does not affect the buyer’s rights under the Premium preorder."
+            "text": "The Seller will take reasonable steps to develop and improve the application but does not guarantee the implementation of every feature suggested by users."
           }
         ]
       },
       {
         "title": "8. How the preorder purchase works",
         "blocks": [
-          {
-            "type": "paragraph",
-            "text": "The preorder is purchased by:"
-          },
+          { "type": "paragraph", "text": "The preorder is purchased by:" },
           {
             "type": "list",
             "items": [
@@ -884,11 +869,11 @@
           },
           {
             "type": "paragraph",
-            "text": "After payment, the buyer will see an order confirmation; the payment provider may email a transaction confirmation to the address provided. The Seller will share details of the purchased Premium subscription before or on the public launch date."
+            "text": "After payment, the user will receive a purchase confirmation at the email address provided."
           },
           {
             "type": "paragraph",
-            "text": "The buyer should provide a current and accurate email address. It will be used to link the Premium subscription and communicate about the preorder, any free beta testing invitation, refunds and complaints."
+            "text": "The user should provide a true and current email address because it will be used to provide information about access to the application and for communications concerning the preorder, refunds and complaints."
           }
         ]
       },
@@ -903,17 +888,11 @@
             "type": "paragraph",
             "text": "To withdraw from the agreement, send an email to:"
           },
-          {
-            "type": "paragraph",
-            "text": "support@fishki-med.com"
-          },
-          {
-            "type": "paragraph",
-            "text": "Example message:"
-          },
+          { "type": "paragraph", "text": "support@fishki-med.com" },
+          { "type": "paragraph", "text": "Example message:" },
           {
             "type": "quote",
-            "text": "I withdraw from the agreement to preorder a 12-month Fishki Premium subscription. Please refund the payment.\nEmail address used for the purchase: [email address]."
+            "text": "I withdraw from the Fishki Early Access preorder purchase agreement. Please refund the payment.\nEmail address used for the purchase: [email address]."
           },
           {
             "type": "paragraph",
@@ -936,10 +915,7 @@
             "type": "paragraph",
             "text": "The refund request should be sent to:"
           },
-          {
-            "type": "paragraph",
-            "text": "support@fishki-med.com"
-          },
+          { "type": "paragraph", "text": "support@fishki-med.com" },
           {
             "type": "paragraph",
             "text": "The refund covers the amount actually paid by the user for the preorder."
@@ -957,9 +933,9 @@
             "type": "list",
             "items": [
               "purchase confirmation,",
-              "the start of the 12-month Premium subscription after public launch,",
+              "access to the application,",
               "Fishki development status,",
-              "a possible, free beta testing invitation,",
+              "application testing,",
               "collecting feedback,",
               "complaints and refunds."
             ]
@@ -981,14 +957,8 @@
             "type": "paragraph",
             "text": "The user may submit a complaint concerning the preorder or the application by sending a message to:"
           },
-          {
-            "type": "paragraph",
-            "text": "support@fishki-med.com"
-          },
-          {
-            "type": "paragraph",
-            "text": "The complaint should include:"
-          },
+          { "type": "paragraph", "text": "support@fishki-med.com" },
+          { "type": "paragraph", "text": "The complaint should include:" },
           {
             "type": "list",
             "items": [
@@ -1008,7 +978,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text": "The user’s personal data is processed to handle the Premium preorder, payment, linking the 12-month subscription from public launch, possible free beta testing invitations, communications, refunds and complaints."
+            "text": "The user's personal data is processed to handle the preorder, payment, access to the application, communications, refunds and complaints."
           },
           {
             "type": "paragraph",
@@ -1046,19 +1016,13 @@
             "type": "paragraph",
             "text": "Polish law applies to matters not regulated by these terms."
           },
-          {
-            "type": "paragraph",
-            "text": "Contact regarding the preorder:"
-          },
-          {
-            "type": "paragraph",
-            "text": "support@fishki-med.com"
-          }
+          { "type": "paragraph", "text": "Contact regarding the preorder:" },
+          { "type": "paragraph", "text": "support@fishki-med.com" }
         ]
       }
     ]
   },
   "floatingCta": {
-    "text": "Preorder Premium"
+    "text": "Get beta access"
   }
 }

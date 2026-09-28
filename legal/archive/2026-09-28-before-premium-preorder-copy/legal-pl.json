@@ -13,10 +13,7 @@
             "type": "paragraph",
             "text": "Niniejsze Warunki użytkowania określają zasady korzystania ze strony internetowej Fishki dostępnej pod adresem:"
           },
-          {
-            "type": "paragraph",
-            "text": "https://www.fishki-med.com/"
-          },
+          { "type": "paragraph", "text": "https://www.fishki-med.com/" },
           {
             "type": "paragraph",
             "text": "oraz, po jej udostępnieniu, z aplikacji Fishki."
@@ -29,26 +26,20 @@
             "type": "paragraph",
             "text": "Mateusz Buczak, osoba fizyczna prowadząca działalność nierejestrowaną\nAdres: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów\nE-mail: support@fishki-med.com"
           },
-          {
-            "type": "paragraph",
-            "text": "Dalej: \"Operator\"."
-          }
+          { "type": "paragraph", "text": "Dalej: \"Operator\"." }
         ]
       },
       {
         "title": "2. Charakter strony",
         "blocks": [
-          {
-            "type": "paragraph",
-            "text": "Strona Fishki służy do:"
-          },
+          { "type": "paragraph", "text": "Strona Fishki służy do:" },
           {
             "type": "list",
             "items": [
               "prezentacji planowanej aplikacji edukacyjnej,",
               "pokazania interaktywnego demo,",
               "zbierania zapisów na waitlistę,",
-              "sprzedaży preorderu 12-miesięcznej subskrypcji Fishki Premium,",
+              "sprzedaży preorderu Fishki Early Access,",
               "informowania o rozwoju produktu."
             ]
           },
@@ -65,10 +56,7 @@
             "type": "paragraph",
             "text": "Demo dostępne na stronie pokazuje kierunek rozwoju produktu i przykładowy sposób działania aplikacji."
           },
-          {
-            "type": "paragraph",
-            "text": "Demo:"
-          },
+          { "type": "paragraph", "text": "Demo:" },
           {
             "type": "list",
             "items": [
@@ -125,7 +113,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text": "Zasady zakupu preorderu 12-miesięcznej subskrypcji Fishki Premium określa osobny dokument: Regulamin sprzedaży preorderu 12-miesięcznej subskrypcji Fishki Premium. Zaproszenie do zamkniętych testów beta może być dodatkową, bezpłatną możliwością, a nie przedmiotem zakupu."
+            "text": "Zasady zakupu preorderu Fishki Early Access określa osobny dokument: Regulamin sprzedaży preorderu Fishki Early Access."
           },
           {
             "type": "paragraph",
@@ -210,10 +198,7 @@
       {
         "title": "9. Zakaz nadużyć",
         "blocks": [
-          {
-            "type": "paragraph",
-            "text": "Użytkownik nie może:"
-          },
+          { "type": "paragraph", "text": "Użytkownik nie może:" },
           {
             "type": "list",
             "items": [
@@ -311,14 +296,8 @@
             "type": "paragraph",
             "text": "Reklamacje dotyczące działania strony lub aplikacji można zgłaszać na adres:"
           },
-          {
-            "type": "paragraph",
-            "text": "support@fishki-med.com"
-          },
-          {
-            "type": "paragraph",
-            "text": "Reklamacja powinna zawierać:"
-          },
+          { "type": "paragraph", "text": "support@fishki-med.com" },
+          { "type": "paragraph", "text": "Reklamacja powinna zawierać:" },
           {
             "type": "list",
             "items": [
@@ -368,14 +347,8 @@
       {
         "title": "16. Kontakt",
         "blocks": [
-          {
-            "type": "paragraph",
-            "text": "Kontakt z Operatorem:"
-          },
-          {
-            "type": "paragraph",
-            "text": "support@fishki-med.com"
-          }
+          { "type": "paragraph", "text": "Kontakt z Operatorem:" },
+          { "type": "paragraph", "text": "support@fishki-med.com" }
         ]
       }
     ]
@@ -398,10 +371,7 @@
             "type": "paragraph",
             "text": "Mateusz Buczak, osoba fizyczna prowadząca działalność nierejestrowaną\nAdres: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów\nE-mail: support@fishki-med.com"
           },
-          {
-            "type": "paragraph",
-            "text": "Dalej: \"Administrator\"."
-          },
+          { "type": "paragraph", "text": "Dalej: \"Administrator\"." },
           {
             "type": "paragraph",
             "text": "Ta Polityka prywatności wyjaśnia, jakie dane przetwarzamy, w jakich celach, na jakiej podstawie i jakie prawa Ci przysługują. Polityka prywatności może być miejscem realizacji obowiązku informacyjnego wobec użytkownika, ponieważ przy zbieraniu danych trzeba jasno wskazać m.in. administratora, cele, podstawy, okres przetwarzania i prawa osoby, której dane dotyczą."
@@ -420,7 +390,7 @@
             "items": [
               "adres e-mail,",
               "imię i nazwisko, jeżeli zostaną podane,",
-              "preferowany system urządzenia do ewentualnych bezpłatnych testów beta (iOS, Android, oba lub brak decyzji),",
+              "preferowany system urządzenia do testowania aplikacji (iOS, Android, oba lub brak decyzji),",
               "odpowiedzi udzielone w formularzu waitlisty,",
               "dane dotyczące zakupu preorderu, w tym identyfikator sesji płatniczej, kwotę, walutę i status transakcji,",
               "dane płatnicze w zakresie przekazanym przez operatora płatności,",
@@ -445,7 +415,7 @@
           },
           {
             "type": "paragraph",
-            "text": "3.2. Obsługa preorderu\nDane przetwarzamy, aby przyjąć i obsłużyć zakup preorderu 12-miesięcznej subskrypcji Fishki Premium od publicznej premiery, potwierdzić płatność, przypisać subskrypcję oraz obsłużyć zwroty i reklamacje. Możemy też wykorzystać podany adres e-mail i preferowaną platformę do wysłania opcjonalnego, bezpłatnego zaproszenia do zamkniętych testów beta.\n\nPodstawa prawna: wykonanie umowy lub podjęcie działań przed jej zawarciem; dla zaproszenia do testów - prawnie uzasadniony interes Administratora w rozwoju produktu."
+            "text": "3.2. Obsługa preorderu\nDane przetwarzamy, aby przyjąć i obsłużyć zakup preorderu, wysłać potwierdzenie zakupu, przekazać dostęp do aplikacji, obsłużyć zwroty i reklamacje.\n\nPodstawa prawna: wykonanie umowy lub podjęcie działań przed jej zawarciem."
           },
           {
             "type": "paragraph",
@@ -480,10 +450,7 @@
             "type": "paragraph",
             "text": "Do obsługi strony, formularzy, płatności, hostingu, analityki i komunikacji e-mail możemy korzystać z zewnętrznych dostawców."
           },
-          {
-            "type": "paragraph",
-            "text": "Mogą to być w szczególności:"
-          },
+          { "type": "paragraph", "text": "Mogą to być w szczególności:" },
           {
             "type": "list",
             "items": [
@@ -554,10 +521,7 @@
       {
         "title": "7. Prawa użytkownika",
         "blocks": [
-          {
-            "type": "paragraph",
-            "text": "Masz prawo do:"
-          },
+          { "type": "paragraph", "text": "Masz prawo do:" },
           {
             "type": "list",
             "items": [
@@ -579,10 +543,7 @@
             "type": "paragraph",
             "text": "Aby skorzystać ze swoich praw, napisz na:"
           },
-          {
-            "type": "paragraph",
-            "text": "support@fishki-med.com"
-          }
+          { "type": "paragraph", "text": "support@fishki-med.com" }
         ]
       },
       {
@@ -615,10 +576,7 @@
             "type": "paragraph",
             "text": "Strona może korzystać z cookies oraz podobnych technologii."
           },
-          {
-            "type": "paragraph",
-            "text": "Cookies mogą być używane w celu:"
-          },
+          { "type": "paragraph", "text": "Cookies mogą być używane w celu:" },
           {
             "type": "list",
             "items": [
@@ -694,10 +652,7 @@
             "type": "paragraph",
             "text": "W sprawach dotyczących prywatności i danych osobowych napisz na:"
           },
-          {
-            "type": "paragraph",
-            "text": "support@fishki-med.com"
-          }
+          { "type": "paragraph", "text": "support@fishki-med.com" }
         ]
       }
     ]

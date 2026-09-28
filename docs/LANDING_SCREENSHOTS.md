@@ -24,4 +24,4 @@ Finalne pliki należy umieścić w `public/images/app-screenshots/`.
 - brak klawiatury poza screenem edytora,
 - po podmianie obrazów trzeba najpierw sprawdzić poprawność masek image occlusion.
 
-Pod galerią pozostaje komunikat o działającej becie oraz przyciski prowadzące do Wczesnego dostępu i zapisu na aktualności.
+Pod galerią pozostaje informacja o pierwszych testerach i możliwym bezpłatnym zaproszeniu do zamkniętej bety. Przycisk zakupowy prowadzi do preorderu 12 miesięcy Fishki Premium od publicznej premiery; drugi przycisk prowadzi do zapisu na aktualności.

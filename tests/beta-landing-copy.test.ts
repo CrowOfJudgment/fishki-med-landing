@@ -46,9 +46,9 @@ test("landing clearly says that first testers already have access", () => {
     polish.hero.validation,
     /pierwsi studenci medycyny już testują/i,
   );
-  assert.match(polish.preorder.subtitle, /pierwsi studenci już korzystają/i);
+  assert.match(polish.preorder.subtitle, /pierwsi studenci już testują/i);
   assert.match(english.hero.validation, /students are already testing/i);
-  assert.match(english.preorder.subtitle, /join them today/i);
+  assert.match(english.preorder.subtitle, /medical students are already testing/i);
 });
 
 test("English landing copy avoids literal or awkward product phrasing", () => {
@@ -107,6 +107,37 @@ test("annual launch prices stay consistent in both locales", () => {
     `${polish}\n${english}`,
     /€129\.99|129,99 €|129,99 EUR|\$149\.99|149,99 USD/,
   );
+});
+
+test("preorder sells 12 months of Premium and treats beta invitations as free and optional", () => {
+  for (const locale of ["pl", "en"] as const) {
+    const copy = messages(locale) as LandingMessages & {
+      header: { preorderCta: string };
+      preorderThankYou: { title: string; body: string; accountHint: string };
+      preorderTerms: { sections: Array<{ title: string; blocks: Array<{ text?: string }> }> };
+      preorder: LandingMessages["preorder"] & {
+        pricing: Record<string, { title: string; value: string }>;
+        offerFacts: Array<{ value: string; note: string }>;
+        faq: Array<{ question: string; answer: string }>;
+        buyWithCard: string;
+      };
+    };
+    const offer = JSON.stringify([
+      copy.header.preorderCta,
+      copy.preorder.pricing,
+      copy.preorder.offerFacts,
+      copy.preorder.buyWithCard,
+      copy.preorderThankYou,
+    ]);
+    const subject = JSON.stringify(copy.preorderTerms.sections[2]);
+
+    assert.match(offer, /12 (miesięcy|months).*Premium/i);
+    assert.match(subject, /12-(miesięcznej|month)|12 (miesięcy|months)/i);
+    assert.match(subject, /bezpłatn|free/i);
+    assert.match(subject, /nie gwarantuje|does not guarantee/i);
+    assert.match(copy.preorder.faq[1].answer, /bezpłatn|free/i);
+    assert.doesNotMatch(offer, /dostęp do bety \+|beta access \+|kup dostęp do bety|get beta access|Early Access/i);
+  }
 });
 
 test("mocked and interactive demos are removed while the beta CTA remains", () => {
@@ -293,8 +324,8 @@ for (const locale of ["pl", "en"] as const) {
     assert.match(marketingCopy, /beta/i);
     assert.doesNotMatch(marketingCopy, /prototyp|prototype/i);
     assert.doesNotMatch(
-      marketingCopy,
-      /planowan[yae]|planned for the end of september/i,
+      copy.hero.validation,
+      /planowan.{0,20}września|planned for the end of september/i,
     );
   });
 

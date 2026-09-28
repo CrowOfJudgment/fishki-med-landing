@@ -13,10 +13,7 @@
             "type": "paragraph",
             "text": "These Terms of Use govern the use of the Fishki website available at:"
           },
-          {
-            "type": "paragraph",
-            "text": "https://www.fishki-med.com/"
-          },
+          { "type": "paragraph", "text": "https://www.fishki-med.com/" },
           {
             "type": "paragraph",
             "text": "and, once it becomes available, the Fishki application."
@@ -29,26 +26,20 @@
             "type": "paragraph",
             "text": "Mateusz Buczak, operating as an unregistered business activity under Polish law\nAddress: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów, Poland\nEmail: support@fishki-med.com"
           },
-          {
-            "type": "paragraph",
-            "text": "Hereinafter: the \"Operator\"."
-          }
+          { "type": "paragraph", "text": "Hereinafter: the \"Operator\"." }
         ]
       },
       {
         "title": "2. Nature of the website",
         "blocks": [
-          {
-            "type": "paragraph",
-            "text": "The Fishki website is used to:"
-          },
+          { "type": "paragraph", "text": "The Fishki website is used to:" },
           {
             "type": "list",
             "items": [
               "present the planned educational application,",
               "show an interactive demo,",
               "collect waitlist registrations,",
-              "sell the preorder for a 12-month Fishki Premium subscription,",
+              "sell the Fishki Early Access preorder,",
               "provide information about product development."
             ]
           },
@@ -65,10 +56,7 @@
             "type": "paragraph",
             "text": "The demo available on the website shows the direction of product development and an example of how the application may work."
           },
-          {
-            "type": "paragraph",
-            "text": "The demo:"
-          },
+          { "type": "paragraph", "text": "The demo:" },
           {
             "type": "list",
             "items": [
@@ -125,7 +113,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "text": "The purchase of a preorder for a 12-month Fishki Premium subscription is governed by a separate document: the Fishki Premium 12-Month Subscription Preorder and Sales Terms. An invitation to private beta testing may be an additional free opportunity and is not the subject of the purchase."
+            "text": "The purchase of the Fishki Early Access preorder is governed by a separate document: the Fishki Early Access Preorder and Sales Terms."
           },
           {
             "type": "paragraph",
@@ -165,10 +153,7 @@
             "type": "paragraph",
             "text": "The user is responsible for materials added to the application and represents that they hold the rights or permissions required to use them."
           },
-          {
-            "type": "paragraph",
-            "text": "Users may not add materials that:"
-          },
+          { "type": "paragraph", "text": "Users may not add materials that:" },
           {
             "type": "list",
             "items": [
@@ -206,10 +191,7 @@
       {
         "title": "9. Prohibited conduct",
         "blocks": [
-          {
-            "type": "paragraph",
-            "text": "The user may not:"
-          },
+          { "type": "paragraph", "text": "The user may not:" },
           {
             "type": "list",
             "items": [
@@ -254,10 +236,7 @@
       {
         "title": "11. No medical advice",
         "blocks": [
-          {
-            "type": "paragraph",
-            "text": "Fishki is an educational tool."
-          },
+          { "type": "paragraph", "text": "Fishki is an educational tool." },
           {
             "type": "paragraph",
             "text": "Content in the application, demo or user materials does not constitute medical, diagnostic or therapeutic advice."
@@ -303,14 +282,8 @@
             "type": "paragraph",
             "text": "Complaints concerning the website or application may be sent to:"
           },
-          {
-            "type": "paragraph",
-            "text": "support@fishki-med.com"
-          },
-          {
-            "type": "paragraph",
-            "text": "A complaint should include:"
-          },
+          { "type": "paragraph", "text": "support@fishki-med.com" },
+          { "type": "paragraph", "text": "A complaint should include:" },
           {
             "type": "list",
             "items": [
@@ -360,14 +333,8 @@
       {
         "title": "16. Contact",
         "blocks": [
-          {
-            "type": "paragraph",
-            "text": "Contact the Operator at:"
-          },
-          {
-            "type": "paragraph",
-            "text": "support@fishki-med.com"
-          }
+          { "type": "paragraph", "text": "Contact the Operator at:" },
+          { "type": "paragraph", "text": "support@fishki-med.com" }
         ]
       }
     ]
@@ -390,10 +357,7 @@
             "type": "paragraph",
             "text": "Mateusz Buczak, operating as an unregistered business activity under Polish law\nAddress: ul. Ks. Alojzego Koziełka 106, 44-190 Knurów, Poland\nEmail: support@fishki-med.com"
           },
-          {
-            "type": "paragraph",
-            "text": "Hereinafter: the \"Controller\"."
-          },
+          { "type": "paragraph", "text": "Hereinafter: the \"Controller\"." },
           {
             "type": "paragraph",
             "text": "This Privacy Policy explains what data we process, for what purposes, on what legal basis and what rights you have. It may serve to provide the information required when data is collected, including the controller's identity, purposes, legal bases, retention period and data subject rights."
@@ -412,7 +376,7 @@
             "items": [
               "email address,",
               "full name where provided,",
-              "preferred device platform for possible free beta testing (iOS, Android, both or undecided),",
+              "preferred device platform for application testing (iOS, Android, both or undecided),",
               "answers submitted through the waitlist form,",
               "preorder purchase information, including the checkout identifier, amount, currency and transaction status,",
               "payment data provided by the payment provider,",
@@ -437,7 +401,7 @@
           },
           {
             "type": "paragraph",
-            "text": "3.2. Preorder management\nWe process data to accept and fulfil the preorder for a 12-month Fishki Premium subscription from public launch, confirm payment, link the subscription, and handle refunds and complaints. We may also use the email address and preferred platform to send an optional, free private beta invitation.\n\nLegal basis: performance of a contract or steps taken before entering into a contract; for a testing invitation, the Controller’s legitimate interest in product development."
+            "text": "3.2. Preorder management\nWe process data to accept and fulfil the preorder purchase, send confirmation, provide application access and handle refunds and complaints.\n\nLegal basis: performance of a contract or steps taken before entering into a contract."
           },
           {
             "type": "paragraph",
@@ -472,10 +436,7 @@
             "type": "paragraph",
             "text": "We may use external providers for the website, forms, payments, hosting, analytics and email communication."
           },
-          {
-            "type": "paragraph",
-            "text": "These may include:"
-          },
+          { "type": "paragraph", "text": "These may include:" },
           {
             "type": "list",
             "items": [
@@ -546,10 +507,7 @@
       {
         "title": "7. User rights",
         "blocks": [
-          {
-            "type": "paragraph",
-            "text": "You have the right to:"
-          },
+          { "type": "paragraph", "text": "You have the right to:" },
           {
             "type": "list",
             "items": [
@@ -567,14 +525,8 @@
             "type": "paragraph",
             "text": "Withdrawal of consent does not affect the lawfulness of processing carried out before it was withdrawn."
           },
-          {
-            "type": "paragraph",
-            "text": "To exercise your rights, contact:"
-          },
-          {
-            "type": "paragraph",
-            "text": "support@fishki-med.com"
-          }
+          { "type": "paragraph", "text": "To exercise your rights, contact:" },
+          { "type": "paragraph", "text": "support@fishki-med.com" }
         ]
       },
       {
@@ -682,10 +634,7 @@
             "type": "paragraph",
             "text": "For privacy and personal data matters, contact:"
           },
-          {
-            "type": "paragraph",
-            "text": "support@fishki-med.com"
-          }
+          { "type": "paragraph", "text": "support@fishki-med.com" }
         ]
       }
     ]
