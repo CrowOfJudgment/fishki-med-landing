@@ -7,7 +7,8 @@ import { useT } from "@/lib/i18n-context";
 
 export default function Header() {
   const t = useT();
-  const webAppUrl = process.env.NEXT_PUBLIC_APP_URL?.trim();
+  const webAppUrl =
+    process.env.NEXT_PUBLIC_APP_URL?.trim() || "https://app.fishki-med.com";
   const [isMobile, setIsMobile] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
@@ -76,7 +77,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-3 sm:px-5">
-        <div className="flex min-w-0 items-center justify-between gap-2 rounded-[1.25rem] border border-[#B9DDD5] bg-[#F4F7F5]/90 px-3 py-2.5 shadow-[0_16px_50px_rgba(39,77,83,0.1)] backdrop-blur-xl sm:rounded-[1.4rem] sm:px-4 sm:py-3 xl:gap-3">
+        <div className="flex min-w-0 flex-wrap items-center justify-between gap-2 rounded-[1.25rem] border border-[#B9DDD5] bg-[#F4F7F5]/90 px-3 py-2.5 shadow-[0_16px_50px_rgba(39,77,83,0.1)] backdrop-blur-xl sm:rounded-[1.4rem] sm:px-4 sm:py-3 xl:gap-3">
           <div className="flex min-w-0 items-center gap-3">
             <Logo
               horizontal
@@ -98,18 +99,16 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex shrink-0 items-center gap-2">
-            {webAppUrl && (
-              <a
-                href={webAppUrl}
-                aria-label={t.header.openAppAria}
-                data-analytics-click="header_open_app"
-                data-analytics-section="header"
-                className="hidden h-9 shrink-0 items-center justify-center whitespace-nowrap rounded-full border border-[#B9DDD5] bg-white/80 px-3 text-xs font-semibold text-[#0F766E] transition hover:-translate-y-0.5 hover:bg-white min-[720px]:inline-flex xl:px-4 xl:text-sm"
-              >
-                {t.header.openApp}
-              </a>
-            )}
+          <a
+            href={webAppUrl}
+            aria-label={t.header.openAppAria}
+            data-analytics-click="header_open_app"
+            data-analytics-section="header"
+            className="order-3 inline-flex h-9 w-full shrink-0 items-center justify-center whitespace-nowrap rounded-full border border-[#B9DDD5] bg-white/80 px-3 text-xs font-semibold text-[#0F766E] transition hover:-translate-y-0.5 hover:bg-white sm:order-none sm:w-auto xl:px-4 xl:text-sm"
+          >
+            {t.header.openApp}
+          </a>
+          <div className="order-2 flex shrink-0 items-center gap-2 sm:order-none">
             <Link
               href="/#waitlist-form"
               aria-label={t.header.ctaAria ?? t.header.cta}
