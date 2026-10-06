@@ -692,7 +692,18 @@
     "terms": "Warunki użytkowania",
     "privacy": "Polityka prywatności",
     "preorderTerms": "Warunki preorderu",
+    "deleteAccount": "Usuń konto",
     "contactPlaceholder": "support@fishki-med.com"
+  },
+  "deleteAccount": {
+    "badge": "Konto i dane",
+    "title": "Usuń swoje konto Fishki",
+    "request": "Możesz poprosić o usunięcie swojego konta Fishki i powiązanych danych, pisząc na adres",
+    "emailHint": "Wyślij prośbę z adresu e-mail powiązanego z Twoim kontem Fishki.",
+    "deletion": "Po usunięciu konta Twoje konto i powiązane dane Fishki, w tym talie, fiszki i historia nauki, zostaną trwale usunięte. Tej operacji nie można cofnąć.",
+    "retention": "Niektóre dokumenty mogą być przechowywane, jeśli wymagają tego przepisy prawa lub jest to niezbędne do ustalenia, dochodzenia lub obrony roszczeń, zgodnie z naszą Polityką prywatności.",
+    "privacyLink": "Polityka prywatności",
+    "emailSubject": "Prośba o usunięcie konta Fishki"
   },
   "preorderThankYou": {
     "badge": "Zamówienie preorderu przyjęte",

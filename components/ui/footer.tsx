@@ -15,6 +15,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
     { href: "/#waitlist-form", label: t.footer.waitlist },
     { href: "/terms", label: t.footer.terms },
     { href: "/privacy", label: t.footer.privacy },
+    { href: "/delete-account", label: t.footer.deleteAccount },
     { href: "/preorder-terms", label: t.footer.preorderTerms },
   ];
 

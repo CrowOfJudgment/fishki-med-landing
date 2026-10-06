@@ -690,7 +690,18 @@
     "copyright": "Built with medical students in mind.",
     "terms": "Terms of use",
     "privacy": "Privacy Policy",
-    "preorderTerms": "Preorder terms"
+    "preorderTerms": "Preorder terms",
+    "deleteAccount": "Delete account"
+  },
+  "deleteAccount": {
+    "badge": "Account and data",
+    "title": "Delete your Fishki account",
+    "request": "You can request deletion of your Fishki account and associated data by contacting us at",
+    "emailHint": "Please send the request from the email address associated with your Fishki account.",
+    "deletion": "When your account is deleted, your account and associated Fishki data, including your decks, flashcards and study history, will be permanently deleted. This action cannot be undone.",
+    "retention": "Certain records may be retained where required by law or necessary to establish, pursue or defend claims, as described in our Privacy Policy.",
+    "privacyLink": "Privacy Policy",
+    "emailSubject": "Fishki account deletion request"
   },
   "preorderThankYou": {
     "badge": "Preorder submitted",
