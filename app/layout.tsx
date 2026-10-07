@@ -23,13 +23,13 @@ export async function generateMetadata() {
     icons: {
       icon: [
         {
-          url: "/fishki-icon.png?v=3",
+          url: "/fishki-icon.png?v=4",
           type: "image/png",
           sizes: "1024x1024",
         },
       ],
-      shortcut: "/fishki-icon.png?v=3",
-      apple: "/fishki-icon.png?v=3",
+      shortcut: "/fishki-icon.png?v=4",
+      apple: "/fishki-icon.png?v=4",
     },
   };
 }
