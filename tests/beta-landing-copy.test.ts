@@ -1,6 +1,11 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
+import {
+  LANDING_SCREENSHOTS,
+  SCREENSHOT_WIDTH,
+  SCREENSHOT_HEIGHT,
+} from "../lib/landing-screenshots.ts";
 
 type LandingMessages = {
   hero: { badge: string; subtitle: string; validation: string };
@@ -192,36 +197,23 @@ test("screenshot introduction describes real app screens without card-count fill
   }
 });
 
-test("product showcase renders only genuine simulator screenshots", () => {
-  const showcaseSection = readFileSync(
+test("landing uses all 12 genuine supplied screenshots shared by both locales", () => {
+  const screenshots = Object.values(LANDING_SCREENSHOTS).flat();
+  assert.equal(screenshots.length, 12);
+  assert.equal(new Set(screenshots.map((item) => item.src)).size, 12);
+  for (const item of screenshots) {
+    const image = readFileSync(
+      new URL(`../public${item.src}`, import.meta.url),
+    );
+    assert.equal(image.subarray(0, 8).toString("hex"), "89504e470d0a1a0a");
+    assert.equal(image.readUInt32BE(16), SCREENSHOT_WIDTH);
+    assert.equal(image.readUInt32BE(20), SCREENSHOT_HEIGHT);
+  }
+  const showcase = readFileSync(
     new URL("../components/product-showcase-section.tsx", import.meta.url),
     "utf8",
   );
-  const screenshotPaths = [
-    "03-card-editor.png",
-    "04-smart-review.png",
-    "06-study-plan.png",
-  ];
-
-  for (const screenshot of screenshotPaths) {
-    assert.match(showcaseSection, new RegExp(screenshot.replace(".", "\\.")));
-    for (const directory of ["", "en/"]) {
-      const image = readFileSync(
-        new URL(
-          `../public/images/app-screenshots/${directory}${screenshot}`,
-          import.meta.url,
-        ),
-      );
-      assert.ok(
-        image.length > 100_000,
-        `${directory}${screenshot} should be a real screenshot`,
-      );
-    }
-  }
-
-  assert.match(showcaseSection, /useLocale/);
-  assert.match(showcaseSection, /app-screenshots\/en/);
-  assert.doesNotMatch(showcaseSection, /mockup|interactive demo/i);
+  assert.doesNotMatch(showcase, /useLocale|missingScreenshot/);
 });
 
 test("screenshots use one large automatically advancing carousel", () => {
@@ -242,28 +234,14 @@ test("screenshots use one large automatically advancing carousel", () => {
   assert.doesNotMatch(showcaseSection, /xl:grid-cols-5|lg:grid-cols-3/);
 });
 
-test("medical screenshot plan covers the real beta flows", () => {
-  const screenshotPlan = readFileSync(
+test("screenshot documentation covers the supplied real app flows", () => {
+  const plan = readFileSync(
     new URL("../docs/LANDING_SCREENSHOTS.md", import.meta.url),
     "utf8",
   );
-
-  assert.match(screenshotPlan, /wyłącznie zrzuty.*działającej aplikacji/is);
-  assert.match(screenshotPlan, /01-decks\.png/);
-  assert.match(screenshotPlan, /03-card-editor\.png/);
-  assert.match(screenshotPlan, /05-image-occlusion\.png/);
-  assert.match(screenshotPlan, /06-study-plan\.png/);
-
-  for (const locale of ["pl", "en"] as const) {
-    const ui = messages(locale).demo.ui;
-    assert.ok(ui.deckAnatomy);
-    assert.ok(ui.deckPharmacology);
-    assert.ok(ui.deckPathology);
-    assert.ok(ui.demoCardAnatomyOne);
-    assert.ok(ui.demoCardAnatomyFive);
-    assert.ok(ui.demoImageQuestion);
-    assert.ok(ui.demoOcclusionQuestion);
-  }
+  assert.match(plan, /wyłącznie zrzuty.*działającej aplikacji/is);
+  for (const item of Object.values(LANDING_SCREENSHOTS).flat())
+    assert.ok(plan.includes(item.src.split("/").at(-1)!));
 });
 
 test("offline section describes only local features present in the beta", () => {

@@ -1,5 +1,11 @@
 "use client";
 
+import Image from "next/image";
+import {
+  EXAM_PLANNING_SCREENSHOT,
+  SCREENSHOT_WIDTH,
+  SCREENSHOT_HEIGHT,
+} from "@/lib/landing-screenshots";
 import { useT } from "@/lib/i18n-context";
 
 const iconPaths = [
@@ -88,9 +94,16 @@ export default function Problem() {
               )}
             </ol>
           </div>
-          {/* Replace with a genuine exam planner screenshot when supplied. 06-study-plan.png shows Daily Study. */}
-          <div className="flex min-h-72 items-center justify-center rounded-[2rem] border border-dashed border-[#78C2B7] bg-[#E7F1EE]/70 p-8 text-center text-sm text-[#274D53] lg:min-h-[32rem]">
-            {t.demo.missingScreenshot}
+          <div className="mx-auto w-full max-w-[22rem] overflow-hidden rounded-[3rem] border-[8px] border-[#0B1418] bg-[#0B1418] shadow-[0_24px_60px_rgba(0,40,56,0.2)]">
+            <Image
+              src={EXAM_PLANNING_SCREENSHOT}
+              alt={t.examPlanning.screenshotAlt}
+              width={SCREENSHOT_WIDTH}
+              height={SCREENSHOT_HEIGHT}
+              sizes="(min-width: 640px) 352px, calc(100vw - 32px)"
+              className="h-auto w-full rounded-[2.5rem]"
+              unoptimized
+            />
           </div>
         </div>
       </section>

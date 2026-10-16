@@ -423,7 +423,19 @@
       "plannerExamplePharmacology": "10 trudnych fiszek z farmakologii"
     },
     "postDemoLink": "Chcesz uczyć się skuteczniej? Zamów Premium za {price} →",
-    "missingScreenshot": "Miejsce na zrzut ekranu planera egzaminów."
+    "screenshotViews": "Widoki ekranu",
+    "screenshotViewLabels": {
+      "dailyStudy": "Codzienna nauka",
+      "editor": "Edytor fiszek",
+      "question": "Pytanie",
+      "answer": "Odpowiedź",
+      "calendar": "Kalendarz",
+      "examDetails": "Szczegóły egzaminu",
+      "again": "Ponownie",
+      "hard": "Trudno",
+      "good": "Dobrze",
+      "easy": "Łatwo"
+    }
   },
   "useCases": {
     "badge": "Stworzone pod medycynę",
@@ -990,6 +1002,7 @@
         "title": "Realizuj dzienny plan",
         "text": "Sprawdź, czego się uczyć i co powtarzać każdego dnia."
       }
-    ]
+    ],
+    "screenshotAlt": "Szczegóły egzaminu z anatomii w Fishki: plan nauki na dziś, prognozowane przypominanie i postęp materiału."
   }
 }

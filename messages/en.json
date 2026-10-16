@@ -423,7 +423,19 @@
       "plannerExamplePharmacology": "10 difficult pharmacology cards"
     },
     "postDemoLink": "Ready to study smarter? Preorder Premium for {price} →",
-    "missingScreenshot": "Exam Planner screenshot to be added."
+    "screenshotViews": "Screen views",
+    "screenshotViewLabels": {
+      "dailyStudy": "Daily Study",
+      "editor": "Flashcard Editor",
+      "question": "Question",
+      "answer": "Answer",
+      "calendar": "Calendar",
+      "examDetails": "Exam details",
+      "again": "Again",
+      "hard": "Hard",
+      "good": "Good",
+      "easy": "Easy"
+    }
   },
   "useCases": {
     "badge": "Built for medicine",
@@ -988,6 +1000,7 @@
         "title": "Follow your daily plan",
         "text": "See what to learn and review each day."
       }
-    ]
+    ],
+    "screenshotAlt": "Anatomy exam details in Fishki: today’s study plan, projected recall and material progress."
   }
 }

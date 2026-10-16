@@ -1,44 +1,23 @@
-# Landing refresh: replacement screenshots needed
+# Screenshoty aplikacji na landing
 
-Supply genuine app captures in English and Polish if both localized previews are required. Keep a consistent device, resolution and appearance across all five images. No mock screens or composited UI.
+Landing pokazuje wyłącznie zrzuty z działającej aplikacji Fishki. Wszystkie 12 plików dostarczył użytkownik 16 października 2026. Oryginalne PNG 1260 × 2736 zachowano bez retuszu i kadrowania.
 
-Carousel order:
-1. Daily Study: the home study screen with today’s workload and progress. Currently uses `06-study-plan.png`, which is actually Daily Study.
-2. Flashcard Editor: a clear editor with text and an image. Currently uses `03-card-editor.png`.
-3. Cloze Deletion: selected text or a saved cloze with its answer. Currently reuses the genuine cloze shown in `03-card-editor.png`.
-4. Exam Planner: an exam with its date, selected decks and daily plan. No matching asset is available; a placeholder is reserved in both the carousel and the exam planning section. One portrait capture can serve both locations.
-5. Smart Reviews: a real review question or revealed answer with the available review ratings. Currently uses `04-smart-review.png`.
+Angielskie ekrany aplikacji są wspólne dla polskiej i angielskiej wersji landingu. Podpisy i opisy pozostają lokalizowane. Mapowanie: `lib/landing-screenshots.ts`. Pliki: `public/images/app-screenshots/landing/`.
 
-The replacement images can keep the existing portrait screenshot format. The page preserves the full frame without cropping.
+## Karuzela — pięć tematów
 
-Product updates still embeds the existing Tally forms (PL: `2ERGxA`, EN: `pbzpW8`). Supply replacement email-only form links with a real email field and Keep me updated submit action. The external iframe cannot be restyled or have individual fields hidden from this repository.
+1. Daily Study: `daily-study.png` (załącznik 8).
+2. Flashcard Editor: `flashcard-editor.png` (załącznik 11, edytor z cloze i klawiaturą).
+3. Cloze Deletion: `cloze-question.png` oraz `cloze-answer.png` (załączniki 6 i 7).
+4. Exam Planner: `exam-calendar.png` oraz `exam-details.png` (załączniki 10 i 9).
+5. Smart Reviews: `smart-review-question.png` (12, obraz histologiczny), `smart-review-answer.png` (1), `smart-review-again.png` (5), `smart-review-hard.png` (4), `smart-review-good.png` (2), `smart-review-easy.png` (3).
 
----
+Przy tematach z kilkoma obrazami przyciski „Widoki ekranu” pozwalają wybrać zapisany screenshot. Nie odtwarzają działania nauki ani oceniania w aplikacji. Każdy temat zaczyna się od pierwszego widoku.
 
-# Prawdziwe screeny aplikacji na landing
+## Sekcja planowania egzaminów
 
-Landing nie może używać makiet ani komponentów imitujących aplikację. Galeria ma pokazywać wyłącznie zrzuty wykonane z działającej aplikacji Fishki na iPhonie.
+`exam-details.png` pokazuje plan nauki na dziś, projected recall i postęp materiału. Zastępuje wcześniejsze puste miejsce na screenshot.
 
-## Planowane pliki
+## Formularz aktualności
 
-1. `01-decks.png` - lista trzech talii demonstracyjnych.
-2. `02-deck-contents.png` - pięć fiszek wewnątrz talii.
-3. `03-card-editor.png` - edytor fiszki z luką i tagami.
-4. `04-image-study.png` - nauka z kartą zawierającą obraz.
-5. `05-image-occlusion.png` - nauka z prawdziwą maską image occlusion.
-6. `06-study-plan.png` - ekran Nauka z planem i powtórkami.
-
-Finalne pliki należy umieścić w `public/images/app-screenshots/`.
-
-## Zasady wykonania
-
-- jeden model iPhone'a i jedna skala we wszystkich ujęciach,
-- polski interfejs dla polskiego landingu,
-- realistyczne dane z pakietu `Fishki-demo-medyczne.apkg`,
-- brak prywatnego e-maila, nazwy konta, powiadomień i innych danych osobowych,
-- pełna rozdzielczość PNG bez kompresji komunikatorów,
-- spójna godzina, poziom baterii i tryb jasny,
-- brak klawiatury poza screenem edytora,
-- po podmianie obrazów trzeba najpierw sprawdzić poprawność masek image occlusion.
-
-Pod galerią pozostaje informacja o pierwszych testerach i możliwym bezpłatnym zaproszeniu do zamkniętej bety. Przycisk zakupowy prowadzi do preorderu 12 miesięcy Fishki Premium od publicznej premiery; drugi przycisk prowadzi do zapisu na aktualności.
+Bez zmian: obecne formularze Tally (PL: `2ERGxA`, EN: `pbzpW8`). Nadal oczekują na nowe formularze z samym e-mailem. Ich pól nie można ukrywać CSS-em strony nadrzędnej.

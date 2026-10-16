@@ -8,27 +8,18 @@ import {
   useState,
   type TouchEvent,
 } from "react";
-import { useLocale, useT } from "@/lib/i18n-context";
+import { useT } from "@/lib/i18n-context";
 
 import type { PricingRegion } from "@/lib/pricing-region";
 
-const screenshotPaths: Record<"pl" | "en", Record<string, string>> = {
-  pl: {
-    dailyStudy: "/images/app-screenshots/06-study-plan.png",
-    cloze: "/images/app-screenshots/03-card-editor.png",
-    editor: "/images/app-screenshots/03-card-editor.png",
-    smartReview: "/images/app-screenshots/04-smart-review.png",
-  },
-  en: {
-    dailyStudy: "/images/app-screenshots/en/06-study-plan.png",
-    cloze: "/images/app-screenshots/en/03-card-editor.png",
-    editor: "/images/app-screenshots/en/03-card-editor.png",
-    smartReview: "/images/app-screenshots/en/04-smart-review.png",
-  },
-};
+import {
+  LANDING_SCREENSHOTS,
+  SCREENSHOT_WIDTH,
+  SCREENSHOT_HEIGHT,
+} from "@/lib/landing-screenshots";
 
 type ShowcaseScreen = {
-  key: string;
+  key: keyof typeof LANDING_SCREENSHOTS;
   number: string;
   label: string;
   title: string;
@@ -44,16 +35,16 @@ export default function ProductShowcaseSection({
   pricingRegion: PricingRegion;
 }) {
   const t = useT();
-  const locale = useLocale();
   const [active, setActive] = useState(0);
+  const [activeView, setActiveView] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const touchStartX = useRef<number | null>(null);
   const screens = (t.demo.fixedScreens as ShowcaseScreen[]).map((screen) => {
-    const src = screenshotPaths[locale][screen.key];
-    return { ...screen, src };
+    return { ...screen, images: LANDING_SCREENSHOTS[screen.key] };
   });
   const controls = t.demo.carouselControls;
   const screen = screens[active] ?? screens[0];
+  const screenshot = screen?.images[activeView] ?? screen?.images[0];
 
   const stopAutoplay = useCallback(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
@@ -64,11 +55,13 @@ export default function ProductShowcaseSection({
     if (intervalRef.current || screens.length < 2) return;
     intervalRef.current = setInterval(() => {
       setActive((current) => (current + 1) % screens.length);
+      setActiveView(0);
     }, AUTOPLAY_INTERVAL_MS);
   }, [screens.length]);
 
   const goToSlide = (index: number) => {
     setActive((index + screens.length) % screens.length);
+    setActiveView(0);
   };
 
   useEffect(() => {
@@ -93,7 +86,7 @@ export default function ProductShowcaseSection({
     startAutoplay();
   };
 
-  if (!screen) return null;
+  if (!screen || !screenshot) return null;
 
   return (
     <section id="how-it-works" className="scroll-mt-28 py-10 sm:py-16">
@@ -174,31 +167,49 @@ export default function ProductShowcaseSection({
               <p className="mx-auto mt-4 max-w-md text-base leading-7 text-[#274D53] lg:mx-0">
                 {screen.description}
               </p>
+              {screen.images.length > 1 ? (
+                <div className="mt-5">
+                  <p className="text-xs font-medium text-[#274D53]">
+                    {t.demo.screenshotViews}
+                  </p>
+                  <div
+                    role="group"
+                    aria-label={t.demo.screenshotViews}
+                    className="mt-2 flex flex-wrap justify-center gap-2 lg:justify-start"
+                  >
+                    {screen.images.map((item, index) => (
+                      <button
+                        key={item.view}
+                        type="button"
+                        aria-pressed={activeView === index}
+                        onClick={() => setActiveView(index)}
+                        className={`min-h-10 rounded-full border px-3 py-2 text-xs font-semibold transition ${activeView === index ? "border-[#0F766E] bg-[#0F766E] text-white" : "border-[#B9DDD5] bg-white/70 text-[#0F766E] hover:bg-white"}`}
+                      >
+                        {t.demo.screenshotViewLabels[item.view]}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
             </div>
 
             <div className="order-1 flex items-center justify-center lg:order-2">
-              {screen.src ? (
-                <div
-                  key={`image-${screen.number}`}
-                  className="w-full max-w-[27rem] overflow-hidden rounded-[4.5rem] border-[10px] border-[#0B1418] bg-[#0B1418] shadow-[0_24px_60px_rgba(0,40,56,0.2)] motion-safe:animate-[demo-in_280ms_ease-out]"
-                >
-                  <Image
-                    src={screen.src}
-                    alt={`${screen.label}: ${screen.title}`}
-                    width={1206}
-                    height={2622}
-                    sizes="(min-width: 1024px) 432px, (min-width: 640px) 432px, calc(100vw - 72px)"
-                    className="h-auto w-full select-none rounded-[3.75rem]"
-                    draggable={false}
-                    unoptimized
-                    priority={active === 0}
-                  />
-                </div>
-              ) : (
-                <div className="flex aspect-[1206/2622] w-full max-w-[27rem] items-center justify-center rounded-[2rem] border border-dashed border-[#78C2B7] bg-white/60 p-8 text-center text-sm text-[#274D53]">
-                  {t.demo.missingScreenshot}
-                </div>
-              )}
+              <div
+                key={`image-${screen.number}-${screenshot.view}`}
+                className="w-full max-w-[27rem] overflow-hidden rounded-[4.5rem] border-[10px] border-[#0B1418] bg-[#0B1418] shadow-[0_24px_60px_rgba(0,40,56,0.2)] motion-safe:animate-[demo-in_280ms_ease-out]"
+              >
+                <Image
+                  src={screenshot.src}
+                  alt={`${screen.label}: ${t.demo.screenshotViewLabels[screenshot.view]}`}
+                  width={SCREENSHOT_WIDTH}
+                  height={SCREENSHOT_HEIGHT}
+                  sizes="(min-width: 640px) 432px, calc(100vw - 72px)"
+                  className="h-auto w-full select-none rounded-[3.75rem]"
+                  draggable={false}
+                  unoptimized
+                  priority={active === 0}
+                />
+              </div>
             </div>
           </div>
         </div>
