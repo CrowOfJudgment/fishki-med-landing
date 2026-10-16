@@ -20,4 +20,4 @@ Przy tematach z kilkoma obrazami przyciski „Widoki ekranu” pozwalają wybra�
 
 ## Formularz aktualności
 
-Bez zmian: obecne formularze Tally (PL: `2ERGxA`, EN: `pbzpW8`). Nadal oczekują na nowe formularze z samym e-mailem. Ich pól nie można ukrywać CSS-em strony nadrzędnej.
+Obie wersje językowe korzystają z nowego formularza Tally `OQ1dDM`, dostarczonego przez użytkownika. Początkowa wysokość ramki to 174 px; skrypt Tally dopasowuje ją dynamicznie. W przypadku błędu ładowania skryptu ramka korzysta z fallbacku dostarczonego w kodzie Tally.

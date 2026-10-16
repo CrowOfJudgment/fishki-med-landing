@@ -1,8 +1,7 @@
 "use client";
 
 import Script from "next/script";
-import { useEffect } from "react";
-import { useLocale, useT } from "@/lib/i18n-context";
+import { useT } from "@/lib/i18n-context";
 
 type TallyWindow = Window & {
   Tally?: {
@@ -10,26 +9,27 @@ type TallyWindow = Window & {
   };
 };
 
+const tallyForm = {
+  src: "https://tally.so/embed/OQ1dDM?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1",
+  title: "Fishki Med new",
+};
+
+function loadEmbeds() {
+  const tally = (window as TallyWindow).Tally;
+  if (tally?.loadEmbeds) {
+    tally.loadEmbeds();
+    return;
+  }
+  // Tally's supplied fallback also loads the iframe if the widget script fails.
+  document
+    .querySelectorAll<HTMLIFrameElement>("iframe[data-tally-src]:not([src])")
+    .forEach((iframe) => {
+      if (iframe.dataset.tallySrc) iframe.src = iframe.dataset.tallySrc;
+    });
+}
+
 export default function Cta() {
   const t = useT();
-  const locale = useLocale();
-  const tallyForm =
-    locale === "pl"
-      ? {
-          src: "https://tally.so/embed/2ERGxA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1",
-          title: "Fishki PL",
-        }
-      : {
-          src: "https://tally.so/embed/pbzpW8?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1",
-          title: "Fishki",
-        };
-  const loadEmbeds = () => {
-    (window as TallyWindow).Tally?.loadEmbeds?.();
-  };
-
-  useEffect(() => {
-    loadEmbeds();
-  }, []);
 
   return (
     <section
@@ -51,7 +51,7 @@ export default function Cta() {
             className="pointer-events-none absolute -left-12 bottom-0 h-56 w-56 rounded-full bg-[#B9DDD5]/40 blur-3xl motion-safe:animate-float"
           />
 
-          <div className="relative grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10">
+          <div className="relative grid items-center gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10">
             <div className="p-4 sm:p-6 lg:p-8">
               <span className="inline-flex rounded-full border border-[#B9DDD5] bg-[#F4F7F5] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]">
                 {t.cta.badge}
@@ -64,8 +64,6 @@ export default function Cta() {
               <p className="mt-5 max-w-xl text-lg leading-8 text-[#274D53]">
                 {t.cta.subtitle}
               </p>
-
-              {/* Tally owns the form fields. Keep the live embed until an email-only form is supplied. */}
             </div>
 
             <div className="relative">
@@ -78,13 +76,16 @@ export default function Cta() {
                   data-tally-src={tallyForm.src}
                   title={tallyForm.title}
                   width="100%"
-                  height="620"
-                  className="block min-h-[520px] w-full rounded-[1.35rem] bg-white sm:min-h-[560px] lg:min-h-[620px]"
+                  height="174"
+                  className="block w-full rounded-[1.35rem] bg-white"
                   frameBorder="0"
                   marginHeight={0}
                   marginWidth={0}
                   loading="lazy"
                 />
+                <p className="mt-3 text-center text-xs leading-5 text-[#274D53]">
+                  {t.cta.privacyNote}
+                </p>
               </div>
             </div>
           </div>
@@ -93,7 +94,8 @@ export default function Cta() {
       <Script
         src="https://tally.so/widgets/embed.js"
         strategy="afterInteractive"
-        onLoad={loadEmbeds}
+        onReady={loadEmbeds}
+        onError={loadEmbeds}
       />
     </section>
   );
