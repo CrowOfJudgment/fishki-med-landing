@@ -1,3 +1,20 @@
+# Landing refresh: replacement screenshots needed
+
+Supply genuine app captures in English and Polish if both localized previews are required. Keep a consistent device, resolution and appearance across all five images. No mock screens or composited UI.
+
+Carousel order:
+1. Daily Study: the home study screen with today’s workload and progress. Currently uses `06-study-plan.png`, which is actually Daily Study.
+2. Flashcard Editor: a clear editor with text and an image. Currently uses `03-card-editor.png`.
+3. Cloze Deletion: selected text or a saved cloze with its answer. Currently reuses the genuine cloze shown in `03-card-editor.png`.
+4. Exam Planner: an exam with its date, selected decks and daily plan. No matching asset is available; a placeholder is reserved in both the carousel and the exam planning section. One portrait capture can serve both locations.
+5. Smart Reviews: a real review question or revealed answer with the available review ratings. Currently uses `04-smart-review.png`.
+
+The replacement images can keep the existing portrait screenshot format. The page preserves the full frame without cropping.
+
+Product updates still embeds the existing Tally forms (PL: `2ERGxA`, EN: `pbzpW8`). Supply replacement email-only form links with a real email field and Keep me updated submit action. The external iframe cannot be restyled or have individual fields hidden from this repository.
+
+---
+
 # Prawdziwe screeny aplikacji na landing
 
 Landing nie może używać makiet ani komponentów imitujących aplikację. Galeria ma pokazywać wyłącznie zrzuty wykonane z działającej aplikacji Fishki na iPhonie.

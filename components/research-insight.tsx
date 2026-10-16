@@ -2,17 +2,11 @@
 
 import { useT } from "@/lib/i18n-context";
 
-type ProofQuote = {
-  name: string;
-  role: string;
-  quote: string;
-};
-
 export default function ResearchInsight() {
   const t = useT();
 
   return (
-    <section id="student-voices" className="scroll-mt-28 py-16 sm:py-20">
+    <section id="student-voices" className="scroll-mt-28 py-6 sm:py-10">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="relative overflow-hidden rounded-[2.25rem] border border-[#B9DDD5] bg-[#F4F7F5] p-6 shadow-[0_24px_70px_rgba(39,77,83,0.08)] sm:p-8 lg:p-10">
           <div
@@ -39,39 +33,38 @@ export default function ResearchInsight() {
               ) : null}
             </div>
 
-            <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {t.proof.quotes.map((item: ProofQuote, index: number) => (
-                <article
-                  key={`${item.name}-${index}`}
-                  className="rounded-[1.55rem] border border-[#B9DDD5] bg-white/80 p-5 shadow-sm"
+            <div className="mt-5 flex flex-wrap gap-x-6 gap-y-3">
+              {t.proof.facts.map((fact: string, index: number) => (
+                <p
+                  key={fact}
+                  className="flex items-center gap-2 text-sm font-semibold text-[#0F766E]"
                 >
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <h4 className="text-sm font-semibold text-[#002838]">
-                        {item.name}
-                      </h4>
-                      <p className="mt-1 text-xs font-medium text-[#0F766E]">
-                        {item.role}
-                      </p>
-                    </div>
-                    <span
-                      aria-hidden="true"
-                      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#E7F1EE] text-lg font-semibold text-[#0F766E]"
-                    >
-                      ”
-                    </span>
-                  </div>
-                  <blockquote className="mt-5 text-sm leading-6 text-[#274D53]">
-                    “{item.quote}”
-                  </blockquote>
-                </article>
+                  <svg
+                    aria-hidden="true"
+                    className="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    {index === 0 ? (
+                      <>
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m20 0v-2a4 4 0 0 0-3-3.9M16 3a4 4 0 0 1 0 8" />
+                        <circle cx="9" cy="7" r="4" />
+                      </>
+                    ) : (
+                      <>
+                        <rect x="6" y="2" width="12" height="20" rx="2" />
+                        <path d="M11 18h2" />
+                      </>
+                    )}
+                  </svg>
+                  {fact}
+                </p>
               ))}
             </div>
-            {t.proof.footer ? (
-              <p className="mx-auto mt-7 max-w-3xl text-center text-lg leading-8 text-[#274D53]">
-                {t.proof.footer}
-              </p>
-            ) : null}
           </div>
         </div>
       </div>

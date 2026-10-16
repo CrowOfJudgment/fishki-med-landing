@@ -10,25 +10,6 @@ type TallyWindow = Window & {
   };
 };
 
-function CheckIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      className="h-3.5 w-3.5"
-      viewBox="0 0 14 14"
-      fill="none"
-    >
-      <path
-        d="m3 7.25 2.25 2.25L11 3.75"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 export default function Cta() {
   const t = useT();
   const locale = useLocale();
@@ -84,36 +65,7 @@ export default function Cta() {
                 {t.cta.subtitle}
               </p>
 
-              <ul className="mt-8 space-y-4">
-                {t.cta.benefits.map((benefit: string) => (
-                  <li key={benefit} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#B9DDD5] text-[#0F766E]">
-                      <CheckIcon />
-                    </span>
-                    <span className="text-sm leading-7 text-[#274D53]">
-                      {benefit}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-8 rounded-2xl border border-[#B9DDD5] bg-[#F4F7F5] px-4 py-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]">
-                  {t.cta.cta}
-                </p>
-                <p className="mt-2 text-sm leading-6 text-[#274D53]">
-                  {t.cta.formNote}
-                </p>
-                <a
-                  href="#preorder"
-                  aria-label={t.cta.preorderAria}
-                  data-analytics-click="waitlist_preorder"
-                  data-analytics-section="waitlist"
-                  className="mt-4 inline-flex rounded-full bg-[#E86860] px-4 py-2 text-xs font-semibold text-white shadow-[0_10px_24px_rgba(232,104,96,0.18)] transition hover:bg-[#D85A52]"
-                >
-                  {t.cta.preorderLink}
-                </a>
-              </div>
+              {/* Tally owns the form fields. Keep the live embed until an email-only form is supplied. */}
             </div>
 
             <div className="relative">

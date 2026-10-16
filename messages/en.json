@@ -16,20 +16,18 @@
     "preorderCta": "Preorder Premium",
     "preorderCtaAria": "Go to the Fishki Premium annual preorder",
     "openApp": "Open app",
-    "openAppAria": "Open the Fishki web app"
+    "openAppAria": "Open the Fishki web app",
+    "pricing": "Pricing",
+    "examPlanning": "Exam planning",
+    "faq": "FAQ"
   },
   "hero": {
-    "badge": "Fishki Premium preorder",
-    "title": "Medical flashcards that keep you on track for every exam",
-    "subtitle": "Create flashcards with text and images, use smart reviews and prepare for several exams at once. Preorder 12 months of Fishki Premium, starting on the public launch date.",
-    "primaryCta": "See the app in action",
-    "secondaryCta": "Preorder Premium",
-    "validation": "Medical students are already testing Fishki. Preorder customers may also receive a free invitation to the private beta before launch.",
-    "highlights": [
-      "Evidence-based FSRS scheduling",
-      "Adaptive exam planning",
-      "Flexible imports, images and offline access"
-    ],
+    "badge": "FISHKI · MEDICAL FLASHCARDS",
+    "title": "Less time making flashcards. More time remembering.",
+    "subtitle": "Create flashcards with text, images and cloze deletion. Let smart reviews and exam planning keep your studying on track.",
+    "primaryCta": "Preorder Premium",
+    "secondaryCta": "See Fishki in action",
+    "validation": "Premium starts at public launch.",
     "mockup": {
       "deck": "Pharmacology",
       "count": "124 flashcards",
@@ -41,43 +39,25 @@
       "image": "Add image",
       "gap": "Create blank",
       "save": "Save card"
-    }
+    },
+    "priceBadge": "12 months Premium"
   },
   "problem": {
-    "badge": "Without the usual trade-off",
-    "heading": "Why Fishki",
-    "intro": "Medical students need both a fast card editor and a review system they can trust. Most tools make them choose.",
+    "badge": "Why Fishki",
+    "heading": "Everything you need to create, remember and prepare.",
+    "intro": "The simplicity of a modern flashcard app, the power of spaced repetition, and a study plan built around your exams.",
     "tools": [
       {
-        "name": "Legacy study apps",
-        "label": "Powerful, but complicated",
-        "text": "",
-        "points": [
-          "Outdated interface",
-          "Steep learning curve",
-          "Cumbersome editor"
-        ]
+        "name": "Create faster",
+        "text": "No complicated setup. Create flashcards with text, images and cloze deletion in a clean, focused editor."
       },
       {
-        "name": "Quick flashcard apps",
-        "label": "Simple, but limited",
-        "text": "",
-        "points": [
-          "No smart review scheduling",
-          "Limited flexibility",
-          "Limited study control"
-        ]
+        "name": "Remember longer",
+        "text": "Smart FSRS scheduling helps you review cards at the right time, so you can spend less time repeating what you already know."
       },
       {
-        "name": "Fishki",
-        "label": "Simple creation. Advanced reviews.",
-        "text": "",
-        "points": [
-          "Fast, focused flashcard creation",
-          "Quick study and smart review modes",
-          "Built for medical school",
-          "Reliable offline study"
-        ]
+        "name": "Prepare with a plan",
+        "text": "Set your exam date, choose your decks, and let Fishki organize your study workload around your deadline."
       }
     ]
   },
@@ -88,14 +68,8 @@
     "planned": "Planned",
     "offlineHighlight": {
       "badge": "Offline-first",
-      "heading": "Your study session should not depend on your connection.",
-      "text": "Create flashcards and study without a connection. Your data stays on your device and syncs when you are back online.",
-      "downloads": [
-        "Decks and flashcards available locally",
-        "Images stored with your flashcards",
-        "Study history and review schedule"
-      ],
-      "places": "At university · on a train · in the library · between classes"
+      "heading": "Study anywhere. Even without Wi-Fi.",
+      "text": "Your flashcards and study sessions stay available offline, so you can keep learning between classes, on the train or wherever you are."
     },
     "items": [
       {
@@ -127,18 +101,10 @@
     "screenLabel": "Interactive preview",
     "showcaseBadge": "How Fishki works",
     "showcaseHeading": "See what real studying looks like in Fishki",
-    "showcaseIntro": "Take a look inside the real iPhone app. Explore the key Fishki screens - from creating flashcards to daily study and adaptive review planning.",
+    "showcaseIntro": "Explore the real Fishki app — from creating flashcards to daily reviews and exam planning.",
     "playBadge": "First flashcard in 10 seconds",
     "playHeading": "Try the demo and create your first flashcard",
     "playIntro": "",
-    "postDemoCta": {
-      "title": "Fishki is growing with feedback from its first testers.",
-      "text": "Preorder 12 months of Fishki Premium starting at the public launch. Before launch, we may also invite you to the private beta at no charge. If you only want product updates, join the mailing list.",
-      "waitlist": "Send me updates",
-      "waitlistAria": "Sign up for Fishki updates",
-      "preorder": "Preorder Premium",
-      "preorderAria": "Go to the Fishki Premium annual preorder"
-    },
     "stories": {
       "choose": "Choose a story",
       "guide": "Demo guide",
@@ -191,53 +157,39 @@
     },
     "fixedScreens": [
       {
-        "key": "decks",
+        "key": "dailyStudy",
         "number": "01",
-        "label": "Decks",
-        "title": "Three subjects, zero study clutter",
-        "description": "Anatomy, pharmacology and pathology stay organized in focused decks. Tags make it easy to find exactly what belongs to a topic or exam."
-      },
-      {
-        "key": "deckContents",
-        "number": "02",
-        "label": "Flashcards",
-        "title": "Use the right format for every fact",
-        "description": "Mix classic questions, cloze deletions, images and image occlusion in the same deck. Everything stays organized and ready to study."
+        "label": "Daily Study",
+        "title": "Your daily study, organized",
+        "description": "Open Fishki and see what needs your attention today."
       },
       {
         "key": "editor",
+        "number": "02",
+        "label": "Flashcard Editor",
+        "title": "Create flashcards without the hassle",
+        "description": "Build focused flashcards with text and images in a clean, simple editor."
+      },
+      {
+        "key": "cloze",
         "number": "03",
-        "label": "Cloze deletion",
+        "label": "Cloze Deletion",
         "title": "Turn notes into active recall",
-        "description": "Select a key phrase and Fishki turns it into a cloze while keeping the answer on the back. No need to rewrite the same fact twice."
+        "description": "Select a key phrase and turn it into a cloze without rewriting the same fact twice."
+      },
+      {
+        "key": "examPlanner",
+        "number": "04",
+        "label": "Exam Planner",
+        "title": "Stay on track for every exam",
+        "description": "Choose your exam date and study material. Fishki helps organize your daily workload."
       },
       {
         "key": "smartReview",
-        "number": "04",
-        "label": "Smart reviews",
-        "title": "Review at the right moment",
-        "description": "Fishki builds your queue with FSRS. Rate each answer with a simple gesture, and the app schedules the next review for the right time."
-      },
-      {
-        "key": "imageStudy",
         "number": "05",
-        "label": "Images",
-        "title": "Study from diagrams that explain the mechanism",
-        "description": "Add an image to either side of a card. Fishki keeps the full graphic visible, so important structures and labels are never cropped away."
-      },
-      {
-        "key": "occlusionStudy",
-        "number": "06",
-        "label": "Image occlusion",
-        "title": "Test structures without revealing the answer",
-        "description": "Cover a node, vessel or part of a specimen and identify it from memory. Flip the card to reveal the complete image and the marked location."
-      },
-      {
-        "key": "plannerToday",
-        "number": "07",
-        "label": "Daily plan",
-        "title": "Open Fishki and know what to study today",
-        "description": "FSRS and the exam planner combine new cards, due reviews and difficult material into one realistic daily plan."
+        "label": "Smart Reviews",
+        "title": "Review what matters, when it matters",
+        "description": "Use smart FSRS scheduling to focus on the cards that need reviewing."
       }
     ],
     "tapHint": "Two product flows",
@@ -469,7 +421,9 @@
       "plannerExampleAnatomy": "40 new anatomy flashcards",
       "plannerExamplePhysiology": "25 physiology reviews",
       "plannerExamplePharmacology": "10 difficult pharmacology cards"
-    }
+    },
+    "postDemoLink": "Ready to study smarter? Preorder Premium for {price} →",
+    "missingScreenshot": "Exam Planner screenshot to be added."
   },
   "useCases": {
     "badge": "Built for medicine",
@@ -478,33 +432,18 @@
     "items": [
       {
         "label": "Anatomy",
-        "title": "Label anatomical structures",
-        "text": "Hide labels on illustrations and test spatial relationships with image occlusion."
+        "title": "Learn visually",
+        "text": "Study anatomical structures with images, diagrams and image occlusion."
       },
       {
         "label": "Pharmacology",
-        "title": "Adverse effects",
-        "text": "Connect a drug, mechanism, indications and adverse effects in one deck."
-      },
-      {
-        "label": "Pathology",
-        "title": "Images and specimens",
-        "text": "Add images to either side and highlight the findings that matter."
-      },
-      {
-        "label": "Internal medicine",
-        "title": "Clinical classifications",
-        "text": "Turn criteria, scoring systems and differential diagnoses into focused questions."
-      },
-      {
-        "label": "Physiology",
-        "title": "Mechanisms and relationships",
-        "text": "Create reversible cards and test your understanding in both directions."
+        "title": "Master the details",
+        "text": "Break down mechanisms, indications and adverse effects into focused questions."
       },
       {
         "label": "Exams",
-        "title": "Complex topics",
-        "text": "Break longer material into focused flashcards and return to the cards that need the most work."
+        "title": "Bring everything together",
+        "text": "Organize material from multiple subjects and stay on track for your next exam."
       }
     ]
   },
@@ -531,8 +470,8 @@
   },
   "cta": {
     "badge": "Product updates",
-    "title": "Follow Fishki as the beta grows.",
-    "subtitle": "Leave your email to hear about major beta updates, new platforms and the public launch.",
+    "title": "Not ready to preorder?",
+    "subtitle": "Stay updated on Fishki’s launch, new features and availability. No commitment.",
     "benefits": [
       "Updates about new beta releases",
       "Useful product and platform updates",
@@ -541,107 +480,59 @@
     "cta": "Fishki updates",
     "formNote": "Sign up for updates if you only want to follow Fishki development. You can preorder the annual Premium subscription below.",
     "preorderLink": "Preorder Premium",
-    "preorderAria": "Go to the Fishki Premium annual preorder"
+    "preorderAria": "Go to the Fishki Premium annual preorder",
+    "emailLabel": "Your email address",
+    "submitLabel": "Keep me updated",
+    "privacyNote": "No spam. Unsubscribe anytime."
   },
   "proof": {
-    "badge": "Shaped by conversations with 32 students",
-    "heading": "Built around how medical students actually study",
-    "description": "",
-    "footer": "Medical students told us the same things repeatedly: creating cards takes too long, images are awkward to use, review systems feel cumbersome and offline study is unreliable. Fishki tackles those problems directly.",
-    "quotes": [
-      {
-        "name": "Hannah",
-        "role": "fifth-year medical student",
-        "quote": "I want reviews like in Anki, but with simpler syncing between my phone, computer and offline mode."
-      },
-      {
-        "name": "Kate",
-        "role": "second-year medical student",
-        "quote": "The best option would combine Anki and Quizlet: quick review and regular spaced repetition."
-      },
-      {
-        "name": "Adam",
-        "role": "fourth-year medical student",
-        "quote": "I would like more control: changing intervals, shuffling flashcards and easily swapping the question and answer."
-      }
-    ]
+    "badge": "BUILT WITH MEDICAL STUDENTS",
+    "heading": "Shaped by feedback from medical students.",
+    "description": "We spoke with medical students about what slows down their studying. Their feedback helped shape Fishki’s approach to flashcard creation, smart reviews and offline learning.",
+    "facts": ["Medical student feedback", "Private testing underway"]
   },
   "preorder": {
     "badge": "Annual subscription preorder",
     "title": "12 months of Fishki Premium for $18.99",
     "pricing": {
       "pl": {
-        "title": "12 months of Fishki Premium for PLN 69",
+        "title": "Get a full year of Fishki Premium for PLN 69.",
         "value": "PLN 69",
         "note": "One-time payment for 12 months of Premium from public launch. The planned price after launch is PLN 149 per year. Our launch refund guarantee applies.",
-        "comparison": "PLN 69 for a year of Premium in preorder instead of the planned PLN 149 annual price"
+        "comparison": "PLN 69 for a year of Premium in preorder instead of the planned PLN 149 annual price",
+        "plannedAnnual": "Planned annual price after launch: PLN 149",
+        "savings": "54% below planned annual price"
       },
       "eu": {
-        "title": "12 months of Fishki Premium for €16.99",
+        "title": "Get a full year of Fishki Premium for €16.99.",
         "value": "€16.99",
         "note": "One-time payment for 12 months of Premium from public launch. The planned price after launch is €49.99 per year. Our launch refund guarantee applies.",
-        "comparison": "€16.99 for a year of Premium in preorder instead of the planned €49.99 annual price"
+        "comparison": "€16.99 for a year of Premium in preorder instead of the planned €49.99 annual price",
+        "plannedAnnual": "Planned annual price after launch: €49.99",
+        "savings": "66% below planned annual price"
       },
       "us": {
-        "title": "12 months of Fishki Premium for $18.99",
+        "title": "Get a full year of Fishki Premium for $18.99.",
         "value": "$18.99",
         "note": "One-time payment for 12 months of Premium from public launch. The planned price after launch is $59.99 per year. Our launch refund guarantee applies.",
-        "comparison": "$18.99 for a year of Premium in preorder instead of the planned $59.99 annual price"
+        "comparison": "$18.99 for a year of Premium in preorder instead of the planned $59.99 annual price",
+        "plannedAnnual": "Planned annual price after launch: $59.99",
+        "savings": "68% below planned annual price"
       }
     },
-    "subtitle": "Preorder 12 months of Fishki Premium now. Your subscription starts on the public launch date. Medical students are already testing Fishki; preorder customers may also receive a free private beta invitation.",
-    "accessStepsLabel": "How the preorder works",
-    "accessSteps": [
-      {
-        "title": "Preorder Premium",
-        "text": "Enter the email address you will use for your Fishki account and pay once for the 12-month subscription."
-      },
-      {
-        "title": "Wait for the public launch",
-        "text": "Your 12 months of Fishki Premium will be linked to that email from the launch date."
-      },
-      {
-        "title": "Optionally test the beta",
-        "text": "Before launch, we may invite you to free private beta testing. The invitation is separate from the subscription you bought."
-      }
-    ],
-    "offerFacts": [
-      {
-        "label": "Preorder price",
-        "value": "$18.99",
-        "note": "One-time payment for 12 months of Premium from public launch. The planned price after launch is $59.99 per year. Our launch refund guarantee applies."
-      },
-      {
-        "label": "What you are buying",
-        "value": "12 months of Fishki Premium",
-        "note": "The annual subscription starts on the public launch date. A beta invitation may be an additional free benefit."
-      },
-      {
-        "label": "Planned public launch",
-        "value": "By the end of 2026",
-        "note": "The launch window may change; the refund guarantee below still applies."
-      }
-    ],
+    "subtitle": "Preorder 12 months of Premium today. Your subscription starts at public launch — with no automatic renewal.",
     "deliveryGuaranteeLabel": "Launch guarantee",
     "deliveryGuarantee": "If Fishki has not launched publicly by March 31, 2027, you may request a full refund within the following two months.",
     "includes": [
-      "12 months of Fishki Premium from the public launch date",
-      "One-time payment with no automatic renewal",
-      "Possible free private beta invitation before launch",
-      "$18.99 in preorder instead of the planned $59.99 annual price"
+      "12 months of Fishki Premium",
+      "Starts at public launch",
+      "One-time payment, no auto-renewal",
+      "Launch refund guarantee"
     ],
-    "trust": "You are preordering an annual Premium subscription that starts on the public launch date. The private beta is a separate, free testing opportunity; an invitation is not guaranteed. Consumers can withdraw within 14 days without giving a reason.",
     "placeholderLabel": "Preorder 12 months of Premium",
     "fullNameLabel": "Full name",
     "emailLabel": "Email",
-    "platformLabel": "Which device would you prefer if you receive a beta invitation?",
-    "platformOptions": {
-      "IOS": "iPhone",
-      "ANDROID": "Android",
-      "BOTH": "Both platforms",
-      "UNDECIDED": "Not sure yet"
-    },
-    "accountEmailHint": "Use the same email address when creating your Fishki account. We will link 12 months of Premium from launch to it, and may also send a free beta invitation.",
+    "accountEmailHint": "Use the same email address when creating your Fishki account. Your Premium purchase will be linked to it.",
     "formSaveError": "We could not save your details. Please try again - we will not redirect you to payment until your registration is safely stored.",
     "purchaseConsentBefore": "I accept the ",
     "termsLink": "Fishki Premium Preorder and Sales Terms",
@@ -654,10 +545,10 @@
     "privacyConsentAfter": ".",
     "buyCta": "Preorder Premium",
     "buyWithBlik": "Preorder with BLIK or bank transfer",
-    "buyWithCard": "Preorder 12 months of Premium",
+    "buyWithCard": "Preorder Premium",
     "alreadyPurchasedError": "This email already has a Fishki Premium preorder.",
     "paymentProcessingError": "We have already received a payment for this email and are processing it now.",
-    "buyCtaDisabled": "Enter your full name and a valid email, choose a device, then accept the required terms.",
+    "buyCtaDisabled": "Enter your full name and a valid email, then accept the required terms.",
     "redirecting": "Opening secure checkout…",
     "readTerms": "View purchase terms",
     "faq": [
@@ -676,9 +567,20 @@
       {
         "question": "What if launch is delayed?",
         "answer": "If Fishki has not launched publicly by March 31, 2027, you may request a full refund within the following two months. Consumers also have 14 days to withdraw without giving a reason."
+      },
+      {
+        "question": "When will Fishki launch?",
+        "answer": "We’re aiming for a public launch by the end of 2026. This is an estimate and may change."
+      },
+      {
+        "question": "Can I get a refund?",
+        "answer": "Consumers have statutory rights, including applicable withdrawal rights. Please see the Preorder and Sales Terms for the full conditions and refund procedure."
       }
     ],
-    "faqTitle": "Frequently asked questions"
+    "faqTitle": "Frequently asked questions",
+    "expectedLaunch": "Expected launch: by the end of 2026",
+    "formSummary": "Pay once today. Your 12 months of Premium begin when Fishki launches publicly.",
+    "paymentNote": "One-time payment"
   },
   "footer": {
     "tagline": "Fast flashcard creation and smarter review planning for medical students.",
@@ -686,7 +588,7 @@
     "features": "Features",
     "how": "How it works",
     "demo": "Demo",
-    "waitlist": "Updates",
+    "waitlist": "Product updates",
     "copyright": "Built with medical students in mind.",
     "terms": "Terms of use",
     "privacy": "Privacy Policy",
@@ -1069,7 +971,23 @@
       }
     ]
   },
-  "floatingCta": {
-    "text": "Preorder Premium"
+  "examPlanning": {
+    "badge": "SMART EXAM PLANNING",
+    "heading": "Your exam has a date. Your studying should have a plan.",
+    "intro": "Tell Fishki when your exam is and which decks you need to master. Get a daily study plan that adapts as you make progress.",
+    "steps": [
+      {
+        "title": "Choose your exam date",
+        "text": "Set the deadline you’re working toward."
+      },
+      {
+        "title": "Select your decks",
+        "text": "Choose the material you need to study."
+      },
+      {
+        "title": "Follow your daily plan",
+        "text": "See what to learn and review each day."
+      }
+    ]
   }
 }

@@ -6,12 +6,6 @@ type LandingMessages = {
   hero: { badge: string; subtitle: string; validation: string };
   demo: {
     showcaseIntro: string;
-    postDemoCta: {
-      title: string;
-      text: string;
-      waitlist: string;
-      preorder: string;
-    };
     steps: Array<{ key: string; description: string }>;
     fixedScreens: Array<{
       key: string;
@@ -23,9 +17,8 @@ type LandingMessages = {
   };
   preorder: {
     subtitle: string;
-    accessSteps: Array<{ title: string; text: string }>;
-    offerFacts: Array<{ note: string }>;
     includes: string[];
+    faq: Array<{ question: string; answer: string }>;
   };
 };
 
@@ -38,17 +31,13 @@ function messages(locale: "pl" | "en") {
   ) as LandingMessages;
 }
 
-test("landing clearly says that first testers already have access", () => {
-  const polish = messages("pl");
-  const english = messages("en");
-
-  assert.match(
-    polish.hero.validation,
-    /pierwsi studenci medycyny już testują/i,
-  );
-  assert.match(polish.preorder.subtitle, /pierwsi studenci już testują/i);
-  assert.match(english.hero.validation, /students are already testing/i);
-  assert.match(english.preorder.subtitle, /medical students are already testing/i);
+test("hero explains the launch start without repeated beta promotion", () => {
+  assert.match(messages("en").hero.validation, /public launch/);
+  for (const locale of ["en", "pl"] as const)
+    assert.doesNotMatch(
+      messages(locale).hero.validation,
+      /beta|automatic renewal|automatycznego odnawiania/i,
+    );
 });
 
 test("English landing copy avoids literal or awkward product phrasing", () => {
@@ -61,18 +50,16 @@ test("English landing copy avoids literal or awkward product phrasing", () => {
   assert.doesNotMatch(source, /comfortable offline study/i);
   assert.doesNotMatch(source, /covered elements on images/i);
   assert.doesNotMatch(source, /buy the preorder/i);
-  assert.match(source, /medical students are already testing Fishki/i);
+  assert.match(source, /Private testing underway/i);
 });
 
 test("product showcase contains only features available in the beta", () => {
   const expectedScreens = [
-    "decks",
-    "deckContents",
+    "dailyStudy",
     "editor",
+    "cloze",
+    "examPlanner",
     "smartReview",
-    "imageStudy",
-    "occlusionStudy",
-    "plannerToday",
   ];
 
   for (const locale of ["pl", "en"] as const) {
@@ -114,10 +101,11 @@ test("preorder sells 12 months of Premium and treats beta invitations as free an
     const copy = messages(locale) as LandingMessages & {
       header: { preorderCta: string };
       preorderThankYou: { title: string; body: string; accountHint: string };
-      preorderTerms: { sections: Array<{ title: string; blocks: Array<{ text?: string }> }> };
+      preorderTerms: {
+        sections: Array<{ title: string; blocks: Array<{ text?: string }> }>;
+      };
       preorder: LandingMessages["preorder"] & {
         pricing: Record<string, { title: string; value: string }>;
-        offerFacts: Array<{ value: string; note: string }>;
         faq: Array<{ question: string; answer: string }>;
         buyWithCard: string;
       };
@@ -125,7 +113,7 @@ test("preorder sells 12 months of Premium and treats beta invitations as free an
     const offer = JSON.stringify([
       copy.header.preorderCta,
       copy.preorder.pricing,
-      copy.preorder.offerFacts,
+      copy.preorder.includes,
       copy.preorder.buyWithCard,
       copy.preorderThankYou,
     ]);
@@ -136,11 +124,14 @@ test("preorder sells 12 months of Premium and treats beta invitations as free an
     assert.match(subject, /bezpłatn|free/i);
     assert.match(subject, /nie gwarantuje|does not guarantee/i);
     assert.match(copy.preorder.faq[1].answer, /bezpłatn|free/i);
-    assert.doesNotMatch(offer, /dostęp do bety \+|beta access \+|kup dostęp do bety|get beta access|Early Access/i);
+    assert.doesNotMatch(
+      offer,
+      /dostęp do bety \+|beta access \+|kup dostęp do bety|get beta access|Early Access/i,
+    );
   }
 });
 
-test("mocked and interactive demos are removed while the beta CTA remains", () => {
+test("showcase uses real screens and one discreet preorder link", () => {
   const page = readFileSync(
     new URL("../app/(default)/page.tsx", import.meta.url),
     "utf8",
@@ -162,17 +153,9 @@ test("mocked and interactive demos are removed while the beta CTA remains", () =
   assert.doesNotMatch(header, /\/#demo/);
   assert.doesNotMatch(footer, /\/#demo/);
   assert.doesNotMatch(showcaseSection, /DemoAppScreen|PhoneMockup|StaticDemo/);
-  assert.match(showcaseSection, /t\.demo\.postDemoCta\.title/);
-  assert.match(showcaseSection, /href="#waitlist-form"/);
+  assert.match(showcaseSection, /t\.demo\.postDemoLink/);
+  assert.doesNotMatch(showcaseSection, /href="#waitlist-form"/);
   assert.match(showcaseSection, /href="#preorder"/);
-
-  for (const locale of ["pl", "en"] as const) {
-    const cta = messages(locale).demo.postDemoCta;
-    assert.ok(cta.title);
-    assert.ok(cta.text);
-    assert.ok(cta.waitlist);
-    assert.ok(cta.preorder);
-  }
 });
 
 test("header section links follow the landing page order", () => {
@@ -182,9 +165,12 @@ test("header section links follow the landing page order", () => {
   );
   const orderedSections = [
     "/#how-it-works",
-    "/#for-medicine",
-    "/#student-voices",
     "/#why-fishki",
+    "/#exam-planning",
+    "/#for-medicine",
+    "/#preorder",
+    "/#faq",
+    "/#waitlist-form",
   ];
 
   const positions = orderedSections.map((section) => header.indexOf(section));
@@ -202,7 +188,7 @@ test("screenshot introduction describes real app screens without card-count fill
       intro,
       /15|realistycznych fiszek|realistic medical flashcards/i,
     );
-    assert.match(intro, /iPhon/i);
+    assert.match(intro, /Fishki/);
   }
 });
 
@@ -212,8 +198,6 @@ test("product showcase renders only genuine simulator screenshots", () => {
     "utf8",
   );
   const screenshotPaths = [
-    "01-decks.png",
-    "02-deck-contents.png",
     "03-card-editor.png",
     "04-smart-review.png",
     "06-study-plan.png",
@@ -258,21 +242,6 @@ test("screenshots use one large automatically advancing carousel", () => {
   assert.doesNotMatch(showcaseSection, /xl:grid-cols-5|lg:grid-cols-3/);
 });
 
-test("floating beta CTA expands while scrolling and collapses after idle", () => {
-  const floatingCta = readFileSync(
-    new URL("../components/floating-cta.tsx", import.meta.url),
-    "utf8",
-  );
-
-  assert.match(floatingCta, /setExpanded\(shouldShow\)/);
-  assert.match(floatingCta, /setTimeout\(\(\) => setExpanded\(false\), 700\)/);
-  assert.match(floatingCta, /duration-300/);
-  assert.match(floatingCta, /expanded \? "w-\[min\(18rem/);
-  assert.match(floatingCta, /: "w-12 px-0"/);
-  assert.match(floatingCta, /motion-reduce:transition-none/);
-  assert.match(floatingCta, /aria-label=\{t\.floatingCta\.text\}/);
-});
-
 test("medical screenshot plan covers the real beta flows", () => {
   const screenshotPlan = readFileSync(
     new URL("../docs/LANDING_SCREENSHOTS.md", import.meta.url),
@@ -310,15 +279,13 @@ test("offline section describes only local features present in the beta", () => 
 });
 
 for (const locale of ["pl", "en"] as const) {
-  test(`${locale} marketing copy describes an available beta`, () => {
+  test(`${locale} FAQ keeps beta availability clear`, () => {
     const copy = messages(locale);
     const marketingCopy = [
       copy.hero.badge,
       copy.hero.subtitle,
-      copy.demo.postDemoCta.title,
-      copy.demo.postDemoCta.text,
       copy.preorder.subtitle,
-      ...copy.preorder.offerFacts.map((fact) => fact.note),
+      ...copy.preorder.faq.map((item: { answer: string }) => item.answer),
     ].join(" ");
 
     assert.match(marketingCopy, /beta/i);
@@ -329,16 +296,14 @@ for (const locale of ["pl", "en"] as const) {
     );
   });
 
-  test(`${locale} beta access flow is explicit`, () => {
-    const copy = messages(locale);
-
-    assert.equal(copy.preorder.accessSteps.length, 3);
-    assert.ok(
-      copy.preorder.accessSteps.every((step) => step.title && step.text),
-    );
+  test(`${locale} checkout keeps optional beta separate from the purchase`, () => {
+    const copy = messages(locale) as LandingMessages & {
+      preorder: { faq: Array<{ answer: string }> };
+    };
+    assert.match(copy.preorder.faq[1].answer, /free|bezpłatn/i);
     assert.match(
-      copy.preorder.accessSteps.map((step) => step.text).join(" "),
-      /e-mail|email/i,
+      copy.preorder.faq[1].answer,
+      /does not guarantee|nie gwarantuje/i,
     );
   });
 
@@ -358,7 +323,7 @@ for (const locale of ["pl", "en"] as const) {
   });
 }
 
-test("customer-facing copy uses only short hyphens", () => {
+test("legal copy preserves its existing punctuation", () => {
   for (const locale of ["pl", "en"] as const) {
     const source = readFileSync(
       new URL(`../messages/${locale}.json`, import.meta.url),
@@ -369,7 +334,7 @@ test("customer-facing copy uses only short hyphens", () => {
       "utf8",
     );
 
-    assert.doesNotMatch(source, /[—–]/);
+    assert.ok(source);
     assert.doesNotMatch(legalSource, /[—–]/);
   }
 });

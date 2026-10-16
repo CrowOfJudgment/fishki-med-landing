@@ -13,23 +13,21 @@
     "waitlist": "Aktualności",
     "cta": "Aktualności",
     "ctaAria": "Zapisz się na aktualności o Fishki",
-    "preorderCta": "Preorder Premium",
+    "preorderCta": "Zamów Premium",
     "preorderCtaAria": "Przejdź do preorderu rocznej subskrypcji Fishki Premium",
     "openApp": "Otwórz aplikację",
-    "openAppAria": "Otwórz aplikację webową Fishki"
+    "openAppAria": "Otwórz aplikację webową Fishki",
+    "pricing": "Cena",
+    "examPlanning": "Egzaminy",
+    "faq": "FAQ"
   },
   "hero": {
-    "badge": "Preorder Fishki Premium",
-    "title": "Medyczne fiszki, które podpowiadają, czego uczyć się dzisiaj",
-    "subtitle": "Twórz fiszki z tekstu i obrazów, korzystaj z inteligentnych powtórek i przygotowuj się do kilku egzaminów jednocześnie. Kup preorder 12 miesięcy Fishki Premium, które rozpoczną się w dniu publicznej premiery.",
-    "primaryCta": "Zobacz, jak działają Fishki",
-    "secondaryCta": "Kup preorder Premium",
-    "validation": "Pierwsi studenci medycyny już testują Fishki. Klienci preorderu mogą dodatkowo otrzymać bezpłatne zaproszenie do zamkniętej bety przed premierą.",
-    "highlights": [
-      "Inteligentne powtórki FSRS",
-      "Planowanie nauki do egzaminów",
-      "Import materiałów, obrazy i nauka offline"
-    ],
+    "badge": "FISHKI · FISZKI MEDYCZNE",
+    "title": "Mniej czasu na tworzenie fiszek. Więcej na zapamiętywanie.",
+    "subtitle": "Twórz fiszki z tekstem, obrazami i lukami. Inteligentne powtórki i planowanie egzaminów pomogą Ci utrzymać rytm nauki.",
+    "primaryCta": "Zamów Premium",
+    "secondaryCta": "Zobacz Fishki w akcji",
+    "validation": "Premium zaczyna się w dniu publicznej premiery.",
     "mockup": {
       "deck": "Farmakologia",
       "count": "124 fiszki",
@@ -41,43 +39,25 @@
       "image": "Dodaj obraz",
       "gap": "Utwórz lukę",
       "save": "Zapisz kartę"
-    }
+    },
+    "priceBadge": "12 miesięcy Premium"
   },
   "problem": {
-    "badge": "Prostota bez rezygnacji ze skuteczności",
-    "heading": "Dlaczego Fishki",
-    "intro": "Szybkie tworzenie fiszek nie powinno oznaczać rezygnacji ze skutecznych powtórek. Fishki łączą prosty edytor z systemem przygotowanym do nauki dużej ilości materiału.",
+    "badge": "Dlaczego Fishki",
+    "heading": "Wszystko, czego potrzebujesz, by tworzyć, pamiętać i przygotować się do egzaminu.",
+    "intro": "Prostota nowoczesnej aplikacji do fiszek, siła powtórek rozłożonych w czasie i plan nauki dopasowany do egzaminów.",
     "tools": [
       {
-        "name": "Tradycyjne aplikacje",
-        "label": "Skuteczne, ale skomplikowane",
-        "text": "",
-        "points": [
-          "Przestarzały interfejs",
-          "Wysoki próg wejścia",
-          "Niewygodny edytor"
-        ]
+        "name": "Twórz szybciej",
+        "text": "Bez skomplikowanej konfiguracji. Twórz fiszki z tekstem, obrazami i lukami w prostym, przejrzystym edytorze."
       },
       {
-        "name": "Proste aplikacje",
-        "label": "Proste, ale ograniczone",
-        "text": "",
-        "points": [
-          "Brak zaawansowanych powtórek",
-          "Mała elastyczność",
-          "Ograniczona kontrola nauki"
-        ]
+        "name": "Pamiętaj dłużej",
+        "text": "Inteligentny harmonogram FSRS pomaga powtarzać fiszki we właściwym czasie, by poświęcać mniej czasu na to, co już wiesz."
       },
       {
-        "name": "Fishki",
-        "label": "Proste tworzenie. Skuteczna nauka.",
-        "text": "",
-        "points": [
-          "Proste i szybkie tworzenie fiszek",
-          "Dwa tryby nauki: szybki i inteligentny",
-          "Stworzone z myślą o nauce medycyny",
-          "Wygodny tryb nauki offline"
-        ]
+        "name": "Przygotuj się z planem",
+        "text": "Ustaw datę egzaminu, wybierz talie i pozwól Fishki uporządkować naukę z uwzględnieniem terminu."
       }
     ]
   },
@@ -88,14 +68,8 @@
     "planned": "Planowane",
     "offlineHighlight": {
       "badge": "Offline-first",
-      "heading": "Nauka nie powinna zależeć od zasięgu.",
-      "text": "Twórz fiszki i ucz się bez internetu. Dane pozostają na urządzeniu, a zmiany synchronizują się po odzyskaniu połączenia.",
-      "downloads": [
-        "Talie i fiszki dostępne lokalnie",
-        "Obrazy zapisane razem z fiszkami",
-        "Historia nauki i harmonogram powtórek"
-      ],
-      "places": "Na uczelni · w pociągu · w bibliotece · między zajęciami"
+      "heading": "Ucz się wszędzie. Nawet bez Wi-Fi.",
+      "text": "Twoje fiszki i sesje nauki są dostępne offline. Ucz się między zajęciami, w pociągu i wszędzie tam, gdzie jesteś."
     },
     "items": [
       {
@@ -127,18 +101,10 @@
     "screenLabel": "Interaktywny podgląd",
     "showcaseBadge": "Jak działa Fishki",
     "showcaseHeading": "Zobacz, jak wygląda prawdziwa nauka w Fishki",
-    "showcaseIntro": "Zajrzyj do prawdziwej aplikacji na iPhonie. Poniżej zobaczysz najważniejsze ekrany Fishki - od tworzenia fiszek po codzienną naukę i planowanie powtórek.",
+    "showcaseIntro": "Poznaj prawdziwą aplikację Fishki — od tworzenia fiszek po codzienne powtórki i planowanie egzaminów.",
     "playBadge": "Utwórz pierwszą fiszkę",
     "playHeading": "Wypróbuj demo i stwórz swoją pierwszą fiszkę",
     "playIntro": "",
-    "postDemoCta": {
-      "title": "Fishki rozwijają się z pomocą pierwszych testerów.",
-      "text": "Kup preorder 12-miesięcznej subskrypcji Fishki Premium od publicznej premiery. Przed premierą możemy dodatkowo zaprosić Cię bezpłatnie do zamkniętych testów beta. Jeśli chcesz tylko śledzić rozwój produktu, zapisz się na aktualności.",
-      "waitlist": "Chcę otrzymywać aktualności",
-      "waitlistAria": "Zapisz się na aktualności o Fishki",
-      "preorder": "Kup preorder Premium",
-      "preorderAria": "Przejdź do preorderu rocznej subskrypcji Fishki Premium"
-    },
     "stories": {
       "choose": "Wybierz historyjkę",
       "guide": "Przewodnik po demo",
@@ -191,53 +157,39 @@
     },
     "fixedScreens": [
       {
-        "key": "decks",
+        "key": "dailyStudy",
         "number": "01",
-        "label": "Talie",
-        "title": "Trzy przedmioty, zero chaosu",
-        "description": "Anatomia, farmakologia i patologia są podzielone na czytelne talie. Tagi pomagają szybko odnaleźć materiał do konkretnego tematu lub egzaminu."
-      },
-      {
-        "key": "deckContents",
-        "number": "02",
-        "label": "Fiszki",
-        "title": "Każda informacja w najlepszym formacie",
-        "description": "W jednej talii możesz łączyć klasyczne pytania, fiszki z lukami, obrazy i zakrywanie obrazu. Wszystkie materiały pozostają uporządkowane i gotowe do nauki."
+        "label": "Codzienna nauka",
+        "title": "Twoja codzienna nauka, uporządkowana",
+        "description": "Otwórz Fishki i zobacz, co wymaga dziś Twojej uwagi."
       },
       {
         "key": "editor",
+        "number": "02",
+        "label": "Edytor fiszek",
+        "title": "Twórz fiszki bez komplikacji",
+        "description": "Twórz konkretne fiszki z tekstem i obrazami w prostym, przejrzystym edytorze."
+      },
+      {
+        "key": "cloze",
         "number": "03",
         "label": "Fiszki z lukami",
-        "title": "Zamieniaj notatki w aktywne przypominanie",
-        "description": "Zaznacz kluczowy fragment, a Fishki utworzą z niego lukę i zachowają odpowiedź na odwrocie. Bez ręcznego przepisywania tej samej treści."
+        "title": "Zamień notatki w aktywne przypominanie",
+        "description": "Zaznacz kluczową frazę i zamień ją w lukę, bez przepisywania tego samego faktu."
+      },
+      {
+        "key": "examPlanner",
+        "number": "04",
+        "label": "Planer egzaminów",
+        "title": "Przygotuj się do każdego egzaminu",
+        "description": "Wybierz datę egzaminu i materiał. Fishki pomoże uporządkować codzienną naukę."
       },
       {
         "key": "smartReview",
-        "number": "04",
-        "label": "Inteligentne powtórki",
-        "title": "Powtarzaj we właściwym momencie",
-        "description": "Fishki układają kolejkę na podstawie FSRS. Oceniasz odpowiedź prostym gestem, a aplikacja wyznacza najlepszy termin kolejnej powtórki."
-      },
-      {
-        "key": "imageStudy",
         "number": "05",
-        "label": "Obrazy",
-        "title": "Ucz się na schematach, które naprawdę coś wyjaśniają",
-        "description": "Dodawaj obrazy do przodu lub tyłu fiszki. Cała grafika pozostaje widoczna, więc nie tracisz ważnych szczegółów mechanizmu lub preparatu."
-      },
-      {
-        "key": "occlusionStudy",
-        "number": "06",
-        "label": "Zakrywanie obrazu",
-        "title": "Sprawdzaj struktury bez zdradzania odpowiedzi",
-        "description": "Zakryj węzeł, naczynie lub fragment preparatu i spróbuj rozpoznać go z pamięci. Po odwróceniu karty zobaczysz pełny obraz z zaznaczonym miejscem."
-      },
-      {
-        "key": "plannerToday",
-        "number": "07",
-        "label": "Plan dnia",
-        "title": "Otwierasz aplikację i wiesz, czego uczyć się dziś",
-        "description": "FSRS i planner egzaminacyjny łączą nowe fiszki, wymagane powtórki i trudny materiał w jeden realistyczny plan dnia."
+        "label": "Inteligentne powtórki",
+        "title": "Powtarzaj to, co trzeba, wtedy, kiedy trzeba",
+        "description": "Inteligentny harmonogram FSRS pomaga skupić się na fiszkach wymagających powtórki."
       }
     ],
     "tapHint": "Dwa przepływy produktu",
@@ -469,7 +421,9 @@
       "plannerExampleAnatomy": "40 nowych fiszek z anatomii",
       "plannerExamplePhysiology": "25 powtórek z fizjologii",
       "plannerExamplePharmacology": "10 trudnych fiszek z farmakologii"
-    }
+    },
+    "postDemoLink": "Chcesz uczyć się skuteczniej? Zamów Premium za {price} →",
+    "missingScreenshot": "Miejsce na zrzut ekranu planera egzaminów."
   },
   "useCases": {
     "badge": "Stworzone pod medycynę",
@@ -478,33 +432,18 @@
     "items": [
       {
         "label": "Anatomia",
-        "title": "Podpisy struktur",
-        "text": "Zakrywaj nazwy na rycinach i ucz się relacji przestrzennych."
+        "title": "Ucz się wizualnie",
+        "text": "Poznawaj struktury anatomiczne dzięki obrazom, schematom i zasłanianiu fragmentów obrazów."
       },
       {
         "label": "Farmakologia",
-        "title": "Działania niepożądane",
-        "text": "Łącz lek, mechanizm, wskazania i działania uboczne w jednej talii."
-      },
-      {
-        "label": "Patologia",
-        "title": "Obrazy i preparaty",
-        "text": "Dodawaj zdjęcia po obu stronach fiszki i zakrywaj najważniejsze elementy obrazu."
-      },
-      {
-        "label": "Interna",
-        "title": "Klasyfikacje chorób",
-        "text": "Rozbijaj kryteria, skale i różnicowanie na krótkie pytania."
-      },
-      {
-        "label": "Fizjologia",
-        "title": "Mechanizmy i zależności",
-        "text": "Powtarzaj materiał od przodu do tyłu, od tyłu do przodu albo w obu kierunkach."
+        "title": "Opanuj szczegóły",
+        "text": "Zamień mechanizmy działania, wskazania i działania niepożądane w konkretne pytania."
       },
       {
         "label": "Egzaminy",
-        "title": "Złożone zagadnienia",
-        "text": "Rozbijaj dłuższy materiał na konkretne fiszki i wracaj do tych, które sprawiają największą trudność."
+        "title": "Połącz całą wiedzę",
+        "text": "Uporządkuj materiał z wielu przedmiotów i przygotuj się do kolejnego egzaminu."
       }
     ]
   },
@@ -531,8 +470,8 @@
   },
   "cta": {
     "badge": "Aktualności",
-    "title": "Bądź na bieżąco z Fishki",
-    "subtitle": "Zostaw swój e-mail, a damy Ci znać o nowych wersjach bety, kolejnych platformach i publicznym starcie Fishki.",
+    "title": "Jeszcze nie chcesz zamawiać?",
+    "subtitle": "Otrzymuj informacje o premierze Fishki, nowych funkcjach i dostępności. Bez zobowiązań.",
     "benefits": [
       "Informacje o nowych wersjach bety",
       "Konkretne aktualizacje o produkcie i platformach",
@@ -541,107 +480,59 @@
     "cta": "Zapisz mnie na aktualności",
     "formNote": "Jeśli chcesz otrzymywać tylko informacje o rozwoju Fishki, zapisz się na aktualności. Preorder rocznej subskrypcji Premium kupisz poniżej.",
     "preorderLink": "Kup preorder Premium",
-    "preorderAria": "Przejdź do preorderu rocznej subskrypcji Fishki Premium"
+    "preorderAria": "Przejdź do preorderu rocznej subskrypcji Fishki Premium",
+    "emailLabel": "Twój adres e-mail",
+    "submitLabel": "Powiadom mnie",
+    "privacyNote": "Bez spamu. Możesz wypisać się w każdej chwili."
   },
   "proof": {
-    "badge": "Fishki powstają razem ze studentami",
-    "heading": "32 rozmowy ze studentami pokazały, czego brakuje obecnym aplikacjom",
-    "description": "",
-    "footer": "Studenci wskazali konkretne problemy: wolne tworzenie fiszek, niewygodną pracę z obrazami, uciążliwe powtórki i zawodną naukę offline. Rozwijamy Fishki razem z testerami, odpowiadając na te potrzeby krok po kroku.",
-    "quotes": [
-      {
-        "name": "Hania",
-        "role": "studentka 5. roku medycyny",
-        "quote": "Chcę powtórek jak w Anki, ale z prostszą synchronizacją między telefonem, komputerem i trybem offline."
-      },
-      {
-        "name": "Kasia",
-        "role": "studentka 2. roku medycyny",
-        "quote": "Najlepsze byłoby połączenie Anki i Quizleta: szybka powtórka oraz normalne powtórki rozłożone w czasie."
-      },
-      {
-        "name": "Adam",
-        "role": "student 4. roku medycyny",
-        "quote": "Chciałbym mieć większą kontrolę: zmieniać interwały, losować fiszki i łatwo odwracać pytanie z odpowiedzią."
-      }
-    ]
+    "badge": "TWORZONE ZE STUDENTAMI MEDYCYNY",
+    "heading": "Tworzone z uwzględnieniem opinii studentów medycyny.",
+    "description": "Rozmawialiśmy ze studentami medycyny o tym, co spowalnia ich naukę. Ich opinie pomogły ukształtować tworzenie fiszek, inteligentne powtórki i naukę offline w Fishki.",
+    "facts": ["Konsultacje ze studentami medycyny", "Trwają prywatne testy"]
   },
   "preorder": {
     "badge": "Preorder rocznej subskrypcji",
     "title": "12 miesięcy Fishki Premium za 69 zł",
     "pricing": {
       "pl": {
-        "title": "12 miesięcy Fishki Premium za 69 zł",
+        "title": "Zamów pełny rok Fishki Premium za 69 zł.",
         "value": "69 zł",
         "note": "Jednorazowa płatność za 12 miesięcy Premium od publicznej premiery. Planowana cena po premierze to 149 zł rocznie. Obowiązuje gwarancja zwrotu.",
-        "comparison": "69 zł za rok Premium w preorderze zamiast planowanych 149 zł rocznie"
+        "comparison": "69 zł za rok Premium w preorderze zamiast planowanych 149 zł rocznie",
+        "plannedAnnual": "Planowana cena roczna po premierze: 149 zł",
+        "savings": "54% poniżej planowanej ceny rocznej"
       },
       "eu": {
-        "title": "12 miesięcy Fishki Premium za 16,99 €",
+        "title": "Zamów pełny rok Fishki Premium za 16,99 €.",
         "value": "16,99 €",
         "note": "Jednorazowa płatność za 12 miesięcy Premium od publicznej premiery. Planowana cena po premierze to 49,99 € rocznie. Obowiązuje gwarancja zwrotu.",
-        "comparison": "16,99 € za rok Premium w preorderze zamiast planowanych 49,99 € rocznie"
+        "comparison": "16,99 € za rok Premium w preorderze zamiast planowanych 49,99 € rocznie",
+        "plannedAnnual": "Planowana cena roczna po premierze: 49,99 €",
+        "savings": "66% poniżej planowanej ceny rocznej"
       },
       "us": {
-        "title": "12 miesięcy Fishki Premium za 18,99 USD",
+        "title": "Zamów pełny rok Fishki Premium za 18,99 USD.",
         "value": "18,99 USD",
         "note": "Jednorazowa płatność za 12 miesięcy Premium od publicznej premiery. Planowana cena po premierze to 59,99 USD rocznie. Obowiązuje gwarancja zwrotu.",
-        "comparison": "18,99 USD za rok Premium w preorderze zamiast planowanych 59,99 USD rocznie"
+        "comparison": "18,99 USD za rok Premium w preorderze zamiast planowanych 59,99 USD rocznie",
+        "plannedAnnual": "Planowana cena roczna po premierze: 59,99 USD",
+        "savings": "68% poniżej planowanej ceny rocznej"
       }
     },
-    "subtitle": "Zamów teraz 12 miesięcy Fishki Premium. Okres subskrypcji rozpocznie się w dniu publicznej premiery. Pierwsi studenci już testują Fishki; klienci preorderu mogą dodatkowo otrzymać bezpłatne zaproszenie do zamkniętej bety.",
-    "accessStepsLabel": "Jak działa preorder",
-    "accessSteps": [
-      {
-        "title": "Kup preorder Premium",
-        "text": "Podaj adres e-mail, którego użyjesz także do konta Fishki, i opłać 12-miesięczną subskrypcję."
-      },
-      {
-        "title": "Oczekuj na publiczną premierę",
-        "text": "Od dnia premiery na ten adres przypiszemy 12 miesięcy Fishki Premium."
-      },
-      {
-        "title": "Opcjonalnie przetestuj betę",
-        "text": "Przed premierą możemy zaprosić Cię do bezpłatnych zamkniętych testów beta. Zaproszenie nie jest częścią zakupionej subskrypcji."
-      }
-    ],
-    "offerFacts": [
-      {
-        "label": "Cena preorderu",
-        "value": "69 zł",
-        "note": "Jednorazowa płatność za 12 miesięcy Premium od publicznej premiery. Planowana cena po premierze to 149 zł rocznie. Obowiązuje gwarancja zwrotu."
-      },
-      {
-        "label": "Co kupujesz",
-        "value": "12 miesięcy Fishki Premium",
-        "note": "Roczna subskrypcja zacznie się w dniu publicznej premiery. Zaproszenie do bety może być dodatkowym bezpłatnym benefitem."
-      },
-      {
-        "label": "Planowany publiczny start",
-        "value": "Do końca 2026 roku",
-        "note": "Termin premiery może się zmienić; obowiązuje gwarancja zwrotu opisana poniżej."
-      }
-    ],
+    "subtitle": "Zamów dziś 12 miesięcy Premium. Subskrypcja rozpocznie się w dniu publicznej premiery — bez automatycznego odnawiania.",
     "deliveryGuaranteeLabel": "Gwarancja premiery",
     "deliveryGuarantee": "Jeśli Fishki nie zostaną publicznie udostępnione do 31 marca 2027 roku, możesz zażądać pełnego zwrotu w ciągu dwóch miesięcy od tej daty.",
     "includes": [
-      "12 miesięcy Fishki Premium od dnia publicznej premiery",
-      "Jednorazowa płatność bez automatycznego odnowienia",
-      "Możliwe bezpłatne zaproszenie do zamkniętej bety przed premierą",
-      "69 zł w preorderze zamiast planowanych 149 zł rocznie"
+      "12 miesięcy Fishki Premium",
+      "Od dnia publicznej premiery",
+      "Jednorazowa płatność, bez automatycznego odnawiania",
+      "Gwarancja zwrotu w razie braku premiery"
     ],
-    "trust": "Kupujesz preorder rocznej subskrypcji Premium, która rozpocznie się w dniu publicznej premiery. Zamknięta beta jest odrębną, bezpłatną możliwością testowania; zaproszenie nie jest gwarantowane. Jako konsument możesz odstąpić od umowy w ciągu 14 dni bez podawania przyczyny.",
     "placeholderLabel": "Kup preorder 12 miesięcy Premium",
     "fullNameLabel": "Imię i nazwisko",
     "emailLabel": "E-mail",
-    "platformLabel": "Na jakim urządzeniu chciał(a)byś testować Fishki, jeśli otrzymasz zaproszenie?",
-    "platformOptions": {
-      "IOS": "iPhone",
-      "ANDROID": "Android",
-      "BOTH": "Oba systemy",
-      "UNDECIDED": "Jeszcze nie wiem"
-    },
-    "accountEmailHint": "Użyj tego samego adresu e-mail podczas zakładania konta Fishki. Przypiszemy do niego 12 miesięcy Premium od publicznej premiery; możemy też wysłać bezpłatne zaproszenie do testów beta.",
+    "accountEmailHint": "Podaj ten sam adres e-mail podczas tworzenia konta Fishki. Powiążemy z nim zakup Premium.",
     "formSaveError": "Nie udało się zapisać danych. Spróbuj ponownie - nie przekierujemy Cię do płatności, dopóki zgłoszenie nie zostanie bezpiecznie zapisane.",
     "purchaseConsentBefore": "Akceptuję ",
     "termsLink": "Regulamin sprzedaży preorderu Fishki Premium",
@@ -654,10 +545,10 @@
     "privacyConsentAfter": ".",
     "buyCta": "Kup preorder Premium",
     "buyWithBlik": "Kup preorder przez BLIK lub szybki przelew",
-    "buyWithCard": "Kup preorder 12 miesięcy Premium",
+    "buyWithCard": "Zamów Premium",
     "alreadyPurchasedError": "Ten adres e-mail ma już przypisany zakup preorderu Fishki Premium.",
     "paymentProcessingError": "Płatność dla tego adresu e-mail została już przyjęta i jest właśnie przetwarzana.",
-    "buyCtaDisabled": "Uzupełnij imię i nazwisko, poprawny e-mail, wybierz urządzenie i zaznacz obowiązkowe zgody.",
+    "buyCtaDisabled": "Wpisz imię i nazwisko oraz poprawny adres e-mail, a następnie zaznacz wymagane zgody.",
     "redirecting": "Przygotowujemy bezpieczną płatność…",
     "readTerms": "Przeczytaj warunki zakupu",
     "faq": [
@@ -676,9 +567,20 @@
       {
         "question": "Co, jeśli premiera się opóźni?",
         "answer": "Jeśli Fishki nie wystartują publicznie do 31 marca 2027 roku, możesz zażądać pełnego zwrotu w ciągu kolejnych dwóch miesięcy. Jako konsument masz też 14 dni na odstąpienie od umowy bez podawania przyczyny."
+      },
+      {
+        "question": "Kiedy Fishki będzie dostępne publicznie?",
+        "answer": "Planujemy publiczną premierę do końca 2026 roku. To szacowany termin, który może się zmienić."
+      },
+      {
+        "question": "Czy mogę otrzymać zwrot?",
+        "answer": "Konsumentom przysługują ustawowe prawa, w tym prawo do odstąpienia od umowy. Pełne warunki i procedurę zwrotu znajdziesz w Regulaminie preorderu i sprzedaży."
       }
     ],
-    "faqTitle": "Najczęstsze pytania"
+    "faqTitle": "Najczęstsze pytania",
+    "expectedLaunch": "Planowana premiera: do końca 2026 roku",
+    "formSummary": "Zapłać raz dzisiaj. Twoje 12 miesięcy Premium rozpocznie się w dniu publicznej premiery Fishki.",
+    "paymentNote": "Jednorazowa płatność"
   },
   "footer": {
     "tagline": "Proste tworzenie fiszek i poważny system powtórek dla studentów medycyny.",
@@ -1071,7 +973,23 @@
       }
     ]
   },
-  "floatingCta": {
-    "text": "Preorder Premium"
+  "examPlanning": {
+    "badge": "INTELIGENTNY PLAN NAUKI",
+    "heading": "Egzamin ma datę. Twoja nauka powinna mieć plan.",
+    "intro": "Podaj datę egzaminu i wybierz talie do opanowania. Otrzymasz dzienny plan nauki, który dopasowuje się do Twoich postępów.",
+    "steps": [
+      {
+        "title": "Wybierz datę egzaminu",
+        "text": "Ustaw termin, do którego się przygotowujesz."
+      },
+      {
+        "title": "Wybierz talie",
+        "text": "Wskaż materiał, którego chcesz się nauczyć."
+      },
+      {
+        "title": "Realizuj dzienny plan",
+        "text": "Sprawdź, czego się uczyć i co powtarzać każdego dnia."
+      }
+    ]
   }
 }

@@ -1,23 +1,29 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState, type TouchEvent } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type TouchEvent,
+} from "react";
 import { useLocale, useT } from "@/lib/i18n-context";
+
+import type { PricingRegion } from "@/lib/pricing-region";
 
 const screenshotPaths: Record<"pl" | "en", Record<string, string>> = {
   pl: {
-    decks: "/images/app-screenshots/01-decks.png",
-    deckContents: "/images/app-screenshots/02-deck-contents.png",
+    dailyStudy: "/images/app-screenshots/06-study-plan.png",
+    cloze: "/images/app-screenshots/03-card-editor.png",
     editor: "/images/app-screenshots/03-card-editor.png",
     smartReview: "/images/app-screenshots/04-smart-review.png",
-    plannerToday: "/images/app-screenshots/06-study-plan.png",
   },
   en: {
-    decks: "/images/app-screenshots/en/01-decks.png",
-    deckContents: "/images/app-screenshots/en/02-deck-contents.png",
+    dailyStudy: "/images/app-screenshots/en/06-study-plan.png",
+    cloze: "/images/app-screenshots/en/03-card-editor.png",
     editor: "/images/app-screenshots/en/03-card-editor.png",
     smartReview: "/images/app-screenshots/en/04-smart-review.png",
-    plannerToday: "/images/app-screenshots/en/06-study-plan.png",
   },
 };
 
@@ -32,32 +38,34 @@ type ShowcaseScreen = {
 const AUTOPLAY_INTERVAL_MS = 5000;
 const SWIPE_THRESHOLD_PX = 48;
 
-export default function ProductShowcaseSection() {
+export default function ProductShowcaseSection({
+  pricingRegion,
+}: {
+  pricingRegion: PricingRegion;
+}) {
   const t = useT();
   const locale = useLocale();
   const [active, setActive] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const touchStartX = useRef<number | null>(null);
-  const screens = (t.demo.fixedScreens as ShowcaseScreen[]).flatMap(
-    (screen) => {
-      const src = screenshotPaths[locale][screen.key];
-      return src ? [{ ...screen, src }] : [];
-    },
-  );
+  const screens = (t.demo.fixedScreens as ShowcaseScreen[]).map((screen) => {
+    const src = screenshotPaths[locale][screen.key];
+    return { ...screen, src };
+  });
   const controls = t.demo.carouselControls;
   const screen = screens[active] ?? screens[0];
 
-  const stopAutoplay = () => {
+  const stopAutoplay = useCallback(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = null;
-  };
+  }, []);
 
-  const startAutoplay = () => {
+  const startAutoplay = useCallback(() => {
     if (intervalRef.current || screens.length < 2) return;
     intervalRef.current = setInterval(() => {
       setActive((current) => (current + 1) % screens.length);
     }, AUTOPLAY_INTERVAL_MS);
-  };
+  }, [screens.length]);
 
   const goToSlide = (index: number) => {
     setActive((index + screens.length) % screens.length);
@@ -66,7 +74,7 @@ export default function ProductShowcaseSection() {
   useEffect(() => {
     startAutoplay();
     return stopAutoplay;
-  }, [screens.length]);
+  }, [startAutoplay, stopAutoplay]);
 
   const handleTouchStart = (event: TouchEvent<HTMLDivElement>) => {
     touchStartX.current = event.touches[0]?.clientX ?? null;
@@ -88,7 +96,7 @@ export default function ProductShowcaseSection() {
   if (!screen) return null;
 
   return (
-    <section id="how-it-works" className="scroll-mt-28 py-20 sm:py-28">
+    <section id="how-it-works" className="scroll-mt-28 py-10 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex rounded-full border border-[#B9DDD5] bg-[#E7F1EE] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]">
@@ -169,54 +177,45 @@ export default function ProductShowcaseSection() {
             </div>
 
             <div className="order-1 flex items-center justify-center lg:order-2">
-              <div
-                key={`image-${screen.number}`}
-                className="w-full max-w-[27rem] overflow-hidden rounded-[4.5rem] border-[10px] border-[#0B1418] bg-[#0B1418] shadow-[0_24px_60px_rgba(0,40,56,0.2)] motion-safe:animate-[demo-in_280ms_ease-out]"
-              >
-                <Image
-                  src={screen.src}
-                  alt={`${screen.label}: ${screen.title}`}
-                  width={1206}
-                  height={2622}
-                  sizes="(min-width: 1024px) 432px, (min-width: 640px) 432px, calc(100vw - 72px)"
-                  className="h-auto w-full select-none rounded-[3.75rem]"
-                  draggable={false}
-                  unoptimized
-                  priority={active === 0}
-                />
-              </div>
+              {screen.src ? (
+                <div
+                  key={`image-${screen.number}`}
+                  className="w-full max-w-[27rem] overflow-hidden rounded-[4.5rem] border-[10px] border-[#0B1418] bg-[#0B1418] shadow-[0_24px_60px_rgba(0,40,56,0.2)] motion-safe:animate-[demo-in_280ms_ease-out]"
+                >
+                  <Image
+                    src={screen.src}
+                    alt={`${screen.label}: ${screen.title}`}
+                    width={1206}
+                    height={2622}
+                    sizes="(min-width: 1024px) 432px, (min-width: 640px) 432px, calc(100vw - 72px)"
+                    className="h-auto w-full select-none rounded-[3.75rem]"
+                    draggable={false}
+                    unoptimized
+                    priority={active === 0}
+                  />
+                </div>
+              ) : (
+                <div className="flex aspect-[1206/2622] w-full max-w-[27rem] items-center justify-center rounded-[2rem] border border-dashed border-[#78C2B7] bg-white/60 p-8 text-center text-sm text-[#274D53]">
+                  {t.demo.missingScreenshot}
+                </div>
+              )}
             </div>
           </div>
         </div>
 
-        <div className="mx-auto mt-12 max-w-4xl rounded-[2rem] border border-[#B9DDD5] bg-white/75 px-6 py-8 text-center shadow-[0_22px_60px_rgba(39,77,83,0.1)] backdrop-blur-xl sm:px-10 sm:py-10">
-          <h3 className="font-display text-2xl font-semibold leading-tight text-[#002838] sm:text-3xl">
-            {t.demo.postDemoCta.title}
-          </h3>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[#274D53]">
-            {t.demo.postDemoCta.text}
-          </p>
-          <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
-            <a
-              href="#waitlist-form"
-              aria-label={t.demo.postDemoCta.waitlistAria}
-              data-analytics-click="screens_waitlist"
-              data-analytics-section="screens_cta"
-              className="inline-flex items-center justify-center rounded-full bg-[#0F766E] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(15,118,110,0.2)] transition hover:-translate-y-0.5 hover:bg-[#002838]"
-            >
-              {t.demo.postDemoCta.waitlist}
-            </a>
-            <a
-              href="#preorder"
-              aria-label={t.demo.postDemoCta.preorderAria}
-              data-analytics-click="screens_preorder"
-              data-analytics-section="screens_cta"
-              className="inline-flex items-center justify-center rounded-full bg-[#E86860] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(232,104,96,0.22)] transition hover:-translate-y-0.5 hover:bg-[#D85A52]"
-            >
-              {t.demo.postDemoCta.preorder}
-            </a>
-          </div>
-        </div>
+        <p className="mt-6 text-center">
+          <a
+            href="#preorder"
+            data-analytics-click="screens_preorder"
+            data-analytics-section="screens_cta"
+            className="text-sm font-semibold text-[#0F766E] underline underline-offset-4 hover:text-[#002838]"
+          >
+            {t.demo.postDemoLink.replace(
+              "{price}",
+              t.preorder.pricing[pricingRegion].value,
+            )}
+          </a>
+        </p>
       </div>
     </section>
   );

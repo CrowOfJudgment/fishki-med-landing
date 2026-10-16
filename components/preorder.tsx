@@ -12,8 +12,6 @@ import {
   PREORDER_PAYMENT_PROVIDER,
 } from "@/lib/preorder-checkout";
 
-type PreferredPlatform = "IOS" | "ANDROID" | "BOTH" | "UNDECIDED";
-
 export default function Preorder({
   pricingRegion,
 }: {
@@ -28,8 +26,6 @@ export default function Preorder({
   const [showConsentError, setShowConsentError] = useState(false);
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
-  const [preferredPlatform, setPreferredPlatform] =
-    useState<PreferredPlatform | null>(null);
   const [website, setWebsite] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [submissionError, setSubmissionError] = useState<string | null>(null);
@@ -39,7 +35,6 @@ export default function Preorder({
   const canBuy =
     validName &&
     validEmail &&
-    preferredPlatform !== null &&
     acceptedPreorderTerms &&
     acceptedTermsOfUse &&
     acceptedPrivacyPolicy;
@@ -63,7 +58,8 @@ export default function Preorder({
           paymentProvider: PREORDER_PAYMENT_PROVIDER,
           pricingRegion: apiPricingRegion(pricingRegion),
           locale,
-          preferredPlatform,
+          // The existing API requires this field; no device preference is collected.
+          preferredPlatform: "UNDECIDED",
           ...PREORDER_DOCUMENT_VERSIONS,
           website,
         }),
@@ -92,389 +88,318 @@ export default function Preorder({
   };
 
   return (
-    <section id="preorder" className="scroll-mt-28 pb-10 pt-4 sm:pb-14">
+    <section id="preorder" className="scroll-mt-28 py-10 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="relative overflow-hidden rounded-[2.25rem] border border-[#B9DDD5] bg-white/75 p-5 shadow-[0_24px_70px_rgba(39,77,83,0.08)] backdrop-blur-xl sm:p-8 lg:p-10">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-16 top-0 h-52 w-52 rounded-full bg-[#78C2B7]/15 blur-3xl"
-          />
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -left-20 bottom-0 h-56 w-56 rounded-full bg-[#B9DDD5]/35 blur-3xl"
-          />
-
-          <div className="relative">
-            <div className="max-w-3xl">
-              <span className="inline-flex rounded-full border border-[#B9DDD5] bg-[#E7F1EE] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]">
-                {t.preorder.badge}
-              </span>
-              <h2 className="mt-5 max-w-2xl font-display text-3xl font-semibold leading-tight text-balance text-[#002838] sm:text-4xl">
-                {pricing.title}
-              </h2>
-              <p className="mt-4 max-w-xl text-base leading-7 text-[#274D53]">
-                {t.preorder.subtitle}
+        <div className="relative overflow-hidden rounded-[2.25rem] border border-[#B9DDD5] bg-white/75 p-5 shadow-[0_24px_70px_rgba(39,77,83,0.08)] sm:p-8 lg:p-10">
+          <div className="max-w-3xl">
+            <span className="inline-flex rounded-full border border-[#B9DDD5] bg-[#E7F1EE] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]">
+              {t.preorder.badge}
+            </span>
+            <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-balance text-[#002838] sm:text-4xl">
+              {pricing.title}
+            </h2>
+            <p className="mt-4 text-base leading-7 text-[#274D53]">
+              {t.preorder.subtitle}
+            </p>
+          </div>
+          <div className="mt-7 grid items-start gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="rounded-[1.75rem] border border-[#B9DDD5] bg-[#E7F1EE]/70 p-5 sm:p-7">
+              <p className="font-display text-5xl font-semibold text-[#002838]">
+                {pricing.value}
               </p>
+              <p className="mt-3 inline-flex rounded-full bg-white/80 px-3 py-1.5 text-xs font-semibold text-[#0F766E]">
+                {pricing.savings}
+              </p>
+              <p className="mt-3 text-sm leading-6 text-[#274D53]">
+                {pricing.plannedAnnual}
+              </p>
+              <ul className="mt-6 space-y-3">
+                {t.preorder.includes.map((item: string) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-sm leading-6 text-[#274D53]"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="font-bold text-[#0F766E]"
+                    >
+                      ✓
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6 border-t border-[#B9DDD5] pt-5">
+                <p className="text-sm font-semibold text-[#002838]">
+                  {t.preorder.expectedLaunch}
+                </p>
+                <p className="mt-2 text-xs leading-6 text-[#274D53]">
+                  {t.preorder.deliveryGuarantee}
+                </p>
+              </div>
             </div>
-
-            <div className="mt-7 grid gap-3 sm:grid-cols-3">
-              {t.preorder.offerFacts.map(
-                (
-                  item: { label: string; value: string; note: string },
-                  index: number,
-                ) => (
-                  <article
-                    key={item.label}
-                    className={`rounded-[1.35rem] border p-4 sm:p-5 ${
-                      index === 0
-                        ? "border-[#E86860]/35 bg-[#E86860]/8"
-                        : "border-[#B9DDD5] bg-[#F4F7F5]"
+            <form
+              onSubmit={(event) => {
+                event.preventDefault();
+                void handleBuyClick();
+              }}
+              id="preorder-module"
+              className="rounded-[1.75rem] border border-[#78C2B7] bg-[#F4F7F5] p-6 sm:p-8"
+            >
+              <p className="text-center text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]">
+                {t.preorder.placeholderLabel}
+              </p>
+              <p className="mt-3 text-sm leading-6 text-[#274D53]">
+                {t.preorder.formSummary}
+              </p>
+              <div className="mt-5 space-y-3 text-left">
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <label className="text-sm font-semibold text-[#002838]">
+                    {t.preorder.fullNameLabel}
+                    <input
+                      value={fullName}
+                      onChange={(event) => setFullName(event.target.value)}
+                      required
+                      minLength={2}
+                      maxLength={120}
+                      autoComplete="name"
+                      className={`mt-2 block min-h-12 w-full rounded-2xl border bg-white px-4 text-base font-normal outline-none transition focus:border-[#0F766E] focus:ring-4 focus:ring-[#78C2B7]/20 ${
+                        showConsentError && !validName
+                          ? "border-[#E86860]"
+                          : "border-[#B9DDD5]"
+                      }`}
+                    />
+                  </label>
+                  <label className="text-sm font-semibold text-[#002838]">
+                    {t.preorder.emailLabel}
+                    <input
+                      type="email"
+                      required
+                      maxLength={254}
+                      value={email}
+                      onChange={(event) => setEmail(event.target.value)}
+                      autoComplete="email"
+                      inputMode="email"
+                      className={`mt-2 block min-h-12 w-full rounded-2xl border bg-white px-4 text-base font-normal outline-none transition focus:border-[#0F766E] focus:ring-4 focus:ring-[#78C2B7]/20 ${
+                        showConsentError && !validEmail
+                          ? "border-[#E86860]"
+                          : "border-[#B9DDD5]"
+                      }`}
+                    />
+                  </label>
+                </div>
+                <p className="text-xs leading-5 text-[#274D53]">
+                  {t.preorder.accountEmailHint}
+                </p>
+                <label className="absolute -left-[10000px]" aria-hidden="true">
+                  Website
+                  <input
+                    value={website}
+                    onChange={(event) => setWebsite(event.target.value)}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </label>
+                <div className="space-y-0">
+                  <label
+                    className={`flex min-h-11 cursor-pointer items-start gap-3 rounded-xl border border-transparent px-1 py-1 text-sm leading-5 text-[#274D53] transition sm:min-h-9 ${
+                      showConsentError && !acceptedPreorderTerms
+                        ? "border-[#E86860] shadow-[0_0_0_3px_rgba(232,104,96,0.12)]"
+                        : "border-transparent"
                     }`}
                   >
-                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#0F766E]">
-                      {item.label}
-                    </p>
-                    <p className="mt-2 text-lg font-semibold text-[#002838]">
-                      {index === 0 ? pricing.value : item.value}
-                    </p>
-                    <p className="mt-1 text-xs leading-5 text-[#274D53]">
-                      {index === 0 ? pricing.note : item.note}
-                    </p>
-                  </article>
-                ),
-              )}
-            </div>
-
-            <div className="mt-6 rounded-[1.75rem] border border-[#B9DDD5] bg-[#E7F1EE]/70 p-5 sm:p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0F766E]">
-                {t.preorder.accessStepsLabel}
-              </p>
-              <ol className="mt-4 grid gap-4 md:grid-cols-3">
-                {t.preorder.accessSteps.map(
-                  (step: { title: string; text: string }, index: number) => (
-                    <li key={step.title} className="flex items-start gap-3">
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#0F766E] text-sm font-semibold text-white">
-                        {index + 1}
-                      </span>
-                      <div>
-                        <p className="text-sm font-semibold text-[#002838]">
-                          {step.title}
-                        </p>
-                        <p className="mt-1 text-xs leading-5 text-[#274D53]">
-                          {step.text}
-                        </p>
-                      </div>
-                    </li>
-                  ),
-                )}
-              </ol>
-            </div>
-
-            <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_0.95fr] lg:items-start">
-              <div>
-                <div className="rounded-[1.35rem] border border-[#B9DDD5] bg-[#F4F7F5] p-4">
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#0F766E]">
-                    {t.preorder.deliveryGuaranteeLabel}
-                  </p>
-                  <p className="mt-2 text-sm font-medium leading-6 text-[#002838]">
-                    {t.preorder.deliveryGuarantee}
-                  </p>
-                </div>
-                <div className="mt-7 space-y-3">
-                  {t.preorder.includes.map((item: string, index: number) => (
-                    <div key={item} className="flex items-start gap-3">
-                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#B9DDD5] text-xs font-bold text-[#0F766E]">
-                        ✓
-                      </span>
-                      <span className="text-sm leading-6 text-[#274D53]">
-                        {index === t.preorder.includes.length - 1
-                          ? pricing.comparison
-                          : item}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-                <p className="mt-6 rounded-2xl border border-[#B9DDD5] bg-[#F4F7F5] p-4 text-sm leading-6 text-[#274D53]">
-                  {t.preorder.trust}
-                </p>
-                <div className="mt-7">
-                  <h3 className="text-lg font-semibold text-[#002838]">
-                    {t.preorder.faqTitle}
-                  </h3>
-                  <div className="mt-3 space-y-2">
-                    {t.preorder.faq.map(
-                      (item: { question: string; answer: string }) => (
-                        <details
-                          key={item.question}
-                          className="rounded-2xl border border-[#B9DDD5] bg-[#F4F7F5] p-4"
-                        >
-                          <summary className="cursor-pointer text-sm font-semibold text-[#002838]">
-                            {item.question}
-                          </summary>
-                          <p className="mt-2 text-sm leading-6 text-[#274D53]">
-                            {item.answer}
-                          </p>
-                        </details>
-                      ),
-                    )}
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div
-                  id="preorder-module"
-                  className="rounded-[1.75rem] border border-[#78C2B7] bg-[#F4F7F5] p-6 sm:p-8"
-                >
-                  <p className="text-center text-xs font-semibold uppercase tracking-[0.24em] text-[#0F766E]">
-                    {t.preorder.placeholderLabel}
-                  </p>
-                  <div className="mt-5 space-y-3 text-left">
-                    <div className="grid gap-3 sm:grid-cols-2">
-                      <label className="text-sm font-semibold text-[#002838]">
-                        {t.preorder.fullNameLabel}
-                        <input
-                          value={fullName}
-                          onChange={(event) => setFullName(event.target.value)}
-                          autoComplete="name"
-                          className={`mt-2 block min-h-12 w-full rounded-2xl border bg-white px-4 text-base font-normal outline-none transition focus:border-[#0F766E] focus:ring-4 focus:ring-[#78C2B7]/20 ${
-                            showConsentError && !validName
-                              ? "border-[#E86860]"
-                              : "border-[#B9DDD5]"
-                          }`}
-                        />
-                      </label>
-                      <label className="text-sm font-semibold text-[#002838]">
-                        {t.preorder.emailLabel}
-                        <input
-                          type="email"
-                          value={email}
-                          onChange={(event) => setEmail(event.target.value)}
-                          autoComplete="email"
-                          inputMode="email"
-                          className={`mt-2 block min-h-12 w-full rounded-2xl border bg-white px-4 text-base font-normal outline-none transition focus:border-[#0F766E] focus:ring-4 focus:ring-[#78C2B7]/20 ${
-                            showConsentError && !validEmail
-                              ? "border-[#E86860]"
-                              : "border-[#B9DDD5]"
-                          }`}
-                        />
-                      </label>
-                    </div>
-                    <p className="text-xs leading-5 text-[#274D53]">
-                      {t.preorder.accountEmailHint}
-                    </p>
-                    <div
-                      role="radiogroup"
-                      aria-labelledby="preferred-platform-label"
-                      className="rounded-[1.15rem] border border-[#B9DDD5] bg-white p-4"
-                    >
-                      <p
-                        id="preferred-platform-label"
-                        className="text-sm font-semibold leading-6 text-[#002838]"
+                    <input
+                      type="checkbox"
+                      required
+                      checked={acceptedPreorderTerms}
+                      onChange={(event) => {
+                        const checked = event.target.checked;
+                        setAcceptedPreorderTerms(checked);
+                        if (
+                          checked &&
+                          acceptedTermsOfUse &&
+                          acceptedPrivacyPolicy
+                        ) {
+                          setShowConsentError(false);
+                        }
+                      }}
+                      className="mt-0.5 h-4 w-4 shrink-0 accent-[#0F766E]"
+                    />
+                    <span>
+                      {t.preorder.purchaseConsentBefore}
+                      <Link
+                        href="/preorder-terms"
+                        data-analytics-click="preorder_terms_inline"
+                        data-analytics-section="preorder"
+                        className="font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 hover:text-[#002838]"
                       >
-                        {t.preorder.platformLabel}
-                      </p>
-                      <div className="mt-3 grid gap-2 sm:grid-cols-2">
-                        {(["IOS", "ANDROID", "BOTH", "UNDECIDED"] as const).map(
-                          (platform) => (
-                            <label
-                              key={platform}
-                              className={`flex min-h-11 cursor-pointer items-center gap-2 rounded-xl border px-3 text-sm transition ${
-                                preferredPlatform === platform
-                                  ? "border-[#0F766E] bg-[#E7F1EE] text-[#002838]"
-                                  : "border-[#D8E8E4] text-[#274D53]"
-                              }`}
-                            >
-                              <input
-                                type="radio"
-                                name="preferred-platform"
-                                value={platform}
-                                checked={preferredPlatform === platform}
-                                onChange={() => setPreferredPlatform(platform)}
-                                className="accent-[#0F766E]"
-                              />
-                              {t.preorder.platformOptions[platform]}
-                            </label>
-                          ),
-                        )}
-                      </div>
-                    </div>
-                    <label
-                      className="absolute -left-[10000px]"
-                      aria-hidden="true"
-                    >
-                      Website
-                      <input
-                        value={website}
-                        onChange={(event) => setWebsite(event.target.value)}
-                        tabIndex={-1}
-                        autoComplete="off"
-                      />
-                    </label>
-                    <label
-                      className={`flex cursor-pointer items-start gap-3 rounded-[1.15rem] border bg-white p-4 text-sm leading-6 text-[#274D53] transition ${
-                        showConsentError && !acceptedPreorderTerms
-                          ? "border-[#E86860] shadow-[0_0_0_3px_rgba(232,104,96,0.12)]"
-                          : "border-[#B9DDD5]"
-                      }`}
-                    >
-                      <input
-                        type="checkbox"
-                        required
-                        checked={acceptedPreorderTerms}
-                        onChange={(event) => {
-                          const checked = event.target.checked;
-                          setAcceptedPreorderTerms(checked);
-                          if (
-                            checked &&
-                            acceptedTermsOfUse &&
-                            acceptedPrivacyPolicy
-                          ) {
-                            setShowConsentError(false);
-                          }
-                        }}
-                        className="mt-1 h-4 w-4 shrink-0 accent-[#0F766E]"
-                      />
-                      <span>
-                        {t.preorder.purchaseConsentBefore}
-                        <Link
-                          href="/preorder-terms"
-                          data-analytics-click="preorder_terms_inline"
-                          data-analytics-section="preorder"
-                          className="font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 hover:text-[#002838]"
-                        >
-                          {t.preorder.termsLink}
-                        </Link>
-                        {t.preorder.purchaseConsentAfter}
-                      </span>
-                    </label>
+                        {t.preorder.termsLink}
+                      </Link>
+                      {t.preorder.purchaseConsentAfter}
+                    </span>
+                  </label>
 
-                    <label
-                      className={`flex cursor-pointer items-start gap-3 rounded-[1.15rem] border bg-white p-4 text-sm leading-6 text-[#274D53] transition ${
-                        showConsentError && !acceptedTermsOfUse
-                          ? "border-[#E86860] shadow-[0_0_0_3px_rgba(232,104,96,0.12)]"
-                          : "border-[#B9DDD5]"
-                      }`}
-                    >
-                      <input
-                        type="checkbox"
-                        required
-                        checked={acceptedTermsOfUse}
-                        onChange={(event) => {
-                          const checked = event.target.checked;
-                          setAcceptedTermsOfUse(checked);
-                          if (
-                            acceptedPreorderTerms &&
-                            checked &&
-                            acceptedPrivacyPolicy
-                          ) {
-                            setShowConsentError(false);
-                          }
-                        }}
-                        className="mt-1 h-4 w-4 shrink-0 accent-[#0F766E]"
-                      />
-                      <span>
-                        {t.preorder.documentsConsentBefore}
-                        <Link
-                          href="/terms"
-                          data-analytics-click="preorder_terms_of_use_inline"
-                          data-analytics-section="preorder"
-                          className="font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 hover:text-[#002838]"
-                        >
-                          {t.preorder.termsOfUseLink}
-                        </Link>
-                        {t.preorder.documentsConsentAfter}
-                      </span>
-                    </label>
-
-                    <label
-                      className={`flex cursor-pointer items-start gap-3 rounded-[1.15rem] border bg-white p-4 text-sm leading-6 text-[#274D53] transition ${
-                        showConsentError && !acceptedPrivacyPolicy
-                          ? "border-[#E86860] shadow-[0_0_0_3px_rgba(232,104,96,0.12)]"
-                          : "border-[#B9DDD5]"
-                      }`}
-                    >
-                      <input
-                        type="checkbox"
-                        required
-                        checked={acceptedPrivacyPolicy}
-                        onChange={(event) => {
-                          const checked = event.target.checked;
-                          setAcceptedPrivacyPolicy(checked);
-                          if (
-                            acceptedPreorderTerms &&
-                            acceptedTermsOfUse &&
-                            checked
-                          ) {
-                            setShowConsentError(false);
-                          }
-                        }}
-                        className="mt-1 h-4 w-4 shrink-0 accent-[#0F766E]"
-                      />
-                      <span>
-                        {t.preorder.privacyConsentBefore}
-                        <Link
-                          href="/privacy"
-                          data-analytics-click="preorder_privacy_inline"
-                          data-analytics-section="preorder"
-                          className="font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 hover:text-[#002838]"
-                        >
-                          {t.preorder.privacyLink}
-                        </Link>
-                        {t.preorder.privacyConsentAfter}
-                      </span>
-                    </label>
-                  </div>
-
-                  <div className="mt-6 flex flex-col gap-3">
-                    <button
-                      type="button"
-                      onClick={() => void handleBuyClick()}
-                      disabled={submitting}
-                      data-analytics-click={
-                        canBuy
-                          ? "preorder_buy_stripe"
-                          : "preorder_buy_missing_consents"
-                      }
-                      data-analytics-section="preorder"
-                      className={`flex min-h-12 w-full items-center justify-center rounded-full border-2 bg-white px-5 py-3 text-center text-sm font-semibold text-[#002838] transition hover:-translate-y-0.5 hover:bg-[#E86860]/5 ${
-                        showConsentError && !canBuy
-                          ? "border-[#E86860] ring-4 ring-[#E86860]/20"
-                          : "border-[#E86860]"
-                      }`}
-                    >
-                      {submitting
-                        ? t.preorder.redirecting
-                        : t.preorder.buyWithCard}
-                    </button>
-                  </div>
-                  {showConsentError && !canBuy ? (
-                    <p className="mt-3 rounded-2xl border border-[#E86860]/35 bg-[#E86860]/10 px-4 py-3 text-center text-xs font-medium leading-5 text-[#002838]">
-                      {t.preorder.buyCtaDisabled}
-                    </p>
-                  ) : null}
-                  {submissionError ? (
-                    <p
-                      role="alert"
-                      className="mt-3 rounded-2xl border border-[#E86860]/35 bg-[#E86860]/10 px-4 py-3 text-center text-xs font-medium leading-5 text-[#002838]"
-                    >
-                      {submissionError}
-                    </p>
-                  ) : null}
-
-                  <Link
-                    href="/preorder-terms"
-                    data-analytics-click="preorder_terms_read"
-                    data-analytics-section="preorder"
-                    className="mx-auto mt-5 inline-flex items-center justify-center text-sm font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 transition hover:text-[#002838]"
+                  <label
+                    className={`flex min-h-11 cursor-pointer items-start gap-3 rounded-xl border border-transparent px-1 py-1 text-sm leading-5 text-[#274D53] transition sm:min-h-9 ${
+                      showConsentError && !acceptedTermsOfUse
+                        ? "border-[#E86860] shadow-[0_0_0_3px_rgba(232,104,96,0.12)]"
+                        : "border-transparent"
+                    }`}
                   >
-                    {t.preorder.readTerms}
-                  </Link>
+                    <input
+                      type="checkbox"
+                      required
+                      checked={acceptedTermsOfUse}
+                      onChange={(event) => {
+                        const checked = event.target.checked;
+                        setAcceptedTermsOfUse(checked);
+                        if (
+                          acceptedPreorderTerms &&
+                          checked &&
+                          acceptedPrivacyPolicy
+                        ) {
+                          setShowConsentError(false);
+                        }
+                      }}
+                      className="mt-0.5 h-4 w-4 shrink-0 accent-[#0F766E]"
+                    />
+                    <span>
+                      {t.preorder.documentsConsentBefore}
+                      <Link
+                        href="/terms"
+                        data-analytics-click="preorder_terms_of_use_inline"
+                        data-analytics-section="preorder"
+                        className="font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 hover:text-[#002838]"
+                      >
+                        {t.preorder.termsOfUseLink}
+                      </Link>
+                      {t.preorder.documentsConsentAfter}
+                    </span>
+                  </label>
+
+                  <label
+                    className={`flex min-h-11 cursor-pointer items-start gap-3 rounded-xl border border-transparent px-1 py-1 text-sm leading-5 text-[#274D53] transition sm:min-h-9 ${
+                      showConsentError && !acceptedPrivacyPolicy
+                        ? "border-[#E86860] shadow-[0_0_0_3px_rgba(232,104,96,0.12)]"
+                        : "border-transparent"
+                    }`}
+                  >
+                    <input
+                      type="checkbox"
+                      required
+                      checked={acceptedPrivacyPolicy}
+                      onChange={(event) => {
+                        const checked = event.target.checked;
+                        setAcceptedPrivacyPolicy(checked);
+                        if (
+                          acceptedPreorderTerms &&
+                          acceptedTermsOfUse &&
+                          checked
+                        ) {
+                          setShowConsentError(false);
+                        }
+                      }}
+                      className="mt-0.5 h-4 w-4 shrink-0 accent-[#0F766E]"
+                    />
+                    <span>
+                      {t.preorder.privacyConsentBefore}
+                      <Link
+                        href="/privacy"
+                        data-analytics-click="preorder_privacy_inline"
+                        data-analytics-section="preorder"
+                        className="font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 hover:text-[#002838]"
+                      >
+                        {t.preorder.privacyLink}
+                      </Link>
+                      {t.preorder.privacyConsentAfter}
+                    </span>
+                  </label>
                 </div>
               </div>
-            </div>
+
+              <div className="mt-6 flex flex-col gap-3">
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  data-analytics-click={
+                    canBuy
+                      ? "preorder_buy_stripe"
+                      : "preorder_buy_missing_consents"
+                  }
+                  data-analytics-section="preorder"
+                  className={`flex min-h-12 w-full items-center justify-center rounded-full border-2 bg-[#E86860] px-5 py-3 text-center text-sm font-semibold text-[#002838] transition disabled:cursor-wait ${
+                    showConsentError && !canBuy
+                      ? "border-[#E86860] ring-4 ring-[#E86860]/20"
+                      : "border-[#E86860]"
+                  }`}
+                >
+                  {submitting ? t.preorder.redirecting : t.preorder.buyWithCard}
+                </button>
+              </div>
+              <p className="mt-3 text-center text-xs leading-5 text-[#274D53]">
+                {t.preorder.paymentNote}
+              </p>
+              {showConsentError && !canBuy ? (
+                <p className="mt-3 rounded-2xl border border-[#E86860]/35 bg-[#E86860]/10 px-4 py-3 text-center text-xs font-medium leading-5 text-[#002838]">
+                  {t.preorder.buyCtaDisabled}
+                </p>
+              ) : null}
+              {submissionError ? (
+                <p
+                  role="alert"
+                  className="mt-3 rounded-2xl border border-[#E86860]/35 bg-[#E86860]/10 px-4 py-3 text-center text-xs font-medium leading-5 text-[#002838]"
+                >
+                  {submissionError}
+                </p>
+              ) : null}
+
+              <Link
+                href="/preorder-terms"
+                data-analytics-click="preorder_terms_read"
+                data-analytics-section="preorder"
+                className="mx-auto mt-5 inline-flex items-center justify-center text-sm font-semibold text-[#0F766E] underline decoration-[#78C2B7] underline-offset-4 transition hover:text-[#002838]"
+              >
+                {t.preorder.readTerms}
+              </Link>
+            </form>
           </div>
         </div>
+      </div>
+    </section>
+  );
+}
+
+export function PreorderFaq() {
+  const t = useT();
+  return (
+    <section id="faq" className="scroll-mt-28 py-10 sm:py-16">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6">
+        <h2 className="text-center font-display text-3xl font-semibold text-[#002838] sm:text-4xl">
+          {t.preorder.faqTitle}
+        </h2>
+        <div className="mt-7 space-y-3">
+          {t.preorder.faq.map((item: { question: string; answer: string }) => (
+            <details
+              key={item.question}
+              className="rounded-2xl border border-[#B9DDD5] bg-white/70 p-5"
+            >
+              <summary className="cursor-pointer text-sm font-semibold leading-6 text-[#002838]">
+                {item.question}
+              </summary>
+              <p className="mt-3 text-sm leading-7 text-[#274D53]">
+                {item.answer}
+              </p>
+            </details>
+          ))}
+        </div>
+        <p className="mt-5 text-center">
+          <Link
+            href="/preorder-terms"
+            className="text-sm font-semibold text-[#0F766E] underline underline-offset-4"
+          >
+            {t.preorder.termsLink}
+          </Link>
+        </p>
       </div>
     </section>
   );

@@ -59,20 +59,25 @@ export default async function RootLayout({
       <body className="relative overflow-x-clip bg-[#F4F7F5] font-inter tracking-tight text-[#002838] antialiased selection:bg-[#B9DDD5] selection:text-[#002838]">
         <div
           aria-hidden="true"
-          className="pointer-events-none fixed inset-0 -z-30 bg-[#F4F7F5]"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 -z-20 opacity-[0.14] [background-image:radial-gradient(circle_at_1px_1px,rgba(39,77,83,0.18)_1px,transparent_0)] [background-size:32px_32px] sm:fixed"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute left-[-8rem] top-28 -z-20 h-72 w-72 rounded-full bg-[#B9DDD5]/45 blur-3xl sm:fixed motion-safe:sm:animate-float"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute right-[-8rem] top-[30rem] -z-20 h-80 w-80 rounded-full bg-[#78C2B7]/15 blur-3xl sm:fixed motion-safe:sm:animate-float"
-        />
+          className="pointer-events-none absolute inset-0 -z-10 overflow-hidden sm:fixed"
+        >
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 -z-30 bg-[#F4F7F5]"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 -z-20 opacity-[0.14] [background-image:radial-gradient(circle_at_1px_1px,rgba(39,77,83,0.18)_1px,transparent_0)] [background-size:32px_32px]"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-[-8rem] top-28 -z-20 h-72 w-72 rounded-full bg-[#B9DDD5]/45 blur-3xl motion-safe:sm:animate-float"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute right-[-8rem] top-[30rem] -z-20 h-80 w-80 rounded-full bg-[#78C2B7]/15 blur-3xl motion-safe:sm:animate-float"
+          />
+        </div>
         <I18nProvider locale={locale}>
           <div className="flex min-h-screen flex-col overflow-x-clip">
             {children}

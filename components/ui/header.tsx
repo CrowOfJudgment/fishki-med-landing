@@ -1,133 +1,78 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
 import Logo from "./logo";
 import { useT } from "@/lib/i18n-context";
 
 export default function Header() {
   const t = useT();
-  const webAppUrl =
-    process.env.NEXT_PUBLIC_APP_URL?.trim() || "https://app.fishki-med.com";
-  const [isMobile, setIsMobile] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const lastScrollY = useRef(0);
-
-  useEffect(() => {
-    const updateVisibility = () => {
-      const mobile = window.matchMedia("(max-width: 639px)").matches;
-      const currentScrollY = window.scrollY;
-
-      setIsMobile(mobile);
-
-      if (!mobile) {
-        setIsVisible(true);
-        lastScrollY.current = currentScrollY;
-        return;
-      }
-
-      if (currentScrollY < 12) {
-        setIsVisible(true);
-      } else if (currentScrollY > lastScrollY.current && currentScrollY > 24) {
-        setIsVisible(false);
-      } else if (currentScrollY < lastScrollY.current) {
-        setIsVisible(true);
-      }
-
-      lastScrollY.current = currentScrollY;
-    };
-
-    updateVisibility();
-    window.addEventListener("scroll", updateVisibility, { passive: true });
-    window.addEventListener("resize", updateVisibility);
-
-    return () => {
-      window.removeEventListener("scroll", updateVisibility);
-      window.removeEventListener("resize", updateVisibility);
-    };
-  }, []);
-
   const navLinks = [
     {
       href: "/#how-it-works",
       label: t.header.how,
-      className: "hidden md:inline-flex",
-    },
-    {
-      href: "/#for-medicine",
-      label: t.header.forMedicine,
-      className: "hidden min-[860px]:inline-flex",
-    },
-    {
-      href: "/#student-voices",
-      label: t.header.studentVoices,
-      className: "hidden min-[980px]:inline-flex",
+      className: "text-[#274D53] hidden min-[480px]:inline-flex",
     },
     {
       href: "/#why-fishki",
       label: t.header.problem,
-      className: "hidden min-[1080px]:inline-flex",
+      className: "text-[#274D53] hidden sm:inline-flex",
+    },
+    {
+      href: "/#exam-planning",
+      label: t.header.examPlanning,
+      className: "text-[#274D53] hidden md:inline-flex",
+    },
+    {
+      href: "/#for-medicine",
+      label: t.header.forMedicine,
+      className: "text-[#274D53] hidden min-[980px]:inline-flex",
+    },
+    {
+      href: "/#preorder",
+      label: t.header.preorderCta,
+      className:
+        "inline-flex shrink-0 bg-[#E86860] font-semibold text-[#002838]",
+    },
+    {
+      href: "/#faq",
+      label: t.header.faq,
+      className: "text-[#274D53] hidden min-[1120px]:inline-flex",
+    },
+    {
+      href: "/#waitlist-form",
+      label: t.header.waitlist,
+      className: "text-[#274D53] hidden min-[1240px]:inline-flex",
     },
   ];
 
   return (
-    <header
-      className={`fixed inset-x-0 top-2 z-40 transition-transform duration-200 ease-out sm:top-3 ${
-        isMobile && !isVisible ? "-translate-y-[120%]" : "translate-y-0"
-      }`}
-    >
+    <header className="fixed inset-x-0 top-2 z-40 sm:top-3">
       <div className="mx-auto max-w-7xl px-3 sm:px-5">
-        <div className="flex min-w-0 flex-wrap items-center justify-between gap-2 rounded-[1.25rem] border border-[#B9DDD5] bg-[#F4F7F5]/90 px-3 py-2.5 shadow-[0_16px_50px_rgba(39,77,83,0.1)] backdrop-blur-xl sm:rounded-[1.4rem] sm:px-4 sm:py-3 xl:gap-3">
-          <div className="flex min-w-0 items-center gap-3">
+        <div className="flex min-w-0 items-center justify-between gap-2 rounded-[1.25rem] border border-[#B9DDD5] bg-[#F4F7F5]/90 px-3 py-2.5 shadow-[0_16px_50px_rgba(39,77,83,0.1)] backdrop-blur-xl sm:rounded-[1.4rem] sm:px-4 sm:py-3 xl:gap-3">
+          <div className="flex shrink-0 items-center gap-3">
             <Logo
               horizontal
               className="w-[128px] sm:w-[142px] lg:w-[154px] xl:w-[170px]"
             />
           </div>
 
-          <nav className="min-w-0 items-center gap-0.5 md:flex xl:gap-1">
+          <nav className="flex min-w-0 items-center gap-0.5 xl:gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 data-analytics-click={`header_${link.href.split("#")[1] ?? "link"}`}
                 data-analytics-section="header"
-                className={`${link.className} whitespace-nowrap rounded-full px-2 py-2 text-xs font-medium text-[#274D53] transition hover:bg-[#E7F1EE] hover:text-[#002838] xl:px-3 xl:text-sm`}
+                className={`${link.className} whitespace-nowrap rounded-full px-2 py-2 text-xs font-medium transition xl:px-3 xl:text-sm ${
+                  link.href === "/#preorder"
+                    ? "hover:bg-[#E86860]"
+                    : "hover:bg-[#E7F1EE] hover:text-[#002838]"
+                }`}
               >
                 {link.label}
               </Link>
             ))}
           </nav>
-
-          <a
-            href={webAppUrl}
-            aria-label={t.header.openAppAria}
-            data-analytics-click="header_open_app"
-            data-analytics-section="header"
-            className="order-3 inline-flex h-9 w-full shrink-0 items-center justify-center whitespace-nowrap rounded-full border border-[#B9DDD5] bg-white/80 px-3 text-xs font-semibold text-[#0F766E] transition hover:-translate-y-0.5 hover:bg-white sm:order-none sm:w-auto xl:px-4 xl:text-sm"
-          >
-            {t.header.openApp}
-          </a>
-          <div className="order-2 flex shrink-0 items-center gap-2 sm:order-none">
-            <Link
-              href="/#waitlist-form"
-              aria-label={t.header.ctaAria ?? t.header.cta}
-              data-analytics-click="header_waitlist"
-              data-analytics-section="header"
-              className="inline-flex h-9 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-[#0F766E] px-3 text-xs font-medium text-white shadow-[0_10px_30px_rgba(15,118,110,0.2)] transition hover:-translate-y-0.5 hover:bg-[#002838] xl:px-4 xl:text-sm"
-            >
-              {t.header.cta}
-            </Link>
-            <Link
-              href="/#preorder"
-              aria-label={t.header.preorderCtaAria ?? t.header.preorderCta}
-              data-analytics-click="header_preorder"
-              data-analytics-section="header"
-              className="hidden h-9 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-[#E86860] px-3 text-xs font-semibold text-white shadow-[0_10px_28px_rgba(232,104,96,0.24)] transition hover:-translate-y-0.5 hover:bg-[#D85A52] min-[820px]:inline-flex xl:px-4 xl:text-sm"
-            >
-              {t.header.preorderCta}
-            </Link>
-          </div>
         </div>
       </div>
     </header>
