@@ -34,14 +34,14 @@ export default function Header() {
         "inline-flex shrink-0 bg-[#E86860] font-semibold text-[#002838]",
     },
     {
-      href: "/#faq",
-      label: t.header.faq,
-      className: "text-[#274D53] hidden min-[1120px]:inline-flex",
-    },
-    {
       href: "/#waitlist-form",
       label: t.header.waitlist,
       className: "text-[#274D53] hidden min-[1240px]:inline-flex",
+    },
+    {
+      href: "/#faq",
+      label: t.header.faq,
+      className: "text-[#274D53] hidden min-[1120px]:inline-flex",
     },
   ];
 

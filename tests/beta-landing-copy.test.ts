@@ -174,8 +174,8 @@ test("header section links follow the landing page order", () => {
     "/#exam-planning",
     "/#for-medicine",
     "/#preorder",
-    "/#faq",
     "/#waitlist-form",
+    "/#faq",
   ];
 
   const positions = orderedSections.map((section) => header.indexOf(section));

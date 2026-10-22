@@ -25,8 +25,8 @@ export default async function Home() {
       <OfflineFirst />
       <ResearchInsight />
       <Preorder pricingRegion={pricingRegion} />
-      <PreorderFaq />
       <Cta />
+      <PreorderFaq />
     </div>
   );
 }
